@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[网站建立]]></title>
     <url>%2Ftitle%2Fe6eb3c29%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[经过种种困难，终于把网站建立好了，利用hexo 搭配github,确实奇妙。只需要简单的几个指令 123hexo ghexo shexo d 就能看到十分漂亮的界面，前端发展确实方便了我们这种平头老百姓。hexo由台湾大神Tommy351写就，在中国有着广泛的使用！据说他当年看着任何一个博客模板都觉得丑，遂自己写了一个，就是今天的hexo.以下是官方给的使用指南，十分简单. Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
         <category>网页</category>
       </categories>
