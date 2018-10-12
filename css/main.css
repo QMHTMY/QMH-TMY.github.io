@@ -2108,7 +2108,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #88590f;
+  background: #ffffe8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3411,7 +3411,7 @@ code {
   margin: 2px;
 }
 .site-meta {
-  background: #906;
+  background: #900;
 }
 .highlight,
 pre {
