@@ -86,18 +86,17 @@
 
 
 
-<meta name="description" content="1.从清华大学的镜像处下载https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/ 2.安装图像化界面必备的perl-tk组件sudo apt-get install perl-tk 3.把下载好的.iso文件挂载到/mnt下sudo mount -t iso9660 -o loop texlive2018-20180414">
 <meta name="keywords" content="Tex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux下自定义位置安装TeXLive2018">
+<meta property="og:title" content="Linux下自定义位置安装TeXLive2019">
 <meta property="og:url" content="https://www.shieber.cn/title/46ed9a72/index.html">
 <meta property="og:site_name" content="Shieber">
-<meta property="og:description" content="1.从清华大学的镜像处下载https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/ 2.安装图像化界面必备的perl-tk组件sudo apt-get install perl-tk 3.把下载好的.iso文件挂载到/mnt下sudo mount -t iso9660 -o loop texlive2018-20180414">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T14:43:03.678Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg">
+<meta property="og:updated_time" content="2019-10-30T15:28:02.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux下自定义位置安装TeXLive2018">
-<meta name="twitter:description" content="1.从清华大学的镜像处下载https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/ 2.安装图像化界面必备的perl-tk组件sudo apt-get install perl-tk 3.把下载好的.iso文件挂载到/mnt下sudo mount -t iso9660 -o loop texlive2018-20180414">
+<meta name="twitter:title" content="Linux下自定义位置安装TeXLive2019">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg">
 
 
 
@@ -133,7 +132,7 @@
 
 
 
-  <title>Linux下自定义位置安装TeXLive2018 | Shieber</title>
+  <title>Linux下自定义位置安装TeXLive2019 | Shieber</title>
   
 
 
@@ -321,7 +320,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Linux下自定义位置安装TeXLive2018</h2>
+          <h2 class="post-title" itemprop="name headline">Linux下自定义位置安装TeXLive2019</h2>
         
 
         <div class="post-meta">
@@ -333,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T21:47:38+08:00">
-                2019-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-11T21:47:38+08:00">
+                2019-04-11
               </time>
             
 
@@ -373,7 +372,7 @@
 
           
           
-             <span id="/title/46ed9a72/" class="leancloud_visitors" data-flag-title="Linux下自定义位置安装TeXLive2018">
+             <span id="/title/46ed9a72/" class="leancloud_visitors" data-flag-title="Linux下自定义位置安装TeXLive2019">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -438,22 +437,23 @@
       
 
       
-        <h2 id="1-从清华大学的镜像处下载"><a href="#1-从清华大学的镜像处下载" class="headerlink" title="1.从清华大学的镜像处下载"></a>1.从清华大学的镜像处下载</h2><pre><code>https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg" alt="texlive"><br><a id="more"></a></p>
+<h2 id="1-从清华大学的镜像处下载"><a href="#1-从清华大学的镜像处下载" class="headerlink" title="1.从清华大学的镜像处下载"></a>1.从清华大学的镜像处下载</h2><pre><code>https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 </code></pre><h2 id="2-安装图像化界面必备的perl-tk组件"><a href="#2-安装图像化界面必备的perl-tk组件" class="headerlink" title="2.安装图像化界面必备的perl-tk组件"></a>2.安装图像化界面必备的perl-tk组件</h2><pre><code>sudo apt-get install perl-tk
-</code></pre><h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><pre><code>sudo mount -t iso9660 -o loop texlive2018-20180414.iso /mnt
+</code></pre><h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><pre><code>sudo mount -t iso9660 -o loop texlive2019-20190410.iso /mnt
 </code></pre><h2 id="4-准备从图形界面安装"><a href="#4-准备从图形界面安装" class="headerlink" title="4.准备从图形界面安装"></a>4.准备从图形界面安装</h2><pre><code>cd /mnt
 sudo ./install-tl -gui
-</code></pre><h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2018)
+</code></pre><h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2019)
 </code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><pre><code>&quot;安装字体/宏包文档目录树&quot;　切换为否
 &quot;安装字体/宏包源代码目录树&quot;　切换为否
 上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间
 </code></pre><h2 id="7-点击安装TeX-Live"><a href="#7-点击安装TeX-Live" class="headerlink" title="7.点击安装TeX Live"></a>7.点击安装TeX Live</h2><h2 id="8-卸载镜像文件"><a href="#8-卸载镜像文件" class="headerlink" title="8.卸载镜像文件"></a>8.卸载镜像文件</h2><pre><code>sudo unmount /mnt
-</code></pre><h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><pre><code>sudo cp /home/tex2018/2018/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+</code></pre><h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><pre><code>sudo cp /home/tex2019/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
 sudo fc-cache -fsv (此步执行时间稍长)
 </code></pre><h2 id="10-环境变量设置"><a href="#10-环境变量设置" class="headerlink" title="10.环境变量设置"></a>10.环境变量设置</h2><p>打开~/.bashrc 在最后加入如下内容(具体路径安按照自己的系统修改)</p>
-<pre><code>export TexMan=&quot;/home/tex2018/2018/texmf-dist/doc/man&quot;
-export TexInfo=&quot;/home/tex2018/2018/texmf-dist/doc/info&quot;
-export TexLive=&quot;/home/tex2018/2018/bin/x86_64-linux&quot;
+<pre><code>export TexMan=&quot;/home/tex2019/2019/texmf-dist/doc/man&quot;
+export TexInfo=&quot;/home/tex2019/2019/texmf-dist/doc/info&quot;
+export TexLive=&quot;/home/tex2019/2019/bin/x86_64-linux&quot;
 export MANPATH=&quot;$MANPATH:$TexMan&quot;
 export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;
 export PATH=&quot;$PATH:$TexLive&quot;
@@ -474,11 +474,11 @@ export PATH=&quot;$PATH:$TexLive&quot;
 (2) sudo aptitude install equivs
 (3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs
 (4) equivs-control texlive-local
-(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2018-ex.txt并复制所有内容
+(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2019-ex.txt并复制所有内容
 (6) sudo vi texlive-local 将从浏览器拷贝的内容粘贴进去并保存退出
 (7) sudo equivs-build texlive-local
 (8) sudo apt-get freeglut3
-(9) sudo dpkg -i texlive-local_2018-1_all.deb
+(9) sudo dpkg -i texlive-local_2019-1_all.deb
 </code></pre>
       
     </div>
@@ -506,11 +506,11 @@ export PATH=&quot;$PATH:$TexLive&quot;
 	<!-- JS库 sweetalert 可修改路径 --> 
 	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-	<p><span>本文标题:</span><a href="/title/46ed9a72/">Linux下自定义位置安装TeXLive2018</a></p> 
+	<p><span>本文标题:</span><a href="/title/46ed9a72/">Linux下自定义位置安装TeXLive2019</a></p> 
 	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
-	<p><span>发布时间:</span>2019年03月22日 - 21:47</p> 
-	<p><span>最后更新:</span>2019年10月30日 - 22:43</p> 
-	<p><span>原始链接:</span><a href="/title/46ed9a72/" title="Linux下自定义位置安装TeXLive2018">https://www.shieber.cn/title/46ed9a72/</a> 
+	<p><span>发布时间:</span>2019年04月11日 - 21:47</p> 
+	<p><span>最后更新:</span>2019年10月30日 - 23:28</p> 
+	<p><span>原始链接:</span><a href="/title/46ed9a72/" title="Linux下自定义位置安装TeXLive2019">https://www.shieber.cn/title/46ed9a72/</a> 
 	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shieber.cn/title/46ed9a72/" aria-label="复制成功！"></i></span> 
 	</p> 
 	<p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0
@@ -589,8 +589,8 @@ export PATH=&quot;$PATH:$TexLive&quot;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/title/51414649/" rel="next" title="Tex排版系统及其衍生系列产品的简介">
-                <i class="fa fa-chevron-left"></i> Tex排版系统及其衍生系列产品的简介
+              <a href="/title/d8ef31cc/" rel="next" title="关系数据库，非关系数据库，云原生数据库">
+                <i class="fa fa-chevron-left"></i> 关系数据库，非关系数据库，云原生数据库
               </a>
             
           </div>
@@ -599,8 +599,8 @@ export PATH=&quot;$PATH:$TexLive&quot;
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/title/2cca9645/" rel="prev" title="Python Matplotlib 画图中文乱码解决">
-                Python Matplotlib 画图中文乱码解决 <i class="fa fa-chevron-right"></i>
+              <a href="/title/4388879e/" rel="prev" title="Linux上可用的文献目录管理工具">
+                Linux上可用的文献目录管理工具 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
