@@ -41,6 +41,33 @@
   </entry>
   
   <entry>
+    <title>MySQL 8.0 迁移数据存储位置到指定位置(Linux版)</title>
+    <link href="https://www.shieber.cn/title/dd137b08/"/>
+    <id>https://www.shieber.cn/title/dd137b08/</id>
+    <published>2019-03-13T15:26:54.000Z</published>
+    <updated>2019-10-30T14:10:20.893Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一：具体步骤"><a href="#一：具体步骤" class="headerlink" title="一：具体步骤"></a>一：具体步骤</h1><p><strong>停止mysql服务</strong></p><ol><li>sudo service mysql stop</li></ol><p><strong>拷贝数据存储到你的新位置</strong></p><ol><li>例如: /home/database/</li><li>sudo cp -R /var/lib/mysql /home/database/</li></ol><p><strong>打开/etc/mysql/mysql.conf.d/mysqld.cnf修改数据存储位置</strong></p><ol><li>将以下两行注释掉并加入新的两行(按自己的位置修改)</li><li>#socket = /var/run/mysqld/mysqld.sock</li><li>#datadir= /var/lib/mysql</li><li>socket = /home/database/mysql/mysql.sock</li><li>datadir = /home/database/mysql</li><li>再接着添加以下内容</li><li>[client]</li><li>socket = /home/database/mysql/mysql.sock</li><li>[mysql]</li><li>socket = /home/database/mysql/mysql.sock</li></ol><p><strong>打开/etc/apparmor.d/usr.sbin.mysqld修改新位置的读写权限</strong></p><ol><li>注释以下两行并加入新的两行（用gedit修改该文件要记得删除可能存在的usr.sbin.mysqld~ 文件，不然启动会失败）</li><li>#/var/lib/mysql/ r,</li><li>#/var/lib/mysql/** rwk,</li><li>/home/database/mysql/ r,</li><li>/home/database/mysql/** rwk,</li></ol><p><strong>打开/etc/apparmor.d/abstractions/mysql修改数据库的依赖路径</strong></p><ol><li>注释下面一行并加入第三行(这是个大坑)</li><li>#/var/lib/mysql{,d}/mysql{,d}.sock rw,</li><li>/home/database/mysql/mysql.sock rw,</li></ol><p><strong>重新加载apparmor刷新配置文件</strong></p><ol><li>sudo /etc/init.d/apparmor reload</li></ol><p><strong>重新加载mysql服务</strong></p><ol><li>sudo service mysql start</li></ol><h1 id="二：其他几个大坑可能导致启动失败"><a href="#二：其他几个大坑可能导致启动失败" class="headerlink" title="二：其他几个大坑可能导致启动失败"></a>二：其他几个大坑可能导致启动失败</h1><p><strong>mysql/的权限属性</strong></p><ol><li>注意查看/home/database/mysql是否属于mysql组和mysql用户，及权限，若不是则执行</li><li>sudo chown -R mysql:mysql /home/database/mysql</li><li>sudo chmod 755 /home/database/mysql/</li><li>没有mysql组的通过以下命令创建mysql组和用户</li><li>sudo groupadd mysql</li><li>sudo useradd -r -g mysql mysql</li></ol><p><strong>database/的权限属性</strong></p><ol><li>database/的权限，建议是755，属于root，root</li><li>sudo chgrp root database/</li><li>sudo chown root database/</li><li>sudo chmod 755 database/</li></ol><p><strong>Linux selinux安全机制</strong></p><ol><li>在/etc/selinux/config 或类似的文件里，如有SELINUX项，请修改为</li><li>SELINUX=disabled</li></ol><h1 id="三：结语"><a href="#三：结语" class="headerlink" title="三：结语"></a>三：结语</h1><ol><li>网上的很多教程都过时且并不详细，提到这个又漏掉那个，本教程仍旧不敢保证你一定能成功。</li><li>MySQL 8.0的配置文件太多了，my.cnf conf.d/ mysql.cnf mysql.conf.d/ 等等出现了引用包含。</li><li><a href="https://downloads.mysql.com/docs/refman-8.0-en.a4.pdf" target="_blank" rel="noopener">官方文档</a> 六千多页，够玩儿一年。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一：具体步骤&quot;&gt;&lt;a href=&quot;#一：具体步骤&quot; class=&quot;headerlink&quot; title=&quot;一：具体步骤&quot;&gt;&lt;/a&gt;一：具体步骤&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;停止mysql服务&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;sudo service m
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://www.shieber.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开源精神:Linux</title>
     <link href="https://www.shieber.cn/title/d8add382/"/>
     <id>https://www.shieber.cn/title/d8add382/</id>
