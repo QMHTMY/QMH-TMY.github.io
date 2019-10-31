@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shieber.cn/"/>
-  <updated>2019-10-31T08:17:06.509Z</updated>
+  <updated>2019-10-31T13:52:10.648Z</updated>
   <id>https://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5G之后是6G？</title>
+    <link href="https://www.shieber.cn/title/fb817f20/"/>
+    <id>https://www.shieber.cn/title/fb817f20/</id>
+    <published>2019-10-31T10:19:27.000Z</published>
+    <updated>2019-10-31T13:52:10.648Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/31/KooVW4.jpg" alt="5gON"><br><a id="more"></a></p><h2 id="5G商用"><a href="#5G商用" class="headerlink" title="5G商用"></a>5G商用</h2><p>今天上午，2019中国国际信息通信展在北京国家会议中心召开。在5G商用启动仪式上，工信部与中国移动、中国联通、中国电信、中国铁塔共同宣布5G正式商用。11月1日，也即明天，各地的5G套餐就可以办理了。对于大部分消费者来说，有尝鲜的意愿，但目前价格还比较贵，真正办理的估计不多。但不管贵不贵，速度快倒是真的。</p><h2 id="运营商的新玩法"><a href="#运营商的新玩法" class="headerlink" title="运营商的新玩法"></a>运营商的新玩法</h2><p>5G和4G相比，有了很多不同的情况，尤其是在运营商层面。4G时代各大运营商相互竞争，5G时代，运营商得抱团取暖，合作共赢。上面已经表明，电信和联通要共同建设通信基站，以往各自建塔的模式玩不转了，唯一能独立搞的就只有移动。5G，使用的波更短，意味着要使用更多的基站，而每个基站都挺贵的，所以总体基站建设费用会比较高，从目前公布的基础套餐价最低为128也能看出这点。据最新数据估计，5G基站建设得分好几年，总投资费用高达1.6万亿左右。</p><p><img src="https://s2.ax1x.com/2019/10/31/Kooml9.md.jpg" alt="TelUni"></p><p>这样看来，现在很多地方买了5G手机也没有5G网络可用。哪里有5G呢？见下表  </p><table><thead><tr><th style="text-align:center">直辖市</th><th style="text-align:center">省会城市   </th></tr></thead><tbody><tr><td style="text-align:center">北京，上海</td><td style="text-align:center">成都，杭州</td></tr><tr><td style="text-align:center">天津，重庆</td><td style="text-align:center">南京，武汉等</td></tr></tbody></table><table><thead><tr><th style="text-align:center">单列市</th><th style="text-align:center">重要城市</th></tr></thead><tbody><tr><td style="text-align:center">深圳，青岛</td><td style="text-align:center">雄安，苏州 </td></tr><tr><td style="text-align:center">宁波，厦门</td><td style="text-align:center">温州，张家口</td></tr><tr><td style="text-align:center">大连</td><td style="text-align:center"></td></tr></tbody></table><h2 id="5G的应用猜测"><a href="#5G的应用猜测" class="headerlink" title="5G的应用猜测"></a>5G的应用猜测</h2><p>前段时间在B站上，北京邮电大学的何同学试用了5G，并就未来的应用做了讨论。他借鉴了4G刚出来时人们的反应，表明预测未来的应用确实是挺难的。<a href="https://www.bilibili.com/video/av54737593" target="_blank" rel="noopener">视频：5G有什么用</a>。</p><p>尽管很难预测，但我还是大胆猜猜5G的应用。  </p><table><thead><tr><th style="text-align:center">基本预测</th></tr></thead><tbody><tr><td style="text-align:center">远程医疗 智慧施政</td><td></td></tr><tr><td style="text-align:center">智能家具 工业物联</td><td></td></tr></tbody></table><p>远程医疗：一是指优秀的专家可以远程做手术，节约时间和交通成本。二指医生可以通过网络对家里的病人进行指导和开展医疗服务。4G让人吃饭不出家，点外卖；5G就让人生病不出家，点医生，点药。未来的医生可能会享受很高的社会地位，他们通过提供更好的服务，赚取高额的佣金。同时，这种医患关系避免物理接触，包含了医生。</p><p>智慧施政：民智越开，则政府越弱，一旦老百姓掌握了信息，那么政府的很多服务可以取消，政府不能随便制定政策，很多政府职位要交给智慧系统，很多政府职权要还给百姓。</p><p>智能家具：物联网时代，硬件大爆发，未来的家庭，联网的器件增多，冰箱，空调，桌子，椅子可能都有某种程度的网络功能，并提供相应的服务。</p><p>工业物联：打造全新的制造链和运输链，智能驾驶，智能运输系统。</p><h2 id="5G中的Polar码"><a href="#5G中的Polar码" class="headerlink" title="5G中的Polar码"></a>5G中的Polar码</h2><p>Polar码是5G中的一种编码技术，属于5G核心技术。Polar码源于2008年的一篇论文Channel Polarization。作者是土耳其科学家埃达尔·阿勒坎（Erdal Arikan）。1981年，阿勒坎在位于加州理工学院获得本科学位，随后他去了美国的另一所名校——麻省理工学院，于1985年得到电子信息工程专业的博士学位。阿勒坎的博士生导师是美国人罗伯特·加拉格（Robert Gallager）教授，而加拉格的导师，也就是阿勒坎的师爷，则是大名鼎鼎的信息论鼻祖香农。原本以为只是个牛叉人物，没想到竟然是香农大佬门徒。不过想来也对，不是这个领域的人，又如何搞出这些编码呢？</p><p>华为公司在论文出来后，就调集人手攻克论文提出的编码，并最终得以攻克。前几年，华为推动的Polar码在3GPP会议上同LDPC码共同确立为5G技术，LDPC管理数据信道，Polar码则属于控制信道。</p><p>值得一提的是，美国人推动的LDPC就是阿勒坎的师傅加拉格搞出来的，最终两师徒的理论现在相继成为5G核心技术，美国选师傅，中国选徒弟，然后相互斗，想想挺有趣的。</p><p><img src="https://s2.ax1x.com/2019/10/31/Koo3FO.png" alt="Edel"></p><h2 id="6G研究"><a href="#6G研究" class="headerlink" title="6G研究"></a>6G研究</h2><p>2018年两会期间，工信部部长苗圩表示，中国已开展6G的研发，预计2030年试使用。中国通信产业要做到，用一代，产一代，研一代。目前的5G，仍然有缺点，所以预计会放在6G攻克。</p><p><img src="https://s2.ax1x.com/2019/10/31/KoTC1H.jpg" alt="miaoyu"></p><h2 id="G"><a href="#G" class="headerlink" title="?G"></a>?G</h2><p>香农定理<br>$$ C= Blog_2(1 + \frac{S}{N}) $$</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] 5G核心技术，Qualcomm(高通)中国<br>[2] 手机基站天线去哪儿了？知乎老狼<br>[3] 5G NR: The Next Generation Wireless Access Technology<br>[4] Channel Polarization, Erdal Arikan, Senior Member, IEEE.  </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/31/KooVW4.jpg&quot; alt=&quot;5gON&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="通信" scheme="https://www.shieber.cn/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="It" scheme="https://www.shieber.cn/tags/It/"/>
+    
+  </entry>
   
   <entry>
     <title>资深大牛的博客</title>
