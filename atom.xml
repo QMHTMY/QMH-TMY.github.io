@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shieber.cn/"/>
-  <updated>2019-10-30T15:34:54.749Z</updated>
+  <updated>2019-10-31T08:09:54.265Z</updated>
   <id>https://www.shieber.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.shieber.cn/title/f2d8edc5/"/>
     <id>https://www.shieber.cn/title/f2d8edc5/</id>
     <published>2019-10-20T06:00:52.000Z</published>
-    <updated>2019-10-30T15:34:54.749Z</updated>
+    <updated>2019-10-31T08:09:54.265Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5YRsK.jpg" alt="niubility"><br><a id="more"></a></p><h2 id="整理一份行业大牛的博客"><a href="#整理一份行业大牛的博客" class="headerlink" title="整理一份行业大牛的博客"></a>整理一份行业大牛的博客</h2><p>00.<a href="http://www.yinwang.org/" target="_blank" rel="noopener">王垠</a></p><p>01.<a href="https://blog.codingnow.com/" target="_blank" rel="noopener">云风</a></p><p>02.<a href="http://blog.yufeng.info/" target="_blank" rel="noopener">余峰</a></p><p>03.<a href="https://www.cnblogs.com/Solstice/" target="_blank" rel="noopener">陈硕</a></p><p>04.<a href="http://blog.zhaojie.me/" target="_blank" rel="noopener">老赵</a></p><p>05.<a href="https://blog.csdn.net/luoshengyang" target="_blank" rel="noopener">老罗</a></p><p>06.<a href="https://blog.csdn.net/21aspnet" target="_blank" rel="noopener">无界</a></p><p>07.<a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">阮一峰</a></p><p>08.<a href="http://mindhacks.cn/" target="_blank" rel="noopener">刘未鹏</a></p><p>09.<a href="https://www.trinea.cn/" target="_blank" rel="noopener">吴更新</a></p><p>10.<a href="http://www.cppblog.com/vczh" target="_blank" rel="noopener">VCZh</a></p><p>11.<a href="https://www.byvoid.com/blog" target="_blank" rel="noopener">BYVoid</a></p><p>12.<a href="https://blog.csdn.net/v_july_v" target="_blank" rel="noopener">七月在线创始人</a></p><p>13.<a href="http://www.zhuangbiaowei.com/blog/" target="_blank" rel="noopener">读书，思考，生活</a></p><p>14.<a href="https://www.captainbed.net/troubleshooter/" target="_blank" rel="noopener">床长人工智能教程</a></p>]]></content>
     
@@ -352,9 +352,9 @@
       <category term="互联网" scheme="https://www.shieber.cn/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-      <category term="Linux" scheme="https://www.shieber.cn/tags/Linux/"/>
-    
       <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+    
+      <category term="Linux" scheme="https://www.shieber.cn/tags/Linux/"/>
     
   </entry>
   
