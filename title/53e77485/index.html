@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5YBa4.md.jpg">
-<meta property="og:updated_time" content="2019-10-30T15:33:25.625Z">
+<meta property="og:updated_time" content="2019-10-31T08:23:23.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双托管代码">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5YBa4.md.jpg">
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  209
+                  242
                 </span>
               
 
@@ -441,21 +441,9 @@
 <hr>
 <h2 id="一：背景"><a href="#一：背景" class="headerlink" title="一：背景"></a>一：背景</h2><p>近期美国加紧封锁大棒，不但对中国，据说连委内瑞纳一个小国也被禁止使用Photoshop。结合前段时间github封禁中东开发者的情况，我认为中国的开发者需要把代码迁移一下，迁移到国内。目前国内的托管平台有多个，一是腾讯开发者平台，码云，还有最近华为开放的ihub，我选择了码云。</p>
 <hr>
-<h2 id="二：双托管"><a href="#二：双托管" class="headerlink" title="二：双托管"></a>二：双托管</h2><pre><code>首先查看配置.
-$git remote -v 
-origin git@github.com:USERNAME/package.git (fetch)
-origin git@github.com:USERNAME/package.git (push)
-删除github的配置.
-$git remote rm origin
-重新添加新配置.
-$git remote add github git@github.com:USERNAME/package.git
-$git remote add gitee  git@gitee.com:USERNAME1/package1.git
-解决推送冲突
-$git pull gitee master --allow-unrelated-histories
-推送到两个平台
-$git push gitee  master 
-$git push github master 
-</code></pre>
+<h2 id="二：双托管"><a href="#二：双托管" class="headerlink" title="二：双托管"></a>二：双托管</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">首先查看配置.</span><br><span class="line">$git remote -v </span><br><span class="line">origin git@github.com:USERNAME/package.git (fetch)</span><br><span class="line">origin git@github.com:USERNAME/package.git (push)</span><br><span class="line">删除github的配置.</span><br><span class="line">$git remote rm origin</span><br><span class="line">重新添加新配置.</span><br><span class="line">$git remote add github git@github.com:USERNAME/package.git</span><br><span class="line">$git remote add gitee  git@gitee.com:USERNAME1/package1.git</span><br><span class="line">解决推送冲突</span><br><span class="line">$git pull gitee master --allow-unrelated-histories</span><br><span class="line">推送到两个平台</span><br><span class="line">$git push gitee  master </span><br><span class="line">$git push github master</span><br></pre></td></tr></table></figure>
+<p>如果想存放在多个平台，修改同上面一样，只需要加入另一个平台的地址就行。</p>
+
       
     </div>
     
@@ -485,7 +473,7 @@ $git push github master
 	<p><span>本文标题:</span><a href="/title/53e77485/">双托管代码</a></p> 
 	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
 	<p><span>发布时间:</span>2019年10月09日 - 21:51</p> 
-	<p><span>最后更新:</span>2019年10月30日 - 23:33</p> 
+	<p><span>最后更新:</span>2019年10月31日 - 16:23</p> 
 	<p><span>原始链接:</span><a href="/title/53e77485/" title="双托管代码">https://www.shieber.cn/title/53e77485/</a> 
 	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shieber.cn/title/53e77485/" aria-label="复制成功！"></i></span> 
 	</p> 

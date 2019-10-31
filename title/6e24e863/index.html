@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5JvCR.jpg">
-<meta property="og:updated_time" content="2019-10-30T15:30:15.369Z">
+<meta property="og:updated_time" content="2019-10-31T08:24:47.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于glibc中strcmp函数的其他几种写法">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5JvCR.jpg">
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  451
+                  468
                 </span>
               
 
@@ -445,66 +445,9 @@
 <hr>
 <p>strcmp, <strong>String Compare Function</strong>, compare S1 and S2, returning less than, equal to or greater than zero if S1 is lexicographically less than, equal to or greater than S2. 字符串S1中字符一旦大于S2中的字符就返回大于零的数(两字符差值)，小于就返回小于零的数，等于就返回零。</p>
 <h2 id="2-由头"><a href="#2-由头" class="headerlink" title="2.由头"></a>2.由头</h2><p>最近看书，发现C语言指针和数组特别神奇，很多复杂的函数，只要有指针就能简化代码。刚好在glic中发现字符串比较函数strcmp的官方写法，自己又结合书籍整理了一番，提出了几个自己写的版本。</p>
-<h2 id="3-自定义版"><a href="#3-自定义版" class="headerlink" title="3.自定义版"></a>3.自定义版</h2><pre><code>int strcmp0(char *p1, char *p2)
-{   //最简单的写法，指针当数组用
-    int i;
-    for (i = 0; p1[i] == p2[i]; i++){
-        if (p1[i] == &apos;\0&apos;)
-            return 0;
-    }
-    return p1[i] - p2[i];
-
-int strcmp1(char *p1, char *p2)
-{    //数组下标自增
-    int i = 0;
-    for (; p1[i] == p2[i];){
-        if (p1[i++] == &apos;\0&apos;)
-            return 0;
-    }
-    return p1[i] - p2[i];
-}
-
-int strcmp2(char *p1, char *p2)
-{    //使用指针取值
-    for (; *p1 == *p2; p1++, p2++){
-        if (*p1 == &apos;\0&apos;)
-            return 0;
-    }
-    return *p1 - *p2;
-}
-
-int strcmp3(char *p1, char *p2)
-{    //放弃判断&apos;\0&apos;，而用!取反
-    for (; *p1 == *p2; p1++, p2++){
-        if (!*p1)
-            return 0;
-    }
-    return *p1 - *p2;
-
-int strcmp4(char *p1, char *p2)
-{    //指针自增，注意*--p1中*和--的优先级，此法最简，不知有错没？
-    while (*p1++ == *p2++);
-    return *--p1 - *--p2;
-}
-</code></pre><h2 id="4-官方版"><a href="#4-官方版" class="headerlink" title="4.官方版"></a>4.官方版</h2><pre><code>int 
-STRCMP(const char *p1, const char *p2)
-{
-  const unsigned char *s1 = (const unsigned char *) p1;
-  const unsigned char *s2 = (const unsigned char *) p2;
-  unsigned char c1, c2;
-
-  do
-    {
-      c1 = (unsigned char) *s1++;
-      c2 = (unsigned char) *s2++;
-      if (c1 == &apos;\0&apos;)
-    return c1 - c2;
-    }
-  while (c1 == c2);
-
-  return c1 - c2;
-}
-</code></pre><h2 id="5-结语"><a href="#5-结语" class="headerlink" title="5.结语"></a>5.结语</h2><p>看了官方版本，终于感觉到自己的差距了。C语言确实灵活，太容易出错，指针简直就是一把瑞士尖刀，弄不好就要戳到自己身上。</p>
+<h2 id="3-自定义版"><a href="#3-自定义版" class="headerlink" title="3.自定义版"></a>3.自定义版</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">int strcmp0(char *p1, char *p2)</span><br><span class="line">&#123;   //最简单的写法，指针当数组用</span><br><span class="line">	int i;</span><br><span class="line">	for (i = 0; p1[i] == p2[i]; i++)&#123;</span><br><span class="line">		if (p1[i] == &apos;\0&apos;)</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	return p1[i] - p2[i];</span><br><span class="line"></span><br><span class="line">int strcmp1(char *p1, char *p2)</span><br><span class="line">&#123;	//数组下标自增</span><br><span class="line">	int i = 0;</span><br><span class="line">	for (; p1[i] == p2[i];)&#123;</span><br><span class="line">		if (p1[i++] == &apos;\0&apos;)</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	return p1[i] - p2[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int strcmp2(char *p1, char *p2)</span><br><span class="line">&#123;	//使用指针取值</span><br><span class="line">	for (; *p1 == *p2; p1++, p2++)&#123;</span><br><span class="line">		if (*p1 == &apos;\0&apos;)</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	return *p1 - *p2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int strcmp3(char *p1, char *p2)</span><br><span class="line">&#123;	//放弃判断&apos;\0&apos;，而用!取反</span><br><span class="line">	for (; *p1 == *p2; p1++, p2++)&#123;</span><br><span class="line">		if (!*p1)</span><br><span class="line">			return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	return *p1 - *p2;</span><br><span class="line"></span><br><span class="line">int strcmp4(char *p1, char *p2)</span><br><span class="line">&#123;	//指针自增，注意*--p1中*和--的优先级，此法最简，不知有错没？</span><br><span class="line">	while (*p1++ == *p2++);</span><br><span class="line">	return *--p1 - *--p2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-官方版"><a href="#4-官方版" class="headerlink" title="4.官方版"></a>4.官方版</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">int </span><br><span class="line">STRCMP(const char *p1, const char *p2)</span><br><span class="line">&#123;</span><br><span class="line">  const unsigned char *s1 = (const unsigned char *) p1;</span><br><span class="line">  const unsigned char *s2 = (const unsigned char *) p2;</span><br><span class="line">  unsigned char c1, c2;</span><br><span class="line"></span><br><span class="line">  do</span><br><span class="line">	&#123;</span><br><span class="line">	  c1 = (unsigned char) *s1++;</span><br><span class="line">	  c2 = (unsigned char) *s2++;</span><br><span class="line">	  if (c1 == &apos;\0&apos;)</span><br><span class="line">	return c1 - c2;</span><br><span class="line">	&#125;</span><br><span class="line">  while (c1 == c2);</span><br><span class="line"></span><br><span class="line">  return c1 - c2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-结语"><a href="#5-结语" class="headerlink" title="5.结语"></a>5.结语</h2><p>看了官方版本，感觉自己还很有差距。C语言灵活，但太容易出错，指针简直就是一把瑞士尖刀，弄不好就要戳到自己身上。</p>
 
       
     </div>
@@ -535,7 +478,7 @@ STRCMP(const char *p1, const char *p2)
 	<p><span>本文标题:</span><a href="/title/6e24e863/">关于glibc中strcmp函数的其他几种写法</a></p> 
 	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
 	<p><span>发布时间:</span>2019年08月12日 - 21:41</p> 
-	<p><span>最后更新:</span>2019年10月30日 - 23:30</p> 
+	<p><span>最后更新:</span>2019年10月31日 - 16:24</p> 
 	<p><span>原始链接:</span><a href="/title/6e24e863/" title="关于glibc中strcmp函数的其他几种写法">https://www.shieber.cn/title/6e24e863/</a> 
 	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shieber.cn/title/6e24e863/" aria-label="复制成功！"></i></span> 
 	</p> 
