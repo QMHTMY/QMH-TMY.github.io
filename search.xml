@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[双托管代码]]></title>
     <url>%2Ftitle%2F53e77485%2F</url>
-    <content type="text"><![CDATA[一：背景近期美国加紧封锁大棒，不但对中国，据说连委内瑞纳一个小国也被禁止使用Photoshop。结合前段时间github封禁中东开发者的情况，我认为中国的开发者需要把代码迁移一下，迁移到国内。目前国内的托管平台有多个，一是腾讯开发者平台，码云，还有最近华为开放的ihub，我选择了码云。 二：双托管1234567891011121314首先查看配置.$git remote -v origin git@github.com:USERNAME/package.git (fetch)origin git@github.com:USERNAME/package.git (push)删除github的配置.$git remote rm origin重新添加新配置.$git remote add github git@github.com:USERNAME/package.git$git remote add gitee git@gitee.com:USERNAME1/package1.git解决推送冲突$git pull gitee master --allow-unrelated-histories推送到两个平台$git push gitee master $git push github master 如果想存放在多个平台，修改同上面一样，只需要加入另一个平台的地址就行。]]></content>
+    <content type="text"><![CDATA[一：背景近期美国加紧封锁大棒，不但对中国，据说连委内瑞纳一个小国也被禁止使用Photoshop。结合前段时间github封禁中东开发者的情况，我认为中国的开发者需要把代码迁移一下，迁移到国内。目前国内的托管平台有多个，腾讯开发者平台，码云，还有最近华为开放的ihub，我选择了码云。 二：双托管1234567891011121314首先查看配置.$git remote -v origin git@github.com:USERNAME/package.git (fetch)origin git@github.com:USERNAME/package.git (push)删除github的配置.$git remote rm origin重新添加新配置.$git remote add github git@github.com:USERNAME/package.git$git remote add gitee git@gitee.com:USERNAME1/package1.git解决推送冲突$git pull gitee master --allow-unrelated-histories推送到两个平台$git push gitee master $git push github master 如果想存放在多个平台，修改同上面一样，只需要加入另一个平台的地址就行。 目前，国内平台多，但和Github比还有差距，仍需相关方继续推动，促进国内源代码托管。同时做好国际化，鼓励国外工程师托管优质代码到中国的服务器。]]></content>
       <categories>
         <category>代码托管</category>
       </categories>
