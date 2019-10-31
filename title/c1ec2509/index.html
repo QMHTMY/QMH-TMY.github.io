@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5YA5d.jpg">
-<meta property="og:updated_time" content="2019-10-30T15:31:42.297Z">
+<meta property="og:updated_time" content="2019-10-31T08:04:47.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言陷阱">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5YA5d.jpg">
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.9k
+                  3k
                 </span>
               
 
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  13
+                  14
                 </span>
               
             </div>
@@ -438,378 +438,44 @@
 
       
         <p><img src="https://s2.ax1x.com/2019/10/30/K5YA5d.jpg" alt="ctraps"><br><a id="more"></a></p>
-<h2 id="第1个陷阱：数组下标最大为n-1"><a href="#第1个陷阱：数组下标最大为n-1" class="headerlink" title="第1个陷阱：数组下标最大为n-1"></a>第1个陷阱：数组下标最大为n-1</h2><pre><code>int i, a[10];
-for (i = 0; i &lt;= 10; i++)
-    a[i] = 0;            //a[10]可能存放的是变量i，所以会导致死循环
+<h2 id="第1个陷阱：数组下标最大为n-1"><a href="#第1个陷阱：数组下标最大为n-1" class="headerlink" title="第1个陷阱：数组下标最大为n-1"></a>第1个陷阱：数组下标最大为n-1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int i, a[10];</span><br><span class="line">for (i = 0; i &lt;= 10; i++)</span><br><span class="line">	a[i] = 0;            //a[10]可能存放的是变量i，所以会导致死循环</span><br><span class="line"></span><br><span class="line">for (i = 0; i &lt;= 9; i++)</span><br><span class="line">	a[i] = 0;</span><br><span class="line"></span><br><span class="line">for (i = 0; i &lt; 10; i++)</span><br><span class="line">	a[i] = 0;           //推荐写法，i &lt; 10要比i &lt;= 9更好，10是出口,0是入口</span><br></pre></td></tr></table></figure>
+<h2 id="第2个陷阱：同一符号的不同作用"><a href="#第2个陷阱：同一符号的不同作用" class="headerlink" title="第2个陷阱：同一符号的不同作用"></a>第2个陷阱：同一符号的不同作用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p-&gt;s = &quot;-&gt;&quot;	          // -&gt;是访问结构体 p-&gt;就是(*p)-&gt;的简写，&quot;-&gt;&quot;仅是一个字符串</span><br></pre></td></tr></table></figure>
+<h2 id="第3个陷阱：赋值和比较运算符混用"><a href="#第3个陷阱：赋值和比较运算符混用" class="headerlink" title="第3个陷阱：赋值和比较运算符混用"></a>第3个陷阱：赋值和比较运算符混用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">if (x = y)            //x == y误写为 x = y，若y不等于零，则程序侥幸能运行，难发现</span><br><span class="line">	break; </span><br><span class="line"></span><br><span class="line">if ( (x = y) != 0)</span><br><span class="line">	break;</span><br><span class="line"></span><br><span class="line">while (c = &apos; &apos;||c==&apos;\t&apos;||c==&apos;\n&apos;)           //=符号运算优先级最低，&apos; &apos;为真，所以死循环</span><br><span class="line">	c = getc(f);</span><br><span class="line"></span><br><span class="line">while (c == &apos;\t&apos; || c = &apos; &apos; || c == &apos;\n&apos;)   //等价于如下的赋值语句，会报错</span><br><span class="line">while (c == &apos;\t&apos; || c) = (&apos; &apos; || c == &apos;\n&apos;)</span><br><span class="line"></span><br><span class="line">if ( (fd == open(argv[i], 0)) &lt; 0)          //比较结果为0或1，永远不小于0，所以error()永不执行</span><br><span class="line">	error();</span><br><span class="line"></span><br><span class="line">if (c == 1);</span><br><span class="line">if (1 == c);          //凡是比较常量的，常量左写，让对的对，错一定让编译器抛出错</span><br></pre></td></tr></table></figure>
+<h2 id="第4个陷阱：混用逻辑与或和位与或运算符，对齐"><a href="#第4个陷阱：混用逻辑与或和位与或运算符，对齐" class="headerlink" title="第4个陷阱：混用逻辑与或和位与或运算符，对齐"></a>第4个陷阱：混用逻辑与或和位与或运算符，对齐</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a &amp;&amp; b;</span><br><span class="line">a &amp; b;                // 若a &amp; b 不为0，则程序侥幸能运行</span><br><span class="line"></span><br><span class="line">parttab[] = &#123;</span><br><span class="line">	046, &quot;left  s&quot;,   //为了对齐125, 46被写成046，而046是八进制数</span><br><span class="line">	047, &quot;right r&quot;,</span><br><span class="line">	125, &quot;frammis&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第5个陷阱：单目符号和多符号的贪心分析法则"><a href="#第5个陷阱：单目符号和多符号的贪心分析法则" class="headerlink" title="第5个陷阱：单目符号和多符号的贪心分析法则"></a>第5个陷阱：单目符号和多符号的贪心分析法则</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a---b;               //编译器识别为a-- - b;</span><br><span class="line"></span><br><span class="line">n--&gt;0                //n-- &gt; 0 不同于n- -&gt;;</span><br><span class="line"></span><br><span class="line">a+++++b;             //(a++)++ +b，错误a++不做左值</span><br><span class="line"></span><br><span class="line">y = x/*p;            //到底是指针还是注释？x/(*p), x/*p?</span><br></pre></td></tr></table></figure>
+<h2 id="第6个陷阱：’’和””的不同"><a href="#第6个陷阱：’’和””的不同" class="headerlink" title="第6个陷阱：’’和””的不同"></a>第6个陷阱：’’和””的不同</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">char *a;</span><br><span class="line">a = &quot;xyz&quot;            //&quot;xyz&quot;提供x的地址	</span><br><span class="line">					 </span><br><span class="line">char hello[] = &#123;&apos;H&apos;,&apos;e&apos;,&apos;l&apos;,&apos;l&apos;,&apos;o&apos;,&apos; &apos;,&apos;w&apos;,&apos;o&apos;,&apos;r&apos;,&apos;l&apos;,&apos;d&apos;,&apos;\n&apos;,0&#125;;</span><br><span class="line">printf(hello);       </span><br><span class="line">                     //&apos; &apos;内为char或者说int，而&quot; &quot;括号内字符串常量</span><br><span class="line"></span><br><span class="line">printf(&quot;Hello world\n&quot;);</span><br><span class="line"></span><br><span class="line">printf(&apos;\n&apos;);</span><br><span class="line">printf(&quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">c = &apos;yes&apos;;           //c可能等于y或者s，视不同机器的实现</span><br><span class="line">c = &quot;yes&quot;;</span><br></pre></td></tr></table></figure>
+<h2 id="第7个陷阱：嵌套注释"><a href="#第7个陷阱：嵌套注释" class="headerlink" title="第7个陷阱：嵌套注释"></a>第7个陷阱：嵌套注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/*&quot;/* &quot;*/</span><br></pre></td></tr></table></figure>
+<h2 id="第8个陷阱：函数声明"><a href="#第8个陷阱：函数声明" class="headerlink" title="第8个陷阱：函数声明 "></a>第8个陷阱：函数声明 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(*(void(*)())0)();   //按照用的规则来，去掉哑变量</span><br><span class="line">					 //(void(*)())是一种强制类型转换操作，类似于unsigned a</span><br><span class="line">					 //它表示的是一个函数指针，且该指针指向的函数返回值为void型，且函数没有参数</span><br><span class="line">					 //整个表达式是把0这个数转换为0这个位置，然后读取0位置的函数并执行</span><br><span class="line">					 // (* (void (*)())0 )()</span><br><span class="line">					 // (指针 类型转换 地址)()</span><br><span class="line">(*((*)())0)();       //默认返回类型为int，一般会出错，段错误，核心已转储</span><br><span class="line"></span><br><span class="line">float *g(), (*h)();</span><br><span class="line">(float (*)())        //指向返回值为浮点类型的函数指针的类型转换符号</span><br><span class="line"></span><br><span class="line">int func()&#123;&#125;</span><br><span class="line">(int (*)()) p = func;</span><br><span class="line">(*p)()               //简写为p() 但不是*p()，因为()优先和p结合</span><br></pre></td></tr></table></figure>
+<h2 id="第9个陷阱：优先级别"><a href="#第9个陷阱：优先级别" class="headerlink" title="第9个陷阱：优先级别 "></a>第9个陷阱：优先级别 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(* / + -) &gt; (&lt;&lt; &gt;&gt;) &gt; (&gt; &lt; &gt;= &lt;= ==) &gt; (&amp;&amp; || !) &gt; (=) &gt; (? :) &gt; (,)</span><br><span class="line">                     //各种运算符号的优先级别，算术大于移位大于比较大于逻辑大于赋值大于三目运算大于逗号运算符号。</span><br><span class="line"></span><br><span class="line">FLAG = 01000100000;  //假设为二进制表示</span><br><span class="line">if (flags &amp; FLAG)    //flags &amp;&amp; FLAGE</span><br><span class="line">	do sth;</span><br><span class="line"></span><br><span class="line">r = hi&lt;&lt;4 + low      //hi &lt;&lt; (4 + low)</span><br><span class="line">r = (hi&lt;&lt;4) + low;   //正确写法</span><br><span class="line">r = hi&lt;&lt;4 | low;     //这种写法也可，但hi得指高位，low指低位</span><br><span class="line"></span><br><span class="line">while (c = getc(in) != EOF) //c一直为1，直到文件末尾为0，可能导致对文件循环读取</span><br><span class="line">	putc(c, stdout);</span><br></pre></td></tr></table></figure>
+<h2 id="第10个陷阱：分号"><a href="#第10个陷阱：分号" class="headerlink" title="第10个陷阱：分号 "></a>第10个陷阱：分号 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if (x[i] &gt; big);     //big = x[i]一定会得到执行</span><br><span class="line">	big = x[i]; </span><br><span class="line"></span><br><span class="line">if (n &lt; 3)          </span><br><span class="line">	return           //return logre.date = x[0];</span><br><span class="line">logre.date = x[0];</span><br><span class="line">logre.time = x[1];</span><br><span class="line">logre.code = x[2];</span><br><span class="line"></span><br><span class="line">struct logrec&#123;</span><br><span class="line">	int date;</span><br><span class="line">	int time;</span><br><span class="line">	int code;</span><br><span class="line">&#125;</span><br><span class="line">main()&#123;&#125;             //main函数返回类型为struct logrec类型</span><br></pre></td></tr></table></figure>
+<h2 id="第11个陷阱：switch-省略break"><a href="#第11个陷阱：switch-省略break" class="headerlink" title="第11个陷阱：switch 省略break; "></a>第11个陷阱：switch 省略break; </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">case &apos;\n&apos;:</span><br><span class="line">	linecount++;     //故意省略break，可以继续执行下面的case</span><br><span class="line">case &apos;\t&apos;:</span><br><span class="line">case &apos; &apos;:</span><br></pre></td></tr></table></figure>
+<h2 id="第12个陷阱：函数调用"><a href="#第12个陷阱：函数调用" class="headerlink" title="第12个陷阱：函数调用 "></a>第12个陷阱：函数调用 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f();                 //调用函数f</span><br><span class="line">f;                   //获得函数f的地址然后丢弃，什么也不做</span><br></pre></td></tr></table></figure>
+<h2 id="第13个陷阱：悬挂else"><a href="#第13个陷阱：悬挂else" class="headerlink" title="第13个陷阱：悬挂else "></a>第13个陷阱：悬挂else </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (x == 0)</span><br><span class="line">	if (y == 0) error();</span><br><span class="line">else&#123;</span><br><span class="line">	z = x + y;</span><br><span class="line">	f(&amp;z);</span><br><span class="line">&#125;                    //else 按照最近匹配原则和内部if配对</span><br></pre></td></tr></table></figure>
+<h2 id="第14个陷阱：数组和指针几乎等价"><a href="#第14个陷阱：数组和指针几乎等价" class="headerlink" title="第14个陷阱：数组和指针几乎等价 "></a>第14个陷阱：数组和指针几乎等价 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int *p, a[12];</span><br><span class="line">p = a;               //a既是数组名也是其首地址</span><br><span class="line">*a = 10;             //就是a[0] = 10</span><br><span class="line">*p = 10;             //也是a[0] = 10</span><br><span class="line">a[i]                 //可以写成i[a]或者a + i;</span><br><span class="line"></span><br><span class="line">char *r *malloc();                 //错误1:可能分配失败, 要检测r是否为NULL</span><br><span class="line">r = malloc(strlen(s) + strlen(t)); //错误2:缺少&apos;\0&apos;字符的存储位置</span><br><span class="line">strcpy(r,s);</span><br><span class="line">strcat(r,t);                       //错误3:未释放内存</span><br><span class="line">                     </span><br><span class="line">char r*, *malloc();  //一种可行的写法</span><br><span class="line">r = malloc(strlen(s) + strlen(t) + 1);</span><br><span class="line">if (!r)&#123;</span><br><span class="line">	complain();</span><br><span class="line">	exit(1);</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	strcpy(r,s);</span><br><span class="line">	strcat(r,t);</span><br><span class="line">&#125;</span><br><span class="line">free(r);</span><br><span class="line">p = NULL;</span><br></pre></td></tr></table></figure>
+<h2 id="第15个陷阱：是数组还是指针做参数？"><a href="#第15个陷阱：是数组还是指针做参数？" class="headerlink" title="第15个陷阱：是数组还是指针做参数？ "></a>第15个陷阱：是数组还是指针做参数？ </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int strlen(char s[])&#123;&#125;</span><br><span class="line">int strlen(char *s)&#123;&#125;</span><br><span class="line"></span><br><span class="line">int main(int argc, char **argv)&#123;&#125; //等价于下面写法</span><br><span class="line">int main(int argc, char *argv[])&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第16个陷阱：数组下标和指针访问"><a href="#第16个陷阱：数组下标和指针访问" class="headerlink" title="第16个陷阱：数组下标和指针访问"></a>第16个陷阱：数组下标和指针访问</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int cal[12][31];     //以下几种写法完全等价，有点儿绕</span><br><span class="line"></span><br><span class="line">cal[i][j], *(cal[i] + j), *(*(cal + i) + j)</span><br><span class="line">cal[i][j], *(i[cal] + j), j[i[cal]]</span><br></pre></td></tr></table></figure>
+<h2 id="第17个陷阱：对操作优化"><a href="#第17个陷阱：对操作优化" class="headerlink" title="第17个陷阱：对操作优化 "></a>第17个陷阱：对操作优化 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#define N 1024</span><br><span class="line">static char buffer[N];</span><br><span class="line">static char *bufptr;</span><br><span class="line"></span><br><span class="line">void bufwrite(char *p, int n)</span><br><span class="line">&#123;</span><br><span class="line">	while (--n &gt;= 0)&#123;</span><br><span class="line">		if (bufptr == &amp;buffer[N])</span><br><span class="line">			flushbuffer();</span><br><span class="line">		*bufptr++ = *p++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void memcpy(char *dest, const char *source, int k)</span><br><span class="line">&#123;</span><br><span class="line">	while (--k &gt;= 0)</span><br><span class="line">		*dest++ = *source++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void bufwrite(char *p, int n)</span><br><span class="line">&#123;                    //优化版，一次拷贝k个字符</span><br><span class="line">	while (n &gt; 0)&#123;</span><br><span class="line">		int k, rem;</span><br><span class="line">		if (bufptr == &amp;buffer[N])</span><br><span class="line">			flushbuffer();</span><br><span class="line"></span><br><span class="line">		rem = N - (bufptr - buffer); //buffer + N - bufptr;</span><br><span class="line">		k = n &gt; rem ? rem : n;</span><br><span class="line">		memcpy(bufptr, p, k);</span><br><span class="line">		bufptr += k;</span><br><span class="line">		p += k;</span><br><span class="line">		n -= k;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第18个陷阱：求值顺序"><a href="#第18个陷阱：求值顺序" class="headerlink" title="第18个陷阱：求值顺序 "></a>第18个陷阱：求值顺序 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">f(x, y)              //函数有两个参数，求值顺序未定</span><br><span class="line">f( (x, y) )          //函数有一个参数，先求x，再求y</span><br><span class="line"></span><br><span class="line">i = 0;</span><br><span class="line">while (i &lt; n)</span><br><span class="line">	y[i] = x[i++];   //错误，i++求值顺序未定</span><br><span class="line">	y[i++] = x[i];   //错误，i++求值顺序未定</span><br><span class="line"></span><br><span class="line">i = 0;</span><br><span class="line">while (i &lt; n)</span><br><span class="line">	y[i] = x[i];     //正确</span><br><span class="line">	++i;</span><br><span class="line"></span><br><span class="line">i = 0</span><br><span class="line">for (;i &lt; n; ++i)    //正确</span><br><span class="line">	y[i] = x[i];</span><br></pre></td></tr></table></figure>
+<h2 id="第19个陷阱：-amp-amp"><a href="#第19个陷阱：-amp-amp" class="headerlink" title="第19个陷阱：&amp;&amp; || !"></a>第19个陷阱：&amp;&amp; || !</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i = 0;               //&amp;&amp;误用为&amp;，若&amp;操作结果为零才能发现此错误</span><br><span class="line">while (i &lt; tabsize &amp; tab[i] != x) </span><br><span class="line">	i++;</span><br></pre></td></tr></table></figure>
+<h2 id="第20个陷阱：数溢出"><a href="#第20个陷阱：数溢出" class="headerlink" title="第20个陷阱：数溢出 "></a>第20个陷阱：数溢出 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if ((unsigned)a + (unsigned)b &gt; INT_MAX)</span><br><span class="line">	complain();      //加法溢出时，若检测溢出位标志会失败</span><br><span class="line">                    </span><br><span class="line">if (a &gt;INT_MAX - b)  //最好用减法，减法防止溢出，</span><br><span class="line">	complain();</span><br></pre></td></tr></table></figure>
+<h2 id="第21个陷阱：main-函数无返回值"><a href="#第21个陷阱：main-函数无返回值" class="headerlink" title="第21个陷阱：main 函数无返回值 "></a>第21个陷阱：main 函数无返回值 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;hello world!\n&quot;);</span><br><span class="line">&#125;                    //返回垃圾整数，导致操作系统误判程序执行失败，而实际又执行成功了</span><br><span class="line"></span><br><span class="line">int main(int argc, char **)</span><br><span class="line">&#123;                    </span><br><span class="line">	printf(&quot;hello world!\n&quot;);</span><br><span class="line">	return 0;        //一种可行的写法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第22个陷阱：声明和引用"><a href="#第22个陷阱：声明和引用" class="headerlink" title="第22个陷阱：声明和引用 "></a>第22个陷阱：声明和引用 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a;               //a未赋值，则默认为0</span><br><span class="line">int b = 1;</span><br><span class="line">extern int c;        //引用外部变量</span><br><span class="line">static int d;        //限制d在该文件，不可被外部引用</span><br></pre></td></tr></table></figure>
+<h2 id="第23个陷阱：调用外部函数要声明参数类型"><a href="#第23个陷阱：调用外部函数要声明参数类型" class="headerlink" title="第23个陷阱：调用外部函数要声明参数类型 "></a>第23个陷阱：调用外部函数要声明参数类型 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int isvowel(char);</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a;</span><br><span class="line">	char c;</span><br><span class="line"></span><br><span class="line">	c = &apos;a&apos;;</span><br><span class="line">	a = isvowel(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第24个陷阱：变量类型错误使用"><a href="#第24个陷阱：变量类型错误使用" class="headerlink" title="第24个陷阱：变量类型错误使用"></a>第24个陷阱：变量类型错误使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	char c;</span><br><span class="line">	for (i = 0; i &lt; 10; i++)&#123;</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;c);   //%c还是%d? </span><br><span class="line">		printf(&quot;%d &quot;, i);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;\n&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第25个陷阱：外部变量类型引用时声明错误"><a href="#第25个陷阱：外部变量类型引用时声明错误" class="headerlink" title="第25个陷阱：外部变量类型引用时声明错误 "></a>第25个陷阱：外部变量类型引用时声明错误 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">long n;</span><br><span class="line">extern int n;       //到底用long 还是int?</span><br></pre></td></tr></table></figure>
+<h2 id="第26个陷阱：缓冲区释放错误"><a href="#第26个陷阱：缓冲区释放错误" class="headerlink" title="第26个陷阱：缓冲区释放错误 "></a>第26个陷阱：缓冲区释放错误 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">static char buf[BUFSIZ]; //正确位置</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int c;</span><br><span class="line">	char buf[BUFSIZ];    //错误位置，放在此处，main执行完buf就没了，释放buf时出错</span><br><span class="line">	setbuf(stdout, buf)  //最好作为main函数第一句</span><br><span class="line"></span><br><span class="line">	while ((c = getchar()) != EOF)</span><br><span class="line">		putchar(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第27个陷阱：宏定义缺少必要的括号"><a href="#第27个陷阱：宏定义缺少必要的括号" class="headerlink" title="第27个陷阱：宏定义缺少必要的括号 "></a>第27个陷阱：宏定义缺少必要的括号 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#define abs(x) x &gt;= 0 ? x : -x</span><br><span class="line">abs(a-b)                 //a - b &gt;= 0 ? a - b : -a-b 此处错误，应为-(a-b)</span><br><span class="line">abs(a) + 1               //a &gt;= 0 ? a : -a + 1       又错   </span><br><span class="line">#define abs(x) ((x) &gt;= 0 ?(x):-(x)) //良定义</span><br><span class="line"></span><br><span class="line">#define max(biggest, x)  ((biggest) &gt; (x) ? (bigget) : (x))</span><br><span class="line">max(bigest, x[i++])      //宏中最好不要有带有副作用的操作存在，类似i++</span><br><span class="line">max(a,max(b,max(c,d)))   //宏定义展开过长 </span><br><span class="line">max(max(a,b),max(c,d))   //((((a)&gt;(b)?(a):(b)))&gt;(((c)&gt;(d)?(c):(d)))?(((a)&gt;(b)?(a):(b))):(((c)&gt;(d)?(c):(d))))</span><br><span class="line"></span><br><span class="line">bigest = a;              //一种比较a,b,c,d的好方法，代码清晰</span><br><span class="line">if (bigest &lt; b) bigest = b;</span><br><span class="line">if (bigest &lt; c) bigest = c;</span><br><span class="line">if (bigest &lt; d) bigest = d;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#define assert(e) if (!e) assert_error(__FILE__,__LINE__)</span><br><span class="line">if (x &gt; 0 &amp;&amp; y &gt; 0)</span><br><span class="line">	assert(x &gt; y);       //展开后if和else匹配出错</span><br><span class="line">else</span><br><span class="line">	assert(x &lt; y);</span><br><span class="line">#define assert(e) &#123; if (!e) assert_error(__FILE__,__LINE__) &#125;</span><br><span class="line">if (x &gt; 0 &amp;&amp; y &gt; 0)</span><br><span class="line">	assert(x &gt; y);       //解决了if和else配对，但会在&#125;后多一个; </span><br><span class="line">else</span><br><span class="line">	assert(x &lt; y);</span><br><span class="line">						 //一种可行的写法</span><br><span class="line">#define assert(e) ((void)((e)||_assert_error(__FILE__,__LINE__)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#define T1 struct foo *</span><br><span class="line">typedef struct foo *T2</span><br><span class="line">T1 a, b;                 //struct foo *a, b ，此处b的类型不对</span><br><span class="line">T2 a, b;                 //struct foo *a, *b, 正确</span><br></pre></td></tr></table></figure>
+<h2 id="第28个陷阱：编译器不区分大小写"><a href="#第28个陷阱：编译器不区分大小写" class="headerlink" title="第28个陷阱：编译器不区分大小写 "></a>第28个陷阱：编译器不区分大小写 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">char * Malloc(unsigned n) //Malloc等于是malloc</span><br><span class="line">&#123;</span><br><span class="line">	char *p, *malloc(unsigned); </span><br><span class="line">	p = malloc(n);        //循环调用自身，内存被耗尽，系统崩溃</span><br><span class="line">	if (p == NULL)</span><br><span class="line">		panic(&quot;out of memory&quot;);</span><br><span class="line">	return p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第29个陷阱：字符有无符号"><a href="#第29个陷阱：字符有无符号" class="headerlink" title="第29个陷阱：字符有无符号 "></a>第29个陷阱：字符有无符号 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(unsigned char) c;        //强制声明无符号</span><br></pre></td></tr></table></figure>
+<h2 id="第30个陷阱：乘除2的倍数用移位"><a href="#第30个陷阱：乘除2的倍数用移位" class="headerlink" title="第30个陷阱：乘除2的倍数用移位 "></a>第30个陷阱：乘除2的倍数用移位 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mid  = (low + high) &gt;&gt; 2; //除以4</span><br><span class="line">mid  = low &lt;&lt; 2;          //乘以2</span><br></pre></td></tr></table></figure>
+<h2 id="第31个陷阱：空指针位置0的读写权限"><a href="#第31个陷阱：空指针位置0的读写权限" class="headerlink" title="第31个陷阱：空指针位置0的读写权限 "></a>第31个陷阱：空指针位置0的读写权限 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	char *p;</span><br><span class="line">	p = NULL;             //空指针一般不可写，可读与否看系统</span><br><span class="line">	printf(&quot;Location 0 contains %d\n&quot;,*p);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第32个陷阱：负数成了被除数"><a href="#第32个陷阱：负数成了被除数" class="headerlink" title="第32个陷阱：负数成了被除数 "></a>第32个陷阱：负数成了被除数 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">h = n % HASHSIZE;         // n小于0时，结果未定义</span><br><span class="line">if (h &lt; 0)</span><br><span class="line">	h += HASHSIZE;</span><br><span class="line"></span><br><span class="line">h = (unsigned n) % HASHSIZE; //强制无符号</span><br></pre></td></tr></table></figure>
+<h2 id="第33个陷阱：部分宏定义无法判断字符的范围"><a href="#第33个陷阱：部分宏定义无法判断字符的范围" class="headerlink" title="第33个陷阱：部分宏定义无法判断字符的范围 "></a>第33个陷阱：部分宏定义无法判断字符的范围 </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#define toupper(c) ((c)+&apos;A&apos;-&apos;a&apos;)</span><br><span class="line">#define tolower(c) ((c)+&apos;a&apos;-&apos;A&apos;)</span><br><span class="line"></span><br><span class="line">int c;</span><br><span class="line">while ((c = getchar()) != EOF)</span><br><span class="line">	putchar(tolower(c));  //错误，c可能就是小写字符</span><br><span class="line">	putchar(toupper(c));  //错误，c可能就是大写字符</span><br><span class="line">						  </span><br><span class="line">int c;                    //一种可行的写法</span><br><span class="line">while ((c = getchar()) != EOF)</span><br><span class="line">	putchar(isupper(c) ? tolower(c) : c);</span><br><span class="line">	putchar(islower(c) ? toupper(c) : c);</span><br><span class="line"></span><br><span class="line">int toupper (int c)       //或者使用函数</span><br><span class="line">&#123;</span><br><span class="line">	if (c &gt;= &apos;a&apos; &amp;&amp; c &lt;= &apos;z&apos;)</span><br><span class="line">		return c + &apos;A&apos; - &apos;a&apos;;</span><br><span class="line">&#125;                         //同时也有宏，选择使用一种</span><br><span class="line">#define _toupper(c) ((c)+&apos;A&apos;-&apos;a&apos;)</span><br><span class="line">#define _tolower(c) ((c)+&apos;a&apos;-&apos;A&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="第34个陷阱：释放内存"><a href="#第34个陷阱：释放内存" class="headerlink" title="第34个陷阱：释放内存"></a>第34个陷阱：释放内存</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">struct node *p, *head;</span><br><span class="line">for (p = head; p; p = p-&gt;next)</span><br><span class="line">	free((char *)p);      //此处释放了，p-&gt;next仍正确，但再次循环就会出错</span><br><span class="line"></span><br><span class="line">struct node *p, *head, *tmp;</span><br><span class="line">for (p = head; p; p = tmp)</span><br><span class="line">	tmp = p -&gt; next;      //使用临时指针缓存</span><br><span class="line">	free((char *)p);</span><br></pre></td></tr></table></figure>
+<h2 id="第35个陷阱：默认数组递增序列"><a href="#第35个陷阱：默认数组递增序列" class="headerlink" title="第35个陷阱：默认数组递增序列"></a>第35个陷阱：默认数组递增序列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void printnum(long n, void (*p)())</span><br><span class="line">&#123;</span><br><span class="line">	if ( n &lt; 0)&#123;</span><br><span class="line">		(*p)(&apos;-&apos;);</span><br><span class="line">		n = -n;</span><br><span class="line">	&#125;</span><br><span class="line">	if ( n &gt;= 10)</span><br><span class="line">		printnum( n / 10,p);</span><br><span class="line"></span><br><span class="line">	(*p)((int)(n%10) + &apos;0&apos;);    //+号，暗含所有数按序编排，实际可能不是这样</span><br><span class="line">&#125;</span><br><span class="line">	(*p)(&quot;0123456789&quot;[n % 10]); //此写法可行，字符串作为数组名，</span><br><span class="line">								//提供了首地址，n % 10作为下标取其中的字符</span><br></pre></td></tr></table></figure>
+<h2 id="第36个陷阱：指针不可直接相加，可相减，单独加数"><a href="#第36个陷阱：指针不可直接相加，可相减，单独加数" class="headerlink" title="第36个陷阱：指针不可直接相加，可相减，单独加数"></a>第36个陷阱：指针不可直接相加，可相减，单独加数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int func()</span><br><span class="line">&#123;</span><br><span class="line">	char s[10];</span><br><span class="line">	char *p1, p2;</span><br><span class="line">	char *mid;</span><br><span class="line">	</span><br><span class="line">	p1 = s, </span><br><span class="line">	p2 = &amp;s[9];</span><br><span class="line">	mid = (p1 + p2) / 2         //错误，不可相加</span><br><span class="line">	mid = (p1 + p2) &gt;&gt;1         //错误，不可相加</span><br><span class="line"></span><br><span class="line">	mid = (p2 - p1)/2  + p1     //正确，指针p1可以加数</span><br><span class="line">	mid = (p2 - p1) &gt;&gt; 1 + p1   //错误，+ 优先级高</span><br><span class="line">	mid = ((p2-p1)&gt;&gt;1) + p1     //正确</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第37个陷阱：空指针引发段错误，核心转储"><a href="#第37个陷阱：空指针引发段错误，核心转储" class="headerlink" title="第37个陷阱：空指针引发段错误，核心转储"></a>第37个陷阱：空指针引发段错误，核心转储</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">char s[100];</span><br><span class="line">p = malloc(strlen(s) + 1);      </span><br><span class="line">if (p)</span><br><span class="line">	do sth;</span><br><span class="line">else</span><br><span class="line">	exit(1);</span><br><span class="line"></span><br><span class="line">free(p);</span><br><span class="line">p = NULL;                       //把指针给管起来</span><br><span class="line">char s[100];</span><br><span class="line">p = malloc(strlen(s) + 1);      </span><br><span class="line">if (p)</span><br><span class="line">	do sth;</span><br><span class="line">else</span><br><span class="line">	exit(1);</span><br><span class="line"></span><br><span class="line">free(p);</span><br><span class="line">p = NULL;                       //把指针给管起来</span><br></pre></td></tr></table></figure>
 
-for (i = 0; i &lt;= 9; i++)
-    a[i] = 0;
-
-for (i = 0; i &lt; 10; i++)
-    a[i] = 0;           //推荐写法，i &lt; 10要比i &lt;= 9更好，10是出口,0是入口
-</code></pre><h2 id="第2个陷阱：同一符号的不同作用"><a href="#第2个陷阱：同一符号的不同作用" class="headerlink" title="第2个陷阱：同一符号的不同作用"></a>第2个陷阱：同一符号的不同作用</h2><pre><code>p-&gt;s = &quot;-&gt;&quot;              // -&gt;是访问结构体 p-&gt;就是(*p)-&gt;的简写，&quot;-&gt;&quot;仅是一个字符串     
-</code></pre><h2 id="第3个陷阱：赋值和比较运算符混用"><a href="#第3个陷阱：赋值和比较运算符混用" class="headerlink" title="第3个陷阱：赋值和比较运算符混用"></a>第3个陷阱：赋值和比较运算符混用</h2><pre><code>if (x = y)            //x == y误写为 x = y，若y不等于零，则程序侥幸能运行，难发现
-    break; 
-
-if ( (x = y) != 0)
-    break;
-
-while (c = &apos; &apos;||c==&apos;\t&apos;||c==&apos;\n&apos;)           //=符号运算优先级最低，&apos; &apos;为真，所以死循环
-    c = getc(f);
-
-while (c == &apos;\t&apos; || c = &apos; &apos; || c == &apos;\n&apos;)   //等价于如下的赋值语句，会报错
-while (c == &apos;\t&apos; || c) = (&apos; &apos; || c == &apos;\n&apos;)
-
-if ( (fd == open(argv[i], 0)) &lt; 0)          //比较结果为0或1，永远不小于0，所以error()永不执行
-    error();
-
-if (c == 1);
-if (1 == c);          //凡是比较常量的，常量左写，让对的对，错一定让编译器抛出错
-</code></pre><h2 id="第4个陷阱：混用逻辑与或和位与或运算符，对齐"><a href="#第4个陷阱：混用逻辑与或和位与或运算符，对齐" class="headerlink" title="第4个陷阱：混用逻辑与或和位与或运算符，对齐"></a>第4个陷阱：混用逻辑与或和位与或运算符，对齐</h2><pre><code>a &amp;&amp; b;
-a &amp; b;                // 若a &amp; b 不为0，则程序侥幸能运行
-
-parttab[] = {
-    046, &quot;left  s&quot;,   //为了对齐125, 46被写成046，而046是八进制数
-    047, &quot;right r&quot;,
-    125, &quot;frammis&quot;
-}
-</code></pre><h2 id="第5个陷阱：单目符号和多符号的贪心分析法则"><a href="#第5个陷阱：单目符号和多符号的贪心分析法则" class="headerlink" title="第5个陷阱：单目符号和多符号的贪心分析法则"></a>第5个陷阱：单目符号和多符号的贪心分析法则</h2><pre><code>a---b;               //编译器识别为a-- - b;
-
-n--&gt;0                //n-- &gt; 0 不同于n- -&gt;;
-
-a+++++b;             //(a++)++ +b，错误a++不做左值
-
-y = x/*p;            //到底是指针还是注释？x/(*p), x/*p? 
-</code></pre><h2 id="第6个陷阱：’’和””的不同"><a href="#第6个陷阱：’’和””的不同" class="headerlink" title="第6个陷阱：’’和””的不同"></a>第6个陷阱：’’和””的不同</h2><pre><code>char *a;
-a = &quot;xyz&quot;            //&quot;xyz&quot;提供x的地址    
-
-char hello[] = {&apos;H&apos;,&apos;e&apos;,&apos;l&apos;,&apos;l&apos;,&apos;o&apos;,&apos; &apos;,&apos;w&apos;,&apos;o&apos;,&apos;r&apos;,&apos;l&apos;,&apos;d&apos;,&apos;\n&apos;,0};
-printf(hello);       
-                     //&apos; &apos;内为char或者说int，而&quot; &quot;括号内字符串常量
-
-printf(&quot;Hello world\n&quot;);
-
-printf(&apos;\n&apos;);
-printf(&quot;\n&quot;);
-
-c = &apos;yes&apos;;           //c可能等于y或者s，视不同机器的实现
-c = &quot;yes&quot;; 
-</code></pre><h2 id="第7个陷阱：嵌套注释"><a href="#第7个陷阱：嵌套注释" class="headerlink" title="第7个陷阱：嵌套注释"></a>第7个陷阱：嵌套注释</h2><pre><code>/*&quot;/* &quot;*/
-</code></pre><h2 id="第8个陷阱：函数声明"><a href="#第8个陷阱：函数声明" class="headerlink" title="第8个陷阱：函数声明 "></a>第8个陷阱：函数声明 </h2><pre><code>(*(void(*)())0)();   //按照用的规则来，去掉哑变量
-                     //(void(*)())是一种强制类型转换操作，类似于unsigned a
-                     //它表示的是一个函数指针，且该指针指向的函数返回值为void型，且函数没有参数
-                     //整个表达式是把0这个数转换为0这个位置，然后读取0位置的函数并执行
-                     // (* (void (*)())0 )()
-                     // (指针 类型转换 地址)()
-(*((*)())0)();       //默认返回类型为int，一般会出错，段错误，核心已转储
-
-float *g(), (*h)();
-(float (*)())        //指向返回值为浮点类型的函数指针的类型转换符号
-
-int func(){}
-(int (*)()) p = func;
-(*p)()               //简写为p() 但不是*p()，因为()优先和p结合
-</code></pre><h2 id="第9个陷阱：优先级别"><a href="#第9个陷阱：优先级别" class="headerlink" title="第9个陷阱：优先级别 "></a>第9个陷阱：优先级别 </h2><pre><code>(* / + -) &gt; (&lt;&lt; &gt;&gt;) &gt; (&gt; &lt; &gt;= &lt;= ==) &gt; (&amp;&amp; || !) &gt; (=) &gt; (? :) &gt; (,)
-                     //各种运算符号的优先级别，算术大于移位大于比较大于逻辑大于赋值大于三目运算大于逗号运算符号。
-
-FLAG = 01000100000;  //假设为二进制表示
-if (flags &amp; FLAG)    //flags &amp;&amp; FLAGE
-    do sth;
-
-r = hi&lt;&lt;4 + low      //hi &lt;&lt; (4 + low)
-r = (hi&lt;&lt;4) + low;   //正确写法
-r = hi&lt;&lt;4 | low;     //这种写法也可，但hi得指高位，low指低位
-
-while (c = getc(in) != EOF) //c一直为1，直到文件末尾为0，可能导致对文件循环读取
-    putc(c, stdout);
-</code></pre><h2 id="第10个陷阱：分号"><a href="#第10个陷阱：分号" class="headerlink" title="第10个陷阱：分号 "></a>第10个陷阱：分号 </h2><pre><code>if (x[i] &gt; big);     //big = x[i]一定会得到执行
-    big = x[i]; 
-
-if (n &lt; 3)          
-    return           //return logre.date = x[0];
-logre.date = x[0];
-logre.time = x[1];
-logre.code = x[2];
-
-struct logrec{
-    int date;
-    int time;
-    int code;
-}
-main(){}             //main函数返回类型为struct logrec类型
-</code></pre><h2 id="第11个陷阱：switch-省略break"><a href="#第11个陷阱：switch-省略break" class="headerlink" title="第11个陷阱：switch 省略break; "></a>第11个陷阱：switch 省略break; </h2><pre><code>case &apos;\n&apos;:
-    linecount++;     //故意省略break，可以继续执行下面的case
-case &apos;\t&apos;:
-case &apos; &apos;:
-</code></pre><h2 id="第12个陷阱：函数调用"><a href="#第12个陷阱：函数调用" class="headerlink" title="第12个陷阱：函数调用 "></a>第12个陷阱：函数调用 </h2><pre><code>f();                 //调用函数f
-f;                   //获得函数f的地址然后丢弃，什么也不做
-</code></pre><h2 id="第13个陷阱：悬挂else"><a href="#第13个陷阱：悬挂else" class="headerlink" title="第13个陷阱：悬挂else "></a>第13个陷阱：悬挂else </h2><pre><code>if (x == 0)
-    if (y == 0) error();
-else{
-    z = x + y;
-    f(&amp;z);
-}                    //else 按照最近匹配原则和内部if配对
-</code></pre><h2 id="第14个陷阱：数组和指针几乎等价"><a href="#第14个陷阱：数组和指针几乎等价" class="headerlink" title="第14个陷阱：数组和指针几乎等价 "></a>第14个陷阱：数组和指针几乎等价 </h2><pre><code>int *p, a[12];
-p = a;               //a既是数组名也是其首地址
-*a = 10;             //就是a[0] = 10
-*p = 10;             //也是a[0] = 10
-a[i]                 //可以写成i[a]或者a + i;
-
-char *r *malloc();                 //错误1:可能分配失败, 要检测r是否为NULL
-r = malloc(strlen(s) + strlen(t)); //错误2:缺少&apos;\0&apos;字符的存储位置
-strcpy(r,s);
-strcat(r,t);                       //错误3:未释放内存
-
-char r*, *malloc();  //一种可行的写法
-r = malloc(strlen(s) + strlen(t) + 1);
-if (!r){
-    complain();
-    exit(1);
-}
-else{
-    strcpy(r,s);
-    strcat(r,t);
-}
-free(r);
-p = NULL;
-</code></pre><h2 id="第15个陷阱：是数组还是指针做参数？"><a href="#第15个陷阱：是数组还是指针做参数？" class="headerlink" title="第15个陷阱：是数组还是指针做参数？ "></a>第15个陷阱：是数组还是指针做参数？ </h2><pre><code>int strlen(char s[]){}
-int strlen(char *s){}
-
-int main(int argc, char **argv){} //等价于下面写法
-int main(int argc, char *argv[]){}
-</code></pre><h2 id="第16个陷阱：数组下标和指针访问"><a href="#第16个陷阱：数组下标和指针访问" class="headerlink" title="第16个陷阱：数组下标和指针访问"></a>第16个陷阱：数组下标和指针访问</h2><pre><code>int cal[12][31];     //以下几种写法完全等价，有点儿绕
-
-cal[i][j], *(cal[i] + j), *(*(cal + i) + j)
-cal[i][j], *(i[cal] + j), j[i[cal]]
-</code></pre><h2 id="第17个陷阱：对操作优化"><a href="#第17个陷阱：对操作优化" class="headerlink" title="第17个陷阱：对操作优化 "></a>第17个陷阱：对操作优化 </h2><pre><code>#define N 1024
-static char buffer[N];
-static char *bufptr;
-
-void bufwrite(char *p, int n)
-{
-    while (--n &gt;= 0){
-        if (bufptr == &amp;buffer[N])
-            flushbuffer();
-        *bufptr++ = *p++;
-    }
-}
-void memcpy(char *dest, const char *source, int k)
-{
-    while (--k &gt;= 0)
-        *dest++ = *source++;
-}
-
-void bufwrite(char *p, int n)
-{                    //优化版，一次拷贝k个字符
-    while (n &gt; 0){
-        int k, rem;
-        if (bufptr == &amp;buffer[N])
-            flushbuffer();
-
-        rem = N - (bufptr - buffer); //buffer + N - bufptr;
-        k = n &gt; rem ? rem : n;
-        memcpy(bufptr, p, k);
-        bufptr += k;
-        p += k;
-        n -= k;
-    }
-}
-</code></pre><h2 id="第18个陷阱：求值顺序"><a href="#第18个陷阱：求值顺序" class="headerlink" title="第18个陷阱：求值顺序 "></a>第18个陷阱：求值顺序 </h2><pre><code>f(x, y)              //函数有两个参数，求值顺序未定
-f( (x, y) )          //函数有一个参数，先求x，再求y
-
-i = 0;
-while (i &lt; n)
-    y[i] = x[i++];   //错误，i++求值顺序未定
-    y[i++] = x[i];   //错误，i++求值顺序未定
-
-i = 0;
-while (i &lt; n)
-    y[i] = x[i];     //正确
-    ++i;
-
-i = 0
-for (;i &lt; n; ++i)    //正确
-    y[i] = x[i];
-</code></pre><h2 id="第19个陷阱：-amp-amp"><a href="#第19个陷阱：-amp-amp" class="headerlink" title="第19个陷阱：&amp;&amp; || !"></a>第19个陷阱：&amp;&amp; || !</h2><pre><code>i = 0;               //&amp;&amp;误用为&amp;，若&amp;操作结果为零才能发现此错误
-while (i &lt; tabsize &amp; tab[i] != x) 
-    i++;
-</code></pre><h2 id="第20个陷阱：数溢出"><a href="#第20个陷阱：数溢出" class="headerlink" title="第20个陷阱：数溢出 "></a>第20个陷阱：数溢出 </h2><pre><code>if ((unsigned)a + (unsigned)b &gt; INT_MAX)
-    complain();      //加法溢出时，若检测溢出位标志会失败
-
-if (a &gt;INT_MAX - b)  //最好用减法，减法防止溢出，
-    complain();      
-</code></pre><h2 id="第21个陷阱：main-函数无返回值"><a href="#第21个陷阱：main-函数无返回值" class="headerlink" title="第21个陷阱：main 函数无返回值 "></a>第21个陷阱：main 函数无返回值 </h2><pre><code>main()
-{
-    printf(&quot;hello world!\n&quot;);
-}                    //返回垃圾整数，导致操作系统误判程序执行失败，而实际又执行成功了
-
-int main(int argc, char **)
-{                    
-    printf(&quot;hello world!\n&quot;);
-    return 0;        //一种可行的写法
-}
-</code></pre><h2 id="第22个陷阱：声明和引用"><a href="#第22个陷阱：声明和引用" class="headerlink" title="第22个陷阱：声明和引用 "></a>第22个陷阱：声明和引用 </h2><pre><code>int a;               //a未赋值，则默认为0
-int b = 1;
-extern int c;        //引用外部变量
-static int d;        //限制d在该文件，不可被外部引用
-</code></pre><h2 id="第23个陷阱：调用外部函数要声明参数类型"><a href="#第23个陷阱：调用外部函数要声明参数类型" class="headerlink" title="第23个陷阱：调用外部函数要声明参数类型 "></a>第23个陷阱：调用外部函数要声明参数类型 </h2><pre><code>int isvowel(char);
-int main()
-{
-    int a;
-    char c;
-
-    c = &apos;a&apos;;
-    a = isvowel(c);
-}
-</code></pre><h2 id="第24个陷阱：变量类型错误使用"><a href="#第24个陷阱：变量类型错误使用" class="headerlink" title="第24个陷阱：变量类型错误使用"></a>第24个陷阱：变量类型错误使用</h2><pre><code>#include &lt;stdio.h&gt;
-int main()
-{
-    int i;
-    char c;
-    for (i = 0; i &lt; 10; i++){
-        scanf(&quot;%d&quot;, &amp;c);   //%c还是%d? 
-        printf(&quot;%d &quot;, i);
-    }
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre><h2 id="第25个陷阱：外部变量类型引用时声明错误"><a href="#第25个陷阱：外部变量类型引用时声明错误" class="headerlink" title="第25个陷阱：外部变量类型引用时声明错误 "></a>第25个陷阱：外部变量类型引用时声明错误 </h2><pre><code>long n;
-extern int n;       //到底用long 还是int? 
-</code></pre><h2 id="第26个陷阱：缓冲区释放错误"><a href="#第26个陷阱：缓冲区释放错误" class="headerlink" title="第26个陷阱：缓冲区释放错误 "></a>第26个陷阱：缓冲区释放错误 </h2><pre><code>#include &lt;stdio.h&gt;
-static char buf[BUFSIZ]; //正确位置
-
-int main()
-{
-    int c;
-    char buf[BUFSIZ];    //错误位置，放在此处，main执行完buf就没了，释放buf时出错
-    setbuf(stdout, buf)  //最好作为main函数第一句
-
-    while ((c = getchar()) != EOF)
-        putchar(c);
-}
-</code></pre><h2 id="第27个陷阱：宏定义缺少必要的括号"><a href="#第27个陷阱：宏定义缺少必要的括号" class="headerlink" title="第27个陷阱：宏定义缺少必要的括号 "></a>第27个陷阱：宏定义缺少必要的括号 </h2><pre><code>#define abs(x) x &gt;= 0 ? x : -x
-abs(a-b)                 //a - b &gt;= 0 ? a - b : -a-b 此处错误，应为-(a-b)
-abs(a) + 1               //a &gt;= 0 ? a : -a + 1       又错   
-#define abs(x) ((x) &gt;= 0 ?(x):-(x)) //良定义
-
-#define max(biggest, x)  ((biggest) &gt; (x) ? (bigget) : (x))
-max(bigest, x[i++])      //宏中最好不要有带有副作用的操作存在，类似i++
-max(a,max(b,max(c,d)))   //宏定义展开过长 
-max(max(a,b),max(c,d))   //((((a)&gt;(b)?(a):(b)))&gt;(((c)&gt;(d)?(c):(d)))?(((a)&gt;(b)?(a):(b))):(((c)&gt;(d)?(c):(d))))
-
-bigest = a;              //一种比较a,b,c,d的好方法，代码清晰
-if (bigest &lt; b) bigest = b;
-if (bigest &lt; c) bigest = c;
-if (bigest &lt; d) bigest = d;
-
-
-#define assert(e) if (!e) assert_error(__FILE__,__LINE__)
-if (x &gt; 0 &amp;&amp; y &gt; 0)
-    assert(x &gt; y);       //展开后if和else匹配出错
-else
-    assert(x &lt; y);
-#define assert(e) { if (!e) assert_error(__FILE__,__LINE__) }
-if (x &gt; 0 &amp;&amp; y &gt; 0)
-    assert(x &gt; y);       //解决了if和else配对，但会在}后多一个; 
-else
-    assert(x &lt; y);
-                         //一种可行的写法
-#define assert(e) ((void)((e)||_assert_error(__FILE__,__LINE__)))
-
-
-#define T1 struct foo *
-typedef struct foo *T2
-T1 a, b;                 //struct foo *a, b ，此处b的类型不对
-T2 a, b;                 //struct foo *a, *b, 正确
-</code></pre><h2 id="第28个陷阱：编译器不区分大小写"><a href="#第28个陷阱：编译器不区分大小写" class="headerlink" title="第28个陷阱：编译器不区分大小写 "></a>第28个陷阱：编译器不区分大小写 </h2><pre><code>char * Malloc(unsigned n) //Malloc等于是malloc
-{
-    char *p, *malloc(unsigned); 
-    p = malloc(n);        //循环调用自身，内存被耗尽，系统崩溃
-    if (p == NULL)
-        panic(&quot;out of memory&quot;);
-    return p;
-}
-</code></pre><h2 id="第29个陷阱：字符有无符号"><a href="#第29个陷阱：字符有无符号" class="headerlink" title="第29个陷阱：字符有无符号 "></a>第29个陷阱：字符有无符号 </h2><pre><code>(unsigned char) c;        //强制声明无符号
-</code></pre><h2 id="第30个陷阱：乘除2的倍数用移位"><a href="#第30个陷阱：乘除2的倍数用移位" class="headerlink" title="第30个陷阱：乘除2的倍数用移位 "></a>第30个陷阱：乘除2的倍数用移位 </h2><pre><code>mid  = (low + high) &gt;&gt; 2; //除以4
-mid  = low &lt;&lt; 2;          //乘以2
-</code></pre><h2 id="第31个陷阱：空指针位置0的读写权限"><a href="#第31个陷阱：空指针位置0的读写权限" class="headerlink" title="第31个陷阱：空指针位置0的读写权限 "></a>第31个陷阱：空指针位置0的读写权限 </h2><pre><code>int main()
-{
-    char *p;
-    p = NULL;             //空指针一般不可写，可读与否看系统
-    printf(&quot;Location 0 contains %d\n&quot;,*p);
-    return 0;
-}
-</code></pre><h2 id="第32个陷阱：负数成了被除数"><a href="#第32个陷阱：负数成了被除数" class="headerlink" title="第32个陷阱：负数成了被除数 "></a>第32个陷阱：负数成了被除数 </h2><pre><code>h = n % HASHSIZE;         // n小于0时，结果未定义
-if (h &lt; 0)
-    h += HASHSIZE;
-
-h = (unsigned n) % HASHSIZE; //强制无符号
-</code></pre><h2 id="第33个陷阱：部分宏定义无法判断字符的范围"><a href="#第33个陷阱：部分宏定义无法判断字符的范围" class="headerlink" title="第33个陷阱：部分宏定义无法判断字符的范围 "></a>第33个陷阱：部分宏定义无法判断字符的范围 </h2><pre><code>#define toupper(c) ((c)+&apos;A&apos;-&apos;a&apos;)
-#define tolower(c) ((c)+&apos;a&apos;-&apos;A&apos;)
-
-int c;
-while ((c = getchar()) != EOF)
-    putchar(tolower(c));  //错误，c可能就是小写字符
-    putchar(toupper(c));  //错误，c可能就是大写字符
-
-int c;                    //一种可行的写法
-while ((c = getchar()) != EOF)
-    putchar(isupper(c) ? tolower(c) : c);
-    putchar(islower(c) ? toupper(c) : c);
-
-int toupper (int c)       //或者使用函数
-{
-    if (c &gt;= &apos;a&apos; &amp;&amp; c &lt;= &apos;z&apos;)
-        return c + &apos;A&apos; - &apos;a&apos;;
-}                         //同时也有宏，选择使用一种
-#define _toupper(c) ((c)+&apos;A&apos;-&apos;a&apos;)
-#define _tolower(c) ((c)+&apos;a&apos;-&apos;A&apos;)
-</code></pre><h2 id="第34个陷阱：释放内存"><a href="#第34个陷阱：释放内存" class="headerlink" title="第34个陷阱：释放内存"></a>第34个陷阱：释放内存</h2><pre><code>struct node *p, *head;
-for (p = head; p; p = p-&gt;next)
-    free((char *)p);      //此处释放了，p-&gt;next仍正确，但再次循环就会出错
-
-struct node *p, *head, *tmp;
-for (p = head; p; p = tmp)
-    tmp = p -&gt; next;      //使用临时指针缓存
-    free((char *)p);      
-</code></pre><h2 id="第35个陷阱：默认数组递增序列"><a href="#第35个陷阱：默认数组递增序列" class="headerlink" title="第35个陷阱：默认数组递增序列"></a>第35个陷阱：默认数组递增序列</h2><pre><code>void printnum(long n, void (*p)())
-{
-    if ( n &lt; 0){
-        (*p)(&apos;-&apos;);
-        n = -n;
-    }
-    if ( n &gt;= 10)
-        printnum( n / 10,p);
-
-    (*p)((int)(n%10) + &apos;0&apos;);    //+号，暗含所有数按序编排，实际可能不是这样
-}
-    (*p)(&quot;0123456789&quot;[n % 10]); //此写法可行，字符串作为数组名，
-                                //提供了首地址，n % 10作为下标取其中的字符
-</code></pre><h2 id="第36个陷阱：指针不可直接相加，可相减，单独加数"><a href="#第36个陷阱：指针不可直接相加，可相减，单独加数" class="headerlink" title="第36个陷阱：指针不可直接相加，可相减，单独加数"></a>第36个陷阱：指针不可直接相加，可相减，单独加数</h2><pre><code>int func()
-{
-    char s[10];
-    char *p1, p2;
-    char *mid;
-
-    p1 = s, 
-    p2 = &amp;s[9];
-    mid = (p1 + p2) / 2         //错误，不可相加
-    mid = (p1 + p2) &gt;&gt;1         //错误，不可相加
-
-    mid = (p2 - p1)/2  + p1     //正确，指针p1可以加数
-    mid = (p2 - p1) &gt;&gt; 1 + p1   //错误，+ 优先级高
-    mid = ((p2-p1)&gt;&gt;1) + p1     //正确
-}
-</code></pre><h2 id="第37个陷阱：空指针引发段错误，核心转储"><a href="#第37个陷阱：空指针引发段错误，核心转储" class="headerlink" title="第37个陷阱：空指针引发段错误，核心转储"></a>第37个陷阱：空指针引发段错误，核心转储</h2><pre><code>char s[100];
-p = malloc(strlen(s) + 1);      
-if (p)
-    do sth;
-else
-    exit(1);
-
-free(p);
-p = NULL;                       //把指针给管起来
-</code></pre>
       
     </div>
     
@@ -839,7 +505,7 @@ p = NULL;                       //把指针给管起来
 	<p><span>本文标题:</span><a href="/title/c1ec2509/">C语言陷阱</a></p> 
 	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
 	<p><span>发布时间:</span>2019年08月14日 - 15:07</p> 
-	<p><span>最后更新:</span>2019年10月30日 - 23:31</p> 
+	<p><span>最后更新:</span>2019年10月31日 - 16:04</p> 
 	<p><span>原始链接:</span><a href="/title/c1ec2509/" title="C语言陷阱">https://www.shieber.cn/title/c1ec2509/</a> 
 	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shieber.cn/title/c1ec2509/" aria-label="复制成功！"></i></span> 
 	</p> 
@@ -1215,7 +881,7 @@ p = NULL;                       //把指针给管起来
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共31.2k字</span>
+  <span class="post-count">本站共31.3k字</span>
 </div>
 
 
