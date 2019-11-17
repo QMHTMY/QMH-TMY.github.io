@@ -2108,7 +2108,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3dff;
+  background: #abffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3432,11 +3432,16 @@ pre {
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
-body {
-  background-image: url("https://api.uixsj.cn/bing/bing.php");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: cover;
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("https://api.uixsj.cn/bing/bing.php");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  #footer a {
+    color: #eee;
+  }
 }
