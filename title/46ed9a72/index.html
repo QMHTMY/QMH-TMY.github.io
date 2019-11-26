@@ -89,14 +89,13 @@
 <meta name="keywords" content="Tex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下自定义位置安装TeXLive2019">
-<meta property="og:url" content="https://www.shieber.cn/title/46ed9a72/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;46ed9a72&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg">
-<meta property="og:updated_time" content="2019-10-31T08:26:06.214Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5J53q.md.jpg">
+<meta property="og:updated_time" content="2019-10-31T08:26:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux下自定义位置安装TeXLive2019">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5J53q.md.jpg">
 
 
 
@@ -189,7 +188,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -199,7 +198,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +208,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -219,7 +218,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -229,7 +228,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -241,7 +240,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -355,7 +354,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/排版设计/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8E%92%E7%89%88%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index">
                     <span itemprop="name">排版设计</span>
                   </a>
                 </span>
@@ -437,18 +436,28 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg" alt="texlive"><br><a id="more"></a></p>
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg" alt="texlive"></p>
+<a id="more"></a>
+
 <h2 id="1-从清华大学的镜像处下载"><a href="#1-从清华大学的镜像处下载" class="headerlink" title="1.从清华大学的镜像处下载"></a>1.从清华大学的镜像处下载</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/</span><br></pre></td></tr></table></figure>
+
 <h2 id="2-安装图像化界面必备的perl-tk组件"><a href="#2-安装图像化界面必备的perl-tk组件" class="headerlink" title="2.安装图像化界面必备的perl-tk组件"></a>2.安装图像化界面必备的perl-tk组件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install perl-tk</span><br></pre></td></tr></table></figure>
+
 <h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t iso9660 -o loop texlive2019-20190410.iso /mnt</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-准备从图形界面安装"><a href="#4-准备从图形界面安装" class="headerlink" title="4.准备从图形界面安装"></a>4.准备从图形界面安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /mnt</span><br><span class="line">sudo ./install-tl -gui</span><br></pre></td></tr></table></figure>
-<h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2019)
-</code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;安装字体/宏包文档目录树&quot;　切换为否</span><br><span class="line">&quot;安装字体/宏包源代码目录树&quot;　切换为否</span><br><span class="line">上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2019)</code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;安装字体/宏包文档目录树&quot;　切换为否</span><br><span class="line">&quot;安装字体/宏包源代码目录树&quot;　切换为否</span><br><span class="line">上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间</span><br></pre></td></tr></table></figure>
 <h2 id="7-点击安装TeX-Live"><a href="#7-点击安装TeX-Live" class="headerlink" title="7.点击安装TeX Live"></a>7.点击安装TeX Live</h2><h2 id="8-卸载镜像文件"><a href="#8-卸载镜像文件" class="headerlink" title="8.卸载镜像文件"></a>8.卸载镜像文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unmount /mnt</span><br></pre></td></tr></table></figure>
+
 <h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/tex2019/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf</span><br><span class="line">sudo fc-cache -fsv (此步执行时间稍长)</span><br></pre></td></tr></table></figure>
+
 <h2 id="10-环境变量设置"><a href="#10-环境变量设置" class="headerlink" title="10.环境变量设置"></a>10.环境变量设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">打开~/.bashrc 在最后加入如下内容(具体路径安按照自己的系统修改)</span><br><span class="line"></span><br><span class="line">	export TexMan=&quot;/home/tex2019/2019/texmf-dist/doc/man&quot;</span><br><span class="line">	export TexInfo=&quot;/home/tex2019/2019/texmf-dist/doc/info&quot;</span><br><span class="line">	export TexLive=&quot;/home/tex2019/2019/bin/x86_64-linux&quot;</span><br><span class="line">	export MANPATH=&quot;$MANPATH:$TexMan&quot;</span><br><span class="line">	export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;</span><br><span class="line">	export PATH=&quot;$PATH:$TexLive&quot;</span><br><span class="line"></span><br><span class="line">执行 source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
 <h2 id="11-更新源配置"><a href="#11-更新源配置" class="headerlink" title="11.更新源配置"></a>11.更新源配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet</span><br><span class="line">此步如果出现sudo;找不到命令 tlmgr，意味着执行时环境变量不对，请执行</span><br><span class="line">(1) sudo vi /etc/sudoers</span><br><span class="line">(2) 给如下内容加一个感叹号</span><br><span class="line">	Defaults	env_reset </span><br><span class="line">	Defaults	!env_reset</span><br><span class="line">(3) 再vi ~/.bashrc 加入下面这行到最后</span><br><span class="line">(4) alias sudo=&apos;sudo env PATH=$PATH&apos;</span><br><span class="line">(5) 保存退出执行 source ~/.bashrc</span><br><span class="line">此时再执行第一条命令 sudo tlmgr option ....</span><br></pre></td></tr></table></figure>
+
 <h2 id="12-更新宏包"><a href="#12-更新宏包" class="headerlink" title="12.更新宏包"></a>12.更新宏包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr update --self --all </span><br><span class="line">要更新几百个，时间较长</span><br></pre></td></tr></table></figure>
+
 <h2 id="13-解决软件安装依赖问题"><a href="#13-解决软件安装依赖问题" class="headerlink" title="13.解决软件安装依赖问题"></a>13.解决软件安装依赖问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(1) sudo apt-get install aptitude</span><br><span class="line">(2) sudo aptitude install equivs</span><br><span class="line">(3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs</span><br><span class="line">(4) equivs-control texlive-local</span><br><span class="line">(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2019-ex.txt并复制所有内容</span><br><span class="line">(6) sudo vi texlive-local 将从浏览器拷贝的内容粘贴进去并保存退出</span><br><span class="line">(7) sudo equivs-build texlive-local</span><br><span class="line">(8) sudo apt-get freeglut3</span><br><span class="line">(9) sudo dpkg -i texlive-local_2019-1_all.deb</span><br></pre></td></tr></table></figure>
 
       
@@ -678,7 +687,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
@@ -850,7 +859,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共64.2k字</span>
+  <span class="post-count">本站共61.7k字</span>
 </div>
 
 

@@ -89,14 +89,13 @@
 <meta name="keywords" content="IT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python Matplotlib 画图中文乱码解决">
-<meta property="og:url" content="https://www.shieber.cn/title/2cca9645/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;2cca9645&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5JrgP.md.png">
-<meta property="og:updated_time" content="2019-11-02T05:31:22.065Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JrgP.md.png">
+<meta property="og:updated_time" content="2019-11-02T05:31:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python Matplotlib 画图中文乱码解决">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5JrgP.md.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JrgP.md.png">
 
 
 
@@ -189,7 +188,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -199,7 +198,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +208,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -219,7 +218,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -229,7 +228,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -241,7 +240,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -355,7 +354,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
                     <span itemprop="name">编程语言</span>
                   </a>
                 </span>
@@ -437,12 +436,18 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/10/30/K5JrgP.md.png" alt="matplotlib"><br><a id="more"></a></p>
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5JrgP.md.png" alt="matplotlib"></p>
+<a id="more"></a>
+
 <p>用matplotlib画图出现中文符号乱码，东改改西改改都不对，实际是没找到中文字体，应对方法如下。</p>
 <h1 id="1-找到宋体"><a href="#1-找到宋体" class="headerlink" title="1.找到宋体"></a>1.找到宋体</h1><p> 拷贝Window/Fonts/simhei.ttf 到 /usr/local/lib/python2.7(3.6)/dist-packages/matplotlib/mpl-data/fonts/ttf</p>
 <h1 id="2-删除缓冲文件"><a href="#2-删除缓冲文件" class="headerlink" title="2.删除缓冲文件"></a>2.删除缓冲文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf ~/.cache/matplotlib</span><br></pre></td></tr></table></figure>
+
 <h1 id="3-设置字体配置文件"><a href="#3-设置字体配置文件" class="headerlink" title="3.设置字体配置文件"></a>3.设置字体配置文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/local/lib/python2.7(3.6)/dist-packages/matplotlib/mpl-data/matplotlibrc</span><br><span class="line">取消这三行注释并加入值:</span><br><span class="line"></span><br><span class="line">(1) font.family     : sans-serif</span><br><span class="line">(2) font.sans-serif : SimHei, (加入SimHei,原有的字体不动)</span><br><span class="line">(2) axes.unicode_minus  : False</span><br></pre></td></tr></table></figure>
-<h1 id="4-命令行进入python并尝试导入"><a href="#4-命令行进入python并尝试导入" class="headerlink" title="4.命令行进入python并尝试导入"></a>4.命令行进入python并尝试导入</h1><p>(导入后要稍等字体刷新)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:~$ python</span><br><span class="line">shieber@Kew:~$ python</span><br><span class="line">Python 3.6.7 (default, Oct 22 2018, 11:32:17)</span><br><span class="line">[GCC 8.2.0] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p>
+
+<h1 id="4-命令行进入python并尝试导入"><a href="#4-命令行进入python并尝试导入" class="headerlink" title="4.命令行进入python并尝试导入"></a>4.命令行进入python并尝试导入</h1><p>(导入后要稍等字体刷新)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:~$ python</span><br><span class="line">shieber@Kew:~$ python</span><br><span class="line">Python 3.6.7 (default, Oct 22 2018, 11:32:17)</span><br><span class="line">[GCC 8.2.0] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
+
 <h1 id="5-针对python3"><a href="#5-针对python3" class="headerlink" title="5.针对python3"></a>5.针对python3</h1><p>和python2一样的操作</p>
 <blockquote>
 <p>拷贝字体 /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf</p>
@@ -678,7 +683,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
@@ -850,7 +855,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共64.2k字</span>
+  <span class="post-count">本站共61.7k字</span>
 </div>
 
 

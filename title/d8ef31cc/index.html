@@ -89,14 +89,13 @@
 <meta name="keywords" content="IT,SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关系数据库，非关系数据库，云原生数据库">
-<meta property="og:url" content="https://www.shieber.cn/title/d8ef31cc/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;d8ef31cc&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5JgHg.md.png">
-<meta property="og:updated_time" content="2019-11-02T05:30:04.151Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JgHg.md.png">
+<meta property="og:updated_time" content="2019-11-02T05:30:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关系数据库，非关系数据库，云原生数据库">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5JgHg.md.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JgHg.md.png">
 
 
 
@@ -189,7 +188,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -199,7 +198,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +208,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -219,7 +218,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -229,7 +228,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -241,7 +240,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -355,7 +354,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
                     <span itemprop="name">数据库</span>
                   </a>
                 </span>
@@ -437,7 +436,9 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/10/30/K5JgHg.md.png" alt="database"><br><a id="more"></a></p>
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5JgHg.md.png" alt="database"></p>
+<a id="more"></a>
+
 <h1 id="一-概述"><a href="#一-概述" class="headerlink" title="一 概述"></a>一 概述</h1><p>最近在研究学习数据库知识，发现市面上太多数据库及其书籍，而且体系混乱，越看越糊涂，故特意了解了数据库的发展史。</p>
 <p>最早提出关系型数据库原理的是E.F.Codd，他在其论文<a href="https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf" target="_blank" rel="noopener">A Relational Model of Data for Large Shared Data Banks</a>中详述了关系数据库的原理和实现，我看了下论文，和今天的数据库简直一模一样。</p>
 <p>而非关系数据库NoSQL一词首先是Carlo Strozzi在1998年提出来的，指的是他开发的一个没有SQL功能，轻量级的，开源的关系型数据库。这个定义跟我们现在对NoSQL的定义有很大的区别，它本来指的就是“没有SQL”的数据库，但是NoSQL的发展慢慢偏离了初衷，我们要的不是“no sql”，而是“no relational”，也就是我们现在常说的非关系型数据库。</p>
@@ -454,9 +455,7 @@
 </blockquote>
 <h1 id="三-非关系型数据库"><a href="#三-非关系型数据库" class="headerlink" title="三 非关系型数据库"></a>三 非关系型数据库</h1><p>非关系型里有key-value型的，也有做搜索的，还有做文档和图形和扩展式的。<br>常见的非关系数据库如下：</p>
 <blockquote>
-<p>   <strong>Redis</strong>     一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>    <strong>Neo4 j 一个高性能的,NOSQL图形数据库，它将结构化数据存储在网络上而不是表中。它是一个嵌入式的、基于磁盘的、具备完全的事务特性的Java持久化引擎。
-    </strong>Ria k 一个分布式的存储文档型数据库。<br>    <strong>HBas e 一个分布式的、面向列的开源数据库，源于Fay Chang的Google论文“Bigtable：一个结构化数据的分布式存储系统”。HBase是Apache的Hadoop项目的子项目。
-    </strong>Flar e 由日本第二大SNS网站green.jp开发，支持scale，可动态添加或删除数据库服务节点。<br>    <strong>MongoDB</strong> 一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>    <strong>Couchbase</strong>  CouchDB和Membase合并后的产品，先进的Cache系统，由C/C++开发。<br>    <strong>Memcached</strong>  一套分布式的高速缓存系统，由LiveJournal的Brad Fitzpatrick开发。<br>    <strong>DynamoDB</strong> 被设计成用来托管的NoSQL数据库服务、可预期的性能、可实现无缝扩展性和可靠性等核心问题。<br>    <strong>Hazelcast</strong> 一个开源的可嵌入式数据网格，可以把它看做是内存数据库，但与Redis有不同。<br>    <strong>Accumulo</strong> 一个基于Google’s BigTable的高扩展性存储数据库。采用java编写并且操作于HDFS系统上。</p>
+<p>   <strong>Redis</strong>     一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>    <strong>Neo4 j 一个高性能的,NOSQL图形数据库，它将结构化数据存储在网络上而不是表中。它是一个嵌入式的、基于磁盘的、具备完全的事务特性的Java持久化引擎。<br>    *<em>Ria k 一个分布式的存储文档型数据库。<br>    *</em>HBas e 一个分布式的、面向列的开源数据库，源于Fay Chang的Google论文“Bigtable：一个结构化数据的分布式存储系统”。HBase是Apache的Hadoop项目的子项目。<br>    *<em>Flar e 由日本第二大SNS网站green.jp开发，支持scale，可动态添加或删除数据库服务节点。<br>    *</em>MongoDB</strong> 一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>    <strong>Couchbase</strong>  CouchDB和Membase合并后的产品，先进的Cache系统，由C/C++开发。<br>    <strong>Memcached</strong>  一套分布式的高速缓存系统，由LiveJournal的Brad Fitzpatrick开发。<br>    <strong>DynamoDB</strong> 被设计成用来托管的NoSQL数据库服务、可预期的性能、可实现无缝扩展性和可靠性等核心问题。<br>    <strong>Hazelcast</strong> 一个开源的可嵌入式数据网格，可以把它看做是内存数据库，但与Redis有不同。<br>    <strong>Accumulo</strong> 一个基于Google’s BigTable的高扩展性存储数据库。采用java编写并且操作于HDFS系统上。</p>
 </blockquote>
 <pre><code>**Cassandra** 一套开源分布式NoSQL数据库系统。最初由Facebook开发，用于储存收件箱等简单格式数据，集GoogleBigTable的数据模型与Amazon Dynamo的完全分布式的架构于一身。
 **Cloundant** 省却维护人员在数据库管理、维护和调优方面的工作，而不需要考虑数据库管理以及后续随着数据量增长带来的扩展性问题。麻省理工的三位物理学家在寻找上帝粒子的科学实验中将CouchDB进行了大量定制和改进，从而形成了Cloudant。
@@ -467,8 +466,7 @@
 **Twemproxy** 引入代理层，可将后端的多台Redis或Memcached实例进行统一管理与分配，使应用程序只需要在Twemproxy上进行操作，而不用关心后面具体有多少个真实的 Redis 或 Memcached 存储。
 **CockroachDB**一款开源的分布式数据库，具有NoSQL对海量数据的存储管理能力，又保持了传统数据库支持的ACID和SQL等，还支持跨地域、去中心、高并发、多副本强一致和高可用等特性。
 **Elasticsearch** 一个接近实时的搜索平台，从索引这个文档到这个文档能够被搜索到只有一个轻微的延迟。
-**Azure Cosmos DB** 由Microsoft提供的全球分布式多模型数据库。
-</code></pre><h1 id="NewSQL-新技术"><a href="#NewSQL-新技术" class="headerlink" title="NewSQL 新技术"></a>NewSQL 新技术</h1><p>还有一些新出现的数据库，应对目的不同。</p>
+**Azure Cosmos DB** 由Microsoft提供的全球分布式多模型数据库。</code></pre><h1 id="NewSQL-新技术"><a href="#NewSQL-新技术" class="headerlink" title="NewSQL 新技术"></a>NewSQL 新技术</h1><p>还有一些新出现的数据库，应对目的不同。</p>
 <blockquote>
 <p>   <strong>TiDB</strong> 是国内PingCAP团队开发的一个分布式SQL数据库，其灵感来自于Google的F1和Google spanner, TiDB支持包括传统RDBMS和NoSQL的特性。<br>    <strong>LMDB</strong> 全称是Lightning Memory-Mapped Database(快如闪电的内存映射数据库)，它的文件结构简单，包含一个数据文件和一个锁文件。<br>    <strong>NuoDB</strong> 针对云伸缩设计的关系型数据库。重新定义了关系型数据库技术，它是针对弹性云系统而非单机系统设计的，因此可以将其看作是一个多用户、弹性、按需的分布式关系型数据库管理系统。<br>    <strong>VoltDB</strong> 一个内存数据库，提供了 NoSQL 数据库的可伸缩性和传统关系数据库系统的 ACID 一致性。<br>    <strong>TokuDB</strong> 是TokuTek公司研发的新引擎，支持事务/MVCC，数据压缩功能一流，支持异步写入数据功能。索引结构采用fractal tree数据结构，是buffer tree的变种，写入性能优异，适合写多读少的场景。<br>    <strong>MemSQL</strong> 内存数据库，可以横跨多个商用节点（服务器）扩展MemSQL数据集。<br>    <strong>Spanner</strong> 是谷歌公司研发的、可扩展的、多版本、全球分布式、同步复制数据库。<br>    <strong>LevelDB</strong> 是google实现的一个开源且非常高效的键值对存储数据库。<br>    <strong>Clustrix</strong> 是一款分布式数据库系统，它既支持最简单的Key-Value格式，又兼容MySQL的功能，同时能非常简单通过添加新的节点来存储数十亿条数据。<br>    <strong>HybridDB</strong> 是面向在线事务（OLTP）和在线分析（OLAP）混合场景的关系型数据库。HybridDB采用一份数据存储来进行OLTP和OLAP处理，解决了以往需要把一份数据多次复制来分别进行业务交易和数据分析的问题。<br>    <strong>ScaleBase</strong> 是一款基于 MySQL 而构建的动态数据库集群，已针对云技术进行了优化。该解决方案可实现 MySQL 关系数据的完整性，能使您向外扩展到无限数量的用户、数据和事务。<br>    <strong>SequoiaDB</strong> 是一款支持SQL、高并发、实时性、分布式、可扩展、灵活存储的操作型NewSQL数据库，现已开源。<br>    <strong>Tokyo Cabinet(TC)</strong> 是日本人平林干雄开发的一款DBM数据库读写非常快。 </p>
 </blockquote>
@@ -711,7 +709,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
@@ -883,7 +881,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共64.2k字</span>
+  <span class="post-count">本站共61.7k字</span>
 </div>
 
 

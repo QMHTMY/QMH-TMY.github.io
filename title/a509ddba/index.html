@@ -89,16 +89,15 @@
 <meta name="keywords" content="数学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是P问题、NP问题和NPC问题？">
-<meta property="og:url" content="https://www.shieber.cn/title/a509ddba/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;a509ddba&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/11/02/KqYZBn.jpg">
-<meta property="og:image" content="https://s2.ax1x.com/2019/11/02/Kq8Z0x.md.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/11/02/Kq8GnI.png">
-<meta property="og:updated_time" content="2019-11-02T07:52:55.808Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;KqYZBn.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;Kq8Z0x.md.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;Kq8GnI.png">
+<meta property="og:updated_time" content="2019-11-02T07:52:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是P问题、NP问题和NPC问题？">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/11/02/KqYZBn.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;02&#x2F;KqYZBn.jpg">
 
 
 
@@ -191,7 +190,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -201,7 +200,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -211,7 +210,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -221,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -231,7 +230,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -243,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -357,7 +356,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
                     <span itemprop="name">算法</span>
                   </a>
                 </span>
@@ -439,7 +438,9 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/11/02/KqYZBn.jpg" alt="NP"><br><a id="more"></a></p>
+        <p><img src="https://s2.ax1x.com/2019/11/02/KqYZBn.jpg" alt="NP"></p>
+<a id="more"></a>
+
 <p>这或许是众多OIer最大的误区之一。</p>
 <p>你会经常看到网上出现“这怎么做，这不是NP问题吗”、“这个只有搜了，这已经被证明是NP问题了”之类的话。你要知道，大多数人此时所说的NP问题其实都是指的NPC问题，他们没有搞清楚NP问题和NPC问题的概念。NP问题并不是那种“只有搜才行”的问题，NPC问题才是。好，行了，基本上这个误解已经被澄清了。下面的内容都是在讲什么是P问题，什么是NP问题，什么是NPC问题，你如果不是很感兴趣就可以不看了。接下来你可以看到，把NP问题当成是NPC问题是一个多大的错误。</p>
 <p>还是先用几句话简单说明一下时间复杂度。时间复杂度并不是表示一个程序解决问题需要花多少时间，而是当问题规模扩大后，程序需要的时间长度增长得有多快。也就是说，对于高速处理数据的计算机来说，处理某一个特定数据的效率不能衡量一个程序的好坏，而应该看当这个数据的规模变大到数百倍后，程序运行时间是否还是一样，或者也跟着慢了数百倍，或者变慢了数万倍。不管数据有多大，程序处理花的时间始终是那么多的，我们就说这个程序很好，具有O(1)的时间复杂度，也称常数级复杂度;数据规模变得有多大，花的时间也跟着变得有多长，这个程序的时间复杂度就是O(n)，比如找n个数中的最大值;而像冒泡排序、插入排序等，数据扩大2倍，时间变慢4倍的，属于$O(n^2)$的复杂度。还有一些穷举类的算法，所需时间长度成几何阶数上涨，这就是$O(a^n)$的指数级复杂度，甚至$O(n!)$的阶乘级复杂度。不会存在$O(2*n^2)$的复杂度，因为前面的那个“2”是系数，根本不会影响到整个程序的时间增长。同样地，$O(n^3+n^2)$ 的复杂度也就是$O(n^3)$的复杂度。因此，我们会说，一个$O(0.01*n^3)$的程序的效率比$O(100*n^2)$的效率低，尽管在n很小的时候，前者优于后者，但后者时间随数据规模增长得慢，最终$O(n^3)$的复杂度将远远超过$O(n^2)$。我们也说，$O(n^{100})$的复杂度小于$O(1.01^n)$的复杂度。</p>
@@ -567,7 +568,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数学/" rel="tag"><i class="fa
+            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa
 			fa-tag"></i> 数学</a>
           
         </div>
@@ -690,7 +691,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
@@ -846,7 +847,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共64.2k字</span>
+  <span class="post-count">本站共61.7k字</span>
 </div>
 
 

@@ -89,14 +89,13 @@
 <meta name="keywords" content="IT,MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL 8.0 迁移数据存储位置到指定位置(Linux版)">
-<meta property="og:url" content="https://www.shieber.cn/title/dd137b08/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;dd137b08&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5Go0e.jpg">
-<meta property="og:updated_time" content="2019-10-31T08:42:06.480Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5Go0e.jpg">
+<meta property="og:updated_time" content="2019-10-31T08:42:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL 8.0 迁移数据存储位置到指定位置(Linux版)">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K5Go0e.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5Go0e.jpg">
 
 
 
@@ -189,7 +188,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -199,7 +198,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +208,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -219,7 +218,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -229,7 +228,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -241,7 +240,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -355,7 +354,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
                     <span itemprop="name">数据库</span>
                   </a>
                 </span>
@@ -399,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  503
+                  509
                 </span>
               
 
@@ -437,19 +436,38 @@
       
 
       
-        <p><img src="https://s2.ax1x.com/2019/10/30/K5Go0e.jpg" alt="Mysql">　<br><a id="more"></a></p>
-<h1 id="一：具体步骤"><a href="#一：具体步骤" class="headerlink" title="一：具体步骤"></a>一：具体步骤</h1><p><strong>停止mysql服务</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql stop</span><br></pre></td></tr></table></figure></p>
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5Go0e.jpg" alt="Mysql">　</p>
+<a id="more"></a>
+
+<h1 id="一：具体步骤"><a href="#一：具体步骤" class="headerlink" title="一：具体步骤"></a>一：具体步骤</h1><p><strong>停止mysql服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql stop</span><br></pre></td></tr></table></figure>
 <p><strong>拷贝数据存储到你的新位置</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如: /home/database/</span><br><span class="line">$ sudo cp -R /var/lib/mysql /home/database/</span><br></pre></td></tr></table></figure>
+
 <p><strong>打开/etc/mysql/mysql.conf.d/mysqld.cnf修改数据存储位置</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">将以下两行注释掉并加入新的两行(按自己的位置修改)</span><br><span class="line">\#socket = /var/run/mysqld/mysqld.sock</span><br><span class="line">\#datadir= /var/lib/mysql</span><br><span class="line">socket = /home/database/mysql/mysql.sock</span><br><span class="line">datadir = /home/database/mysql</span><br><span class="line">再接着添加以下内容</span><br><span class="line">[client]</span><br><span class="line">socket = /home/database/mysql/mysql.sock</span><br><span class="line">[mysql]</span><br><span class="line"> socket = /home/database/mysql/mysql.sock</span><br></pre></td></tr></table></figure>
-<p><strong>打开/etc/apparmor.d/usr.sbin.mysqld修改新位置的读写权限</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注释以下两行并加入新的两行（用gedit修改该文件要记得删除可能存在的usr.sbin.mysqld~ 文件，不然启动会失败）</span><br><span class="line">\#/var/lib/mysql/ r,</span><br><span class="line">\#/var/lib/mysql/\*\* rwk,</span><br><span class="line">/home/database/mysql/ r,</span><br><span class="line">/home/database/mysql/\*\* rwk,</span><br></pre></td></tr></table></figure></p>
-<p><strong>打开/etc/apparmor.d/abstractions/mysql修改数据库的依赖路径</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注释下面一行并加入第三行(这是个大坑)</span><br><span class="line">\#/var/lib/mysql&#123;,d&#125;/mysql&#123;,d&#125;.sock rw,</span><br><span class="line">/home/database/mysql/mysql.sock rw,</span><br></pre></td></tr></table></figure></p>
-<p><strong>重新加载apparmor刷新配置文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /etc/init.d/apparmor reload</span><br></pre></td></tr></table></figure></p>
-<p><strong>重新加载mysql服务</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql start</span><br></pre></td></tr></table></figure></p>
-<h1 id="二：其他几个大坑可能导致启动失败"><a href="#二：其他几个大坑可能导致启动失败" class="headerlink" title="二：其他几个大坑可能导致启动失败"></a>二：其他几个大坑可能导致启动失败</h1><p><strong>mysql/的权限属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">注意查看/home/database/mysql是否属于mysql组和mysql用户，及权限，若不是则执行</span><br><span class="line">$ sudo chown -R mysql:mysql /home/database/mysql</span><br><span class="line">$ sudo chmod 755 /home/database/mysql/</span><br><span class="line">没有mysql组的通过以下命令创建mysql组和用户</span><br><span class="line">$ sudo groupadd mysql</span><br><span class="line">$ sudo useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure></p>
-<p><strong>database/的权限属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">database/的权限，建议是755，属于root，root</span><br><span class="line">$ sudo chgrp root database/</span><br><span class="line">$ sudo chown root database/</span><br><span class="line">$ sudo chmod 755 database/</span><br></pre></td></tr></table></figure></p>
-<p><strong>Linux selinux安全机制</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在/etc/selinux/config 或类似的文件里，如有SELINUX项，请修改为</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure></p>
+
+<p><strong>打开/etc/apparmor.d/usr.sbin.mysqld修改新位置的读写权限</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注释以下两行并加入新的两行（用gedit修改该文件要记得删除可能存在的usr.sbin.mysqld~ 文件，不然启动会失败）</span><br><span class="line">\#/var/lib/mysql/ r,</span><br><span class="line">\#/var/lib/mysql/\*\* rwk,</span><br><span class="line">/home/database/mysql/ r,</span><br><span class="line">/home/database/mysql/\*\* rwk,</span><br></pre></td></tr></table></figure>
+
+<p><strong>打开/etc/apparmor.d/abstractions/mysql修改数据库的依赖路径</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注释下面一行并加入第三行(这是个大坑)</span><br><span class="line">\#/var/lib/mysql&#123;,d&#125;/mysql&#123;,d&#125;.sock rw,</span><br><span class="line">/home/database/mysql/mysql.sock rw,</span><br></pre></td></tr></table></figure>
+
+<p><strong>重新加载apparmor刷新配置文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo /etc/init.d/apparmor reload</span><br></pre></td></tr></table></figure>
+
+<p><strong>重新加载mysql服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql start</span><br></pre></td></tr></table></figure>
+
+<h1 id="二：其他几个大坑可能导致启动失败"><a href="#二：其他几个大坑可能导致启动失败" class="headerlink" title="二：其他几个大坑可能导致启动失败"></a>二：其他几个大坑可能导致启动失败</h1><p><strong>mysql/的权限属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">注意查看/home/database/mysql是否属于mysql组和mysql用户，及权限，若不是则执行</span><br><span class="line">$ sudo chown -R mysql:mysql /home/database/mysql</span><br><span class="line">$ sudo chmod 755 /home/database/mysql/</span><br><span class="line">没有mysql组的通过以下命令创建mysql组和用户</span><br><span class="line">$ sudo groupadd mysql</span><br><span class="line">$ sudo useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure>
+
+<p><strong>database/的权限属性</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">database/的权限，建议是755，属于root，root</span><br><span class="line">$ sudo chgrp root database/</span><br><span class="line">$ sudo chown root database/</span><br><span class="line">$ sudo chmod 755 database/</span><br></pre></td></tr></table></figure>
+
+<p><strong>Linux selinux安全机制</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在/etc/selinux/config 或类似的文件里，如有SELINUX项，请修改为</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+
 <h1 id="三：结语"><a href="#三：结语" class="headerlink" title="三：结语"></a>三：结语</h1><p>网上的很多教程都过时且并不详细，提到这个又漏掉那个，本教程仍旧不敢保证你一定能成功。<br>MySQL 8.0的配置文件太多了，my.cnf conf.d/ mysql.cnf mysql.conf.d/ 等等出现了引用包含。<br><a href="https://downloads.mysql.com/docs/refman-8.0-en.a4.pdf" target="_blank" rel="noopener">官方文档</a> 六千多页，够玩儿一年。  </p>
 
       
@@ -682,7 +700,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
                   <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
@@ -854,7 +872,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共64.2k字</span>
+  <span class="post-count">本站共61.7k字</span>
 </div>
 
 
