@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.shieber.cn/about/index.html</loc>
+    
+    <lastmod>2019-11-26T13:21:48.625Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shieber.cn/categories/index.html</loc>
+    
+    <lastmod>2019-11-26T13:20:44.629Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shieber.cn/tags/index.html</loc>
+    
+    <lastmod>2019-11-26T13:18:36.843Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.shieber.cn/title/ee25c1c5/</loc>
     
     <lastmod>2019-11-26T07:44:57.695Z</lastmod>
@@ -103,13 +124,6 @@
     <loc>https://www.shieber.cn/title/bdfafec0/</loc>
     
     <lastmod>2019-11-11T03:04:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shieber.cn/about/index.html</loc>
-    
-    <lastmod>2019-11-07T06:31:07.000Z</lastmod>
     
   </url>
   
@@ -222,20 +236,6 @@
     <loc>https://www.shieber.cn/title/4388879e/</loc>
     
     <lastmod>2019-10-30T15:28:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shieber.cn/tags/index.html</loc>
-    
-    <lastmod>2018-10-12T12:21:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shieber.cn/categories/index.html</loc>
-    
-    <lastmod>2018-10-12T12:19:41.000Z</lastmod>
     
   </url>
   
