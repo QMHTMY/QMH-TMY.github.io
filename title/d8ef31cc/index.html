@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="IT,SQL," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Shieber" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="keywords" content="IT,SQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关系数据库，非关系数据库，云原生数据库">
+<meta property="og:url" content="https:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;d8ef31cc&#x2F;index.html">
+<meta property="og:site_name" content="Shieber">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JgHg.md.png">
+<meta property="og:updated_time" content="2019-11-02T05:30:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5JgHg.md.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.shieber.cn/title/d8ef31cc/"/>
+
+
+
+
+
+  <title>关系数据库，非关系数据库，云原生数据库 | Shieber</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shieber</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">友朋自远方来，不亦乐乎?</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.shieber.cn/title/d8ef31cc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shieber">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shieber">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">关系数据库，非关系数据库，云原生数据库</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T09:25:17+08:00">
+                2019-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/title/d8ef31cc/" class="leancloud_visitors" data-flag-title="关系数据库，非关系数据库，云原生数据库">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+	<!-- 插封面图 -->
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://s2.ax1x.com/2019/10/30/K5JgHg.md.png" alt="database"></p>
+<a id="more"></a>
+
+<h1 id="一-概述"><a href="#一-概述" class="headerlink" title="一 概述"></a>一 概述</h1><p>最近在研究学习数据库知识，发现市面上太多数据库及其书籍，而且体系混乱，越看越糊涂，故特意了解了数据库的发展史。</p>
+<p>最早提出关系型数据库原理的是E.F.Codd，他在其论文<a href="https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf" target="_blank" rel="noopener">A Relational Model of Data for Large Shared Data Banks</a>中详述了关系数据库的原理和实现，我看了下论文，和今天的数据库简直一模一样。</p>
+<p>而非关系数据库NoSQL一词首先是Carlo Strozzi在1998年提出来的，指的是他开发的一个没有SQL功能，轻量级的，开源的关系型数据库。这个定义跟我们现在对NoSQL的定义有很大的区别，它本来指的就是“没有SQL”的数据库，但是NoSQL的发展慢慢偏离了初衷，我们要的不是“no sql”，而是“no relational”，也就是我们现在常说的非关系型数据库。</p>
+<p>2009年初，Johan Oskarsson举办了一场关于开源分布式数据库的讨论，Eric Evans在这次讨论中再次提出了NoSQL一词，用于指代那些非关系型的，分布式的，且一般不保证遵循ACID原则的数据存储系统。Eric Evans使用NoSQL这个词，并不是因为字面上的“没有SQL”的意思，他只是觉得很多经典的关系型数据库名字都叫“xxxSQL”,所以为了表示跟这些关系型数据库在定位上的截然不同，就是用了“NoSQL“一词。</p>
+<p>随着社会的发展，不同时代对数据处理和存储的需求在不断变化，故而可以预见的是，数据库会不断有新品种诞生，老品种过时退出市场。今天历史偶然地走上了大数据和智能的时代，所以未来数据一定是很重要的一块，而数据库由于其特殊地位，应当得到极大的发展。我预计，未来10-20年应该会诞生数种新的广泛流行使用的数据库，满足的需求应当是切合时代要求的。中国的数据库厂商应该要有眼光锁定未来市场。为什么? 因为我们有最多的人口，倘使10年后每个中国人都要接入网络，每天产生1G的数据，那么一年，14甚至15亿人口是什么概念？古代有县志，史书。而现代人也当考虑如何将我们丰富的生活和文化保留给后人研究，所以大型的数据库必然会出现，建立人类数据库势在必行，可能下一个创业点也在此。</p>
+<p>在我的认识里，数据库除了存储还要满足对关系的映射，这里关系包含传统的关系数据库关系，也包含非关系数据库的关系。嗯？非关系数据库还有关系？是的，没有消息就是消息，没有关系也是关系。数据总是有结构存在的，目前的成熟产品不一定能应对未来的场景，此间到底还有多少可以挖掘的知识就需要一代代人慢慢摸索。<br>若干年来，数据库一直锁定在大厂商手里，下面略谈一些。</p>
+<h1 id="二-数据库大厂"><a href="#二-数据库大厂" class="headerlink" title="二 数据库大厂"></a>二 数据库大厂</h1><p>做数据库的大厂商目前有七家(排名不分先后)。</p>
+<blockquote>
+<p>   <strong>SAP</strong>，企业资源计划系统里的佼佼者。<br>    <strong>AWS</strong>，Amazon巨头，卖东西卖出大机遇。<br>    <strong>IBM</strong>，百年老牌，现代计算机结构的奠基者。<br>    <strong>Google</strong>，不作恶，偏学好，引领时代精神。<br>    <strong>Oracle</strong>，甲骨文，专注于闭源的杰出代表。<br>    <strong>Aliyun</strong>，阿里巴巴，人人夸。<br>    <strong>MicroSoft</strong>，Windows 发扬者。</p>
+</blockquote>
+<h1 id="二-关系型数据库"><a href="#二-关系型数据库" class="headerlink" title="二 关系型数据库"></a>二 关系型数据库</h1><p>常见的关系数据库如下：</p>
+<blockquote>
+<p>   <strong>DB2</strong> 是IBM一种分布式数据库解决方案，是IBM开发的一种大型关系型数据库平台。支持多用户或程序在同一条SQL 语句中查询不同database甚至DBMS中的数据。<br>    <strong>Oracle</strong> 是甲骨文公司的一款关系数据库管理系统。它是在数据库领域一直处于领先地位的产品。可以说Oracle数据库系统是目前世界上流行的关系数据库管理系统。<br>    <strong>MySQL</strong> 是一种开放源代码的关系型数据库管理系统，使用最常用的数据库管理语言结构化查询语言（SQL）进行数据库管理。<br>    <strong>MariaDB</strong> 是MySQL的一个分支，主要由开源社区在维护，由MySQL创始人开发。MariaDB完全兼容MySQL，使之能轻松成为MySQL的代替品。使用XtraDB来代替MySQL的InnoDB。<br>    <strong>SQLite</strong> 是一款轻型的数据库，遵守ACID的关系型数据库管理系统，包含在一个相对小的C库中。设计目标是嵌入式，它占用资源非常的低，在嵌入式设备中，可能只需几百K内存就够了。<br>    <strong>Access</strong> 是由微软发布的关系数据库管理系统。它结合了MicrosoftJet Database Engine和图形用户界面两项特点，是Microsoft Office的系统程序之一。<br>    <strong>PostgreSQL</strong> 是以加州大学伯克利分校计算机系开发的POSTGRES(现已更名为PostgreSQL)为基础的对象关系型数据库管理系统（ORDBMS）。<br>    <strong>SQL Server</strong> 同样是微软公司推出的一种关系型数据库系统。是一个可扩展的、高性能的、为分布式客户机/服务器计算所设计的数据库管理系统，实现了与WindowsNT的有机结合，提供了基于事务的企业级信息管理系统方案。<br>    <strong>Teradata</strong> 整体上是按Shared Nothing 架构体系进行组织的，他的定位就是大型数据仓库系统，定位比较高。<br>    <strong>Ingres</strong> 是比较早的数据库系统，开始于加利福尼亚大学柏克莱分校的一个研究项目，该项目开始于70年代早期，在80年代早期结束。从80年代中期，在Ingres基础上产生了很多商业数据库软件，包括Sybase、MicrosoftSQL Server、NonStop SQL、Informix 。<br>    <strong>Informix</strong> 是IBM公司出品的关系数据库管理系统（RDBMS）家族。作为一个集成解决方案，它被定位为作为IBM在线事务处理（OLTP）旗舰级数据服务系统。<br>    <strong>Sybase</strong> 美国Sybase公司研制的一种关系型数据库系统，是一种典型的UNIX或WindowsNT平台上客户机/服务器环境下的大型数据库系统。<br>    <strong>FoxPro</strong> 是一种功能强大的数据库，是当今最受欢迎的数据库管理软件之一。FoxPro数据库最初由美国Fox公司1988年推出，1992年Fox公司被Microsoft公司收购。<br>    <strong>Percona</strong>为MySQL数据库服务器进行了改进，在功能和性能上较MySQL有着很显著的提升。该版本提升了在高负载情况下的InnoDB的性能，为DBA提供一些非常有用的性能诊断工具。<br>    <strong>Cache</strong> 是美国Intersystems公司产品，后关系型数据库(Post Relational database)中的领头羊。Cache数据库在国外特别是医疗领域，在美国和欧洲的HIS系统(医疗卫生管理信息系统)中，所占的比例最大，医疗界首选。</p>
+</blockquote>
+<h1 id="三-非关系型数据库"><a href="#三-非关系型数据库" class="headerlink" title="三 非关系型数据库"></a>三 非关系型数据库</h1><p>非关系型里有key-value型的，也有做搜索的，还有做文档和图形和扩展式的。<br>常见的非关系数据库如下：</p>
+<blockquote>
+<p>   <strong>Redis</strong>     一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。<br>    <strong>Neo4 j 一个高性能的,NOSQL图形数据库，它将结构化数据存储在网络上而不是表中。它是一个嵌入式的、基于磁盘的、具备完全的事务特性的Java持久化引擎。<br>    *<em>Ria k 一个分布式的存储文档型数据库。<br>    *</em>HBas e 一个分布式的、面向列的开源数据库，源于Fay Chang的Google论文“Bigtable：一个结构化数据的分布式存储系统”。HBase是Apache的Hadoop项目的子项目。<br>    *<em>Flar e 由日本第二大SNS网站green.jp开发，支持scale，可动态添加或删除数据库服务节点。<br>    *</em>MongoDB</strong> 一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>    <strong>Couchbase</strong>  CouchDB和Membase合并后的产品，先进的Cache系统，由C/C++开发。<br>    <strong>Memcached</strong>  一套分布式的高速缓存系统，由LiveJournal的Brad Fitzpatrick开发。<br>    <strong>DynamoDB</strong> 被设计成用来托管的NoSQL数据库服务、可预期的性能、可实现无缝扩展性和可靠性等核心问题。<br>    <strong>Hazelcast</strong> 一个开源的可嵌入式数据网格，可以把它看做是内存数据库，但与Redis有不同。<br>    <strong>Accumulo</strong> 一个基于Google’s BigTable的高扩展性存储数据库。采用java编写并且操作于HDFS系统上。</p>
+</blockquote>
+<pre><code>**Cassandra** 一套开源分布式NoSQL数据库系统。最初由Facebook开发，用于储存收件箱等简单格式数据，集GoogleBigTable的数据模型与Amazon Dynamo的完全分布式的架构于一身。
+**Cloundant** 省却维护人员在数据库管理、维护和调优方面的工作，而不需要考虑数据库管理以及后续随着数据量增长带来的扩展性问题。麻省理工的三位物理学家在寻找上帝粒子的科学实验中将CouchDB进行了大量定制和改进，从而形成了Cloudant。
+**DataStax** 基于开源的“NoSQL”数据库Apache Cassandra，将Cassandra与Hadoop进行了集成。
+**FlockDB**  一个存储图数据的分布式数据库，图数据库的存储对象是图论里面的图，而非图片。Twitter使用它来存储人与人之间的关系图。
+**MarkLogic**  企业级的NoSQL数据库。是一个集存储、管理、搜索JSON和XML文档和图形数据的multi-model NoSWL数据库。
+**Voldemort** 一个分布式键-值（Key-value）存储系统，是Amazon Dynamo的一个开源克隆。
+**Twemproxy** 引入代理层，可将后端的多台Redis或Memcached实例进行统一管理与分配，使应用程序只需要在Twemproxy上进行操作，而不用关心后面具体有多少个真实的 Redis 或 Memcached 存储。
+**CockroachDB**一款开源的分布式数据库，具有NoSQL对海量数据的存储管理能力，又保持了传统数据库支持的ACID和SQL等，还支持跨地域、去中心、高并发、多副本强一致和高可用等特性。
+**Elasticsearch** 一个接近实时的搜索平台，从索引这个文档到这个文档能够被搜索到只有一个轻微的延迟。
+**Azure Cosmos DB** 由Microsoft提供的全球分布式多模型数据库。</code></pre><h1 id="NewSQL-新技术"><a href="#NewSQL-新技术" class="headerlink" title="NewSQL 新技术"></a>NewSQL 新技术</h1><p>还有一些新出现的数据库，应对目的不同。</p>
+<blockquote>
+<p>   <strong>TiDB</strong> 是国内PingCAP团队开发的一个分布式SQL数据库，其灵感来自于Google的F1和Google spanner, TiDB支持包括传统RDBMS和NoSQL的特性。<br>    <strong>LMDB</strong> 全称是Lightning Memory-Mapped Database(快如闪电的内存映射数据库)，它的文件结构简单，包含一个数据文件和一个锁文件。<br>    <strong>NuoDB</strong> 针对云伸缩设计的关系型数据库。重新定义了关系型数据库技术，它是针对弹性云系统而非单机系统设计的，因此可以将其看作是一个多用户、弹性、按需的分布式关系型数据库管理系统。<br>    <strong>VoltDB</strong> 一个内存数据库，提供了 NoSQL 数据库的可伸缩性和传统关系数据库系统的 ACID 一致性。<br>    <strong>TokuDB</strong> 是TokuTek公司研发的新引擎，支持事务/MVCC，数据压缩功能一流，支持异步写入数据功能。索引结构采用fractal tree数据结构，是buffer tree的变种，写入性能优异，适合写多读少的场景。<br>    <strong>MemSQL</strong> 内存数据库，可以横跨多个商用节点（服务器）扩展MemSQL数据集。<br>    <strong>Spanner</strong> 是谷歌公司研发的、可扩展的、多版本、全球分布式、同步复制数据库。<br>    <strong>LevelDB</strong> 是google实现的一个开源且非常高效的键值对存储数据库。<br>    <strong>Clustrix</strong> 是一款分布式数据库系统，它既支持最简单的Key-Value格式，又兼容MySQL的功能，同时能非常简单通过添加新的节点来存储数十亿条数据。<br>    <strong>HybridDB</strong> 是面向在线事务（OLTP）和在线分析（OLAP）混合场景的关系型数据库。HybridDB采用一份数据存储来进行OLTP和OLAP处理，解决了以往需要把一份数据多次复制来分别进行业务交易和数据分析的问题。<br>    <strong>ScaleBase</strong> 是一款基于 MySQL 而构建的动态数据库集群，已针对云技术进行了优化。该解决方案可实现 MySQL 关系数据的完整性，能使您向外扩展到无限数量的用户、数据和事务。<br>    <strong>SequoiaDB</strong> 是一款支持SQL、高并发、实时性、分布式、可扩展、灵活存储的操作型NewSQL数据库，现已开源。<br>    <strong>Tokyo Cabinet(TC)</strong> 是日本人平林干雄开发的一款DBM数据库读写非常快。 </p>
+</blockquote>
+<h1 id="四-云源生数据库"><a href="#四-云源生数据库" class="headerlink" title="四 云源生数据库"></a>四 云源生数据库</h1><p>云时代诞生的新型数据库，目前还处在发展阶段。</p>
+<blockquote>
+<p>   <strong>Aurora</strong>  亚马逊推出的云原生数据库。<br>    <strong>PolarDB</strong> 阿里产品。<br>    <strong>CynosDB</strong> 腾讯产品。</p>
+</blockquote>
+<h1 id="五-结语"><a href="#五-结语" class="headerlink" title="五 结语 "></a>五 结语 </h1><p>数据库种类实在太多，在此只列举了一部分，当然，大部分人能用得到的就一部分。<br>看到这些数据库，感觉自己知识实在匮乏，对很多东西理解太简单，对新技术的领悟太浅显。<br>希望能在数据这块好好研究，毕竟未来可期。</p>
+<h1 id="六-参考资源"><a href="#六-参考资源" class="headerlink" title="六 参考资源"></a>六 参考资源</h1><p>[1] <a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener">数据库排名</a></p>
+<p>[2] <a href="https://www.infoq.cn/article/cloud-native-data" target="_blank" rel="noopener">什么是“云原生”数据</a></p>
+<p>[3] <a href="https://zhuanlan.zhihu.com/p/48725521" target="_blank" rel="noopener">阿里云数据库入选Gartner</a></p>
+
+      
+    </div>
+    
+    
+    
+
+	 <div>
+  	  
+      <div> 
+ 
+<div style="text-align:center;color:#330000;font-size:14px;">-------本文结束<i class="fa fa-heart"></i>感谢您的阅读-------</div> 
+
+</div>
+
+
+  	  
+	 </div>
+
+	 <div>
+  	  
+       
+<div class="my_post_copyright"> 
+	<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script> 
+	<!-- JS库 sweetalert 可修改路径 --> 
+	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> 
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+	<p><span>本文标题:</span><a href="/title/d8ef31cc/">关系数据库，非关系数据库，云原生数据库</a></p> 
+	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
+	<p><span>发布时间:</span>2019年03月30日 - 09:25</p> 
+	<p><span>最后更新:</span>2019年11月02日 - 13:30</p> 
+	<p><span>原始链接:</span><a href="/title/d8ef31cc/" title="关系数据库，非关系数据库，云原生数据库">https://www.shieber.cn/title/d8ef31cc/</a> 
+	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shieber.cn/title/d8ef31cc/" aria-label="复制成功！"></i></span> 
+	</p> 
+	<p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0
+	International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a>转载请保留原链接及作者信息</p> 
+</div> 
+<script> 
+	var clipboard = new Clipboard('.fa-clipboard'); 
+	  $(".fa-clipboard").click(function(){ 
+		clipboard.on('success', function(){ 
+			swal({ 
+				title: "", 
+				text: '复制成功', 
+				icon: "success", 
+				showConfirmButton: true 
+				}); 
+			}); 
+	}); 
+</script> 
+
+
+
+
+  	  
+	 </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Shieber 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Shieber 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IT/" rel="tag"><i class="fa fa-tag"></i> IT</a>
+          
+            <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/title/46ed9a72/" rel="prev" title="Linux下自定义位置安装TeXLive2019">
+                <i class="fa fa-chevron-left"></i> Linux下自定义位置安装TeXLive2019
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/title/2cca9645/" rel="next" title="Python Matplotlib 画图中文乱码解决">
+                Python Matplotlib 画图中文乱码解决 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Shieber" />
+            
+              <p class="site-author-name" itemprop="name">Shieber</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/QMH-TMY" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:QMH_XB_TMY@yahoo.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                站点推荐
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://open.163.com/" title="云公开课" target="_blank">云公开课</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nasa.gov/" title="NASA" target="_blank">NASA</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nobelprize.org/" title="Nobel" target="_blank">Nobel</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.coursera.org/" title="Course" target="_blank">Course</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cell.com/" title="Cell" target="_blank">Cell</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nature.com/" title="Nature" target="_blank">Nature</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.sciencemag.org/" title="Science" target="_blank">Science</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://space.bilibili.com/415479453/" title="厨师长农国栋" target="_blank">厨师长农国栋</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://space.bilibili.com/290526283/" title="美食作家王刚" target="_blank">美食作家王刚</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-概述"><span class="nav-number">1.</span> <span class="nav-text">一 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-数据库大厂"><span class="nav-number">2.</span> <span class="nav-text">二 数据库大厂</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-关系型数据库"><span class="nav-number">3.</span> <span class="nav-text">二 关系型数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-非关系型数据库"><span class="nav-number">4.</span> <span class="nav-text">三 非关系型数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NewSQL-新技术"><span class="nav-number">5.</span> <span class="nav-text">NewSQL 新技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-云源生数据库"><span class="nav-number">6.</span> <span class="nav-text">四 云源生数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-结语"><span class="nav-number">7.</span> <span class="nav-text">五 结语 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-参考资源"><span class="nav-number">8.</span> <span class="nav-text">六 参考资源</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shieber</span>
+
+  
+</div>
+
+<!-- 
+-->
+
+
+
+<!--
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">本站共62.2k字</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+  
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/src/fireworks.js"></script> 
+ 
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("HN2rcdIiuLQovQVwxp6Oc24T-gzGzoHsz", "xUczcA1bza5cJj2U5YNRelFb");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
