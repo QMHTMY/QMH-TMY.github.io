@@ -5,9 +5,9 @@
   <subtitle>友朋自远方来，不亦乐乎?</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.shieber.cn/"/>
+  <link href="http://www.shieber.cn/"/>
   <updated>2019-11-19T13:33:28.000Z</updated>
-  <id>https://www.shieber.cn/</id>
+  <id>http://www.shieber.cn/</id>
   
   <author>
     <name>Shieber</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>为何我们学不好数学？</title>
-    <link href="https://www.shieber.cn/title/b13586e/"/>
-    <id>https://www.shieber.cn/title/b13586e/</id>
+    <link href="http://www.shieber.cn/title/b13586e/"/>
+    <id>http://www.shieber.cn/title/b13586e/</id>
     <published>2019-11-19T08:47:36.000Z</published>
     <updated>2019-11-19T13:33:28.000Z</updated>
     
@@ -36,8 +36,8 @@
   
   <entry>
     <title>男人和女人</title>
-    <link href="https://www.shieber.cn/title/314bc6e1/"/>
-    <id>https://www.shieber.cn/title/314bc6e1/</id>
+    <link href="http://www.shieber.cn/title/314bc6e1/"/>
+    <id>http://www.shieber.cn/title/314bc6e1/</id>
     <published>2019-11-18T00:26:40.000Z</published>
     <updated>2019-11-26T05:44:36.837Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>CS强校及人工智能领域顶会</title>
-    <link href="https://www.shieber.cn/title/fa65fa6b/"/>
-    <id>https://www.shieber.cn/title/fa65fa6b/</id>
+    <link href="http://www.shieber.cn/title/fa65fa6b/"/>
+    <id>http://www.shieber.cn/title/fa65fa6b/</id>
     <published>2019-11-16T08:24:48.000Z</published>
     <updated>2019-11-17T12:53:33.000Z</updated>
     
@@ -67,17 +67,17 @@
     
     </summary>
     
-      <category term="AI" scheme="https://www.shieber.cn/categories/AI/"/>
+      <category term="AI" scheme="http://www.shieber.cn/categories/AI/"/>
     
     
   </entry>
   
   <entry>
     <title>5G之后是6G？</title>
-    <link href="https://www.shieber.cn/title/fb817f20/"/>
-    <id>https://www.shieber.cn/title/fb817f20/</id>
+    <link href="http://www.shieber.cn/title/fb817f20/"/>
+    <id>http://www.shieber.cn/title/fb817f20/</id>
     <published>2019-10-31T10:19:27.000Z</published>
-    <updated>2019-11-03T08:58:26.000Z</updated>
+    <updated>2019-11-26T14:47:27.704Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/31/KooVW4.jpg" alt="5gON"></p><a id="more"></a><h2 id="5G商用"><a href="#5G商用" class="headerlink" title="5G商用"></a>5G商用</h2><p>今天上午，2019中国国际信息通信展在北京国家会议中心召开。在5G商用启动仪式上，工信部与中国移动、中国联通、中国电信、中国铁塔共同宣布5G正式商用。11月1日，也即明天，各地的5G套餐就可以办理了。对于大部分消费者来说，有尝鲜的意愿，但目前价格还比较贵，真正办理的估计不多。但不管贵不贵，速度快倒是真的。</p><h2 id="运营商的新玩法"><a href="#运营商的新玩法" class="headerlink" title="运营商的新玩法"></a>运营商的新玩法</h2><p>5G和4G相比，有了很多不同的情况，尤其是在运营商层面。4G时代各大运营商相互竞争，5G时代，运营商得抱团取暖，合作共赢。上面已经表明，电信和联通要共同建设通信基站，以往各自建塔的模式玩不转了，唯一能独立搞的就只有移动。5G，使用的波更短，意味着要使用更多的基站，而每个基站都挺贵的，所以总体基站建设费用会比较高，从目前公布的基础套餐价最低为128也能看出这点。据最新数据估计，5G基站建设得分好几年，总投资费用高达数万亿。</p><p>从频段的分配上也能看出，这两家拿到的5G频段加起来还没人家移动一家多，唯一的好处是，联通电信的频段处于最成熟的区间，布置网络要容易些。</p><table><thead><tr><th align="center">移动</th><th align="center">联通</th><th align="center">电信</th></tr></thead><tbody><tr><td align="center">260MHz</td><td align="center">100MHz</td><td align="center">100MHz</td></tr></tbody></table><p>时代变了，以前的冤家，现在成了亲家，仇人成友人。联通和电信多年发展的失利致使移动独大，只好两家合纵连横同移动拼，真真是有点儿三国演义的味道，然而现实是深刻的，利益是重要的，脸面是可以不要的，所以两家得合作。</p><p><img src="https://s2.ax1x.com/2019/10/31/Kooml9.md.jpg" alt="TelUni"></p><p>除此之外，运营商和用户在基站的问题上还存在一个博弈过程。用户的要求是，基站不能放我家旁，但信号必需好，放在别人家旁我没意见。所以逼着运营耍手段，给基站来个大隐身。路边的井盖，路灯，房顶的空调机，绿化树，排气管等等全都成为了基站的新替身。城市人从来看不到基站，但它们却一直在你身边。</p><p><img src="https://s2.ax1x.com/2019/11/01/KTx8jf.jpg" alt="basestation1"></p><p>你以为是绿化，其实是基站。</p><p><img src="https://s2.ax1x.com/2019/11/01/KTxTKK.jpg" alt="basestation2"></p><p>你以为是热水器，其实是基站。</p><p><img src="https://s2.ax1x.com/2019/11/01/KTxx2t.jpg" alt="basestation3"></p><p>请勿践踏花草，其实里面也是基站，一体两用。</p><p>5G基站大幅度增加，耗资巨大，必然导致有的地方投资薄弱，很多地方未来几年都将没有5G信号，所以买5G手机先确认自家信号，别买了用不了。下表中的城市是首批开通5G的城市，其他城市可能要等两年左右。</p><table><thead><tr><th align="center">直辖市</th><th align="center">省会城市</th></tr></thead><tbody><tr><td align="center">北京，上海</td><td align="center">成都，杭州</td></tr><tr><td align="center">天津，重庆</td><td align="center">南京，武汉等</td></tr></tbody></table><table><thead><tr><th align="center">单列市</th><th align="center">重要城市</th></tr></thead><tbody><tr><td align="center">深圳，青岛</td><td align="center">雄安，苏州</td></tr><tr><td align="center">宁波，厦门</td><td align="center">温州，张家口</td></tr><tr><td align="center">大连</td><td align="center"></td></tr></tbody></table><p>我在想，要是5G时代，联通和电信合起来还干不过移动，是不是意味着权力的洗牌，会不会拆分一家合并到另外两家中去？运营商的套路是丰富多样的，不知未来的套餐又会出什么新花样，反正消费者要看清楚，别被忽悠。</p><h2 id="5G应用场景猜测"><a href="#5G应用场景猜测" class="headerlink" title="5G应用场景猜测"></a>5G应用场景猜测</h2><p>前段时间在B站上，北京邮电大学的何同学试用了5G，并就未来的应用做了讨论。他借鉴了4G刚出来时人们的反应，表明预测未来的应用确实是挺难的。</p><p>视频：5G有什么用</p><iframe src="https://player.bilibili.com/player.html?cid=95749546&aid=54737593" width="270" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>尽管很难预测，但我还是大胆猜猜5G的应用。  </p><table><thead><tr><th align="center">预</th><th align="center">测</th></tr></thead><tbody><tr><td align="center">远程医疗</td><td align="center">智慧施政</td></tr><tr><td align="center">智能家具</td><td align="center">工业物联</td></tr></tbody></table><p>远程医疗：一是指优秀的专家可以远程做手术，节约时间和交通成本。二指医生可以通过网络对家里的病人进行指导和开展医疗服务。4G让人吃饭不出家，点外卖；5G就让人生病不出家，点医生，点药。未来的医生可能会享受很高的社会地位，他们通过提供更好的服务，赚取高额的佣金。同时，这种新的医患关系避免物理接触，保护了医生。</p><p>智慧施政：民智越开，则政府越弱，一旦老百姓掌握了信息，那么政府的很多服务可以取消，政府不能随便制定政策，很多政府服务要交给智慧系统，很多政府职权要还给百姓。</p><p>智能家具：物联网时代，硬件大爆发，未来的家庭，联网的器件增多，冰箱，空调，桌子，椅子可能都有某种程度的网络功能，并提供相应的服务。</p><p>工业物联：打造全新的制造链和运输链，智能驾驶，智能运输系统，同时可能出现新的产业联盟，类似今天存在的各种协会。</p><h2 id="5G中的Polar码"><a href="#5G中的Polar码" class="headerlink" title="5G中的Polar码"></a>5G中的Polar码</h2><p>Polar码是5G中的一种编码技术，属于5G核心技术。Polar码源于2008年的一篇论文Channel Polarization。作者是土耳其科学家埃达尔·阿勒坎（Erdal Arikan）。1981年，阿勒坎在位于加州理工学院获得本科学位，随后他去了美国的另一所名校——麻省理工学院，于1985年得到电子信息工程专业的博士学位。阿勒坎的博士生导师是美国人罗伯特·加拉格（Robert Gallager）教授，而加拉格的导师，也就是阿勒坎的师爷，则是大名鼎鼎的信息论鼻祖香农。原本以为只是个牛叉人物，没想到竟然是香农大佬门徒。不过想来也对，不是这个领域的人，又如何搞出这些编码呢？</p><p>华为公司在论文出来后，就调集人手攻克论文提出的编码，并最终得以攻克。前几年，华为推动的Polar码在3GPP会议上同LDPC码共同确立为5G技术，LDPC管数据信道，Polar码则控制通信信道。Polar码中，重要的是一个矩阵问题，解决了矩阵问题，编码问题就解决了。当然，我不是专家，不太懂，无法发表更多看法。</p><p>值得一提的是，美国人推动的LDPC就是阿勒坎的师傅加拉格搞出来的，最终两师徒的理论均成为5G核心技术，美国选了师傅，中国选了徒弟，然后相互竞争，相互斗。</p><p><img src="https://s2.ax1x.com/2019/10/31/Koo3FO.png" alt="Edel"></p><p>图为华为创始人任正非为阿勒坎颁奖，感谢其在该领域的杰出贡献</p><p>除了编码，5G中还有其他的核心技术，包括OFDM（正交频分复用），MIMO（多天线），新的组网结构。在Erik Dahlman的《5G NR》一书提到 “Both LTE and NR are developed by 3GPP and hence have a common background and share several technology components. Many of the design choices in NR are also based on experience from LTE. Furthermore, LTE continues to evolve in parallel with NR and is an important component in 5G radio access.” 可见，4G (LTE)中有些技术是用到5G里面的，自然5G和4G是兼容的。</p><h2 id="6G研究"><a href="#6G研究" class="headerlink" title="6G研究"></a>6G研究</h2><p>2018年两会期间，工信部部长苗圩表示，中国已开展6G的研发，预计2030年试使用。中国通信产业要做到，用一代，产一代，研一代。</p><p><img src="https://s2.ax1x.com/2019/10/31/KoTC1H.jpg" alt="miaoyu"></p><p>图为工信部长苗圩接受记者访问，并透露6G研究情况</p><p>目前的5G，仍然有缺点，很多缺点就是4G(LTE)自带的，在5G仍然没有解决，所以6G要首先解决这些问题，不然下一代通信技术不可能得到发展。5G都这么快了，6G又该如何？这种问题，想象力不够，水平不够，想不出来。但从社会生产力变革的发展和国家对通信行业的投入来看，未来搞通信的人还将大有作为。这个产业涉及的硬件如芯片，天线，软件如算法，智能调度等将得到进一步发展。当然，6G现在还处在概念期，华为也刚开始投入研究，社会上谈得不多。</p><p>我个人看好6G，换句话说，我认为未来从事计算机，通信，算法，芯片，天线等行业的人将大有可为。知道了这些，怎么选路就很清楚了。人一辈子能碰上一个技术浪潮，加之努力，就可能过得很好，何况处在人类技术大爆发的年代，新技术正不断冒出，新思想正时刻迸发。人人都讲抓住机遇，但机遇也要靠自己奋斗，不是喊喊口号就行。新的技术会催生新的公司，同时灭掉旧的公司。今天的淘宝，腾讯，谁说未来不会成为下一个诺基亚？对于自身来讲，个人的人生道路就看他处在历史的潮流中是抱残守缺还是革故鼎新。</p><h2 id="G"><a href="#G" class="headerlink" title="?G"></a>?G</h2><p>现在再进一步思考：6G过后呢？难道7G？可是信道容量是有极限的，香农定理早已经证明了这一点。<br>$$ C= Blog_{2}(1 + \frac{S}{N}), (N =n_0B)  $$<br>若上面的香农公式中，B趋于无穷，则在给定$S/n_0$的情况下，C最大只能等于<br>$$1.44\frac{S}{n_0}$$ </p><p>所以6G过后，是无G。没有了，等待新技术的突破吧，尤其是物理突破。没有物理理论上的突破，人类的技术就不会进步。实际上，每一次物理的突破都带来了技术的革新。我们回顾自1905年相对论诞生以来的一百多年，原子弹，核电站，GPS成为现在时态；量子力学的诞生提出了晶格理论，催生了新材料合成技术，进而推动半导体发展，集成电路发展，最后是建立于之上的计算机，互联网，一直到今天我们都还在吃量子力学的老本儿。最近一段时间，谷歌的<a href="https://www.nature.com/articles/s41586-019-1666-5" target="_blank" rel="noopener">量子霸权</a>不也再次挑动人们的眼球吗？</p><p>当然，有人说，难道不能突破香农定律吗？还别说，还真有这种人，而且还写了相应的文章，只是没有哪位审稿人给通过。另外，芯片行业的摩尔定律也到头了，CPU能做到1nm吗？能再小吗？不行了，因为电子有大小的，一到电子这个尺度，就要考虑量子效应。</p><p>所以，物理上如果不能取得新突破，则人类就会像欧洲中世纪一样，长时间生活在技术停滞发展的社会。想象如果50年后人们还在玩视频直播，还过着2019年的生活，这会不会出问题？相反，新理论会催生新的生产力，进而产生新的技术并推动文明的前进。今天的地球，斗争处于文明体之间，进步的活下来，落后的要么灭亡，要么遭奴役。这个时代是和科技战车绑架在一起的时代，任何人都只能支持科技的发展。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] 文明的冲突，[美]亨廷顿<br>[2] 5G核心技术，Qualcomm(高通)中国<br>[3] 手机基站天线去哪儿了？知乎老狼<br>[4] 5G NR: The Next Generation Wireless Access Technology<br>[5] Channel Polarization, Erdal Arikan, Senior Member, IEEE.  </p>]]></content>
     
@@ -87,17 +87,17 @@
     
     </summary>
     
-      <category term="通信" scheme="https://www.shieber.cn/categories/%E9%80%9A%E4%BF%A1/"/>
+      <category term="通信" scheme="http://www.shieber.cn/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
   </entry>
   
   <entry>
     <title>资深大牛的博客</title>
-    <link href="https://www.shieber.cn/title/f2d8edc5/"/>
-    <id>https://www.shieber.cn/title/f2d8edc5/</id>
+    <link href="http://www.shieber.cn/title/f2d8edc5/"/>
+    <id>http://www.shieber.cn/title/f2d8edc5/</id>
     <published>2019-10-20T06:00:52.000Z</published>
     <updated>2019-11-01T11:36:53.000Z</updated>
     
@@ -109,17 +109,17 @@
     
     </summary>
     
-      <category term="学习" scheme="https://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Blog" scheme="https://www.shieber.cn/tags/Blog/"/>
+      <category term="Blog" scheme="http://www.shieber.cn/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>双托管代码</title>
-    <link href="https://www.shieber.cn/title/53e77485/"/>
-    <id>https://www.shieber.cn/title/53e77485/</id>
+    <link href="http://www.shieber.cn/title/53e77485/"/>
+    <id>http://www.shieber.cn/title/53e77485/</id>
     <published>2019-10-09T13:51:23.000Z</published>
     <updated>2019-10-31T08:54:21.000Z</updated>
     
@@ -131,17 +131,17 @@
     
     </summary>
     
-      <category term="代码托管" scheme="https://www.shieber.cn/categories/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1/"/>
+      <category term="代码托管" scheme="http://www.shieber.cn/categories/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1/"/>
     
     
-      <category term="Code" scheme="https://www.shieber.cn/tags/Code/"/>
+      <category term="Code" scheme="http://www.shieber.cn/tags/Code/"/>
     
   </entry>
   
   <entry>
     <title>校训？笑训？</title>
-    <link href="https://www.shieber.cn/title/cc8c4bdd/"/>
-    <id>https://www.shieber.cn/title/cc8c4bdd/</id>
+    <link href="http://www.shieber.cn/title/cc8c4bdd/"/>
+    <id>http://www.shieber.cn/title/cc8c4bdd/</id>
     <published>2019-10-09T05:45:28.000Z</published>
     <updated>2019-11-17T13:06:39.000Z</updated>
     
@@ -153,17 +153,17 @@
     
     </summary>
     
-      <category term="高校" scheme="https://www.shieber.cn/categories/%E9%AB%98%E6%A0%A1/"/>
+      <category term="高校" scheme="http://www.shieber.cn/categories/%E9%AB%98%E6%A0%A1/"/>
     
     
-      <category term="校训" scheme="https://www.shieber.cn/tags/%E6%A0%A1%E8%AE%AD/"/>
+      <category term="校训" scheme="http://www.shieber.cn/tags/%E6%A0%A1%E8%AE%AD/"/>
     
   </entry>
   
   <entry>
     <title>何以修身？</title>
-    <link href="https://www.shieber.cn/title/70af6bb7/"/>
-    <id>https://www.shieber.cn/title/70af6bb7/</id>
+    <link href="http://www.shieber.cn/title/70af6bb7/"/>
+    <id>http://www.shieber.cn/title/70af6bb7/</id>
     <published>2019-09-28T02:13:54.000Z</published>
     <updated>2019-11-17T14:15:56.000Z</updated>
     
@@ -175,17 +175,17 @@
     
     </summary>
     
-      <category term="学习" scheme="https://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="小杂感" scheme="https://www.shieber.cn/tags/%E5%B0%8F%E6%9D%82%E6%84%9F/"/>
+      <category term="小杂感" scheme="http://www.shieber.cn/tags/%E5%B0%8F%E6%9D%82%E6%84%9F/"/>
     
   </entry>
   
   <entry>
     <title>中国狗和中国人(傅斯年)</title>
-    <link href="https://www.shieber.cn/title/7ac6e5db/"/>
-    <id>https://www.shieber.cn/title/7ac6e5db/</id>
+    <link href="http://www.shieber.cn/title/7ac6e5db/"/>
+    <id>http://www.shieber.cn/title/7ac6e5db/</id>
     <published>2019-09-20T13:19:18.000Z</published>
     <updated>2019-11-12T13:36:04.000Z</updated>
     
@@ -197,17 +197,17 @@
     
     </summary>
     
-      <category term="议论" scheme="https://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
+      <category term="议论" scheme="http://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="讽刺" scheme="https://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
+      <category term="讽刺" scheme="http://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
     
   </entry>
   
   <entry>
     <title>小杂感(鲁迅)</title>
-    <link href="https://www.shieber.cn/title/e0f1fbc4/"/>
-    <id>https://www.shieber.cn/title/e0f1fbc4/</id>
+    <link href="http://www.shieber.cn/title/e0f1fbc4/"/>
+    <id>http://www.shieber.cn/title/e0f1fbc4/</id>
     <published>2019-09-20T13:08:58.000Z</published>
     <updated>2019-11-02T13:38:21.000Z</updated>
     
@@ -219,17 +219,17 @@
     
     </summary>
     
-      <category term="议论" scheme="https://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
+      <category term="议论" scheme="http://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="讽刺" scheme="https://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
+      <category term="讽刺" scheme="http://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
     
   </entry>
   
   <entry>
     <title>变色龙(契诃夫)</title>
-    <link href="https://www.shieber.cn/title/64a8f1c3/"/>
-    <id>https://www.shieber.cn/title/64a8f1c3/</id>
+    <link href="http://www.shieber.cn/title/64a8f1c3/"/>
+    <id>http://www.shieber.cn/title/64a8f1c3/</id>
     <published>2019-09-20T12:30:56.000Z</published>
     <updated>2019-11-12T13:39:07.000Z</updated>
     
@@ -241,17 +241,17 @@
     
     </summary>
     
-      <category term="议论" scheme="https://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
+      <category term="议论" scheme="http://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
     
     
-      <category term="讽刺" scheme="https://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
+      <category term="讽刺" scheme="http://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
     
   </entry>
   
   <entry>
     <title>理解矩阵</title>
-    <link href="https://www.shieber.cn/title/ee25c1c5/"/>
-    <id>https://www.shieber.cn/title/ee25c1c5/</id>
+    <link href="http://www.shieber.cn/title/ee25c1c5/"/>
+    <id>http://www.shieber.cn/title/ee25c1c5/</id>
     <published>2019-09-10T04:44:12.000Z</published>
     <updated>2019-11-26T07:44:57.695Z</updated>
     
@@ -263,17 +263,17 @@
     
     </summary>
     
-      <category term="学习" scheme="https://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="数学" scheme="https://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>自定义新闻邮件</title>
-    <link href="https://www.shieber.cn/title/3af7bfc2/"/>
-    <id>https://www.shieber.cn/title/3af7bfc2/</id>
+    <link href="http://www.shieber.cn/title/3af7bfc2/"/>
+    <id>http://www.shieber.cn/title/3af7bfc2/</id>
     <published>2019-08-19T00:54:05.000Z</published>
     <updated>2019-11-02T05:32:34.000Z</updated>
     
@@ -285,19 +285,19 @@
     
     </summary>
     
-      <category term="邮件服务" scheme="https://www.shieber.cn/categories/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/"/>
+      <category term="邮件服务" scheme="http://www.shieber.cn/categories/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/"/>
     
     
-      <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
-      <category term="Mail" scheme="https://www.shieber.cn/tags/Mail/"/>
+      <category term="Mail" scheme="http://www.shieber.cn/tags/Mail/"/>
     
   </entry>
   
   <entry>
     <title>C语言陷阱</title>
-    <link href="https://www.shieber.cn/title/c1ec2509/"/>
-    <id>https://www.shieber.cn/title/c1ec2509/</id>
+    <link href="http://www.shieber.cn/title/c1ec2509/"/>
+    <id>http://www.shieber.cn/title/c1ec2509/</id>
     <published>2019-08-14T07:07:46.000Z</published>
     <updated>2019-10-31T08:04:47.000Z</updated>
     
@@ -309,17 +309,17 @@
     
     </summary>
     
-      <category term="编程语言" scheme="https://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="https://www.shieber.cn/tags/C/"/>
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>关于glibc中strcmp函数的其他几种写法</title>
-    <link href="https://www.shieber.cn/title/6e24e863/"/>
-    <id>https://www.shieber.cn/title/6e24e863/</id>
+    <link href="http://www.shieber.cn/title/6e24e863/"/>
+    <id>http://www.shieber.cn/title/6e24e863/</id>
     <published>2019-08-12T13:41:55.000Z</published>
     <updated>2019-10-31T08:24:47.000Z</updated>
     
@@ -331,17 +331,17 @@
     
     </summary>
     
-      <category term="编程语言" scheme="https://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="https://www.shieber.cn/tags/C/"/>
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>什么是P问题、NP问题和NPC问题？</title>
-    <link href="https://www.shieber.cn/title/a509ddba/"/>
-    <id>https://www.shieber.cn/title/a509ddba/</id>
+    <link href="http://www.shieber.cn/title/a509ddba/"/>
+    <id>http://www.shieber.cn/title/a509ddba/</id>
     <published>2019-04-22T04:46:01.000Z</published>
     <updated>2019-11-02T07:52:55.000Z</updated>
     
@@ -353,17 +353,17 @@
     
     </summary>
     
-      <category term="算法" scheme="https://www.shieber.cn/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.shieber.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数学" scheme="https://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="http://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Linux上可用的文献目录管理工具</title>
-    <link href="https://www.shieber.cn/title/4388879e/"/>
-    <id>https://www.shieber.cn/title/4388879e/</id>
+    <link href="http://www.shieber.cn/title/4388879e/"/>
+    <id>http://www.shieber.cn/title/4388879e/</id>
     <published>2019-04-15T11:15:34.000Z</published>
     <updated>2019-10-30T15:28:56.000Z</updated>
     
@@ -375,17 +375,17 @@
     
     </summary>
     
-      <category term="科研" scheme="https://www.shieber.cn/categories/%E7%A7%91%E7%A0%94/"/>
+      <category term="科研" scheme="http://www.shieber.cn/categories/%E7%A7%91%E7%A0%94/"/>
     
     
-      <category term="tools" scheme="https://www.shieber.cn/tags/tools/"/>
+      <category term="tools" scheme="http://www.shieber.cn/tags/tools/"/>
     
   </entry>
   
   <entry>
     <title>Linux下自定义位置安装TeXLive2019</title>
-    <link href="https://www.shieber.cn/title/46ed9a72/"/>
-    <id>https://www.shieber.cn/title/46ed9a72/</id>
+    <link href="http://www.shieber.cn/title/46ed9a72/"/>
+    <id>http://www.shieber.cn/title/46ed9a72/</id>
     <published>2019-04-11T13:47:38.000Z</published>
     <updated>2019-10-31T08:26:06.000Z</updated>
     
@@ -397,17 +397,17 @@
     
     </summary>
     
-      <category term="排版设计" scheme="https://www.shieber.cn/categories/%E6%8E%92%E7%89%88%E8%AE%BE%E8%AE%A1/"/>
+      <category term="排版设计" scheme="http://www.shieber.cn/categories/%E6%8E%92%E7%89%88%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="Tex" scheme="https://www.shieber.cn/tags/Tex/"/>
+      <category term="Tex" scheme="http://www.shieber.cn/tags/Tex/"/>
     
   </entry>
   
   <entry>
     <title>关系数据库，非关系数据库，云原生数据库</title>
-    <link href="https://www.shieber.cn/title/d8ef31cc/"/>
-    <id>https://www.shieber.cn/title/d8ef31cc/</id>
+    <link href="http://www.shieber.cn/title/d8ef31cc/"/>
+    <id>http://www.shieber.cn/title/d8ef31cc/</id>
     <published>2019-03-30T01:25:17.000Z</published>
     <updated>2019-11-02T05:30:04.000Z</updated>
     
@@ -419,19 +419,19 @@
     
     </summary>
     
-      <category term="数据库" scheme="https://www.shieber.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://www.shieber.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
-      <category term="SQL" scheme="https://www.shieber.cn/tags/SQL/"/>
+      <category term="SQL" scheme="http://www.shieber.cn/tags/SQL/"/>
     
   </entry>
   
   <entry>
     <title>Python Matplotlib 画图中文乱码解决</title>
-    <link href="https://www.shieber.cn/title/2cca9645/"/>
-    <id>https://www.shieber.cn/title/2cca9645/</id>
+    <link href="http://www.shieber.cn/title/2cca9645/"/>
+    <id>http://www.shieber.cn/title/2cca9645/</id>
     <published>2019-03-28T09:24:09.000Z</published>
     <updated>2019-11-02T05:31:22.000Z</updated>
     
@@ -443,10 +443,10 @@
     
     </summary>
     
-      <category term="编程语言" scheme="https://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="IT" scheme="https://www.shieber.cn/tags/IT/"/>
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
   </entry>
   
