@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>unupdatewin</title>
+    <url>/title/cec87bc7/</url>
+    <content><![CDATA[<p>长久以来，Windows自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。</p>
+<p>那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程页过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p>
+<h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，那么容易被垃圾360污染，导致越是卸载却越安装的怪病。</p>
+<p>视频：当你想卸载360的时候。</p>
+<iframe src="//player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>
+<h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>
+<h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>IT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为何我们学不好数学？</title>
     <url>/title/b13586e/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2019/11/19/M2W75Q.md.png" alt="math"> </p>
@@ -1588,8 +1608,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>IT</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-11-19T13:33:28.000Z</updated>
+  <updated>2019-11-29T15:54:51.190Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>unupdatewin</title>
+    <link href="http://www.shieber.cn/title/cec87bc7/"/>
+    <id>http://www.shieber.cn/title/cec87bc7/</id>
+    <published>2019-11-29T15:13:24.000Z</published>
+    <updated>2019-11-29T15:54:51.190Z</updated>
+    
+    <content type="html"><![CDATA[<p>长久以来，Windows自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。</p><p>那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程页过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p><h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，那么容易被垃圾360污染，导致越是卸载却越安装的怪病。</p><p>视频：当你想卸载360的时候。</p><iframe src="//player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p><h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p><h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;长久以来，Windows自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。&lt;/p&gt;
+&lt;p&gt;那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，
+      
+    
+    </summary>
+    
+      <category term="Windows" scheme="http://www.shieber.cn/categories/Windows/"/>
+    
+    
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
+    
+  </entry>
   
   <entry>
     <title>为何我们学不好数学？</title>
@@ -425,28 +451,6 @@
       <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
       <category term="SQL" scheme="http://www.shieber.cn/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python Matplotlib 画图中文乱码解决</title>
-    <link href="http://www.shieber.cn/title/2cca9645/"/>
-    <id>http://www.shieber.cn/title/2cca9645/</id>
-    <published>2019-03-28T09:24:09.000Z</published>
-    <updated>2019-11-02T05:31:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5JrgP.md.png" alt="matplotlib"></p><a id="more"></a><p>用matplotlib画图出现中文符号乱码，东改改西改改都不对，实际是没找到中文字体，应对方法如下。</p><h1 id="1-找到宋体"><a href="#1-找到宋体" class="headerlink" title="1.找到宋体"></a>1.找到宋体</h1><p> 拷贝Window/Fonts/simhei.ttf 到 /usr/local/lib/python2.7(3.6)/dist-packages/matplotlib/mpl-data/fonts/ttf</p><h1 id="2-删除缓冲文件"><a href="#2-删除缓冲文件" class="headerlink" title="2.删除缓冲文件"></a>2.删除缓冲文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf ~/.cache/matplotlib</span><br></pre></td></tr></table></figure><h1 id="3-设置字体配置文件"><a href="#3-设置字体配置文件" class="headerlink" title="3.设置字体配置文件"></a>3.设置字体配置文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/local/lib/python2.7(3.6)/dist-packages/matplotlib/mpl-data/matplotlibrc</span><br><span class="line">取消这三行注释并加入值:</span><br><span class="line"></span><br><span class="line">(1) font.family     : sans-serif</span><br><span class="line">(2) font.sans-serif : SimHei, (加入SimHei,原有的字体不动)</span><br><span class="line">(2) axes.unicode_minus  : False</span><br></pre></td></tr></table></figure><h1 id="4-命令行进入python并尝试导入"><a href="#4-命令行进入python并尝试导入" class="headerlink" title="4.命令行进入python并尝试导入"></a>4.命令行进入python并尝试导入</h1><p>(导入后要稍等字体刷新)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:~$ python</span><br><span class="line">shieber@Kew:~$ python</span><br><span class="line">Python 3.6.7 (default, Oct 22 2018, 11:32:17)</span><br><span class="line">[GCC 8.2.0] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure><h1 id="5-针对python3"><a href="#5-针对python3" class="headerlink" title="5.针对python3"></a>5.针对python3</h1><p>和python2一样的操作</p><blockquote><p>拷贝字体 /usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/fonts/ttf</p></blockquote><blockquote><p>修改配置文件/usr/local/lib/python3.6/dist-packages/matplotlib/mpl-data/matplotlibrc</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/30/K5JrgP.md.png&quot; alt=&quot;matplotlib&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
     
   </entry>
   
