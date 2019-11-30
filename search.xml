@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧1：基本概念和水印添加</title>
+    <url>/title/d5e733a9/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/30/QV1K2j.md.jpg" alt="cover"></p>
+<a id="more"></a>
+
+<h2 id="PS使用"><a href="#PS使用" class="headerlink" title="PS使用"></a>PS使用</h2><p>从今天开始，尽量做到每天分享一个PS技巧，提升自己页帮助他人。说起Photoshop，我从大三才正式用，大四老老实实的学了敬伟一百多集的教学视频，算是知道了什么是PS.</p>
+<h2 id="PS软件主体架构"><a href="#PS软件主体架构" class="headerlink" title="PS软件主体架构"></a>PS软件主体架构</h2><p>主体架构为内核和插件应用。内核用C++语言开发，插件有多种，一种是利用官方SDK通过C++开发的插件，一种是利用HTML5 + CSS + JavaScript等前端g语言编写的插件，实际是一个Web App.比如，各种颜色，通道面板都是这类插件。</p>
+<h2 id="PS软件发布体系"><a href="#PS软件发布体系" class="headerlink" title="PS软件发布体系"></a>PS软件发布体系</h2><p>PS肇始于视频处理领域，最开始做的时候没想到它会如此成功，随着计算机技术，尤其印刷技术的发展，PS终于发挥作用并反过来引领时尚设计和印刷业。目前大众还在使用的PS版本是CS6，发布于2012年，随后2013年发布Photoshop creative cloud (CC)，然后是CC 2014, CC 2015 一直到CC 2019，几乎每年一版。这几年随着人工智能在图像数据处理上的成功，PS软件也引入一些智能技术，在CC 2019中，一键抠图已经可以使用，再不用像以前一样去学习钢笔工具作选区抠图啦！</p>
+<p>PS是一种光和色的处理黑箱，输入一张图片，通过点击相应按钮设置部分参数，然后黑箱输出优美的图像，它强调的是对颜色，光线和像素的处理，是一种艺术再加工工具，而不是创造工具。所以使用PS，要定位于改变加工而不是创造，要创造请打开你的摄像机自己去拍照，要艺术加工请用PS。</p>
+<h2 id="图像处理核心概念"><a href="#图像处理核心概念" class="headerlink" title="图像处理核心概念"></a>图像处理核心概念</h2><table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">成分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">颜色</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">分辨率</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">图层</td>
+</tr>
+</tbody></table>
+<p><strong>颜色</strong><br>对于颜色，要考虑的因素有：色相(H)，明度(S)，饱和度(B)。HSB色彩模式正是我们人眼看物质世界的模式，而PS中常用的RGB模式则源于光色的三原色(红R，绿G，蓝B），RGB靠物体发光而被人眼识别。PS中另一种色彩模式是CMYK模式，分别代表Cyan，Magenta, Yellow，Black(K)，因为RGB中把B使用了，所以此处的黑色用K表示。CMYK是印刷用的色彩模式，也就是颜料的三原色。为何会有CMYK和RGB模式？RGB是靠发光，比如你现在看到这些文字是靠屏幕发光显示的黑色，但是你看的书籍上的字可不会发光，它们得靠吸收自然光并反射部分色光(颜色)，这两种模式是不一样的，所以RGB和CMYK模式就是这么来的。在PS上设计的图片，如果要打印就需要调整模式为CMYK，CMYK模式会比RGB暗一些。CMYK中加黑色是因为CMY三种颜色无法勾兑出很纯的黑色，得单独加入黑色。还有一种模式是LAB模式，分别为亮度和颜色，它是一种理论模式。HSB对应人眼，RGB对应发光，CMYK对应反射光，LAB对应大自然颜色。</p>
+<p>PS软件种RGB颜色是通过8位数字来表示的，二进制下8位数字对应$2^8$种程度，比如R就有256种程度，同理三种颜色都各自有256种程度，可以组合出$256^3$种颜色，也就是就是16777216种颜色，一千六百多万，怎么都够日常使用了。实际上，我们可以用16位数保存(28亿多种颜色)，32位(8x$10^{29}$种)保存也可，位数越高，内存占用越大。大自然的颜色无穷无尽，但常用的8位就够了。</p>
+<p><strong>分辨率</strong><br>分辨率强调的是像素点的精细程度，常用指标PPI(Pixel Per Inch，像素每英寸)。PS处理的就是图像的像素。这个概念和视频领域的标清，高清，超清，2K，4K的道理是一样的。每英寸的像素点越多，图像细节越丰富，图像也就越清晰好看。比如手机和笔记本电脑常用的1080P就是1080x1920个像素点。</p>
+<p><strong>图层</strong><br>一副图和另一幅图可以结合创作，把每一张图看做一层，多图就是多层，而PS正是处理图层的专家。同时，PS允许自己添加空白图层来调节图像，通过运用画笔，滤镜等插件，图层间可以出现各种融合效果。</p>
+<h2 id="今日技巧-添加水印"><a href="#今日技巧-添加水印" class="headerlink" title="今日技巧(添加水印)"></a>今日技巧(添加水印)</h2><p>创建一个大小为10CMx5CM的空白图层，通过文字工具输入自己要添加的水印信息。利用编辑里面的描边设置文字描边颜色，调节图层面板的图层填充为0，透明度为65%，就可以调出一个合适的水印。在编辑里选择变换可以变化文字，选择定义图案可以存储该水印，以便今后通过填充使用，也可保存为自定义画笔预设，方便画笔调用。</p>
+<p>例如下面是原始图添加一个水印。</p>
+<p><img src="https://s2.ax1x.com/2019/11/30/QV1aRJ.md.jpg" alt="water_print1">  </p>
+<p>下面是原始图添加一堆水印(令人生厌的模式)。    </p>
+<p><img src="https://s2.ax1x.com/2019/11/30/QV14sI.md.jpg" alt="water_print1">  </p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fucking the Win10 Update Service</title>
     <url>/title/cec87bc7/</url>
     <content><![CDATA[<p><img src="https://ftp.bmp.ovh/imgs/2019/11/07f1ac3a09f4f773.png" alt="Win10"></p>
@@ -1619,8 +1666,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>IT</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
