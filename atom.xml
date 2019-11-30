@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-11-29T15:54:51.190Z</updated>
+  <updated>2019-11-30T02:29:27.121Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,21 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>unupdatewin</title>
+    <title>Fucking the Win10 Update Service</title>
     <link href="http://www.shieber.cn/title/cec87bc7/"/>
     <id>http://www.shieber.cn/title/cec87bc7/</id>
     <published>2019-11-29T15:13:24.000Z</published>
-    <updated>2019-11-29T15:54:51.190Z</updated>
+    <updated>2019-11-30T02:29:27.121Z</updated>
     
-    <content type="html"><![CDATA[<p>长久以来，Windows自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。</p><p>那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程页过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p><h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，那么容易被垃圾360污染，导致越是卸载却越安装的怪病。</p><p>视频：当你想卸载360的时候。</p><iframe src="//player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p><h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p><h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ftp.bmp.ovh/imgs/2019/11/07f1ac3a09f4f773.png" alt="Win10"></p><a id="more"></a><p>最近几年，Windows10自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。你要播报天气预报，不好意思，win10要更新。更多操蛋案例请看知乎：<a href="https://www.zhihu.com/question/271414438" target="_blank" rel="noopener">Why so many people tend to ban Win10 auto-update?</a></p><p>那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程也多半过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p><h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，那么容易被垃圾360污染，导致越是卸载却越安装的怪病。</p><p>视频：当你想卸载360的时候。</p><iframe src="https://player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" width="270" height="300" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p><p>1.按Win + R组合键输入services.msc<br>  在打开的服务中找到Windows Update，点击右键再点击进入属性，在常规一栏将启动类型修改为:禁用，如果改不了先点击下方停止按钮。接着进入恢复一栏，将第一次失败，第二次失败，后续失败统统改为无操作。失败计数设置为1000，或者9999等数字都可以，然后点击下方应用，确定，最后退出。这种方法，在win10早期就是关闭自动更新的方法，然而win10似乎知道了这点，所以他又加了一个Windows Update Medic Service在服务里面，就在Windows Update下面，你点击属性进去，还是像刚刚那样修改，然而你会发现：拒绝访问。这就是win10流氓的地方，自家的电脑，自己却无法访问，你说怪不怪？</p><p>2.按Win + R组合键输入regedit.msc，然后点击注册表项进入HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc，找到start，右击点修改，将数值数据2改为4，确定。接着找到FailureActions，右击修改，将0010和0018两行的第五列[01,01]修改为[00, 00]，具体为移动到01前，按住Shift和右移动键(–&gt;)，删除再输入一个0，他自动就变为00了，下一行一样的改法。保存退出。</p><p>3.再次按Win + R组合键输入services.msc，这次找到刚刚那个流氓Windows Update Meic Service，先点击停止，然后像修改Windows Updata那样，禁用，恢复一栏改为无操作。接着确定，退出。(还是显示拒绝访问，你不用管。)</p><p>你以为完了，还有</p><p>4.再次按Win + R组合键输入gpedit.msc打开组策略文件，依次打开计算机配置 -&gt; 管理模板 -&gt; Windows组件 -&gt; Windows更新，右击配置自动更新，进入编辑，设置为”已禁用”，点击应用，确定并退出。接着在配置自动更新下面找到”删除使用所有WIndows更新功能的访问权限”，右击设置为”已启用”，再点击应用，确定并退出。</p><p>然后，还有。看吧，Windows真是无所不用其极的设置障碍，只要有一处没关，就给你安装更新。</p><p>5.再次按Win + R组合键输入taskschd.msc打开计划程序设置界面，依次展开任务计划程序库 -&gt; Microsoft -&gt; Windows -&gt; WindowsUpdate，把里面的项目都设置为禁用。</p><p>看吧，这么一番骚操作，才能勉强抗衡流氓Win10，而且这个方法，不知后面会不会又被微软给绕过。试想一个漂亮妹妹，如何懂得这许多，她如何不被微软给欺负？估计她的好哥哥也被微软欺负着。本次关闭更新服务用到了，系统服务，组策略，注册表，计划任务，全面关闭才能禁止。在最后taskschd.msc里面，你都可以看到Scheduled Start 上次和下次运行的时间，你看它偷偷运行，干坏事，你还不知道。怎么老是电脑突然风扇呜呜的转，网速也掉了，原来这货没事就下载更新。</p><h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>上面的操作，实在为数太多而且复杂，像Windows update blocker(Wub)这类工具就能帮助你。Wub其实也是设置这些注册表和服务参数，但是只需一键修改，避免个人用户复杂操作。软件可自行百度，或者发邮件给我，我再给你。本想直接放网盘，但分享时间不好设置，也不知有没有人用，万一你喜欢更新呢，我又能怎么说？</p><h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>还有一款比较强大的软件，那就是Dism++，这个软件可以备份系统，在系统崩溃时恢复系统用得上，然后就是关闭更新，可以一键设置。具体请自行百度。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;长久以来，Windows自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。&lt;/p&gt;
-&lt;p&gt;那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，
-      
+      &lt;p&gt;&lt;img src=&quot;https://ftp.bmp.ovh/imgs/2019/11/07f1ac3a09f4f773.png&quot; alt=&quot;Win10&quot;&gt;&lt;/p&gt;
     
     </summary>
     
