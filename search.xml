@@ -668,6 +668,7 @@
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/03/KXkZ5R.md.jpg" alt="matrix"></p>
 <a id="more"></a>
 
+<p><a href="https://blog.csdn.net/myan/article/details/647511," target="_blank" rel="noopener" title="myan">原作者</a> </p>
 <p>前不久chensh出于不可告人的目的，要充当老师，教别人线性代数。于是我被揪住就线性代数中一些务虚性的问题与他讨论了几次。很明显，chensh觉得，要让自己在讲线性代数的时候不被那位强势的学生认为是神经病，还是比较难的事情。</p>
 <p>可怜的chensh，谁让你趟这个地雷阵？！色令智昏啊！</p>
 <p>线性代数课程，无论你从行列式入手还是直接从矩阵入手，从一开始就充斥着莫名其妙。比如说，在全国一般工科院系教学中应用最广泛的同济线性代数教材（现在到了第四版），一上来就介绍逆序数这个“前无古人，后无来者”的古怪概念，然后用逆序数给出行列式的一个极不直观的定义，接着是一些简直犯傻的行列式性质和习题——把这行乘一个系数加到另一行上，再把那一列减过来，折腾得那叫一个热闹，可就是压根看不出这个东西有嘛用。大多数像我一样资质平庸的学生到这里就有点犯晕：连这是个什么东西都模模糊糊的，就开始钻火圈表演了，这未免太“无厘头”了吧！于是开始有人逃课，更多的人开始抄作业。这下就中招了，因为其后的发展可以用一句峰回路转来形容，紧跟着这个无厘头的行列式的，是一个同样无厘头但是伟大的无以复加的家伙的出场——矩阵来了！多年之后，我才明白，当老师犯傻似地用中括号把一堆傻了吧叽的数括起来，并且不紧不慢地说：“这个东西叫做矩阵”的时候，我的数学生涯掀开了何等悲壮辛酸、惨绝人寰的一幕！自那以后，在几乎所有跟“学问”二字稍微沾点边的东西里，矩阵这个家伙从不缺席。对于我这个没能一次搞定线性代数的笨蛋来说，矩阵老大的不请自来每每搞得我灰头土脸，头破血流。长期以来，我在阅读中一见矩阵，就如同阿Q见到了假洋鬼子，揉揉额角就绕道走。</p>
@@ -838,7 +839,6 @@
 <p>好了，这基本上就是我想说的全部了。还留下一个行列式的问题。矩阵M的行列式实际上是组成M的各个向量按照平行四边形法则搭成一个n维立方体的体积。对于这一点，我只能感叹于其精妙，却无法揭开其中奥秘了。也许我掌握的数学工具不够，我希望有人能够给我们大家讲解其中的道理了。</p>
 <p>我不知道是否讲得足够清楚了，反正这一部分需要您花些功夫去推敲。</p>
 <p>此外，请大家不必等待这个系列的后续部分。以我的工作情况而言，近期内很难保证继续投入脑力到这个领域中，尽管我仍然对此兴致浓厚。不过如果还有（四）的话，可能是一些站在应用层面的考虑，比如对计算机图形学相关算法的理解。但是我不承诺这些讨论近期内会出现了。</p>
-<p>原文作者：myan<br>原文链接：<a href="https://blog.csdn.net/myan/article/details/647511" target="_blank" rel="noopener">https://blog.csdn.net/myan/article/details/647511</a></p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -990,6 +990,7 @@
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/02/KqYZBn.jpg" alt="NP"></p>
 <a id="more"></a>
 
+<p>Note: 本文原地址已遗失，若作者发现可知会本人。</p>
 <p>这或许是众多OIer最大的误区之一。</p>
 <p>你会经常看到网上出现“这怎么做，这不是NP问题吗”、“这个只有搜了，这已经被证明是NP问题了”之类的话。你要知道，大多数人此时所说的NP问题其实都是指的NPC问题，他们没有搞清楚NP问题和NPC问题的概念。NP问题并不是那种“只有搜才行”的问题，NPC问题才是。好，行了，基本上这个误解已经被澄清了。下面的内容都是在讲什么是P问题，什么是NP问题，什么是NPC问题，你如果不是很感兴趣就可以不看了。接下来你可以看到，把NP问题当成是NPC问题是一个多大的错误。</p>
 <p>还是先用几句话简单说明一下时间复杂度。时间复杂度并不是表示一个程序解决问题需要花多少时间，而是当问题规模扩大后，程序需要的时间长度增长得有多快。也就是说，对于高速处理数据的计算机来说，处理某一个特定数据的效率不能衡量一个程序的好坏，而应该看当这个数据的规模变大到数百倍后，程序运行时间是否还是一样，或者也跟着慢了数百倍，或者变慢了数万倍。不管数据有多大，程序处理花的时间始终是那么多的，我们就说这个程序很好，具有O(1)的时间复杂度，也称常数级复杂度;数据规模变得有多大，花的时间也跟着变得有多长，这个程序的时间复杂度就是O(n)，比如找n个数中的最大值;而像冒泡排序、插入排序等，数据扩大2倍，时间变慢4倍的，属于$O(n^2)$的复杂度。还有一些穷举类的算法，所需时间长度成几何阶数上涨，这就是$O(a^n)$的指数级复杂度，甚至$O(n!)$的阶乘级复杂度。不会存在$O(2*n^2)$的复杂度，因为前面的那个“2”是系数，根本不会影响到整个程序的时间增长。同样地，$O(n^3+n^2)$ 的复杂度也就是$O(n^3)$的复杂度。因此，我们会说，一个$O(0.01*n^3)$的程序的效率比$O(100*n^2)$的效率低，尽管在n很小的时候，前者优于后者，但后者时间随数据规模增长得慢，最终$O(n^3)$的复杂度将远远超过$O(n^2)$。我们也说，$O(n^{100})$的复杂度小于$O(1.01^n)$的复杂度。</p>
@@ -1020,7 +1021,6 @@
 <p>上面这个逻辑电路中，无论输入是什么，输出都是False。我们就说，这个逻辑电路不存在使输出为True的一组输入。回到上文，给定一个逻辑电路，问是否存在一种输入使输出为True，这即逻辑电路问题。</p>
 <p>逻辑电路问题属于NPC问题。这是有严格证明的。它显然属于NP问题，并且可以直接证明所有的NP问题都可以约化到它(不要以为NP问题有无穷多个将给证明造成不可逾越的困难)。证明过程相当复杂，其大概意思是说任意一个NP问题的输入和输出都可以转换成逻辑电路的输入和输出(想想计算机内部也不过是一些0和1的运算)，因此对于一个NP问题来说，问题转化为了求出满足结果为True的一个输入(即一个可行解)。</p>
 <p>有了第一个NPC问题后，一大堆NPC问题就出现了，因为再证明一个新的NPC问题只需要将一个已知的NPC问题约化到它就行了。后来，Hamilton回路成了NPC问题，TSP问题也成了NPC问题。现在被证明是NPC问题的有很多，任何一个找到了多项式算法的话所有的NP问题都可以完美解决了。因此说，正是因为NPC问题的存在，P=NP变得难以置信。P=NP问题还有许多有趣的东西，有待大家自己进一步的挖掘。攀登这个信息学的巅峰是我们这一代的终极目标。现在我们需要做的，至少是不要把概念弄混淆了。</p>
-<p>说明: 本文为转载，原地址已遗忘，若作者发现可知会本人。</p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1513,6 +1513,55 @@
 <p><img src="https://s2.ax1x.com/2019/11/15/Ma8aLV.md.png" alt="yz"></p>
 <h2 id="年度音乐"><a href="#年度音乐" class="headerlink" title="年度音乐"></a>年度音乐</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=86 src="//music.163.com/outchain/player?type=2&id=32408606&auto=1&height=66"></iframe>
 
+<p>2018年度音乐10首 <a href="http://music.163.com/m/playlist?id=3097730838" target="_blank" rel="noopener">网易云歌单</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">曲目</th>
+<th align="left">歌手</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">的</td>
+<td align="left">兔裹煎蛋卷</td>
+</tr>
+<tr>
+<td align="left">Lapse</td>
+<td align="left">Approaching Nirvana</td>
+</tr>
+<tr>
+<td align="left">Years and Years</td>
+<td align="left">Richard Schrieber</td>
+</tr>
+<tr>
+<td align="left">Positive Outlook</td>
+<td align="left">David Hoffner</td>
+</tr>
+<tr>
+<td align="left">Corporate Dreams</td>
+<td align="left">Capo Productions</td>
+</tr>
+<tr>
+<td align="left">The Way of Honour</td>
+<td align="left">Marcus Warner</td>
+</tr>
+<tr>
+<td align="left">Where Is The Love?</td>
+<td align="left">Clément Bcx</td>
+</tr>
+<tr>
+<td align="left">Best Day of My Life</td>
+<td align="left">American Authors</td>
+</tr>
+<tr>
+<td align="left">B. Jones: Last Pictures</td>
+<td align="left">Rinocerose</td>
+</tr>
+<tr>
+<td align="left">Deep End (Matoma Remix)</td>
+<td align="left">Coucheron</td>
+</tr>
+</tbody></table>
 <h2 id="年度图片"><a href="#年度图片" class="headerlink" title="年度图片"></a>年度图片</h2><p><img src="https://s2.ax1x.com/2019/11/12/M3JoEn.md.png" alt="biye1"><br><img src="https://s2.ax1x.com/2019/11/12/M3Jju4.md.png" alt="biye2"><br><img src="https://s2.ax1x.com/2019/11/12/M3Yi8K.md.png" alt="biye3"></p>
 <h2 id="年度消费"><a href="#年度消费" class="headerlink" title="年度消费    "></a>年度消费    </h2><p><strong>支付宝全年消费</strong>   </p>
 <p><img src="https://s2.ax1x.com/2019/11/15/Ma1w60.md.png" alt="alipay">  </p>
