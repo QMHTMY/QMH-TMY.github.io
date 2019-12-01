@@ -88,12 +88,12 @@
 
 <meta name="keywords" content="IT,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL 8.0 迁移数据存储位置到指定位置(Linux版)">
+<meta property="og:title" content="MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版)">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;dd137b08&#x2F;index.html">
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5Go0e.jpg">
-<meta property="og:updated_time" content="2019-10-31T08:42:06.000Z">
+<meta property="og:updated_time" content="2019-12-01T14:00:03.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;K5Go0e.jpg">
 
@@ -131,7 +131,7 @@
 
 
 
-  <title>MySQL 8.0 迁移数据存储位置到指定位置(Linux版) | Shieber</title>
+  <title>MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版) | Shieber</title>
   
 
 
@@ -319,7 +319,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">MySQL 8.0 迁移数据存储位置到指定位置(Linux版)</h2>
+          <h2 class="post-title" itemprop="name headline">MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版)</h2>
         
 
         <div class="post-meta">
@@ -373,7 +373,7 @@
 
           
           
-             <span id="/title/dd137b08/" class="leancloud_visitors" data-flag-title="MySQL 8.0 迁移数据存储位置到指定位置(Linux版)">
+             <span id="/title/dd137b08/" class="leancloud_visitors" data-flag-title="MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  509
+                  705
                 </span>
               
 
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -441,7 +441,7 @@
         <p><img src="https://s2.ax1x.com/2019/10/30/K5Go0e.jpg" alt="Mysql">　</p>
 <a id="more"></a>
 
-<h1 id="一：具体步骤"><a href="#一：具体步骤" class="headerlink" title="一：具体步骤"></a>一：具体步骤</h1><p><strong>停止mysql服务</strong></p>
+<h1 id="一：MySQL迁移位置具体步骤"><a href="#一：MySQL迁移位置具体步骤" class="headerlink" title="一：MySQL迁移位置具体步骤"></a>一：MySQL迁移位置具体步骤</h1><p><strong>停止mysql服务</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mysql stop</span><br></pre></td></tr></table></figure>
 <p><strong>拷贝数据存储到你的新位置</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如: /home/database/</span><br><span class="line">$ sudo cp -R /var/lib/mysql /home/database/</span><br></pre></td></tr></table></figure>
@@ -471,6 +471,35 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在/etc/selinux/config 或类似的文件里，如有SELINUX项，请修改为</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
 
 <h1 id="三：结语"><a href="#三：结语" class="headerlink" title="三：结语"></a>三：结语</h1><p>网上的很多教程都过时且并不详细，提到这个又漏掉那个，本教程仍旧不敢保证你一定能成功。<br>MySQL 8.0的配置文件太多了，my.cnf conf.d/ mysql.cnf mysql.conf.d/ 等等出现了引用包含。<br><a href="https://downloads.mysql.com/docs/refman-8.0-en.a4.pdf" target="_blank" rel="noopener">官方文档</a> 六千多页，够玩儿一年。  </p>
+<h1 id="四：apt安装的MongoDB迁移位置具体步骤"><a href="#四：apt安装的MongoDB迁移位置具体步骤" class="headerlink" title="四：apt安装的MongoDB迁移位置具体步骤"></a>四：apt安装的MongoDB迁移位置具体步骤</h1><p>你是手动安装的Mongodb的话，那么安装的时候你应该就考虑到这个问题了，自行配置。下面的修改只针对用sudo apt-get install 方法安装的。</p>
+<p><strong>关闭服务 mongodb服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mongodb stop</span><br></pre></td></tr></table></figure>
+
+<p><strong>查找配置文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ locate mongodb.conf</span><br></pre></td></tr></table></figure>
+
+<p>如果没有，就更新下系统数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo updatedb</span><br></pre></td></tr></table></figure>
+
+<p><strong>再次查找配置文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ locate mongodb.conf</span><br></pre></td></tr></table></figure>
+
+<p>一般发现在/etc/mongodb.conf</p>
+<p><strong>打开/etc/mongodb.conf并修改</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbpath=/home/database/ (可自行设置)</span><br></pre></td></tr></table></figure>
+
+<p><strong>转移原来的数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cp -R /var/lib/mongodb /home/database</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改权限</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod 755 -R /home/database/mongodb</span><br></pre></td></tr></table></figure>
+
+<p><strong>更改用户和所属组</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chown -R mongodb:mongodb /home/database/mongodb</span><br></pre></td></tr></table></figure>
+
+<p><strong>重启服务</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mongodb restart</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -498,11 +527,11 @@
 	<!-- JS库 sweetalert 可修改路径 --> 
 	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
-	<p><span>本文标题:</span><a href="/title/dd137b08/">MySQL 8.0 迁移数据存储位置到指定位置(Linux版)</a></p> 
+	<p><span>本文标题:</span><a href="/title/dd137b08/">MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版)</a></p> 
 	<p><span>本文作者:</span><a href="/" title="访问 Shieber 的博客">Shieber</a></p> 
 	<p><span>发布时间:</span>2019年03月13日 - 23:26</p> 
-	<p><span>最后更新:</span>2019年10月31日 - 16:42</p> 
-	<p><span>原始链接:</span><a href="/title/dd137b08/" title="MySQL 8.0 迁移数据存储位置到指定位置(Linux版)">http://www.shieber.cn/title/dd137b08/</a> 
+	<p><span>最后更新:</span>2019年12月01日 - 22:00</p> 
+	<p><span>原始链接:</span><a href="/title/dd137b08/" title="MySQL8.0和Mongodb迁移数据存储位置到指定位置(Linux版)">http://www.shieber.cn/title/dd137b08/</a> 
 	  <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.shieber.cn/title/dd137b08/" aria-label="复制成功！"></i></span> 
 	</p> 
 	<p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0
@@ -832,7 +861,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一：具体步骤"><span class="nav-number">1.</span> <span class="nav-text">一：具体步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二：其他几个大坑可能导致启动失败"><span class="nav-number">2.</span> <span class="nav-text">二：其他几个大坑可能导致启动失败</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三：结语"><span class="nav-number">3.</span> <span class="nav-text">三：结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一：MySQL迁移位置具体步骤"><span class="nav-number">1.</span> <span class="nav-text">一：MySQL迁移位置具体步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二：其他几个大坑可能导致启动失败"><span class="nav-number">2.</span> <span class="nav-text">二：其他几个大坑可能导致启动失败</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三：结语"><span class="nav-number">3.</span> <span class="nav-text">三：结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四：apt安装的MongoDB迁移位置具体步骤"><span class="nav-number">4.</span> <span class="nav-text">四：apt安装的MongoDB迁移位置具体步骤</span></a></li></ol></div>
             
 
           </div>
@@ -876,7 +905,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共65.9k字</span>
+  <span class="post-count">本站共66.1k字</span>
 </div>
 
 
