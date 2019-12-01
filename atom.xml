@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-11-30T14:48:55.233Z</updated>
+  <updated>2019-12-01T06:06:56.517Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日PS技巧2：旋转</title>
+    <link href="http://www.shieber.cn/title/ac80827b/"/>
+    <id>http://www.shieber.cn/title/ac80827b/</id>
+    <published>2019-12-01T05:00:35.000Z</published>
+    <updated>2019-12-01T06:06:56.517Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/30/QV1K2j.md.jpg" alt="cover"></p><a id="more"></a><p>昨天讲了基本概念，今天来试试旋转这个功能。旋转会生成对称美，适合建筑和部分logo设计，在平面设计种可以作为装饰部分。</p><h2 id="今日技巧-使用旋转"><a href="#今日技巧-使用旋转" class="headerlink" title="今日技巧 [使用旋转]"></a>今日技巧 [使用旋转]</h2><p>创建(Ctrl + N)一个300x300像素，填充为黑色的图层，接着再使用Ctrl + Shift +<br>N创建透明图层。选中透明图层，在视图中选定设置水平和垂直参考线。在合适位置利用椭圆工具画一个填充为红色的圆，再接着移动画圆时留下的选区使得其与红色圆相交成一个月牙。移动月牙到中部，复制月牙图层再利用橡皮擦擦除第一个月牙的上部。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeuOhQ.md.png" alt="PS2_1">  </p><p>合并两个月牙图层，再复制合并后的图层，按Ctrl + Shift + T，输入旋转角度22.5度，回车确定，接着按Ctrl + Shift + T 15次，形成下图：  </p><p><img src="https://s2.ax1x.com/2019/12/01/QeKKHK.md.png" alt="PS2_2">  </p><p>选中该图层，使用编辑中的变换，选择水平翻转。</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKIC4.md.png" alt="PS2_3"> </p><p>接着选中原来的红色图层，设置其填充为绿色，参数设置面板里勾选保留透明区域颜色。最后效果如下：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><p>接着还可以作成万花筒，但是我感觉有点儿复杂，这个主要学习旋转的使用，到这一步就够了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/11/30/QV1K2j.md.jpg&quot; alt=&quot;cover&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
+    
+  </entry>
   
   <entry>
     <title>每日PS技巧1：基本概念和水印添加</title>
@@ -231,9 +253,9 @@
     <link href="http://www.shieber.cn/title/7ac6e5db/"/>
     <id>http://www.shieber.cn/title/7ac6e5db/</id>
     <published>2019-09-20T13:19:18.000Z</published>
-    <updated>2019-11-12T13:36:04.000Z</updated>
+    <updated>2019-11-30T15:42:54.569Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/02/KLfQEt.jpg" alt="chinese"></p><a id="more"></a><p>有一天，我见着一位北京警犬学校的人，问他道:“你们训练的狗，单是外国种呢，或是也有中国狗?”他答道:“单是外国种的狗。”</p><p>中国狗也很聪明，它的嗅觉有时竟比外国狗还要灵敏，不过太不专心了。教它去探一件事，它每每在半路上，碰着母狗，或者一群狗打架，或者争食物的时候，便把它的使命丢开了。所以教不成材。</p><p>我听了这一番话，很有点感触，何以中国狗这样像中国人呢?不是不聪明，只是缺乏责任心。中国人“小时了了”的很多，大了，几乎人人要沉沦。留学在国外的成绩颇不恶——胡适之先生说，犹太人在美国大学的成绩最好，其次便是中国学生，至于真美国人，远不如这两个民族——然而一经回国，所学的都向爪哇国去了。大约也是遇着了母狗，或者加入一群狗打架，或者争食物，所以就把已经觉悟的使命丢掉了。</p><p>中国狗和中国人同生在一个地带，一个社会以内，因为受一样环境的支配，和西洋的狗和人比起来，自必有人狗一致的中国派的趋向。和狗有同样的趋向，并不是可羞的事。所不得了者，这趋向偏偏是无责任心。</p><p>我以为中国人的无责任心，真要算达于极点了。单独的行动，百人中有九十九个是卑鄙的。为什么呢?卑鄙可以满足他自身肉体的快乐——他只对这个负责任——至于卑鄙而发生的许多恶影响，反正他以为在别人身上，他是对于自己以外的不负责任的，所以不顾了。团体的行动，百人中有九十九个是过度的。斗狠起来过度，求的目的便在度之外，手段更是过度的。这可就中国历年的政治斗争证明。为什么要这样呢?</p><p>他以为虽过度了，于他自己无害;成功了他可抢得很多的一份，失败了人人分一份，他所分的一份也不比别人多，所以不择手段。一人得，或一团体得，而国家失的事，屡屡得见。现在“鱼行”当道固不必说了，就是前几年也有若干溢出轨道的事;若国会的解散，民国六年临时参议院的召集等等，都是以一团体的利害做前提，而把国家的根本组织打散。我很觉得中国人没有民族的责任心——这就是不怕亡国灭种。我又觉得中国人没有事业的责任心——所以成就的事业极少。没有私立的学校，公立的学校也多半等于官署;没有有力的工厂;没有不磨的言论机关。一时要做事业，不过预备他交游攘臂的媒介物：一旦求得善价，还是沽出去罢!</p><p>中国人所以到了这个地步，不能不说是受历史的支配。专制之下，自然无责任可负;久而久之，自然成遗传性。中国狗所以如此，也是遗传性。中国狗满街走是没有“生活”的。西洋狗是猎物种，当年的日耳曼人就极爱狗，常教狗做事，不专教它跑街，所以责任心不曾忘了。中国人在专制之下，所以才是散沙。西洋人在当年的贵族时代，中流阶级也还有组织，有组织便有生活，有生活便有责任心。中国人没有责任心，也便没有生活。不负责任地活着，自然没有活着的生趣。</p><p>我总觉得中国人的民族是灰色的，前途希望很难说。自五四运动以后，我才觉得改造的基本的萌芽露出了。若说这五四运动单是爱国运动，我便不赞一词了。我对这五四运动所重视的，是它的出发点是直接行动，是唤起公众责任心的运动。我是绝不主张国家主义的人，然而人类生活的发挥，全以责任心为基石。所以，五四运动自是今后偌大的一个平民运动的最先一步。</p><p>不过这一线光明也很容易烟消云散。若不把“社会性”用心地培植一番——就是使责任心成习惯——恐怕仍是个不熟而落的果子。</p><p>前清末年的改造运动，无论它革命也罢，立宪也罢，总有艰苦不拔、蓬蓬勃勃的气象，总算对于民族责任心有透彻的觉悟。民国元、二年间更是朝气曈曈。然而一经袁世凯的狂风暴雨，全国人的兽性大发。官僚武人在那里趁火打劫，青年人便预备着趁火打劫。所以我以为中国人觉悟还算容易，最难的是把这觉悟维持着，发挥去。</p><p>我们自己以为是有新思想的人，别人也说我们有新思想。我以为惭愧得很。我们生理上、心理上，驮着两三千年的历史——为遗传性的缘故，又在“中国化”的灰色水里，浸了二十多年，现在住着的，又是神堂，天天必得和庙祝周旋揖让。所以就境界上和习惯上讲，我们只可说是知道新思想可贵的人，并不是彻底地把新思想代替了旧思想的人。我不曾见过一个能把新思想完全代替了旧思想的人。我们应常常自省，我们若生在皇帝时代，能不能有一定不做官的决心?学生在科举时代，能不能一定不提考篮?能不能有绝俗遗世的魄力?不要和好人比，单和阮嗣宗、李卓吾、袁子才之流比，我们有没有他们那样敢于自用的魄力?我们连袁子才的不成才的魄力亦没有，那么，后人看我们，和我们看前人一样，我们现在颜自负的觉悟，不和当年提过考篮而不中秀才的人发生一种“生不逢时”的感情一样么?有什么了不起呢?这感情能造出什么生活来呢?</p><p>所以新思想不是即刻能贯彻了的，我们须得改造习惯。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/02/KLfQEt.jpg" alt="chinese"></p><a id="more"></a><p>有一天，我见着一位北京警犬学校的人，问他道:“你们训练的狗，单是外国种呢，或是也有中国狗?”他答道:“单是外国种的狗。”</p><p>中国狗也很聪明，它的嗅觉有时竟比外国狗还要灵敏，不过太不专心了。教它去探一件事，它每每在半路上，碰着母狗，或者一群狗打架，或者争食物的时候，便把它的使命丢开了，所以教不成材。</p><p>我听了这一番话，很有点感触，何以中国狗这样像中国人呢?不是不聪明，只是缺乏责任心。中国人“小时了了”的很多，大了，几乎人人要沉沦。留学在国外的成绩颇不恶——胡适之先生说，犹太人在美国大学的成绩最好，其次便是中国学生，至于真美国人，远不如这两个民族——然而一经回国，所学的都向爪哇国去了。大约也是遇着了母狗，或者加入一群狗打架，或者争食物，所以就把已经觉悟的使命丢掉了。</p><p>中国狗和中国人同生在一个地带，一个社会以内，因为受一样环境的支配，和西洋的狗和人比起来，自必有人狗一致的中国派的趋向。和狗有同样的趋向，并不是可羞的事。所不得了者，这趋向偏偏是无责任心。</p><p>我以为中国人的无责任心，真要算达于极点了。单独的行动，百人中有九十九个是卑鄙的。为什么呢?卑鄙可以满足他自身肉体的快乐——他只对这个负责任——至于卑鄙而发生的许多恶影响，反正他以为在别人身上，他是对于自己以外的不负责任的，所以不顾了。团体的行动，百人中有九十九个是过度的。斗狠起来过度，求的目的便在度之外，手段更是过度的。这可就中国历年的政治斗争证明。为什么要这样呢?</p><p>他以为虽过度了，于他自己无害；成功了他可抢得很多的一份，失败了人人分一份，他所分的一份也不比别人多，所以不择手段。一人得，或一团体得，而国家失的事，屡屡得见。现在“鱼行”当道固不必说了，就是前几年也有若干溢出轨道的事；若国会的解散，民国六年临时参议院的召集等等，都是以一团体的利害做前提，而把国家的根本组织打散。我很觉得中国人没有民族的责任心——这就是不怕亡国灭种。我又觉得中国人没有事业的责任心——所以成就的事业极少。没有私立的学校，公立的学校也多半等于官署；没有有力的工厂；没有不磨的言论机关。一时要做事业，不过预备他交游攘臂的媒介物：一旦求得善价，还是沽出去罢!</p><p>中国人所以到了这个地步，不能不说是受历史的支配。专制之下，自然无责任可负；久而久之，自然成遗传性。中国狗所以如此，也是遗传性。中国狗满街走是没有“生活”的。西洋狗是猎物种，当年的日耳曼人就极爱狗，常教狗做事，不专教它跑街，所以责任心不曾忘了。中国人在专制之下，所以才是散沙。西洋人在当年的贵族时代，中流阶级也还有组织，有组织便有生活，有生活便有责任心。中国人没有责任心，也便没有生活。不负责任地活着，自然没有活着的生趣。</p><p>我总觉得中国人的民族是灰色的，前途希望很难说。自五四运动以后，我才觉得改造的基本的萌芽露出了。若说这五四运动单是爱国运动，我便不赞一词了。我对这五四运动所重视的，是它的出发点是直接行动，是唤起公众责任心的运动。我是绝不主张国家主义的人，然而人类生活的发挥，全以责任心为基石。所以，五四运动自是今后偌大的一个平民运动的最先一步。</p><p>不过这一线光明也很容易烟消云散。若不把“社会性”用心地培植一番——就是使责任心成习惯——恐怕仍是个不熟而落的果子。</p><p>前清末年的改造运动，无论它革命也罢，立宪也罢，总有艰苦不拔、蓬蓬勃勃的气象，总算对于民族责任心有透彻的觉悟。民国元、二年间更是朝气曈曈。然而一经袁世凯的狂风暴雨，全国人的兽性大发。官僚武人在那里趁火打劫，青年人便预备着趁火打劫。所以我以为中国人觉悟还算容易，最难的是把这觉悟维持着，发挥去。</p><p>我们自己以为是有新思想的人，别人也说我们有新思想。我以为惭愧得很。我们生理上、心理上，驮着两三千年的历史——为遗传性的缘故，又在“中国化”的灰色水里，浸了二十多年，现在住着的，又是神堂，天天必得和庙祝周旋揖让。所以就境界上和习惯上讲，我们只可说是知道新思想可贵的人，并不是彻底地把新思想代替了旧思想的人。我不曾见过一个能把新思想完全代替了旧思想的人。我们应常常自省，我们若生在皇帝时代，能不能有一定不做官的决心?学生在科举时代，能不能一定不提考篮?能不能有绝俗遗世的魄力?不要和好人比，单和阮嗣宗、李卓吾、袁子才之流比，我们有没有他们那样敢于自用的魄力?我们连袁子才的不成才的魄力亦没有，那么，后人看我们，和我们看前人一样，我们现在颜自负的觉悟，不和当年提过考篮而不中秀才的人发生一种“生不逢时”的感情一样么?有什么了不起呢?这感情能造出什么生活来呢?</p><p>所以新思想不是即刻能贯彻了的，我们须得改造习惯。</p>]]></content>
     
     <summary type="html">
     
@@ -423,28 +445,6 @@
     
     
       <category term="tools" scheme="http://www.shieber.cn/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下自定义位置安装TeXLive2019</title>
-    <link href="http://www.shieber.cn/title/46ed9a72/"/>
-    <id>http://www.shieber.cn/title/46ed9a72/</id>
-    <published>2019-04-11T13:47:38.000Z</published>
-    <updated>2019-10-31T08:26:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg" alt="texlive"></p><a id="more"></a><h2 id="1-从清华大学的镜像处下载"><a href="#1-从清华大学的镜像处下载" class="headerlink" title="1.从清华大学的镜像处下载"></a>1.从清华大学的镜像处下载</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/</span><br></pre></td></tr></table></figure><h2 id="2-安装图像化界面必备的perl-tk组件"><a href="#2-安装图像化界面必备的perl-tk组件" class="headerlink" title="2.安装图像化界面必备的perl-tk组件"></a>2.安装图像化界面必备的perl-tk组件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install perl-tk</span><br></pre></td></tr></table></figure><h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t iso9660 -o loop texlive2019-20190410.iso /mnt</span><br></pre></td></tr></table></figure><h2 id="4-准备从图形界面安装"><a href="#4-准备从图形界面安装" class="headerlink" title="4.准备从图形界面安装"></a>4.准备从图形界面安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /mnt</span><br><span class="line">sudo ./install-tl -gui</span><br></pre></td></tr></table></figure><h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2019)</code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;安装字体/宏包文档目录树&quot;　切换为否</span><br><span class="line">&quot;安装字体/宏包源代码目录树&quot;　切换为否</span><br><span class="line">上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间</span><br></pre></td></tr></table></figure><h2 id="7-点击安装TeX-Live"><a href="#7-点击安装TeX-Live" class="headerlink" title="7.点击安装TeX Live"></a>7.点击安装TeX Live</h2><h2 id="8-卸载镜像文件"><a href="#8-卸载镜像文件" class="headerlink" title="8.卸载镜像文件"></a>8.卸载镜像文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unmount /mnt</span><br></pre></td></tr></table></figure><h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /home/tex2019/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf</span><br><span class="line">sudo fc-cache -fsv (此步执行时间稍长)</span><br></pre></td></tr></table></figure><h2 id="10-环境变量设置"><a href="#10-环境变量设置" class="headerlink" title="10.环境变量设置"></a>10.环境变量设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">打开~/.bashrc 在最后加入如下内容(具体路径安按照自己的系统修改)</span><br><span class="line"></span><br><span class="line">export TexMan=&quot;/home/tex2019/2019/texmf-dist/doc/man&quot;</span><br><span class="line">export TexInfo=&quot;/home/tex2019/2019/texmf-dist/doc/info&quot;</span><br><span class="line">export TexLive=&quot;/home/tex2019/2019/bin/x86_64-linux&quot;</span><br><span class="line">export MANPATH=&quot;$MANPATH:$TexMan&quot;</span><br><span class="line">export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;</span><br><span class="line">export PATH=&quot;$PATH:$TexLive&quot;</span><br><span class="line"></span><br><span class="line">执行 source ~/.bashrc</span><br></pre></td></tr></table></figure><h2 id="11-更新源配置"><a href="#11-更新源配置" class="headerlink" title="11.更新源配置"></a>11.更新源配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet</span><br><span class="line">此步如果出现sudo;找不到命令 tlmgr，意味着执行时环境变量不对，请执行</span><br><span class="line">(1) sudo vi /etc/sudoers</span><br><span class="line">(2) 给如下内容加一个感叹号</span><br><span class="line">Defaultsenv_reset </span><br><span class="line">Defaults!env_reset</span><br><span class="line">(3) 再vi ~/.bashrc 加入下面这行到最后</span><br><span class="line">(4) alias sudo=&apos;sudo env PATH=$PATH&apos;</span><br><span class="line">(5) 保存退出执行 source ~/.bashrc</span><br><span class="line">此时再执行第一条命令 sudo tlmgr option ....</span><br></pre></td></tr></table></figure><h2 id="12-更新宏包"><a href="#12-更新宏包" class="headerlink" title="12.更新宏包"></a>12.更新宏包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr update --self --all </span><br><span class="line">要更新几百个，时间较长</span><br></pre></td></tr></table></figure><h2 id="13-解决软件安装依赖问题"><a href="#13-解决软件安装依赖问题" class="headerlink" title="13.解决软件安装依赖问题"></a>13.解决软件安装依赖问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(1) sudo apt-get install aptitude</span><br><span class="line">(2) sudo aptitude install equivs</span><br><span class="line">(3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs</span><br><span class="line">(4) equivs-control texlive-local</span><br><span class="line">(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2019-ex.txt并复制所有内容</span><br><span class="line">(6) sudo vi texlive-local 将从浏览器拷贝的内容粘贴进去并保存退出</span><br><span class="line">(7) sudo equivs-build texlive-local</span><br><span class="line">(8) sudo apt-get freeglut3</span><br><span class="line">(9) sudo dpkg -i texlive-local_2019-1_all.deb</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg&quot; alt=&quot;texlive&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="排版设计" scheme="http://www.shieber.cn/categories/%E6%8E%92%E7%89%88%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="Tex" scheme="http://www.shieber.cn/tags/Tex/"/>
     
   </entry>
   
