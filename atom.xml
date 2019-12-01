@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-01T06:06:56.517Z</updated>
+  <updated>2019-12-01T07:00:20.528Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://www.shieber.cn/title/ac80827b/"/>
     <id>http://www.shieber.cn/title/ac80827b/</id>
     <published>2019-12-01T05:00:35.000Z</published>
-    <updated>2019-12-01T06:06:56.517Z</updated>
+    <updated>2019-12-01T07:00:20.528Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/30/QV1K2j.md.jpg" alt="cover"></p><a id="more"></a><p>昨天讲了基本概念，今天来试试旋转这个功能。旋转会生成对称美，适合建筑和部分logo设计，在平面设计种可以作为装饰部分。</p><h2 id="今日技巧-使用旋转"><a href="#今日技巧-使用旋转" class="headerlink" title="今日技巧 [使用旋转]"></a>今日技巧 [使用旋转]</h2><p>创建(Ctrl + N)一个300x300像素，填充为黑色的图层，接着再使用Ctrl + Shift +<br>N创建透明图层。选中透明图层，在视图中选定设置水平和垂直参考线。在合适位置利用椭圆工具画一个填充为红色的圆，再接着移动画圆时留下的选区使得其与红色圆相交成一个月牙。移动月牙到中部，复制月牙图层再利用橡皮擦擦除第一个月牙的上部。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeuOhQ.md.png" alt="PS2_1">  </p><p>合并两个月牙图层，再复制合并后的图层，按Ctrl + Shift + T，输入旋转角度22.5度，回车确定，接着按Ctrl + Shift + T 15次，形成下图：  </p><p><img src="https://s2.ax1x.com/2019/12/01/QeKKHK.md.png" alt="PS2_2">  </p><p>选中该图层，使用编辑中的变换，选择水平翻转。</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKIC4.md.png" alt="PS2_3"> </p><p>接着选中原来的红色图层，设置其填充为绿色，参数设置面板里勾选保留透明区域颜色。最后效果如下：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><p>接着还可以作成万花筒，但是我感觉有点儿复杂，这个主要学习旋转的使用，到这一步就够了。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><a id="more"></a><p>昨天讲了基本概念，今天来试试旋转这个功能。旋转会生成对称美，适合建筑和部分logo设计，在平面设计种可以作为装饰部分。</p><h2 id="今日技巧-使用旋转"><a href="#今日技巧-使用旋转" class="headerlink" title="今日技巧 [使用旋转]"></a>今日技巧 [使用旋转]</h2><p>创建(Ctrl + N)一个300x300像素，填充为黑色的图层，接着再使用Ctrl + Shift +<br>N创建透明图层。选中透明图层，在视图中选定设置水平和垂直参考线。在合适位置利用椭圆工具画一个填充为红色的圆，再接着移动画圆时留下的选区使得其与红色圆相交成一个月牙。移动月牙到中部，复制月牙图层再利用橡皮擦擦除第一个月牙的上部。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeuOhQ.md.png" alt="PS2_1">  </p><p>合并两个月牙图层，再复制合并后的图层，按Ctrl + Shift + T，输入旋转角度22.5度，回车确定，接着按Ctrl + Shift + T 15次，形成下图：  </p><p><img src="https://s2.ax1x.com/2019/12/01/QeKKHK.md.png" alt="PS2_2">  </p><p>选中该图层，使用编辑中的变换，选择水平翻转。</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKIC4.md.png" alt="PS2_3"> </p><p>接着选中原来的红色图层，设置其填充为绿色，参数设置面板里勾选保留透明区域颜色。最后效果如下：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><p>接着还可以作成万花筒，但是我感觉有点儿复杂，这个主要学习旋转的使用，到这一步就够了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/11/30/QV1K2j.md.jpg&quot; alt=&quot;cover&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/01/QeKLb6.md.png&quot; alt=&quot;PS2_4&quot;&gt; &lt;/p&gt;
     
     </summary>
     
