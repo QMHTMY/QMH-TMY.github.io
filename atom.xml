@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-01T07:00:20.528Z</updated>
+  <updated>2019-12-02T12:13:03.966Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日PS技巧3：图层样式</title>
+    <link href="http://www.shieber.cn/title/e8aff90b/"/>
+    <id>http://www.shieber.cn/title/e8aff90b/</id>
+    <published>2019-12-02T11:08:26.000Z</published>
+    <updated>2019-12-02T12:13:03.966Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/02/Quwn0K.md.jpg" alt="PS3_1"> </p><a id="more"></a><p>昨天是旋转，今天学习将图层叠加和变亮模式。</p><h2 id="今日技巧-图层变亮叠加"><a href="#今日技巧-图层变亮叠加" class="headerlink" title="今日技巧 [图层变亮叠加]"></a>今日技巧 [图层变亮叠加]</h2><p>今天给一幅中秋月圆夜的图片加上标题，要求标题文字和图片的月亮结合，使得文字发月光。标题来自于高中课本里面的一首诗《春江花月夜》。</p><p>《春江花月夜》是唐代诗人张若虚的诗作。此诗沿用陈隋乐府旧题，运用富有生活气息的清丽之笔，以月为主体，以江为场景，描绘了一幅幽美邈远、惝恍迷离的春江月夜图，抒写了游子思妇真挚动人的离情别绪以及富有哲理意味的人生感慨，表现了一种迥绝的宇宙意识，创造了一个深沉、寥廓、宁静的境界。全诗共三十六句，每四句一换韵，通篇融诗情、画意、哲理为一体，意境空明，想象奇特，语言自然隽永，韵律宛转悠扬，洗净了六朝宫体的浓脂腻粉，具有极高的审美价值，素有“孤篇盖全唐”之誉。</p><p>话说我现在还记得几句“春江潮水连海平，海上明月共潮生。滟滟随波千万里，何处春江无月明！”；“江畔何人初见月？江月何年初照人？人生代代无穷已，江月年年望相似。”</p><p>打开原始图片(随便一副图都可以，太阳也行，只要有个亮的，或是图案)。利用文字工具书写任意文字，字体为华文楷体，字号220，并移动到适当位置。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/02/Quw59J.md.png" alt="PS3_2">  </p><p>接着复制背景图层和文字图层，如果在设计过程中图层干扰到查看就点击图层前的眼睛，暂时关闭图层。此时文字图层在复制的背景图层上，接着用移动工具移动复制的背景图层，使得月亮刚好在第一个字“春”下面。</p><p><img src="https://s2.ax1x.com/2019/12/02/Qu0r5D.md.png" alt="PS3_3">  </p><p>接着将文字图层拉到复制的背景图层下面，按住Alt键并将鼠标移动到两个图层中间，此时出现一个向下箭头，点击。得到的结果如下图(注意看右下角图层的位置关系，关闭了背景图层，防止干扰)：</p><p><img src="https://s2.ax1x.com/2019/12/02/Qu01ET.md.png" alt="PS3_4">  </p><p>其他的字都这样制作，每次制作亮文字最好复制最初的一份文字图层来制作，这样一次制作五个字。</p><p><img src="https://s2.ax1x.com/2019/12/02/Qu0Orq.md.png" alt="PS3_5">  </p><p>五个亮字可以分组，按住Shift键，点选武五副字图，分组(最右下，删除键左边第二个)。然后在分组的五个文字图层里从最下面两个开始，选择第四副设置模式为变亮，这时你会看到两个字都亮了。这时再合并这两个图层，这样就只剩四副图了，注意这时可以打开背景图层，把原图放出来好看一点。</p><p><img src="https://s2.ax1x.com/2019/12/02/QurAUK.md.png" alt="PS3_6"> </p><p>接着重复刚刚的流程，还是选择最后两幅图，继续将第三副图设置为变亮模式，此时有三个字亮了，再合并这两个图层。重复直到五个字全亮。最后的成品就是封面了。    </p><p><img src="https://s2.ax1x.com/2019/12/02/QurMDI.md.png" alt="PS3_7"> </p><p>最后再附上原图和效果图。</p><p><img src="https://s2.ax1x.com/2019/12/02/QusALn.md.png" alt="PS3_8">  </p><p><img src="https://s2.ax1x.com/2019/12/02/Quwn0K.md.jpg" alt="PS3_9"> </p><p>最后的最后，你问我图从哪里找的？其实是使用程序从微软<a href="https://cn.bing.com/" target="_blank" rel="noopener">Bing</a>浏览器主站下载的，每天Bing网站会更新一张封面，都是经过挑选的精美图片。我自己写了个小程序，每天晚上8点电脑会自动下载。其实下了100多张了，都很好看，我也没管过，最近打开目录一看，下了好多图片，张张都是壁纸级别的，所以就用来作这个教程的素材了。</p><p>Shieber出品，必属精品！垃圾图片我才不会放到我网站上。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/02/Quwn0K.md.jpg&quot; alt=&quot;PS3_1&quot;&gt; &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
+    
+  </entry>
   
   <entry>
     <title>每日PS技巧2：旋转</title>
@@ -423,28 +445,6 @@
     
     
       <category term="数学" scheme="http://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux上可用的文献目录管理工具</title>
-    <link href="http://www.shieber.cn/title/4388879e/"/>
-    <id>http://www.shieber.cn/title/4388879e/</id>
-    <published>2019-04-15T11:15:34.000Z</published>
-    <updated>2019-10-30T15:28:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5JHDU.md.png" alt="bibliography"></p><a id="more"></a><p>针对文献管理，Linux有很多的解决方案。借助BibTex的力量，这些工具可以帮你导入引用源，然后自动生成一个结构化文献目录。这里给大家提供了一些Linux上参考文献管理工具的不完全列表。</p><ol><li><p>Zotero<br>这应该是最著名的参考文献聚集工具，Zotero作为一个浏览器的扩展插件。当然，它也有一个方便的Linux 独立工具。拥有强大的性能，Zotero 很容易上手，并且也可以和LibreOffice 或者是其他的文本编辑器配套使用来管理文档的参考文献。我个人很欣赏其操作界面和插件管理器。可惜的是，如果你对参考文献有很多不同的需求的话，很快就会发现 Zotero 功能有限。</p></li><li><p>JabRef<br>JabRef 是最先进的文献管理工具之一。你可以导入大量的格式，可以在其外部的数据库里查找相应的条目（像Google Scholar），并且能直接输出到你喜欢的编辑器。JabRef 可以很好的兼容你的运行环境，甚至也支持插件。最后还有一点，JabRef可以连接你自己的SQL 数据库。而唯一的缺点就是其学习使用的难度。</p></li><li><p>KBibTex<br>对于 KDE 使用者，这个桌面环境也拥有它自己专有的文献管理工具KBibTex。这个程序的品质，正如你所期望。程序可高度定制，通过快捷键就可以很好的操作和体验。你可以很容易找到副本、可以预览结果、也可以直接输出到LaTex 编辑器。而我认为这款软件最大的特色在于它集成了Bigsonomy ，Google Scholar ，甚至是你的Zotero账号。唯一的缺憾是界面看起来实在是有点乱。多花点时间设置软件可以让你使用起来得心应手。</p></li><li><p>Bibfilex<br>可以运行在Gtk 和Qt 环境中，Bibfilex是一个基于 Biblatex 的界面友好的工具。相对于JabRef 和KBibTex ，缺少了一些高级的功能，但这也让他更加的快速和轻巧。不用想太多，这绝对是快速做文献目录的一个聪明的选择。界面很舒服，仅仅反映了一些必要的功能。我给出了其使用的完全手册，你可以从官方的下载页面去获得。</p></li><li><p>Pybliographer<br>正如它的名字一样，Pybliographer是一个用 Python 写的非图形化的文献目录管理工具。我个人比较喜欢把Pybiographic 当做是图形化的前端。它的界面极其简洁和抽象。如果你仅仅需要输出少数的参考文献，而且也确实没有时间去学习更多的工具软件，那么 Pybliographer 确实是一个不错的选择。有一点点像 Bibfilex 的是，它是以让用户方便、快速的使用为目标的。</p></li><li><p>Referencer<br>这应该是我归纳这些时候的一个最大的惊喜，Referencer 确实是让人眼前一亮。完美兼容 Gnome ，它可以查找和导入你的文档，然后在网上查询他们的参考文献，并且输出到 LyX ，非常的漂亮和设计良好。为数不多的几个快捷键和插件让它拥有了图书馆的风格。</p></li><li><p>Mendeley<br>用了Mendeley，一拖一点完事。Mendeley的PDF导入与识别能力非常强大，尤其是对期刊全文PDF。只要将PDF文件拖入Mendeley，它能自动识别Titile， Author， Publication， Year，但有时候识别是不准确的。</p></li><li><p>Bibus<br>BiBus基于Python，Windows和Linux版本都有，Ubuntu下安装Bibus只要敲 sudo apt-get install bibus。要注意的一点是第一次使用前要选择数据库，MySQL或SQLite任选其一。如果是个人使用，最好选择SQLite，具体按提示搞就OK了。然后就需要导入文献数据库，去PubMed主页，搜索关键词，在搜索结果列表中选中一堆你想要的文章，把文字信息导入某个txt文件，打开BiBus(在Applications-Office-BiBus），选择菜单File-Import-Medline，选择txt文件，数据库就显示在BiBus左侧的Import Buffer目录了。使用：点击每篇文献，下方就会显示作者标题摘要等信息；你可以拖动文献到左侧References目录，可以右键点击References目录，选择Add Child增加子目录，也可以手动新建文献资料。</p></li><li><p>Docear<br>配合Zotero使用效果最好，这Docear是基于思维导图形式的文献管理工具，给人耳目一新的感觉，这也是Docear的一大特色，但是Docear的文献管理方面不如Zotero。</p></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/yangtou882/article/details/51296120" target="_blank" rel="noopener">Zoteror和Docear</a></p><p>via: <a href="http://xmodulo.com/reference-management-software-linux.html" target="_blank" rel="noopener">http://xmodulo.com/reference-management-software-linux.html</a> ,原文有增删</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/30/K5JHDU.md.png&quot; alt=&quot;bibliography&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="科研" scheme="http://www.shieber.cn/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    
-      <category term="tools" scheme="http://www.shieber.cn/tags/tools/"/>
     
   </entry>
   
