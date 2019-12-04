@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>每日PS技巧4：移动图层</title>
+    <title>Scrapy爬虫框架</title>
+    <url>/title/dec09abb/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png" alt="scrapy1"></p>
+<a id="more"></a>
+
+<p>前段时间做了好几个爬虫，主要是为自己提供的一些小服务(图片下载，学校讲座信息，新闻获取等)。然而，最近打算大规模获取数据进行其他任务时发现原有的爬虫框架速度不行。经过搜索，发现Scrapy框架能实现大规模爬取，且还可分布式部署，遂入手。</p>
+<p>Python自带的网络库也可以做爬虫，比如requests库就做的还不错，结合BeautifulSoup能实现很多简单的爬取功能。但是，速度和量是它们无法绕过的坎儿。</p>
+<h2 id="Scrapy架构"><a href="#Scrapy架构" class="headerlink" title="Scrapy架构"></a>Scrapy架构</h2><p>Scrapy把网络爬取功能分拆，各个功能模块不干扰，底层由引擎驱动各个模块，一个中央调度器(Scheduler)管理任务分配。大体框架图如图：</p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QlqC6g.md.png" alt="scrapy2"></p>
+<table>
+<thead>
+<tr>
+<th align="left">模块</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Engine</td>
+<td align="left">驱动所有模块工作</td>
+</tr>
+<tr>
+<td align="left">Scheduler</td>
+<td align="left">获取Request并分配任务给Downloader</td>
+</tr>
+<tr>
+<td align="left">Downloader</td>
+<td align="left">专注于下载网页Html并返回给Spider</td>
+</tr>
+<tr>
+<td align="left">Spiders</td>
+<td align="left">爬虫核心，提取数据和链接返回给Pipeline和Scheduler</td>
+</tr>
+<tr>
+<td align="left">Item Pipeline</td>
+<td align="left">专注于下载并存储从Spider传过来的数据(图,文档，音视频等)</td>
+</tr>
+</tbody></table>
+<p>一次爬取任务大概流程  </p>
+<p>1) 引擎开动，激活四大组件和中间件(Middlewares)<br>2) Spider发现start_urls，提交给Scheduler要求(Requests)下载<br>3) Scheduler将url入队，分配给Downloader<br>4) 老实人Downloader从url下载文档并返回(Response)给Spider<br>5) Spider分析文档(Html)，提取需要下载的文档链接和其他需要爬取页的url<br>6) Spider将需要下载的文档链接给Pipeline，并将其他要爬的url交给Scheduler<br>7) Pipeline拿到链接，开始下载资源并存储到配置好的路径中(到数据库或文件)<br>8) Scheduler拿到需要爬取的url，继续入队，分配给Downloader<br>9) 上面的流程实现了闭环，从步骤3到8已经逻辑自恰，可以一直运行下去<br>10) 中间件在爬取过程中提供各种服务(错误处理，用户自定义服务)</p>
+<p>代码组织过程：<br>a. 使用scrapy startproject jditem 创立项目主目录<br>b. 进入jditem/jditem/spider/中建立文件jd_spider.py<br>c. 主体结构如下所示，使用tree获取<br>d. 要下载什么信息在item中注册，在spider.py中实现业务逻辑<br>e. 在pipelines.py实现自定义的下载逻辑<br>f. 在settings中开启管道服务并配置好User-Agent<br>g. 用户主要关注item, spider，settings和pipelines的代码实现  </p>
+<p>shieber@Kew:scrapy$ tree jditem/<br>jditem/<br>├── item.csv<br>├── jditem<br>│   ├── <strong>init</strong>.py<br>│   ├── items.py<br>│   ├── middlewares.py<br>│   ├── pipelines.py<br>│   ├── <strong>pycache</strong><br>│   │   ├── <strong>init</strong>.cpython-36.pyc<br>│   │   ├── items.cpython-36.pyc<br>│   │   ├── pipelines.cpython-36.pyc<br>│   │   └── settings.cpython-36.pyc<br>│   ├── settings.py<br>│   └── spiders<br>│       ├── <strong>init</strong>.py<br>│       ├── jd_spider.py<br>│       └── <strong>pycache</strong><br>│           ├── <strong>init</strong>.cpython-36.pyc<br>│           └── jd_spider.cpython-36.pyc<br>└── scrapy.cfg  </p>
+<p>如果要实现自定义功能，就需要学习pipeline，spider等的源码。要实现分布式需要用scrapy-redis，应对动态网站要学校js执行，利用splash处理就可。</p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>IT</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>每日PS技巧5：移动图层加混合模式</title>
     <url>/title/682c12c4/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJ4w8.md.png" alt="PS5_1"></p>
 <a id="more"></a>
@@ -34,7 +87,7 @@
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJUQ1.md.png" alt="PS_5"></p>
 <a id="more"></a>
 
-<p>今天总结一些PS开发中可以用到的快捷键和指令，其中Alt,Ctrl,Shift,Backspace,Space等都是键盘上的按键，注意是Windows系统下的快捷键，Mac OS X系统似乎要把Ctrl键替换成Cmd键。逗号”,”表示或的意思，加号”+”表示和的意思，逗号和加号是不需要按住的。</p>
+<p>今天总结一些PS开发中可以用到的快捷键和指令，其中Alt,Ctrl,Shift等都是键盘上的按键，注意是Windows系统下的快捷键，Mac OS X系统似乎要把Ctrl键替换成Cmd键。逗号”,”表示或的意思，加号”+”表示和的意思，逗号和加号是不需要按住的。</p>
 <table>
 <thead>
 <tr>

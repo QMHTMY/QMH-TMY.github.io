@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-04T06:40:12.834Z</updated>
+  <updated>2019-12-04T11:53:43.684Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>每日PS技巧4：移动图层</title>
+    <title>Scrapy爬虫框架</title>
+    <link href="http://www.shieber.cn/title/dec09abb/"/>
+    <id>http://www.shieber.cn/title/dec09abb/</id>
+    <published>2019-12-04T08:38:51.000Z</published>
+    <updated>2019-12-04T11:53:43.684Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png" alt="scrapy1"></p><a id="more"></a><p>前段时间做了好几个爬虫，主要是为自己提供的一些小服务(图片下载，学校讲座信息，新闻获取等)。然而，最近打算大规模获取数据进行其他任务时发现原有的爬虫框架速度不行。经过搜索，发现Scrapy框架能实现大规模爬取，且还可分布式部署，遂入手。</p><p>Python自带的网络库也可以做爬虫，比如requests库就做的还不错，结合BeautifulSoup能实现很多简单的爬取功能。但是，速度和量是它们无法绕过的坎儿。</p><h2 id="Scrapy架构"><a href="#Scrapy架构" class="headerlink" title="Scrapy架构"></a>Scrapy架构</h2><p>Scrapy把网络爬取功能分拆，各个功能模块不干扰，底层由引擎驱动各个模块，一个中央调度器(Scheduler)管理任务分配。大体框架图如图：</p><p><img src="https://s2.ax1x.com/2019/12/04/QlqC6g.md.png" alt="scrapy2"></p><table><thead><tr><th align="left">模块</th><th align="left">功能</th></tr></thead><tbody><tr><td align="left">Engine</td><td align="left">驱动所有模块工作</td></tr><tr><td align="left">Scheduler</td><td align="left">获取Request并分配任务给Downloader</td></tr><tr><td align="left">Downloader</td><td align="left">专注于下载网页Html并返回给Spider</td></tr><tr><td align="left">Spiders</td><td align="left">爬虫核心，提取数据和链接返回给Pipeline和Scheduler</td></tr><tr><td align="left">Item Pipeline</td><td align="left">专注于下载并存储从Spider传过来的数据(图,文档，音视频等)</td></tr></tbody></table><p>一次爬取任务大概流程  </p><p>1) 引擎开动，激活四大组件和中间件(Middlewares)<br>2) Spider发现start_urls，提交给Scheduler要求(Requests)下载<br>3) Scheduler将url入队，分配给Downloader<br>4) 老实人Downloader从url下载文档并返回(Response)给Spider<br>5) Spider分析文档(Html)，提取需要下载的文档链接和其他需要爬取页的url<br>6) Spider将需要下载的文档链接给Pipeline，并将其他要爬的url交给Scheduler<br>7) Pipeline拿到链接，开始下载资源并存储到配置好的路径中(到数据库或文件)<br>8) Scheduler拿到需要爬取的url，继续入队，分配给Downloader<br>9) 上面的流程实现了闭环，从步骤3到8已经逻辑自恰，可以一直运行下去<br>10) 中间件在爬取过程中提供各种服务(错误处理，用户自定义服务)</p><p>代码组织过程：<br>a. 使用scrapy startproject jditem 创立项目主目录<br>b. 进入jditem/jditem/spider/中建立文件jd_spider.py<br>c. 主体结构如下所示，使用tree获取<br>d. 要下载什么信息在item中注册，在spider.py中实现业务逻辑<br>e. 在pipelines.py实现自定义的下载逻辑<br>f. 在settings中开启管道服务并配置好User-Agent<br>g. 用户主要关注item, spider，settings和pipelines的代码实现  </p><p>shieber@Kew:scrapy$ tree jditem/<br>jditem/<br>├── item.csv<br>├── jditem<br>│   ├── <strong>init</strong>.py<br>│   ├── items.py<br>│   ├── middlewares.py<br>│   ├── pipelines.py<br>│   ├── <strong>pycache</strong><br>│   │   ├── <strong>init</strong>.cpython-36.pyc<br>│   │   ├── items.cpython-36.pyc<br>│   │   ├── pipelines.cpython-36.pyc<br>│   │   └── settings.cpython-36.pyc<br>│   ├── settings.py<br>│   └── spiders<br>│       ├── <strong>init</strong>.py<br>│       ├── jd_spider.py<br>│       └── <strong>pycache</strong><br>│           ├── <strong>init</strong>.cpython-36.pyc<br>│           └── jd_spider.cpython-36.pyc<br>└── scrapy.cfg  </p><p>如果要实现自定义功能，就需要学习pipeline，spider等的源码。要实现分布式需要用scrapy-redis，应对动态网站要学校js执行，利用splash处理就可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png&quot; alt=&quot;scrapy1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="爬虫" scheme="http://www.shieber.cn/categories/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%88%AC%E8%99%AB/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
+    
+      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每日PS技巧5：移动图层加混合模式</title>
     <link href="http://www.shieber.cn/title/682c12c4/"/>
     <id>http://www.shieber.cn/title/682c12c4/</id>
     <published>2019-12-04T06:16:58.000Z</published>
-    <updated>2019-12-04T06:40:12.834Z</updated>
+    <updated>2019-12-04T06:59:13.479Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJ4w8.md.png" alt="PS5_1"></p><a id="more"></a><p>昨天讲了图层模式，今天结合图层复移动再讲一下图层混合模式。</p><h2 id="今日技巧-图层移动和混合模式"><a href="#今日技巧-图层移动和混合模式" class="headerlink" title="今日技巧 [图层移动和混合模式]"></a>今日技巧 [图层移动和混合模式]</h2><p>首先打开两幅素材图片，然后在一幅图中，按住Ctrl+Alt，此时移动鼠标，会发现鼠标变成三角形状了，只要拖动它到另一副图的标题上，就会自动切换进去，这时释放鼠标，我们就将一幅图复制移动到另一幅图中了。</p><p><img src="https://s2.ax1x.com/2019/12/04/QlYufH.md.png" alt="PS5_2">  </p><p>这样当前窗口就有了两个图层，可自行调整图层大小和位置，如下图。</p><p><img src="https://s2.ax1x.com/2019/12/04/QlYJ78.md.png" alt="PS5_3">  </p><p>此时，新的图层在原来图层上方，而且遮住了原图层，要实现混合，可以利用图层混合模式，看上图右侧，选择变亮模式。该模式将比较两个图层的亮度，让亮的显示出来。这样，原本上方的较暗的图层就让位给下方的亮图层了，实现了图层混合，如下图。</p><p><img src="https://s2.ax1x.com/2019/12/04/QlYf39.md.png" alt="PS5_4">  </p><p>然而我们发现，原图层，左边是黑色的，这下左下角有部分黑色图层，很不协调。为了盖住这部分黑色的图层，可以复制出一份卫星图层，将复制的图层放大并移动，使得其中一部分背景图层恰好遮住黑色图层。调节模式为变亮，这样背景就干掉了，就得到了封面图片的效果。</p><p>最后再附上原图和效果图。</p><p>原图来源：2019年12月04日Baidu图片。  </p><p><img src="https://s2.ax1x.com/2019/12/04/QltKET.md.png" alt="PS5_5">  </p><p>原图来源：2019年07月11日Bing壁纸国内版。  </p><p><img src="https://s2.ax1x.com/2019/12/04/QltGvR.md.png" alt="PS5_6">  </p><p><img src="https://s2.ax1x.com/2019/12/04/QlJ4w8.md.png" alt="PS5_7">  </p>]]></content>
     
@@ -43,9 +69,9 @@
     <link href="http://www.shieber.cn/title/34806234/"/>
     <id>http://www.shieber.cn/title/34806234/</id>
     <published>2019-12-04T04:07:38.000Z</published>
-    <updated>2019-12-04T06:16:15.557Z</updated>
+    <updated>2019-12-04T07:00:25.049Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJUQ1.md.png" alt="PS_5"></p><a id="more"></a><p>今天总结一些PS开发中可以用到的快捷键和指令，其中Alt,Ctrl,Shift,Backspace,Space等都是键盘上的按键，注意是Windows系统下的快捷键，Mac OS X系统似乎要把Ctrl键替换成Cmd键。逗号”,”表示或的意思，加号”+”表示和的意思，逗号和加号是不需要按住的。</p><table><thead><tr><th align="left">快捷操作技巧(57个)</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">F</td><td align="left">切换背景模式</td></tr><tr><td align="left">X</td><td align="left">切换前后景颜色</td></tr><tr><td align="left">D</td><td align="left">恢复前后景颜色默认值</td></tr><tr><td align="left">H + 移动鼠标</td><td align="left">查看整体图样</td></tr><tr><td align="left">[,]</td><td align="left">增缩笔刷大小</td></tr><tr><td align="left">{,}</td><td align="left">增缩笔刷硬度</td></tr><tr><td align="left">&lt;,&gt;,^,v</td><td align="left">上下左右微移图层(方向键)</td></tr><tr><td align="left">TAB</td><td align="left">隐藏和显示所有工具和面板</td></tr><tr><td align="left">Alt + 拖动图层</td><td align="left">复制当前图层</td></tr><tr><td align="left">Alt + Click图层蒙板</td><td align="left">开关图层蒙板</td></tr><tr><td align="left">Alt + Click图层中线</td><td align="left">开启剪贴蒙板</td></tr><tr><td align="left">Alt + L + M + T</td><td align="left">开启图层蒙板(白色)</td></tr><tr><td align="left">Alt + L + M + H</td><td align="left">开启图层蒙板(黑色)</td></tr><tr><td align="left">Alt + Backspace</td><td align="left">用前景色填充图层</td></tr><tr><td align="left">Ctrl+ Backspace</td><td align="left">用背景色填充图层</td></tr><tr><td align="left">Alt + (F,E,I,L,Y,S,T,D,V,W,H)</td><td align="left">打开各种菜单栏</td></tr><tr><td align="left">Ctrl + Alt + G</td><td align="left">开启剪贴蒙板</td></tr><tr><td align="left">Ctrl + 0</td><td align="left">调整以适应屏幕(0是零)</td></tr><tr><td align="left">Ctrl + O</td><td align="left">打开文件(O是字母)</td></tr><tr><td align="left">Ctrl + Z</td><td align="left">撤销上一次动作</td></tr><tr><td align="left">Ctrl + A</td><td align="left">全选</td></tr><tr><td align="left">Ctrl + F</td><td align="left">重复上一次滤镜动作</td></tr><tr><td align="left">Ctrl + G</td><td align="left">将选中的图层分组</td></tr><tr><td align="left">Ctrl + H</td><td align="left">显示附加</td></tr><tr><td align="left">Ctrl + K</td><td align="left">打开首选项</td></tr><tr><td align="left">Ctrl + N</td><td align="left">新建图层</td></tr><tr><td align="left">Ctrl + B</td><td align="left">打开色彩平衡</td></tr><tr><td align="left">Ctrl + L</td><td align="left">打开图层色阶</td></tr><tr><td align="left">Ctrl + M</td><td align="left">打开图层曲线</td></tr><tr><td align="left">Ctrl + U</td><td align="left">打开图层色相</td></tr><tr><td align="left">Ctrl + D</td><td align="left">取消选区</td></tr><tr><td align="left">Ctrl + C</td><td align="left">复制当前图层到剪贴板</td></tr><tr><td align="left">Ctrl + J</td><td align="left">拷贝当前图层(图层选中模式)</td></tr><tr><td align="left">Ctrl + J</td><td align="left">转换选区为图层(选区模式)</td></tr><tr><td align="left">Ctrl + V</td><td align="left">粘贴到当前图层</td></tr><tr><td align="left">Ctrl + E</td><td align="left">合并选中图层</td></tr><tr><td align="left">Ctrl + [</td><td align="left">下移当前图层</td></tr><tr><td align="left">Ctrl + ]</td><td align="left">上移当前图层</td></tr><tr><td align="left">Ctrl + I(选中蒙板)</td><td align="left">翻转图层蒙板显示模式</td></tr><tr><td align="left">Ctrl + I(选中选区)</td><td align="left">去掉背景颜色</td></tr><tr><td align="left">Ctrl + I(选中图层)</td><td align="left">图层反向</td></tr><tr><td align="left">Ctrl + Shift + I</td><td align="left">反向选中选区</td></tr><tr><td align="left">Ctrl + Shift + [</td><td align="left">移动图层到最底层</td></tr><tr><td align="left">Ctrl + Shift + ]</td><td align="left">移动图层到最顶层</td></tr><tr><td align="left">Ctrl + Shift + E</td><td align="left">合并所有图层</td></tr><tr><td align="left">Ctrl + Shift + T</td><td align="left">开启变形工具</td></tr><tr><td align="left">Ctrl + Shift + N</td><td align="left">创建50%灰度的图层</td></tr><tr><td align="left">Ctrl + Shift + Alt + T</td><td align="left">重复上一次变形</td></tr><tr><td align="left">Ctrl + Shift + &lt;,&gt;,^,v</td><td align="left">上下左右移动图层/缩放文字</td></tr><tr><td align="left">Ctrl + 左右移动鼠标</td><td align="left">移动当前图层</td></tr><tr><td align="left">Ctrl + Space + 左右移动</td><td align="left">快速缩放图层</td></tr><tr><td align="left">Shift + F5</td><td align="left">快速填充选区</td></tr><tr><td align="left">Shift + Click图层关闭键</td><td align="left">关闭所有图层</td></tr><tr><td align="left">选中图层&gt;右键&gt;颜色</td><td align="left">用颜色标注图层</td></tr><tr><td align="left">新建调整图层</td><td align="left">改变背景颜色</td></tr><tr><td align="left">油漆桶 + Shift + 点背景</td><td align="left">改变背景颜色</td></tr><tr><td align="left">双击背景图层</td><td align="left">解锁背景图层锁定状态</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJUQ1.md.png" alt="PS_5"></p><a id="more"></a><p>今天总结一些PS开发中可以用到的快捷键和指令，其中Alt,Ctrl,Shift等都是键盘上的按键，注意是Windows系统下的快捷键，Mac OS X系统似乎要把Ctrl键替换成Cmd键。逗号”,”表示或的意思，加号”+”表示和的意思，逗号和加号是不需要按住的。</p><table><thead><tr><th align="left">快捷操作技巧(57个)</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">F</td><td align="left">切换背景模式</td></tr><tr><td align="left">X</td><td align="left">切换前后景颜色</td></tr><tr><td align="left">D</td><td align="left">恢复前后景颜色默认值</td></tr><tr><td align="left">H + 移动鼠标</td><td align="left">查看整体图样</td></tr><tr><td align="left">[,]</td><td align="left">增缩笔刷大小</td></tr><tr><td align="left">{,}</td><td align="left">增缩笔刷硬度</td></tr><tr><td align="left">&lt;,&gt;,^,v</td><td align="left">上下左右微移图层(方向键)</td></tr><tr><td align="left">TAB</td><td align="left">隐藏和显示所有工具和面板</td></tr><tr><td align="left">Alt + 拖动图层</td><td align="left">复制当前图层</td></tr><tr><td align="left">Alt + Click图层蒙板</td><td align="left">开关图层蒙板</td></tr><tr><td align="left">Alt + Click图层中线</td><td align="left">开启剪贴蒙板</td></tr><tr><td align="left">Alt + L + M + T</td><td align="left">开启图层蒙板(白色)</td></tr><tr><td align="left">Alt + L + M + H</td><td align="left">开启图层蒙板(黑色)</td></tr><tr><td align="left">Alt + Backspace</td><td align="left">用前景色填充图层</td></tr><tr><td align="left">Ctrl+ Backspace</td><td align="left">用背景色填充图层</td></tr><tr><td align="left">Alt + (F,E,I,L,Y,S,T,D,V,W,H)</td><td align="left">打开各种菜单栏</td></tr><tr><td align="left">Ctrl + Alt + G</td><td align="left">开启剪贴蒙板</td></tr><tr><td align="left">Ctrl + 0</td><td align="left">调整以适应屏幕(0是零)</td></tr><tr><td align="left">Ctrl + O</td><td align="left">打开文件(O是字母)</td></tr><tr><td align="left">Ctrl + Z</td><td align="left">撤销上一次动作</td></tr><tr><td align="left">Ctrl + A</td><td align="left">全选</td></tr><tr><td align="left">Ctrl + F</td><td align="left">重复上一次滤镜动作</td></tr><tr><td align="left">Ctrl + G</td><td align="left">将选中的图层分组</td></tr><tr><td align="left">Ctrl + H</td><td align="left">显示附加</td></tr><tr><td align="left">Ctrl + K</td><td align="left">打开首选项</td></tr><tr><td align="left">Ctrl + N</td><td align="left">新建图层</td></tr><tr><td align="left">Ctrl + B</td><td align="left">打开色彩平衡</td></tr><tr><td align="left">Ctrl + L</td><td align="left">打开图层色阶</td></tr><tr><td align="left">Ctrl + M</td><td align="left">打开图层曲线</td></tr><tr><td align="left">Ctrl + U</td><td align="left">打开图层色相</td></tr><tr><td align="left">Ctrl + D</td><td align="left">取消选区</td></tr><tr><td align="left">Ctrl + C</td><td align="left">复制当前图层到剪贴板</td></tr><tr><td align="left">Ctrl + J</td><td align="left">拷贝当前图层(图层选中模式)</td></tr><tr><td align="left">Ctrl + J</td><td align="left">转换选区为图层(选区模式)</td></tr><tr><td align="left">Ctrl + V</td><td align="left">粘贴到当前图层</td></tr><tr><td align="left">Ctrl + E</td><td align="left">合并选中图层</td></tr><tr><td align="left">Ctrl + [</td><td align="left">下移当前图层</td></tr><tr><td align="left">Ctrl + ]</td><td align="left">上移当前图层</td></tr><tr><td align="left">Ctrl + I(选中蒙板)</td><td align="left">翻转图层蒙板显示模式</td></tr><tr><td align="left">Ctrl + I(选中选区)</td><td align="left">去掉背景颜色</td></tr><tr><td align="left">Ctrl + I(选中图层)</td><td align="left">图层反向</td></tr><tr><td align="left">Ctrl + Shift + I</td><td align="left">反向选中选区</td></tr><tr><td align="left">Ctrl + Shift + [</td><td align="left">移动图层到最底层</td></tr><tr><td align="left">Ctrl + Shift + ]</td><td align="left">移动图层到最顶层</td></tr><tr><td align="left">Ctrl + Shift + E</td><td align="left">合并所有图层</td></tr><tr><td align="left">Ctrl + Shift + T</td><td align="left">开启变形工具</td></tr><tr><td align="left">Ctrl + Shift + N</td><td align="left">创建50%灰度的图层</td></tr><tr><td align="left">Ctrl + Shift + Alt + T</td><td align="left">重复上一次变形</td></tr><tr><td align="left">Ctrl + Shift + &lt;,&gt;,^,v</td><td align="left">上下左右移动图层/缩放文字</td></tr><tr><td align="left">Ctrl + 左右移动鼠标</td><td align="left">移动当前图层</td></tr><tr><td align="left">Ctrl + Space + 左右移动</td><td align="left">快速缩放图层</td></tr><tr><td align="left">Shift + F5</td><td align="left">快速填充选区</td></tr><tr><td align="left">Shift + Click图层关闭键</td><td align="left">关闭所有图层</td></tr><tr><td align="left">选中图层&gt;右键&gt;颜色</td><td align="left">用颜色标注图层</td></tr><tr><td align="left">新建调整图层</td><td align="left">改变背景颜色</td></tr><tr><td align="left">油漆桶 + Shift + 点背景</td><td align="left">改变背景颜色</td></tr><tr><td align="left">双击背景图层</td><td align="left">解锁背景图层锁定状态</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
@@ -421,30 +447,6 @@
     
     
       <category term="数学" scheme="http://www.shieber.cn/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自定义新闻邮件</title>
-    <link href="http://www.shieber.cn/title/3af7bfc2/"/>
-    <id>http://www.shieber.cn/title/3af7bfc2/</id>
-    <published>2019-08-19T00:54:05.000Z</published>
-    <updated>2019-11-02T05:32:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/08/19/mlBDsI.png" alt="mlBDsI.png"></p><a id="more"></a><h2 id="自定义邮件服务"><a href="#自定义邮件服务" class="headerlink" title="自定义邮件服务"></a>自定义邮件服务</h2><p>平时看新闻，发现各种新闻都是别人挑选出来给自己看的，尤其是利用深度学习算法，每个人都只能看到自己的想象中的世界。我特别讨厌这种情况，但是又挡不住媒体们的套路，所以我干脆自己设计了一个新闻邮件。该邮件从各大网站提取各行各业信息，确保信息题材的广泛。</p><h2 id="科技文"><a href="#科技文" class="headerlink" title="科技文"></a>科技文</h2><p>封面是从科学网站<a href="https://www.sciencemag.org/" target="_blank" rel="noopener">Science</a>提取的播客信息，可以一键听播客，也可以点击图片或标题阅读内容。</p><h2 id="社会类"><a href="#社会类" class="headerlink" title="社会类"></a>社会类</h2><p>打算开发中文版新闻邮件，采集政治，经济，科技，教育等类目新闻并实现每日推送。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/08/19/mlBDsI.png&quot; alt=&quot;mlBDsI.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="邮件服务" scheme="http://www.shieber.cn/categories/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
-    
-      <category term="Mail" scheme="http://www.shieber.cn/tags/Mail/"/>
     
   </entry>
   
