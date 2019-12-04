@@ -1,6 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧4：移动图层</title>
+    <url>/title/682c12c4/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJ4w8.md.png" alt="PS5_1"></p>
+<a id="more"></a>
+
+<p>昨天讲了图层模式，今天结合图层复移动再讲一下图层混合模式。</p>
+<h2 id="今日技巧-图层移动和混合模式"><a href="#今日技巧-图层移动和混合模式" class="headerlink" title="今日技巧 [图层移动和混合模式]"></a>今日技巧 [图层移动和混合模式]</h2><p>首先打开两幅素材图片，然后在一幅图中，按住Ctrl+Alt，此时移动鼠标，会发现鼠标变成三角形状了，只要拖动它到另一副图的标题上，就会自动切换进去，这时释放鼠标，我们就将一幅图复制移动到另一幅图中了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QlYufH.md.png" alt="PS5_2">  </p>
+<p>这样当前窗口就有了两个图层，可自行调整图层大小和位置，如下图。</p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QlYJ78.md.png" alt="PS5_3">  </p>
+<p>此时，新的图层在原来图层上方，而且遮住了原图层，要实现混合，可以利用图层混合模式，看上图右侧，选择变亮模式。该模式将比较两个图层的亮度，让亮的显示出来。这样，原本上方的较暗的图层就让位给下方的亮图层了，实现了图层混合，如下图。</p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QlYf39.md.png" alt="PS5_4">  </p>
+<p>然而我们发现，原图层，左边是黑色的，这下左下角有部分黑色图层，很不协调。为了盖住这部分黑色的图层，可以复制出一份卫星图层，将复制的图层放大并移动，使得其中一部分背景图层恰好遮住黑色图层。调节模式为变亮，这样背景就干掉了，就得到了封面图片的效果。</p>
+<p>最后再附上原图和效果图。</p>
+<p>原图来源：2019年12月04日Baidu图片。  </p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QltKET.md.png" alt="PS5_5">  </p>
+<p>原图来源：2019年07月11日Bing壁纸国内版。  </p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QltGvR.md.png" alt="PS5_6">  </p>
+<p><img src="https://s2.ax1x.com/2019/12/04/QlJ4w8.md.png" alt="PS5_7">  </p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PS快捷键和小技巧</title>
+    <url>/title/34806234/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/QlJUQ1.md.png" alt="PS_5"></p>
+<a id="more"></a>
+
+<p>今天总结一些PS开发中可以用到的快捷键和指令，其中Alt,Ctrl,Shift,Backspace,Space等都是键盘上的按键，注意是Windows系统下的快捷键，Mac OS X系统似乎要把Ctrl键替换成Cmd键。逗号”,”表示或的意思，加号”+”表示和的意思，逗号和加号是不需要按住的。</p>
+<table>
+<thead>
+<tr>
+<th align="left">快捷操作技巧(57个)</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">F</td>
+<td align="left">切换背景模式</td>
+</tr>
+<tr>
+<td align="left">X</td>
+<td align="left">切换前后景颜色</td>
+</tr>
+<tr>
+<td align="left">D</td>
+<td align="left">恢复前后景颜色默认值</td>
+</tr>
+<tr>
+<td align="left">H + 移动鼠标</td>
+<td align="left">查看整体图样</td>
+</tr>
+<tr>
+<td align="left">[,]</td>
+<td align="left">增缩笔刷大小</td>
+</tr>
+<tr>
+<td align="left">{,}</td>
+<td align="left">增缩笔刷硬度</td>
+</tr>
+<tr>
+<td align="left">&lt;,&gt;,^,v</td>
+<td align="left">上下左右微移图层(方向键)</td>
+</tr>
+<tr>
+<td align="left">TAB</td>
+<td align="left">隐藏和显示所有工具和面板</td>
+</tr>
+<tr>
+<td align="left">Alt + 拖动图层</td>
+<td align="left">复制当前图层</td>
+</tr>
+<tr>
+<td align="left">Alt + Click图层蒙板</td>
+<td align="left">开关图层蒙板</td>
+</tr>
+<tr>
+<td align="left">Alt + Click图层中线</td>
+<td align="left">开启剪贴蒙板</td>
+</tr>
+<tr>
+<td align="left">Alt + L + M + T</td>
+<td align="left">开启图层蒙板(白色)</td>
+</tr>
+<tr>
+<td align="left">Alt + L + M + H</td>
+<td align="left">开启图层蒙板(黑色)</td>
+</tr>
+<tr>
+<td align="left">Alt + Backspace</td>
+<td align="left">用前景色填充图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl+ Backspace</td>
+<td align="left">用背景色填充图层</td>
+</tr>
+<tr>
+<td align="left">Alt + (F,E,I,L,Y,S,T,D,V,W,H)</td>
+<td align="left">打开各种菜单栏</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Alt + G</td>
+<td align="left">开启剪贴蒙板</td>
+</tr>
+<tr>
+<td align="left">Ctrl + 0</td>
+<td align="left">调整以适应屏幕(0是零)</td>
+</tr>
+<tr>
+<td align="left">Ctrl + O</td>
+<td align="left">打开文件(O是字母)</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Z</td>
+<td align="left">撤销上一次动作</td>
+</tr>
+<tr>
+<td align="left">Ctrl + A</td>
+<td align="left">全选</td>
+</tr>
+<tr>
+<td align="left">Ctrl + F</td>
+<td align="left">重复上一次滤镜动作</td>
+</tr>
+<tr>
+<td align="left">Ctrl + G</td>
+<td align="left">将选中的图层分组</td>
+</tr>
+<tr>
+<td align="left">Ctrl + H</td>
+<td align="left">显示附加</td>
+</tr>
+<tr>
+<td align="left">Ctrl + K</td>
+<td align="left">打开首选项</td>
+</tr>
+<tr>
+<td align="left">Ctrl + N</td>
+<td align="left">新建图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + B</td>
+<td align="left">打开色彩平衡</td>
+</tr>
+<tr>
+<td align="left">Ctrl + L</td>
+<td align="left">打开图层色阶</td>
+</tr>
+<tr>
+<td align="left">Ctrl + M</td>
+<td align="left">打开图层曲线</td>
+</tr>
+<tr>
+<td align="left">Ctrl + U</td>
+<td align="left">打开图层色相</td>
+</tr>
+<tr>
+<td align="left">Ctrl + D</td>
+<td align="left">取消选区</td>
+</tr>
+<tr>
+<td align="left">Ctrl + C</td>
+<td align="left">复制当前图层到剪贴板</td>
+</tr>
+<tr>
+<td align="left">Ctrl + J</td>
+<td align="left">拷贝当前图层(图层选中模式)</td>
+</tr>
+<tr>
+<td align="left">Ctrl + J</td>
+<td align="left">转换选区为图层(选区模式)</td>
+</tr>
+<tr>
+<td align="left">Ctrl + V</td>
+<td align="left">粘贴到当前图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + E</td>
+<td align="left">合并选中图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + [</td>
+<td align="left">下移当前图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + ]</td>
+<td align="left">上移当前图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + I(选中蒙板)</td>
+<td align="left">翻转图层蒙板显示模式</td>
+</tr>
+<tr>
+<td align="left">Ctrl + I(选中选区)</td>
+<td align="left">去掉背景颜色</td>
+</tr>
+<tr>
+<td align="left">Ctrl + I(选中图层)</td>
+<td align="left">图层反向</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + I</td>
+<td align="left">反向选中选区</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + [</td>
+<td align="left">移动图层到最底层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + ]</td>
+<td align="left">移动图层到最顶层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + E</td>
+<td align="left">合并所有图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + T</td>
+<td align="left">开启变形工具</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + N</td>
+<td align="left">创建50%灰度的图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + Alt + T</td>
+<td align="left">重复上一次变形</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Shift + &lt;,&gt;,^,v</td>
+<td align="left">上下左右移动图层/缩放文字</td>
+</tr>
+<tr>
+<td align="left">Ctrl + 左右移动鼠标</td>
+<td align="left">移动当前图层</td>
+</tr>
+<tr>
+<td align="left">Ctrl + Space + 左右移动</td>
+<td align="left">快速缩放图层</td>
+</tr>
+<tr>
+<td align="left">Shift + F5</td>
+<td align="left">快速填充选区</td>
+</tr>
+<tr>
+<td align="left">Shift + Click图层关闭键</td>
+<td align="left">关闭所有图层</td>
+</tr>
+<tr>
+<td align="left">选中图层&gt;右键&gt;颜色</td>
+<td align="left">用颜色标注图层</td>
+</tr>
+<tr>
+<td align="left">新建调整图层</td>
+<td align="left">改变背景颜色</td>
+</tr>
+<tr>
+<td align="left">油漆桶 + Shift + 点背景</td>
+<td align="left">改变背景颜色</td>
+</tr>
+<tr>
+<td align="left">双击背景图层</td>
+<td align="left">解锁背景图层锁定状态</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日PS技巧4：图层蒙板</title>
     <url>/title/1c50c8f3/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/03/QMFiDK.md.png" alt="PS4_1"> </p>
