@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-05T14:01:56.169Z</updated>
+  <updated>2019-12-05T16:24:34.929Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>个人数据中心和视频床</title>
+    <link href="http://www.shieber.cn/title/b3eac57b/"/>
+    <id>http://www.shieber.cn/title/b3eac57b/</id>
+    <published>2019-12-05T14:39:56.000Z</published>
+    <updated>2019-12-05T16:24:34.929Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/06/QGolrQ.md.png" alt="pdata"></p><a id="more"></a><p>最近写了些文章，你可以看到，我的文章都是一样的模式：开局(封面)一张图，内容不靠编，哈，哈！图片我托管到免费的图床上了，视频是直接用B站的外链。目前使用没什么问题，而且我一分钱没花，用起来确实爽。</p><p>现在考虑一个情况，那就是那天图床没了，B站视频没了怎么办？你说，怎么可能呢？B站视频一直都在。是吗？美国封锁华为的时候不也就突然就来了吗？内涵段子关停是什么时候，360云盘关停又是什么时候？谁知道哪天B站就倒闭了，图床也没了。美国的封锁给我触动还是比较大的，现在我作什么都要备份，而且备份好几份。系统文件备了四份，代码备了三份，主要怕哪天github也用不了了。当然，老婆也要多备…，呃，这个就算了，没有老婆就老实找。</p><p>所以，我们来思考一个问题：针对视频能做出视频床吗？或者有公司在做吗？搜索很久，没发现有，都说这个技术难度太大。当然，视频床不同于图床。图床就是几张图，加速访问就好。可是视频就不行了，视频是一段，很长，量大，太占用带宽。</p><p>然而，随着5G的到来，全球普通用户使用高效的云服务是必然趋势，未来我们身上的智能硬件也可能用云管理，智能汽车，智能家具，智能工厂，智慧政府，智能医疗。所以，为什么视频就不能做呢？主要还是技术和利益吧。利益不够大，所以做不起来。我倒是希望5G时代有人能把视频床做起来，服务大众，造福人类吧。技术不就是为人服务的吗?</p><p>当然，反对方提出的问题肯定有很多。比如：带宽，存储仓库如何建设，如何避免冗余，使用费用，加速模式如何实现等等问题。然而，我记得阿里云王坚做云服务的时候，大家说他是骗子，把他骂哭了，只有马云支持他，说是给他100亿由他搞，不设KPI，遂今天阿里巴巴云服务如此成功，双十一能卖那么多东西。所以，为什么视频床就做不起来？腾讯，爱奇艺，优酷都能存储大量视频，为何私人就不能？我们人看问题往往是用过去的技术以延伸到未来，所以时代技术必然限制我们的思考能力，进而反对多于支持。</p><p>考虑到时代发展到今天这一步，我今天提出新的网络建设概念：个人数据中心。我们有人类基因组大数据中心，有动植物库，有身份证管理中心，有银行结算中心。为何地球百姓就不能有自己唯一的数据中心呢？就像身份证每人一张，未来物联网时代，每个人拥有一个数据中心，这个中心可以交给相应的企业管理。这样我们就又能创立出巨无霸公司了。给数据中心设立权限和信用荣誉机制，个人必须维护自己的数据中心，利用区块链把个人信用和他的消费及行为数据链接起来，这样就不能作假，一旦作假，个人信用丢失，银行，政府可以制裁他，直到他弥补错误。同时，结合个人数据中心，推出新的消费服务，大量可以线上处理的订单，流程，签约都利用个人数据中心实现自动化。</p><p>4G时代短视频爆发，人性进一步发扬，但视频保留在大企业手中。5G时代说不得就要干掉这种模式，就像二维码干掉现金一样。未来的大企业可能就是为用户服务，成为服务视频，图像，文档的管理和维护公司。今天的百度云，坚果云未来未必不会进化为个人数据中心的建设者。个人数据中心需要保存每一个入网用户生产或合法购买的视频，图像，学习工作简历，生活材料(生活缴费，医疗教育费用凭证等等)。反正就是一个人一生的方方面面能数据化的内容都保留，人过世后，数据中心将存有对其的评价，他的遗嘱，他的资产和信用，著作，专利等等。</p><p>我现在开个脑洞吧，为个人数据中心设立些指标，以后再摸索。</p><table><thead><tr><th align="left">指标</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">访问</td><td align="left">人人间的数据访问开放权限，可修正</td></tr><tr><td align="left">消费</td><td align="left">通过该机制实现个人消费结算，可修正</td></tr><tr><td align="left">展示</td><td align="left">个人社交，产品，作品等展示，可修正</td></tr><tr><td align="left">信用</td><td align="left">分数制，根据消费和行为的区块链大数据计算得出，可修正</td></tr><tr><td align="left">安全</td><td align="left">整个数据中心的外层和内层各设置安全管理服务，防黑客</td></tr><tr><td align="left">综评</td><td align="left">统计个人生活维度内的得分，最后给出综合评分，可修正</td></tr></tbody></table><p>今天的人看自己微博有几个赞，未来我们完全可以让他们更加在意自己的数据中心得分。数据中心可以展示他们自己的作品，视频，文字，图像，一样可以实现社交，颠覆微信的社交模式。同时，利用信用机制结合消费权限，实现数据中心的结算功能。同样的，教育，医疗，家庭消费都可以搬上去。</p><p>是吧，这要看人类怎么走，我心中的未来世界的一部分就是这样了，你认为呢？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/06/QGolrQ.md.png&quot; alt=&quot;pdata&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="云服务" scheme="http://www.shieber.cn/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
+    
+    
+      <category term="video" scheme="http://www.shieber.cn/tags/video/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows下优秀软件和工具推荐</title>
     <link href="http://www.shieber.cn/title/12c389c6/"/>
     <id>http://www.shieber.cn/title/12c389c6/</id>
     <published>2019-12-05T11:39:04.000Z</published>
-    <updated>2019-12-05T14:01:56.169Z</updated>
+    <updated>2019-12-05T14:02:01.033Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/05/QGGjzQ.md.png" alt="win_soft"></p><a id="more"></a><p>你会用windows系统吗？大部分人看到这么个问题可能会大笑：我怎么不会？你不看我每天用它完成了多少工作。然而，大部分人只是会点鼠标而已，至于系统优化，系统架构大部分人，不，是绝大部分人都不懂，所以他们的电脑都是垃圾，界面其丑无比，桌面文件图标一堆，什么xx工作报告.txt，123.txt，20xx文档.docx一堆，我大学本科辅导员就是这么干的，我甚至当面说过他，也不知他改了没？混乱的桌面，过不了一周他们自己也晕了，而且使用Windows自带的工具效率实在太低了。还有，不注意网络使用，黑客们经常扫描到弱鸡电脑，直接攻破并利用。至于什么360流氓就不用说了。</p><p>视频：当你想卸载360的时候(弹幕可关闭)。</p><iframe src="https://player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" width="270" height="250" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p>下面介绍些Windows下的好用软件，提升大家的效率。当然，我本身不怎么用windows了，除了用PS之外，我很少用Windows。大部分时候，我还是使用Linux系统，尤其是编程，黑客技术只能在Linux下操作才方便。下面的软件分普通用户和高级用户，各位按需下载使用就好，这些软件基本没有广告，不是流氓软件，很多我以前使用过，真能帮助你高效学习，工作，生活。普通用户指：安装完软件就能用，高级用户指安装完还要学习很多操作，较为困难，有些的困难指数和学习编程一样的难。</p><h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><table><thead><tr><th align="center">适合用户</th><th align="left">名称</th></tr></thead><tbody><tr><td align="center">普通用户</td><td align="left">firefox(浏览器)</td></tr><tr><td align="center">普通用户</td><td align="left">chrome(浏览器)</td></tr><tr><td align="center">普通用户</td><td align="left">everything(文件搜索)</td></tr><tr><td align="center">普通用户</td><td align="left">notepad++(代码编写)</td></tr><tr><td align="center">普通用户</td><td align="left">fences(桌面管理)</td></tr><tr><td align="center">普通用户</td><td align="left">f.fux(只能屏保)</td></tr><tr><td align="center">普通用户</td><td align="left">Evernote(笔记速记)</td></tr><tr><td align="center">普通用户</td><td align="left">CCleaner(软件卸载)</td></tr><tr><td align="center">普通用户</td><td align="left">LICEcap(快速截图)</td></tr><tr><td align="center">普通用户</td><td align="left">IDM(文件下载)</td></tr><tr><td align="center">普通用户</td><td align="left">7-zip(解压软件)</td></tr><tr><td align="center">普通用户</td><td align="left">unlocker(解锁资源)</td></tr><tr><td align="center">普通用户</td><td align="left">seer(预览文件)</td></tr><tr><td align="center">高级用户</td><td align="left">cetex(pdf文档制作)</td></tr><tr><td align="center">高级用户</td><td align="left">Listary(文件搜索)</td></tr><tr><td align="center">高级用户</td><td align="left">pycharm(软件开发)</td></tr><tr><td align="center">高级用户</td><td align="left">anaconda(科学计算)</td></tr><tr><td align="center">高级用户</td><td align="left">LastPass(密码管理)</td></tr><tr><td align="center">高级用户</td><td align="left">CPU-Z(系统资源查看)</td></tr><tr><td align="center">高级用户</td><td align="left">PS CC(图像处理)</td></tr><tr><td align="center">高级用户</td><td align="left">字由(字体管理)</td></tr><tr><td align="center">高级用户</td><td align="left">Steam(游戏平台)</td></tr><tr><td align="center">高级用户</td><td align="left">cmder(模仿Linux命令行)</td></tr><tr><td align="center">高级用户</td><td align="left">Typora(Markdown文档)</td></tr><tr><td align="center">高级用户</td><td align="left">Xmind(思维导图)</td></tr><tr><td align="center">高级用户</td><td align="left">FFmpeg(音视频转换)</td></tr><tr><td align="center">高级用户</td><td align="left">Calibre(电子书处理)</td></tr><tr><td align="center">高级用户</td><td align="left">Sumatra(PDF阅读)</td></tr><tr><td align="center">高级用户</td><td align="left">TeamViewer(远程控制)</td></tr><tr><td align="center">高级用户</td><td align="left">rufus(系统启动盘制作)</td></tr><tr><td align="center">高级用户</td><td align="left">AOMEI分区助手(系统分区和迁移)</td></tr></tbody></table><h2 id="详细介绍-点击可进入官网下载"><a href="#详细介绍-点击可进入官网下载" class="headerlink" title="详细介绍(点击可进入官网下载)"></a>详细介绍(点击可进入官网下载)</h2><p><a href="https://www.firefox.com.cn" target="_blank" rel="noopener">firefox</a> 是一款优秀的浏览器，互联网诞生过程中，firefox的母公司制定了许多网络的协议和标准，帮助了互联网的发展。Firefox不搜集用户信息，防止恶意网站攻击。其他什么百度，360，猎豹等国内浏览器都是要搜集你信息，比较垃圾和流氓，大家可以卸载了。你问我用什么浏览器，我就用这款，主要是程序员和很多黑客用它，而且也好用。还有，最好把windows自带的Edge浏览器卸载掉，如何卸载可以百度或邮件我<a href="mailto:Shieber@aliyun.com" target="_blank" rel="noopener">Shieber@aliyun.com</a>，我发软件给你。Edge的作用还是有的，就是用来下载其他更优秀的浏览器，然后它的使命就完了。还有不要用百度一下，用<a href="https://cn.bing.com/" target="_blank" rel="noopener">Bing</a>搜索就好了，百度全是广告和百家号内容，搜不到自己要的东西，而必应(Bing)就几乎没有广告，而且搜索出来的东西多半就是你要的。</p><p><a href="https://www.google.cn/chrome/index.html" target="_blank" rel="noopener">chrome</a> 谷歌的浏览器，效果好，和firefox有的一拼，但最近加入搜集用户信息功能，招致很多用户批评，然而它依然很强大，全球占有率第一。国内大部分浏览器都是借用的chrome或IE浏览器的引擎，然后包装个界面，就号称自主研发，实则是个流氓。强烈建议用户卸载所有国产浏览器，使用这两款中的任意一款。</p><p><a href="https://www.voidtools.com/zh-cn" target="_blank" rel="noopener">everything</a> 找不到文件？那就用这个搜索，只要输入名字，就给你找出文件在电脑的哪个地方，全盘搜索。  </p><p><a href="http://www.listary.com" target="_blank" rel="noopener">Listary</a> 上面的everything很优秀，这个功能比它还多，包括网络搜索功能，可以打开浏览器搜索，操作比较多，跟着教程学习一下就好，其实二者选一就可。</p><p><a href="https://notepad-plus-plus.org" target="_blank" rel="noopener">notepad++</a> 想写文档，写代码，又不想装复杂的开发环境，那用notepad++就对了，它可以打开所有编程语言类文件。  </p><p><a href="https://www.stardock.com" target="_blank" rel="noopener">fences</a> 桌面图标太乱？用这个软件，把图标收集起来，方便管理和桌面优化。  </p><p><a href="https://evernote.com" target="_blank" rel="noopener">Evernote</a> 有好点子，有学习笔记要作？用Evernote，快速作笔记，支持手写，一键保存，云同步。  </p><p><a href="https://www.piriform.com/ccleaner/download/standard" target="_blank" rel="noopener">CCleaner</a> 软件卸载有残留怎么办，用CCleaner，它能把软件彻底卸载干净，减少空间占用。请试试用来卸载你电脑上的流氓软件吧。</p><p><a href="https://www.cockos.com/licecap/" target="_blank" rel="noopener">LICEcap</a> 想把屏幕操作录制为gif动图就用它，方便快捷。  </p><p><a href="https://www.internetdownloadmanager.com" target="_blank" rel="noopener">IDM</a> 还在用迅雷下载文件？试试这个吧，这个更快，更好用。  </p><p><a href="http://7-zip.org/download.html" target="_blank" rel="noopener">7-zip</a> 把电脑里的什么2345，winrar解压软件全卸载掉吧，尤其2345还有广告，7-zip很小一个软件，支持解压几乎大部分你能用到的压缩文件，我在windows下也用这个。  </p><p><a href="https://unlocker.en.softonic.com" target="_blank" rel="noopener">unlocker</a> 删除文件时显示，文件已在资源管理器中打开，无法删除。这时unlocker就能解决这个问题，一键解除锁定状态，删除文件。</p><p><a href="www.1218.io">seer</a> 不想打开文件，又想看看里面是什么，用这个软件可以预览。</p><p><a href="http://stereopsis.com/flux" target="_blank" rel="noopener">f.fux</a> 让电脑随着太阳的位置自动调节屏幕色温，保护眼界，我以前也用这个。</p><p><a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener">cetex</a> 想直接写PDF文件，用Latex系列软件均可，但是windows下用cetex入手就可。我本科毕业论文就是cetex用的，编出的公式和图片很精美，这是学习的回报。word写的文档太丑，不能自定义。该软件学习尤其困难，应该是本软件推荐列表最难的一个，我用了几年只能是勉强会用了，但是功能强大。博士发表论文几乎都是用tex写的，本科时的老师张传瑜写论文就被这个cetex的语法难倒，还专门请我去给他处理，当然，最后肯定是弄好啦。</p><p><a href="https://www.jetbrains.com/pycharm" target="_blank" rel="noopener">pycharm</a> 学习编程，Python，这是个利器，就是应对软件开发的，当然，普通用户就别试了，你没有软件开发的概念，给你一把杀龙刀，你也不会用。</p><p><a href="https://www.anaconda.com" target="_blank" rel="noopener">anaconda</a> 想做数据科学家，作计算任务，使用这款封装好python科学计算库的套件，开发提速。</p><p><a href="https://lastpass.com" target="_blank" rel="noopener">LastPass</a> QQ,微信，淘宝，支付宝，各种软件密码太多记不过来怎么办，用密码管理软件啊。</p><p><a href="https://www.52pojie.cn/thread-1047008-1-1.html" target="_blank" rel="noopener">PS CC</a> 学PS，艺术加工图片，请用PS CC，最新是2019版。</p><p><a href="http://www.hellofont.cn/" target="_blank" rel="noopener">字由</a> PS，AI，InDesign中想试试各种字体？用字由免费使用各种字体，不用自己在系统安装那么多字体了。</p><p><a href="http://store.steampowered.com/" target="_blank" rel="noopener">Steam</a> 玩游戏的都懂，就不说了。</p><p><a href="http://cmder.net" target="_blank" rel="noopener">cmder</a> 这个给Linux下习惯终端操作的程序员，运维等人员，cmder在Windows下实现和Linux下一样的终端，干掉Powershell。</p><p><a href="|https://www.typora.io">Typora</a> 发布博客，写文档，尤其是想写Markdown格式文档，请用这个，支持输入Latex数学公式，功能可以。</p><p><a href="http://www.xmind.net/" target="_blank" rel="noopener">Xmind</a> 看别人作的笔记和思维导图如此清晰，我们自己也可以制作自己的思维导图，把学习吃透，问题剖析透彻，就用Xmind作导图，支持导出PDF格式文件。</p><p><a href="https://ffmpeg.org/" target="_blank" rel="noopener">FFmpeg</a> 转换各种音视频，提取音频，分割合并视频，建议用户卸载格式工厂。</p><p><a href="http://calibre-ebook.com/" target="_blank" rel="noopener">Calibre</a> 电子书处理，可转换为TXT，PDF，MOBI，AZW3或是EPUB格式。</p><p>[Sumatra](PDF <a href="http://www.sumatrapdfreader.org" target="_blank" rel="noopener">http://www.sumatrapdfreader.org</a> ) 如果不需要编辑PDF文档，只是看看PDF，就用这个吧。占用就几十兆，而Adobe的Acrobat要占用几个G，这差距太大，还有什么福昕阅读器也没什么用，卸载就好。Sumatra还支持打开EPUB，MOBI，CHM，DjVu等格式文档，真是万金油，比Adobe产品方便多了。</p><p><a href="http://www.teamviewer.com/" target="_blank" rel="noopener">TeamViewer</a> 要远程控制电脑，用这个就可以。前端时间在内江试着控制成都的电脑，远程做了些运算并从网上爬取文件转换为PDF发到了我手机上，当时我在高速上，车速100，就用手机操作，全程网络没断，确实很方便。</p><p><a href="http://www.cpuid.com/softwares/cpu-z.html" target="_blank" rel="noopener">CPU-Z</a> 系统使用了多少CPU资源？用这个可以查看系统CPU等资源使用情况。</p><p><a href="http://www.disktool.cn/" target="_blank" rel="noopener">AOMEI分区助手</a> 想换固态硬盘，可是原有系统怎么办？用这个可以把原系统迁移到新硬盘上，不用重装系统。</p><p><a href="http://rufus.akeo.ie" target="_blank" rel="noopener">rufus</a> 想装系统？不管Windows还是Linux系统，rufus都搞得定。</p><p>还有很多优秀软件，此次给出的软件对于普通用户基本够了，实际很多人到死都用不到这么多软件，看个人爱好和需求吧。一些高端一点的软件，使用可能较为困难，多适应。Office我就不列了，大家都有，电脑上也少不了，当然，也可能是WPS，反正都可以，支持国产也很好。最后，希望大家高效使用电脑，别去装垃圾流氓软件，尤其安全软件，只要默认使用windows自带的defender就好，其实很多安全软件就是最不安全的，它权限高，所以无限搜集你信息，谁知道你的裸照是不是传到别人数据库咯？</p>]]></content>
     
@@ -65,7 +87,7 @@
     <link href="http://www.shieber.cn/title/dec09abb/"/>
     <id>http://www.shieber.cn/title/dec09abb/</id>
     <published>2019-12-04T08:38:51.000Z</published>
-    <updated>2019-12-04T11:53:49.100Z</updated>
+    <updated>2019-12-05T14:51:52.204Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png" alt="scrapy1"></p><a id="more"></a><p>前段时间做了好几个爬虫，主要是为自己提供的一些小服务(图片下载，学校讲座信息，新闻获取等)。然而，最近打算大规模获取数据进行其他任务时发现原有的爬虫框架速度不行。经过搜索，发现Scrapy框架能实现大规模爬取，且还可分布式部署，遂入手。</p><p>Python自带的网络库也可以做爬虫，比如requests库就做的还不错，结合BeautifulSoup能实现很多简单的爬取功能。但是，速度和量是它们无法绕过的坎儿。</p><h2 id="Scrapy架构"><a href="#Scrapy架构" class="headerlink" title="Scrapy架构"></a>Scrapy架构</h2><p>Scrapy把网络爬取功能分拆，各个功能模块不干扰，底层由引擎驱动各个模块，一个中央调度器(Scheduler)管理任务分配。大体框架图如图：</p><p><img src="https://s2.ax1x.com/2019/12/04/QlqC6g.md.png" alt="scrapy2"></p><table><thead><tr><th align="left">模块</th><th align="left">功能</th></tr></thead><tbody><tr><td align="left">Engine</td><td align="left">驱动所有模块工作</td></tr><tr><td align="left">Scheduler</td><td align="left">获取Request并分配任务给Downloader</td></tr><tr><td align="left">Downloader</td><td align="left">专注于下载网页Html并返回给Spider</td></tr><tr><td align="left">Spiders</td><td align="left">爬虫核心，提取数据和链接返回给Pipeline和Scheduler</td></tr><tr><td align="left">Item Pipeline</td><td align="left">专注于下载并存储从Spider传过来的数据(图,文档，音视频等)</td></tr></tbody></table><p>一次爬取任务大概流程  </p><p>1) 引擎开动，激活四大组件和中间件(Middlewares)<br>2) Spider发现start_urls，提交给Scheduler要求(Requests)下载<br>3) Scheduler将url入队，分配给Downloader<br>4) 老实人Downloader从url下载文档并返回(Response)给Spider<br>5) Spider分析文档(Html)，提取需要下载的文档链接和其他需要爬取页的url<br>6) Spider将需要下载的文档链接给Pipeline，并将其他要爬的url交给Scheduler<br>7) Pipeline拿到链接，开始下载资源并存储到配置好的路径中(到数据库或文件)<br>8) Scheduler拿到需要爬取的url，继续入队，分配给Downloader<br>9) 上面的流程实现了闭环，从步骤3到8已经逻辑自恰，可以一直运行下去<br>10) 中间件在爬取过程中提供各种服务(错误处理，用户自定义服务)</p><p>代码组织过程：<br>a. 使用scrapy startproject jditem 创立项目主目录<br>b. 进入jditem/jditem/spider/中建立文件jd_spider.py<br>c. 主体结构如下所示，使用tree获取<br>d. 要下载什么信息在item中注册，在spider.py中实现业务逻辑<br>e. 在pipelines.py实现自定义的下载逻辑<br>f. 在settings中开启管道服务并配置好User-Agent<br>g. 用户主要关注item, spider，settings和pipelines的代码实现  </p><p>shieber@Kew:scrapy$ tree jditem/<br>jditem/<br>├── item.csv<br>├── jditem<br>│   ├── <strong>init</strong>.py<br>│   ├── items.py<br>│   ├── middlewares.py<br>│   ├── pipelines.py<br>│   ├── <strong>pycache</strong><br>│   │   ├── <strong>init</strong>.cpython-36.pyc<br>│   │   ├── items.cpython-36.pyc<br>│   │   ├── pipelines.cpython-36.pyc<br>│   │   └── settings.cpython-36.pyc<br>│   ├── settings.py<br>│   └── spiders<br>│       ├── <strong>init</strong>.py<br>│       ├── jd_spider.py<br>│       └── <strong>pycache</strong><br>│           ├── <strong>init</strong>.cpython-36.pyc<br>│           └── jd_spider.cpython-36.pyc<br>└── scrapy.cfg  </p><p>如果要实现自定义功能，就需要学习pipeline，spider等的源码。要实现分布式需要用scrapy-redis，应对动态网站要学校js执行，利用splash处理就可。</p>]]></content>
     
@@ -76,8 +98,6 @@
     </summary>
     
       <category term="爬虫" scheme="http://www.shieber.cn/categories/%E7%88%AC%E8%99%AB/"/>
-    
-      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%88%AC%E8%99%AB/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
       <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
@@ -418,28 +438,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/11/02/KLfQEt.jpg&quot; alt=&quot;chinese&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="议论" scheme="http://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
-    
-    
-      <category term="讽刺" scheme="http://www.shieber.cn/tags/%E8%AE%BD%E5%88%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小杂感(鲁迅)</title>
-    <link href="http://www.shieber.cn/title/e0f1fbc4/"/>
-    <id>http://www.shieber.cn/title/e0f1fbc4/</id>
-    <published>2019-09-20T13:08:58.000Z</published>
-    <updated>2019-11-02T13:38:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/02/KLRHJO.jpg" alt="zagan"></p><a id="more"></a><p>蜜蜂的刺，一用即丧失了它自己的生命；犬儒的刺，一用则苟延了他自己的生命。他们就是如此不同。<br>约翰穆勒说：专制使人们变成冷嘲，而他竟不知道共和使人们变成沉默。<br>要上战场，莫如做军医；要革命，莫如走后方；要杀人，莫如做刽子手。既英雄，又稳当。<br>与名流学者谈，对于他之所讲，当装作偶有不懂之处。太不懂被看轻，太懂了被厌恶。偶有不懂之处，彼此最为合宜。<br>世间大抵只知道指挥刀所以指挥武士，而不想到也可以指挥文人。<br>又是演讲录，又是演讲录，但可惜都没有讲明他何以和先前大两样了；也没有讲明他演讲时，自己是否真相信自己的话。<br>阔的聪明人种种譬如昨日死，不阔的傻子种种实在昨日死，曾经阔气的要复古，正在阔气的要保持现状，未曾阔气的要革新。大抵如是，大抵! 他们之所谓复古，是回到他们所记得的若干年前，并非虞夏商周。<br>女人的天性中有母性，有女儿性；无妻性。妻性是逼成的，只是母性和女儿性的混合。<br>防被欺，自称盗贼的无须防，得其反倒是好人；自称正人君子的必须防，得其反则是盗贼。<br>楼下一个男人病得要死，那间壁的一家唱着留声机；对面是弄孩子。楼上有两人狂笑；还有打牌声，河中的船上有女人哭着她死去的母亲。人类的悲欢并不相通，我只觉得他们吵闹。<br>每一个破衣服人走过，叭儿狗就叫起来，其实并非都是狗主人的意旨或使嗾。叭儿狗往往比它的主人更严厉。恐怕有一天总要不准穿破布衫，否则便是共产党，革命，反革命，不革命。<br>革命的被杀于反革命的。反革命的被杀于革命的。不革命的或当作革命的而被杀于反革命的，或当作反革命的而被杀于革命的，或并不当作什么而被杀于革命的或反革命的，革命，革革命，革革革命，革革……。<br>人感到寂寞时，会创作；一感到干净时，即无创作，他已经一无所爱。创作总根于爱。杨朱无书，创作虽说抒写自己的心，但总愿意有人看。创作是有社会性的，但有时只要有一个人看便满足：好友，爱人。<br>人往往憎和尚，憎尼姑，憎回教徒，憎耶教徒，而不憎道士。懂得此理者，懂得中国大半。<br>要自杀的人，也会怕大海的汪洋，怕夏天死尸的易烂。但遇到澄静的清池，凉爽的秋夜，他往往也自杀了。<br>凡为当局所“诛”者皆有“罪”。刘邦除秦苛暴，“与父老约，法三章耳。”而后来仍有族诛，仍禁挟书，还是秦法。法三章者，话一句耳。<br>一见短袖子，立刻想到白臂膊，立刻想到全裸体，立刻想到生殖器，立刻想到性交，立刻想到杂交，立刻想到私生子。中国人的想像惟在这一层能够如此跃进。<br>九月二十四日。  </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/11/02/KLRHJO.jpg&quot; alt=&quot;zagan&quot;&gt;&lt;/p&gt;
     
     </summary>
     
