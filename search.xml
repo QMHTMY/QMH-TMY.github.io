@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧6：制作证件照片</title>
+    <url>/title/682c12c4/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/05/Q3yYNj.md.png" alt="PS6_1"></p>
+<a id="more"></a>
+
+<p>今天学习图层的新用法–证件照的制作。有时去外面花钱拍的不好，就需要自己来，而且也省了费用。证件照有很多种，一寸的，二寸的，毕业照，驾照等等，其中一寸最常用，具体尺寸如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">尺寸(mm)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">小一寸</td>
+<td align="center">22x32</td>
+</tr>
+<tr>
+<td align="center">大一寸</td>
+<td align="center">33x48</td>
+</tr>
+<tr>
+<td align="center">毕业照</td>
+<td align="center">33x32</td>
+</tr>
+<tr>
+<td align="center">一寸</td>
+<td align="center">25x35</td>
+</tr>
+<tr>
+<td align="center">二寸</td>
+<td align="center">35x49</td>
+</tr>
+<tr>
+<td align="center">三寸</td>
+<td align="center">35x52</td>
+</tr>
+<tr>
+<td align="center">驾照</td>
+<td align="center">21x26</td>
+</tr>
+<tr>
+<td align="center">车照</td>
+<td align="center">60x91</td>
+</tr>
+</tbody></table>
+<h2 id="今日技巧-一寸证件照制作"><a href="#今日技巧-一寸证件照制作" class="headerlink" title="今日技巧 [一寸证件照制作]"></a>今日技巧 [一寸证件照制作]</h2><p>主要步骤：  </p>
+<p>1) 拍摄正面照<br>2) 用PS裁切为宽25mm，高35mm<br>3) 抠除各种背景，杂色<br>4) 调整图像边缘，优化<br>5) 预留白边，方便裁切<br>6) 定义寸照为图案，保存<br>7) 新建标准画布，填充多张寸照  </p>
+<p>blue:329dcb<br>red:255 1 1<br>首先导入图片素材，选择剪裁工具，调整宽为25mm，高为35mm，分辨率一定要300，默认的72在屏幕上能看，但是打印出来就不能看，掉色严重，具体原理在第一篇教程里就讲了。然后就是抠除背景，用魔棒或是钢笔工具都可以，也可以用蒙版把不要涂抹掉，方法其实挺多的。结果如下图：</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q36oQ0.md.png" alt="PS6_2"></p>
+<p>接着，可以修饰边角什么的，用选择&gt;修改&gt;羽化半径。半径自行摸索设置，本次抠图我没用羽化。然后是添加背景色，提前设置好前景色，点击前景色框框，打开的界面最下面输入蓝色的色值329dcb，红色的RGB则可以使用255,1,1。然后用魔棒或是什么工具，选中选区，Alt+Backspace填充前景色，结果如下：</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3ga8A.md.png" alt="PS6_3">  </p>
+<p>此时，为图像增加白边，白边主要为了剪裁用。图像&gt;画布大小，勾选”相对”，然后自行添加2mm的高和宽。这样图层的白边就有了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q32ZsP.md.png" alt="PS6_4">  </p>
+<p>接着保存该图像为图案，方便一会儿填充。编辑&gt;定义图案，自己设置个名字，比如:Trump。接下来，新建图层，宽度设置为4倍(25mm+2mm)，高度设置为2倍(35mm+2mm)。这样就是横4张，竖2张的画布大小。利用快捷键Shift + F5填充画布，选择图案，再选中我们刚定义好的Trump图案，这样就做好了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3RlTO.md.png" alt="PS6_5"></p>
+<p>当然，你要红色，修改一下就好了，如下图：</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3Rc1s.md.png" alt="PS6_6"></p>
+<p>最后再附上原图和效果图，原图来源：2019年12月05日Baidu图片。  </p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3RxAO.png" alt="PS6_7">  </p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3WQvn.md.png" alt="PS6_8">  </p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3Wd29.md.png" alt="PS6_9"></p>
+<p>人物简介：Donald J. Trump，米国大统领；年领：72；年薪：1美元；爱好：发推特；口号：Make America Great Again。</p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Scrapy爬虫框架</title>
     <url>/title/dec09abb/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png" alt="scrapy1"></p>
@@ -474,9 +546,15 @@
     <content><![CDATA[<p><img src="https://ftp.bmp.ovh/imgs/2019/11/07f1ac3a09f4f773.png" alt="Win10"></p>
 <a id="more"></a>
 
-<p>最近几年，Windows10自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新，联网就自动下载，而且不会和用户商量。你要播报天气预报，不好意思，win10要更新。更多操蛋案例请看知乎：<a href="https://www.zhihu.com/question/271414438" target="_blank" rel="noopener">Why so many people tend to ban Win10 auto-update?</a></p>
-<p>那么，朋友就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程也多半过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p>
-<h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，那么容易被垃圾360污染，导致越是卸载却越安装的怪病。</p>
+<p>最近几年，Windows10自动更新升级的毛病折磨着广大的用户。比如，某游戏主播直播中突然断线，只因Windows10强制更新，电视台节目期间，Win10自动更新。</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3ZAje.md.png" alt="Win10_1"></p>
+<p>只要联网就给你自动下载，而且不会和用户商量。你要播报天气预报，不好意思，win10要更新。而且官方给搞了个很傻的界面，什么幸福时刻，搞得是和女人做爱一样。</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3ZQ9f.md.png" alt="Win10_3"></p>
+<p>更多操蛋案例请看知乎：<a href="https://www.zhihu.com/question/271414438" target="_blank" rel="noopener">Why so many people tend to ban Win10 auto-update?</a></p>
+<p>那么，朋友们就会问了：难道我不可以关掉自动更新吗？原本是可以的，不过后来微软又强行加入了新的程序使得简单的关闭更新已经不可能，而且网上搜集的关闭教程也多半过时了。特此，本文讲解三种关闭Win10自动更新的方法。</p>
+<p><img src="https://s2.ax1x.com/2019/12/05/Q3ZK4P.md.png" alt="Win10_2"></p>
+<p>扫黑除恶，首先除掉Windows的毒瘤更新。</p>
+<h2 id="1-从注册表关闭"><a href="#1-从注册表关闭" class="headerlink" title="1.从注册表关闭"></a>1.从注册表关闭</h2><p>所谓的程序，软件，脚步，插件等等都可以或多或少看成是Windows系统的某种服务，而所有的服务(services)都在Windows系统里做好了记录，这个记录就是注册表。注册表详细记录了用户信息，软件安装信息和配置文档信息等等。通过修改注册表就能到达修改程序行为的目的。所以Windows系统那么容易被黑客攻击，只要修改注册表就强制你使用某种服务或软件。所以垃圾360会污染你的电脑，导致越是卸载却越安装的怪病。</p>
 <p>视频：当你想卸载360的时候(弹幕可关闭)。</p>
 <iframe src="https://player.bilibili.com/player.html?aid=76592877&cid=131013977&page=1" width="270" height="250" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
@@ -488,9 +566,9 @@
 <p>4.再次按Win + R组合键输入gpedit.msc打开组策略文件，依次打开计算机配置 -&gt; 管理模板 -&gt; Windows组件 -&gt; Windows更新，右击配置自动更新，进入编辑，设置为”已禁用”，点击应用，确定并退出。接着在配置自动更新下面找到”删除使用所有WIndows更新功能的访问权限”，右击设置为”已启用”，再点击应用，确定并退出。</p>
 <p>然后，还有。看吧，Windows真是无所不用其极的设置障碍，只要有一处没关，就给你安装更新。</p>
 <p>5.再次按Win + R组合键输入taskschd.msc打开计划程序设置界面，依次展开任务计划程序库 -&gt; Microsoft -&gt; Windows -&gt; WindowsUpdate，把里面的项目都设置为禁用。</p>
-<p>看吧，这么一番骚操作，才能勉强抗衡流氓Win10，而且这个方法，不知后面会不会又被微软给绕过。试想一个漂亮妹妹，如何懂得这许多，她如何不被微软给欺负？估计她的好哥哥也被微软欺负着。本次关闭更新服务用到了，系统服务，组策略，注册表，计划任务，全面关闭才能禁止。在最后taskschd.msc里面，你都可以看到Scheduled Start 上次和下次运行的时间，你看它偷偷运行，干坏事，你还不知道。怎么老是电脑突然风扇呜呜的转，网速也掉了，原来这货没事就下载更新。</p>
-<h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>上面的操作，实在为数太多而且复杂，像Windows update blocker(Wub)这类工具就能帮助你。Wub其实也是设置这些注册表和服务参数，但是只需一键修改，避免个人用户复杂操作。软件可自行百度，或者发邮件给我，我再给你。本想直接放网盘，但分享时间不好设置，也不知有没有人用，万一你喜欢更新呢，我又能怎么说？</p>
-<h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>还有一款比较强大的软件，那就是Dism++，这个软件可以备份系统，在系统崩溃时恢复系统用得上，然后就是关闭更新，可以一键设置。具体请自行百度。</p>
+<p>看吧，这么一番骚操作，才能勉强抗衡流氓Win10，而且这个方法，不知后面会不会又被微软给绕过。试想一个漂亮妹妹，如何懂得这许多，她如何不被微软给欺负？估计她的好哥哥也被微软欺负着。本次关闭更新服务用到了系统服务，组策略，注册表，计划任务，且需要全面关闭才能禁止。在最后taskschd.msc里面，你都可以看到Scheduled Start上次和下次运行的时间，你看它偷偷运行，干坏事，你还不知道。怎么电脑风扇老是突然地就呜呜的转，网速也掉了，原来这货没事就下载更新。</p>
+<h2 id="2-免安装工具Wub关闭自动更新"><a href="#2-免安装工具Wub关闭自动更新" class="headerlink" title="2.免安装工具Wub关闭自动更新"></a>2.免安装工具Wub关闭自动更新</h2><p>上面的操作，步骤实在太多且复杂，像Windows update blocker(Wub)这类工具就能帮助你。Wub其实也是设置这些注册表和服务参数，但是只需一键就修改所有内容，避免个人用户复杂操作。软件可自行百度，或者发邮件给我，我再给你。本想直接放网盘，但分享时间不好设置，也不知有没有人用，万一你喜欢微软推送给你的更新呢，我又能怎么说？幸福时刻哟，哈哈！下面是Wub的官网<a href="https://www.sordum.org/" target="_blank" rel="noopener">Wub</a>，里面找一下这个blocker就是。</p>
+<h2 id="3-强大的dism-关闭自动更新"><a href="#3-强大的dism-关闭自动更新" class="headerlink" title="3.强大的dism++关闭自动更新"></a>3.强大的dism++关闭自动更新</h2><p>还有一款比较强大的软件，那就是Dism++，这个软件可以备份系统，在系统崩溃时恢复系统用得上，然后就是关闭更新，可以一键设置。还有很多其他功能，用过这个软件就知道了，开发这个软件的团队自述是这么写的“其实我们都是一些强迫症晚期患者，只想要找个轻巧、好使、透明、不流氓、不装可怜、不唠唠叨叨的实用工具。不过找了半天没找到，但是我们没有放弃治疗，用自己的双手初步实现了梦想，联手打造Dism++——一个不为利益、不跟风、不做作、单纯为执着与激情而生的小工具。安得广厦千万间，大庇天下寒士俱欢颜！”，链接在此<a href="https://www.chuyu.me/zh-Hans/" target="_blank" rel="noopener">Dism++</a>，请看官自行使用。</p>
 ]]></content>
       <categories>
         <category>Windows</category>
@@ -2209,8 +2287,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
