@@ -100,7 +100,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;QJnrm8.md.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;QJK4dU.md.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;QJlHzj.md.png">
-<meta property="og:updated_time" content="2019-12-06T03:54:06.751Z">
+<meta property="og:updated_time" content="2019-12-06T04:20:00.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;QJmRsK.md.png">
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  886
+                  884
                 </span>
               
 
@@ -483,10 +483,10 @@
 <p>最后鼠标放到图片上，查看日期，比如2019-12-06，接着搜索该日期位置，发现在div class=”calendar”中，如此所有数据查找完毕。</p>
 <p><img src="https://s2.ax1x.com/2019/12/06/QJnrm8.md.png" alt="bing_6"></p>
 <p>好，所有数据得到了，现在利用scrapy创建项目，编写对应的spider和pipeline，最后设置好图片保存位置就可以爬取图片了。</p>
-<p>$ scrapy startproject bing<br>$ scrapy genspider picture bing.ioliu.cn<br>$ mv picture.py bing/bing/spiders/<br>接着查看项目结构如下<br>$ tree bing/  </p>
+<p>scrapy startproject bing<br>scrapy genspider picture bing.ioliu.cn<br>mv picture.py bing/bing/spiders/<br>接着查看项目结构如下<br>$ tree bing/  </p>
 <p><img src="https://s2.ax1x.com/2019/12/06/QJK4dU.md.png" alt="bing_7"> </p>
 <p>现在在item.py中定义需要获取的信息字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class ImageItem(scrapy.Item):</span><br><span class="line">	titles = scrapy.Field()</span><br><span class="line">	images = scrapy.Field()</span><br><span class="line">	image_urls = scrapy.Field()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class ImageItem(scrapy.Item):</span><br><span class="line">    titles = scrapy.Field()</span><br><span class="line">    images = scrapy.Field()</span><br><span class="line">    image_urls = scrapy.Field()</span><br></pre></td></tr></table></figure>
 
 <p>然后到picture中实现爬取逻辑，上面的分析都给出了url地址，所以代码很简单。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import sys</span><br><span class="line">import scrapy</span><br><span class="line">from bing.items import ImageItem</span><br><span class="line"></span><br><span class="line">class WallpaperSpiderSpider(scrapy.Spider):</span><br><span class="line">    name = &apos;wallpaper&apos;</span><br><span class="line">    allowed_domains = [&apos;bing.ioliu.cn&apos;]</span><br><span class="line">    start_urls = [&apos;https://bing.ioliu.cn&apos;]</span><br><span class="line"></span><br><span class="line">    i = 0</span><br><span class="line">    item = ImageItem()</span><br><span class="line">    def parse(self, response):</span><br><span class="line">        #第一步：获取图片标题(这里是指日期)和图片url</span><br><span class="line">        sel = response.xpath(&apos;//div[@class=&quot;description&quot;]&apos;)</span><br><span class="line">        ttls= sel.xpath(&apos;.//p[@class=&quot;calendar&quot;]/em/text()&apos;).extract()</span><br><span class="line">        self.item[&apos;titles&apos;] = ttls</span><br><span class="line"></span><br><span class="line">        lks = response.xpath(&apos;//div[@class=&quot;item&quot;]/div/img/@src&apos;).extract()</span><br><span class="line">        self.item[&apos;image_urls&apos;] = lks</span><br><span class="line">        yield self.item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        self.i += 1</span><br><span class="line">        if self.i &gt; 114: #114页，到了就停止下载，不然会反复下载最后一页图片。</span><br><span class="line">            sys.exit(0)</span><br><span class="line"></span><br><span class="line">        #step 2: get next page url</span><br><span class="line">        href = response.xpath(&apos;//div[@class=&quot;page&quot;]/a[2]/@href&apos;).extract_first()</span><br><span class="line">        next_url = response.urljoin(href)</span><br><span class="line">        if next_url:</span><br><span class="line">            yield scrapy.Request(next_url, callback=self.parse)</span><br></pre></td></tr></table></figure>
