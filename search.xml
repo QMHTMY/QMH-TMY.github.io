@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧7：替换背景</title>
+    <url>/title/ca0a4a5b/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/06/QJAcFI.md.png" alt="PS7_1"></p>
+<a id="more"></a>
+
+<p>今天学习替换背景图层，就是给原图换个环境，实现空间大挪移。</p>
+<h2 id="今日技巧-背景替换"><a href="#今日技巧-背景替换" class="headerlink" title="今日技巧 [背景替换]"></a>今日技巧 [背景替换]</h2><p>主要步骤：  </p>
+<p>1) 调整图片大小<br>2) 利用选区工具选择要替换的部分<br>3) 抠除选中部分背景，删除<br>4) 加入新背景图，调整大小以适应<br>5) 修复图中干扰背景<br>6) 合并保存  </p>
+<p>首先导入图片素材，选择剪裁工具，调整图片宽度，去掉水印什么的。接着用自由选择工具选中要删除的背景，如下图蚂蚁线所标识的。</p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJATTs.md.png" alt="PS7_2"></p>
+<p>按删除键，去掉选区内容，得到去背景的初步素材。</p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJEGjS.md.png" alt="PS7_3"></p>
+<p>此时，发现某老师的腿还漏在里面，所有要先摸出这些干扰背景。使用图章，或者图像修复工具都可以把腿融合到背景，但是，跑道的线不能去掉，不但不能去掉，还得恢复出来。这时可以利用滤镜&gt;消失点工具，建立工作区，使用Alt键，选中一段干净的跑道线，软后覆盖掉腿部分，这样跑道就恢复了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJEOUA.md.png" alt="PS7_4"> </p>
+<p>这时，加入新的背景图层，积极调整以适应原图，合并图层就是最终结果了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJVCDg.md.png" alt="PS7_5"></p>
+<p>当然，这时还可以再虚化跑道边缘，给跑道撒上沙子什么的，这样就能得到更好的效果。不过，这个教程目的已经达到了，就到这儿吧。</p>
+<p>最后再附上原图和效果图。</p>
+<p>原图来源：2016年04月21日，学院公布图。  </p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJVHzV.png" alt="PS7_7"></p>
+<p>原图来源：2019年12月06日，百度图片。<br><img src="https://s2.ax1x.com/2019/12/06/QJZFsO.md.png" alt="PS7_8"> </p>
+<p><img src="https://s2.ax1x.com/2019/12/06/QJZEee.md.png" alt="PS7_9"></p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人数据中心和视频床</title>
     <url>/title/b3eac57b/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/06/QGolrQ.md.png" alt="pdata"></p>
