@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-07T03:28:54.532Z</updated>
+  <updated>2019-12-07T05:33:59.942Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日PS技巧8：照片调色</title>
+    <link href="http://www.shieber.cn/title/84b0c2df/"/>
+    <id>http://www.shieber.cn/title/84b0c2df/</id>
+    <published>2019-12-07T05:06:11.000Z</published>
+    <updated>2019-12-07T05:33:59.942Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_1"> </p><a id="more"></a><p>今天学习图像调节技术，拿着一样图片，如何判断其质量呢？可以通过色阶，饱和度，对比度来看看。</p><h2 id="今日技巧-图像调色"><a href="#今日技巧-图像调色" class="headerlink" title="今日技巧 [图像调色]"></a>今日技巧 [图像调色]</h2><p>主要步骤：  </p><p>1) 调节图像色阶<br>2) 调节图像饱和度<br>3) 调节图像色彩平衡<br>4) 调节图像对比度</p><p>首先导入图片素材，通过右下角工具栏选择创建色阶调整图层。然后，可以看到这幅图各个段的颜色都有，还算均匀，可以不用调，但其他图片可就说不准了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qttup6.md.png" alt="PS8_2"></p><p>接着创建饱和度调整图层，追加30左右的饱和度，这时，人脸就温和多了，环境也更鲜艳了。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttQXD.md.png" alt="PS8_3"> </p><p>接着创建色彩平衡度调整图层，选择对阴影部分调节，青色加一点，绿色加一点，蓝色加一点。这是对环境进行处理，让冷色调更冷，暖色调更暖。可以和上面对照看，应该很明显了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qtt87d.md.png" alt="PS8_4"></p><p>接着作锐化，让物体轮廓更清晰。先复制原图层一份，在复制图层上，通过滤镜&gt;其他&gt;高反差保留，设置半径为1。如果仔细看，灰色图层上有人物轮廓。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttXjO.md.png" alt="PS8_5"> </p><p>然后设置这个灰色图层模式为柔光，得到下面的最终图像。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNbZQ.md.png" alt="PS8_6"></p><p>当然，你说，看起来好像也没啥变化呀？对比看，才行。附上原图和效果图，自己用肉眼看看，就知道差距了。</p><p>原图来源：2018.06.19 10:07:49，毕业班级照片。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNjGq.md.png" alt="PS8_7"></p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_8"> </p><p>这能叫没区别吗？你可以把这一套操作保留成动作，然后批量对图片施加该动作，就能批量修图啦！毕业一年多了，现在我才翻出老照片，就处理了这一张，其他得等有时间再说吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/07/QtYtQU.md.png&quot; alt=&quot;PS8_1&quot;&gt; &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
+    
+  </entry>
   
   <entry>
     <title>携号转网的套路</title>
@@ -425,28 +447,6 @@
     
     
       <category term="Blog" scheme="http://www.shieber.cn/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>双托管代码</title>
-    <link href="http://www.shieber.cn/title/53e77485/"/>
-    <id>http://www.shieber.cn/title/53e77485/</id>
-    <published>2019-10-09T13:51:23.000Z</published>
-    <updated>2019-10-31T08:54:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5YBa4.md.jpg" alt="dulgit"></p><a id="more"></a><hr><h2 id="一：背景"><a href="#一：背景" class="headerlink" title="一：背景"></a>一：背景</h2><p>近期美国加紧封锁大棒，不但对中国，据说连委内瑞纳一个小国也被禁止使用Photoshop。结合前段时间github封禁中东开发者的情况，我认为中国的开发者需要把代码迁移一下，迁移到国内。目前国内的托管平台有多个，腾讯开发者平台，码云，还有最近华为开放的ihub，我选择了码云。</p><hr><h2 id="二：双托管"><a href="#二：双托管" class="headerlink" title="二：双托管"></a>二：双托管</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">首先查看配置.</span><br><span class="line">$git remote -v </span><br><span class="line">origin git@github.com:USERNAME/package.git (fetch)</span><br><span class="line">origin git@github.com:USERNAME/package.git (push)</span><br><span class="line">删除github的配置.</span><br><span class="line">$git remote rm origin</span><br><span class="line">重新添加新配置.</span><br><span class="line">$git remote add github git@github.com:USERNAME/package.git</span><br><span class="line">$git remote add gitee  git@gitee.com:USERNAME1/package1.git</span><br><span class="line">解决推送冲突</span><br><span class="line">$git pull gitee master --allow-unrelated-histories</span><br><span class="line">推送到两个平台</span><br><span class="line">$git push gitee  master </span><br><span class="line">$git push github master</span><br></pre></td></tr></table></figure><p>如果想存放在多个平台，修改同上面一样，只需要加入另一个平台的地址就行。</p><p>目前，国内平台多，但和Github比还有差距，仍需相关方继续推动，促进国内源代码托管。同时做好国际化，鼓励国外工程师托管优质代码到中国的服务器。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/30/K5YBa4.md.jpg&quot; alt=&quot;dulgit&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="代码托管" scheme="http://www.shieber.cn/categories/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1/"/>
-    
-    
-      <category term="Code" scheme="http://www.shieber.cn/tags/Code/"/>
     
   </entry>
   

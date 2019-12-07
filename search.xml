@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧8：照片调色</title>
+    <url>/title/84b0c2df/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_1"> </p>
+<a id="more"></a>
+
+<p>今天学习图像调节技术，拿着一样图片，如何判断其质量呢？可以通过色阶，饱和度，对比度来看看。</p>
+<h2 id="今日技巧-图像调色"><a href="#今日技巧-图像调色" class="headerlink" title="今日技巧 [图像调色]"></a>今日技巧 [图像调色]</h2><p>主要步骤：  </p>
+<p>1) 调节图像色阶<br>2) 调节图像饱和度<br>3) 调节图像色彩平衡<br>4) 调节图像对比度</p>
+<p>首先导入图片素材，通过右下角工具栏选择创建色阶调整图层。然后，可以看到这幅图各个段的颜色都有，还算均匀，可以不用调，但其他图片可就说不准了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/Qttup6.md.png" alt="PS8_2"></p>
+<p>接着创建饱和度调整图层，追加30左右的饱和度，这时，人脸就温和多了，环境也更鲜艳了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/QttQXD.md.png" alt="PS8_3"> </p>
+<p>接着创建色彩平衡度调整图层，选择对阴影部分调节，青色加一点，绿色加一点，蓝色加一点。这是对环境进行处理，让冷色调更冷，暖色调更暖。可以和上面对照看，应该很明显了。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/Qtt87d.md.png" alt="PS8_4"></p>
+<p>接着作锐化，让物体轮廓更清晰。先复制原图层一份，在复制图层上，通过滤镜&gt;其他&gt;高反差保留，设置半径为1。如果仔细看，灰色图层上有人物轮廓。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/QttXjO.md.png" alt="PS8_5"> </p>
+<p>然后设置这个灰色图层模式为柔光，得到下面的最终图像。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/QtNbZQ.md.png" alt="PS8_6"></p>
+<p>当然，你说，看起来好像也没啥变化呀？对比看，才行。附上原图和效果图，自己用肉眼看看，就知道差距了。</p>
+<p>原图来源：2018.06.19 10:07:49，毕业班级照片。</p>
+<p><img src="https://s2.ax1x.com/2019/12/07/QtNjGq.md.png" alt="PS8_7"></p>
+<p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_8"> </p>
+<p>这能叫没区别吗？你可以把这一套操作保留成动作，然后批量对图片施加该动作，就能批量修图啦！毕业一年多了，现在我才翻出老照片，就处理了这一张，其他得等有时间再说吧。</p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>携号转网的套路</title>
     <url>/title/652f364c/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/07/QtmWZT.md.png" alt="xz"> </p>
