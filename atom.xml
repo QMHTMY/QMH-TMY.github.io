@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-07T05:33:59.942Z</updated>
+  <updated>2019-12-08T06:20:51.876Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>每日PS技巧9：照片换色</title>
+    <link href="http://www.shieber.cn/title/51ed8652/"/>
+    <id>http://www.shieber.cn/title/51ed8652/</id>
+    <published>2019-12-08T05:41:28.000Z</published>
+    <updated>2019-12-08T06:20:51.876Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_1"> </p><a id="more"></a><p>今天学习图像颜色替换，把封面中的花色调出来。</p><h2 id="今日技巧-图像换色"><a href="#今日技巧-图像换色" class="headerlink" title="今日技巧 [图像换色]"></a>今日技巧 [图像换色]</h2><p>主要步骤：  </p><p>1) 打开图像可选颜色<br>2) 调节参数并保存</p><p>首先导入图片素材，我们首先试试色相饱和度能不能行。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiCDS.md.png" alt="PS9_2"></p><p>花是黄色，所以选择对黄色色相进行调节，下图显示，结果不好，而且人脸变色严重，值发绿。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiFEQ.md.png" alt="PS9_3"></p><p>所以，可以试试可选颜色以调整颜色的值。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaieg0.md.png" alt="PS9_4"></p><p>因为要改变黄色为粉红色，而黄色和红色挨着，所以一并调节黄色和红色的值，同时减少青色的值，具体值自己一试就知道了，按效果来调节。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaitv6.md.png" alt="PS9_5"></p><p>然后我们发现人脸也变色了，变得特别红，所以需要恢复原图人脸的颜色，同时保留花儿变化后的颜色。可以使用蒙版对人脸进行恢复。如下图，恢复的人脸和没恢复的，差别明显。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiRr8.md.png" alt="PS9_6"></p><p>把人脸调节完，基本就可以了，当然，大体可以，细节还不行，学习就到这一步，细节微调属于其他技巧。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaF9R1.md.png" alt="PS9_7"></p><p>下面附上原图和效果图，原图来源：2019.12.07 毕业班级照片校色图。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS9_8"> </p><p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_9"> </p><p>当然，还可以调成白色，薰衣草色，紫色，这些颜色都是可以的，有兴趣再慢慢摸索吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/08/QaPYnS.md.png&quot; alt=&quot;PS9_1&quot;&gt; &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>每日PS技巧8：照片调色</title>
     <link href="http://www.shieber.cn/title/84b0c2df/"/>
     <id>http://www.shieber.cn/title/84b0c2df/</id>
     <published>2019-12-07T05:06:11.000Z</published>
-    <updated>2019-12-07T05:33:59.942Z</updated>
+    <updated>2019-12-08T06:23:09.759Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_1"> </p><a id="more"></a><p>今天学习图像调节技术，拿着一样图片，如何判断其质量呢？可以通过色阶，饱和度，对比度来看看。</p><h2 id="今日技巧-图像调色"><a href="#今日技巧-图像调色" class="headerlink" title="今日技巧 [图像调色]"></a>今日技巧 [图像调色]</h2><p>主要步骤：  </p><p>1) 调节图像色阶<br>2) 调节图像饱和度<br>3) 调节图像色彩平衡<br>4) 调节图像对比度</p><p>首先导入图片素材，通过右下角工具栏选择创建色阶调整图层。然后，可以看到这幅图各个段的颜色都有，还算均匀，可以不用调，但其他图片可就说不准了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qttup6.md.png" alt="PS8_2"></p><p>接着创建饱和度调整图层，追加30左右的饱和度，这时，人脸就温和多了，环境也更鲜艳了。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttQXD.md.png" alt="PS8_3"> </p><p>接着创建色彩平衡度调整图层，选择对阴影部分调节，青色加一点，绿色加一点，蓝色加一点。这是对环境进行处理，让冷色调更冷，暖色调更暖。可以和上面对照看，应该很明显了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qtt87d.md.png" alt="PS8_4"></p><p>接着作锐化，让物体轮廓更清晰。先复制原图层一份，在复制图层上，通过滤镜&gt;其他&gt;高反差保留，设置半径为1。如果仔细看，灰色图层上有人物轮廓。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttXjO.md.png" alt="PS8_5"> </p><p>然后设置这个灰色图层模式为柔光，得到下面的最终图像。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNbZQ.md.png" alt="PS8_6"></p><p>当然，你说，看起来好像也没啥变化呀？对比看，才行。附上原图和效果图，自己用肉眼看看，就知道差距了。</p><p>原图来源：2018.06.19 10:07:49，毕业班级照片。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNjGq.md.png" alt="PS8_7"></p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_8"> </p><p>这能叫没区别吗？你可以把这一套操作保留成动作，然后批量对图片施加该动作，就能批量修图啦！毕业一年多了，现在我才翻出老照片，就处理了这一张，其他得等有时间再说吧。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_1"> </p><a id="more"></a><p>今天学习图像调节技术，拿着一张图片，如何判断其质量呢？我们可以通过色阶，饱和度，对比度来看看。</p><h2 id="今日技巧-图像调色"><a href="#今日技巧-图像调色" class="headerlink" title="今日技巧 [图像调色]"></a>今日技巧 [图像调色]</h2><p>主要步骤：  </p><p>1) 调节图像色阶<br>2) 调节图像饱和度<br>3) 调节图像色彩平衡<br>4) 调节图像对比度</p><p>首先导入图片素材，通过右下角工具栏选择创建色阶调整图层。然后，可以看到这幅图各个段的颜色都有，还算均匀，可以不用调，但其他图片可就说不准了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qttup6.md.png" alt="PS8_2"></p><p>接着创建饱和度调整图层，追加30左右的饱和度，这时，人脸就温和多了，环境也更鲜艳了。拿到人像，一定追加饱和度，尤其是女性图片，追加过后，女性会显出一种饱满，健康的色彩，要漂亮得多。很多女生拍了照，也不会调整，最后对照片还是不满意。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttQXD.md.png" alt="PS8_3"> </p><p>接着创建色彩平衡度调整图层，选择对阴影部分调节，青色加一点，绿色加一点，蓝色加一点。这是对环境进行处理，让冷色调更冷，暖色调更暖。可以和上面对照看，应该很明显了。</p><p><img src="https://s2.ax1x.com/2019/12/07/Qtt87d.md.png" alt="PS8_4"></p><p>接着作锐化，让物体轮廓更清晰。先复制原图层一份，在复制图层上，通过滤镜&gt;其他&gt;高反差保留，设置半径为1。如果仔细看，灰色图层上有人物轮廓。</p><p><img src="https://s2.ax1x.com/2019/12/07/QttXjO.md.png" alt="PS8_5"> </p><p>然后设置这个灰色图层模式为柔光，得到下面的最终图像。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNbZQ.md.png" alt="PS8_6"></p><p>当然，你说，看起来好像也没啥变化呀？对比看，才行。附上原图和效果图，自己用肉眼看看，就知道差距了。</p><p>原图来源：2018.06.19 10:07:49，毕业班级照片。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtNjGq.md.png" alt="PS8_7"></p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS8_8"> </p><p>这能叫没区别吗？你可以把这一套操作保留成动作，然后批量对图片施加该动作，就能批量修图啦！毕业一年多了，现在我才翻出老照片，就处理了这一张，其他得等有时间再说吧。</p>]]></content>
     
     <summary type="html">
     
@@ -425,28 +447,6 @@
     
     
       <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>资深大牛的博客</title>
-    <link href="http://www.shieber.cn/title/f2d8edc5/"/>
-    <id>http://www.shieber.cn/title/f2d8edc5/</id>
-    <published>2019-10-20T06:00:52.000Z</published>
-    <updated>2019-11-01T11:36:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5YRsK.jpg" alt="niubility"></p><a id="more"></a><h2 id="整理一份行业大牛的博客"><a href="#整理一份行业大牛的博客" class="headerlink" title="整理一份行业大牛的博客"></a>整理一份行业大牛的博客</h2><p>00.<a href="http://www.yinwang.org/" target="_blank" rel="noopener">王垠</a></p><p>01.<a href="https://blog.codingnow.com/" target="_blank" rel="noopener">云风</a></p><p>02.<a href="http://blog.yufeng.info/" target="_blank" rel="noopener">余峰</a></p><p>03.<a href="https://www.cnblogs.com/Solstice/" target="_blank" rel="noopener">陈硕</a></p><p>04.<a href="http://blog.zhaojie.me/" target="_blank" rel="noopener">老赵</a></p><p>05.<a href="https://blog.csdn.net/luoshengyang" target="_blank" rel="noopener">老罗</a></p><p>06.<a href="https://blog.csdn.net/21aspnet" target="_blank" rel="noopener">无界</a></p><p>07.<a href="https://evilcos.me/" target="_blank" rel="noopener">余弦</a></p><p>08.<a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">阮一峰</a></p><p>09.<a href="http://mindhacks.cn/" target="_blank" rel="noopener">刘未鹏</a></p><p>10.<a href="https://www.trinea.cn/" target="_blank" rel="noopener">吴更新</a></p><p>11.<a href="http://www.cppblog.com/vczh" target="_blank" rel="noopener">VCZh</a></p><p>12.<a href="https://www.byvoid.com/blog" target="_blank" rel="noopener">BYVoid</a></p><p>13.<a href="https://blog.csdn.net/v_july_v" target="_blank" rel="noopener">七月在线创始人</a></p><p>14.<a href="http://www.zhuangbiaowei.com/blog/" target="_blank" rel="noopener">读书，思考，生活</a></p><p>15.<a href="https://www.captainbed.net/troubleshooter/" target="_blank" rel="noopener">床长人工智能教程</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/10/30/K5YRsK.jpg&quot; alt=&quot;niubility&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="学习" scheme="http://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Blog" scheme="http://www.shieber.cn/tags/Blog/"/>
     
   </entry>
   
