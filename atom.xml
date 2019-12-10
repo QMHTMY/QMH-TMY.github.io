@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-09T06:19:38.808Z</updated>
+  <updated>2019-12-09T06:30:15.993Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>每日PS技巧10：镜像模糊做车灯</title>
+    <title>每日PS技巧10：径向模糊做车灯</title>
     <link href="http://www.shieber.cn/title/910f1429/"/>
     <id>http://www.shieber.cn/title/910f1429/</id>
     <published>2019-12-09T05:51:10.000Z</published>
-    <updated>2019-12-09T06:19:38.808Z</updated>
+    <updated>2019-12-09T06:30:15.993Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/09/QwlJDe.md.png" alt="PS10_1"> </p><a id="more"></a><p>今天学习滤镜中的径向模糊。</p><h2 id="今日技巧-径向模糊"><a href="#今日技巧-径向模糊" class="headerlink" title="今日技巧 [径向模糊]"></a>今日技巧 [径向模糊]</h2><p>主要步骤：  </p><p>1) 打开图像素材<br>2) 加入黑色图层和空白图层<br>3) 在白色图层上用画笔画圆，且模式为溶解<br>4) 对白色图层施加滤镜里的径向模糊<br>5) 重复滤镜动作得到灯光效果<br>6) 移动位置，复制一份，得到两个灯光<br>7) 车身和环境调色<br>8) 保存发布</p><p>首先导入图片素材，下面是原图。</p><p><img src="https://s2.ax1x.com/2019/12/09/QwlwCt.md.png" alt="PS10_2"></p><p>新建图层，填充为黑色，再在黑色图层上创建空白图层，使用半径为45的画笔，硬度为0%，在中间画一个点，并调整该图层模式为溶解.再在空白图层和黑色图层间创建空白图层，合并两个空白图层(这一步是为了使模式变为正常）。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/09/QwlyDg.md.png" alt="PS10_3"></p><p>使用滤镜中的径向模糊，调整为缩放模式，最大点数。</p><p><img src="https://s2.ax1x.com/2019/12/09/Qwl7b4.md.png" alt="PS10_4"></p><p>初步效果如下：</p><p><img src="https://s2.ax1x.com/2019/12/09/Qwlj8x.md.png" alt="PS10_5"></p><p>然后，重复执行Ctrl+Alt+F，也就是多次重复刚刚的滤镜动作，可以得到下图的灯光样式。如果不行，试试复制图层。</p><p><img src="https://s2.ax1x.com/2019/12/09/Qw1prD.md.png" alt="PS10_6"></p><p>此时可以打开车身图层，看看效果。</p><p><img src="https://s2.ax1x.com/2019/12/09/Qw1API.md.png" alt="PS10_7"></p><p>效果一般般吧，但车身色彩不行，我们添加色相饱和度和色彩平衡图层，调节车身和环境颜色。</p><p><img src="https://s2.ax1x.com/2019/12/09/Qw1uqg.md.png" alt="PS10_8"></p><p>最后，加上灯光。可以看到，调整后的环境还是被灯光给破坏了，颜色明显淡了，这时对比的结果。</p><p><img src="https://s2.ax1x.com/2019/12/09/Qw1MZQ.md.png" alt="PS10_9"></p><p>最后附上原图和效果图，原图：2018.6.18 Baidu图片。<br><img src="https://s2.ax1x.com/2019/12/09/Qw1ULF.md.png" alt="PS10_XI"></p><p><img src="https://s2.ax1x.com/2019/12/09/Qw18Gq.md.png" alt="PS10_X"></p><p><img src="https://s2.ax1x.com/2019/12/09/QwlJDe.md.png" alt="PS10_XII"> </p><p>调过色的图果然要好一点儿，灯光亮瞎狗眼，哈哈，今天就这样吧！</p>]]></content>
     
