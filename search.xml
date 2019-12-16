@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧13：保护图像以拉伸</title>
+    <url>/title/7d335d56/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/16/Q5Jhq0.png" alt="PS13_1"></p>
+<a id="more"></a>
+
+<p>昨天的图片感觉窄了一点儿，今天试图将其拉伸。然而，图中人物在拉伸过程中也会变宽，把妹妹变宽了就不好看来。所以，这次尝试建立保护选区，使得拉伸过程中，人物区域不变化。</p>
+<h2 id="今日技巧-保护图像以拉伸"><a href="#今日技巧-保护图像以拉伸" class="headerlink" title="今日技巧 [保护图像以拉伸]"></a>今日技巧 [保护图像以拉伸]</h2><p>主要步骤：  </p>
+<p>1) 打开图像素材<br>2) 利用矩形选区建立人物选区，并存储选区<br>3) 使用只能图像变换，选择刚保存的选区<br>4) 拉伸图像，此时保护选区中人物不变形</p>
+<p>首先导入图片素材，利用左边矩形选区工具建立选区。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5JOMR.md.png" alt="PS13_2"></p>
+<p>在选择里，存储选区，名字可随便设置，比如save</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5JzdK.md.png" alt="PS13_3"></p>
+<p>接着，在图像&gt;画布大小里，设置宽度增加100，可随意指定，接着在编辑里选择内容识别缩放。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5Y1Qs.md.png" alt="PS13_4"></p>
+<p>在上面的保护选框中选择刚保存的选区save</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5YAsI.md.png" alt="PS13_5"></p>
+<p>也可以调整到中间。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5YBl9.md.png" alt="PS13_6"></p>
+<p>然后，拉伸，可以看到人物没变形。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5Yx6s.md.png" alt="PS13_7"></p>
+<p>最后附上原图和效果图，原图：2018.6.21 10:48:20 Baidu图片。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5tltO.png" alt="PS13_8"></p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5Jhq0.png" alt="PS13_9"></p>
+<p>可以看到，石头和海面都拉伸，人物保留得很好。</p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日PS技巧12：图像去模糊</title>
     <url>/title/f3df35e2/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/16/Q5e7PP.png" alt="PS12_1"></p>
