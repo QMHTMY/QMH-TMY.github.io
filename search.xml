@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>每日PS技巧12：图像去模糊</title>
+    <url>/title/f3df35e2/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/16/Q5e7PP.png" alt="PS12_1"></p>
+<a id="more"></a>
+
+<p>有的时候，图片没对好焦，拍的照片有些模糊，实际上利用PS可以恢复到一定程度。</p>
+<h2 id="今日技巧-图像去模糊"><a href="#今日技巧-图像去模糊" class="headerlink" title="今日技巧 [图像去模糊]"></a>今日技巧 [图像去模糊]</h2><p>主要步骤：  </p>
+<p>1) 打开图像素材<br>2) 利用Ctrl+Shif+U去色<br>3) 在去色图层上施加滤镜&gt;其他&gt;高反差保留(半径在2~5，要自行调节)<br>4) 保存发布</p>
+<p>首先导入图片素材，下面是未调整的原图。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5eOKg.md.png" alt="PS12_2"></p>
+<p>首先去色 Ctrl+Shif+U，去色的目的是为了得到灰调图(没有色彩信息，只有结构信息，我们利用结构信息以去模糊)</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5mAr4.md.png" alt="PS12_3"></p>
+<p>接着，施加高反差保留的滤镜(高反差，意味着图像结构信息很鲜明，反差大，得以保留)</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5mKG6.md.png" alt="PS12_4"></p>
+<p>接下来，将该灰调图层的模式设置为叠加（将高反差结构信息和原彩色图叠加，去除模糊）</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5mTeJ.md.png" alt="PS12_5"></p>
+<p>最后附上原图和效果图，原图：2018.6.21 10:48:20 Baidu图片。两图对比看，还是能看出差别。</p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5na79.png" alt="PS12_7"></p>
+<p><img src="https://s2.ax1x.com/2019/12/16/Q5e7PP.png" alt="PS12_8"></p>
+]]></content>
+      <categories>
+        <category>设计</category>
+      </categories>
+      <tags>
+        <tag>PS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker安装与使用</title>
     <url>/title/2e9dcbbc/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/11/QsBuLD.png" alt="docker"></p>
@@ -2841,8 +2869,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
