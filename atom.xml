@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-16T14:02:58.830Z</updated>
+  <updated>2019-12-16T14:15:09.165Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.shieber.cn/title/7d335d56/"/>
     <id>http://www.shieber.cn/title/7d335d56/</id>
     <published>2019-12-17T02:25:26.000Z</published>
-    <updated>2019-12-16T14:02:58.830Z</updated>
+    <updated>2019-12-16T14:15:09.165Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/16/Q5Jhq0.png" alt="PS13_1"></p><a id="more"></a><p>昨天的图片感觉窄了一点儿，今天试图将其拉伸。然而，图中人物在拉伸过程中也会变宽，把妹妹变宽了就不好看来。所以，这次尝试建立保护选区，使得拉伸过程中，人物区域不变化。</p><h2 id="今日技巧-保护图像以拉伸"><a href="#今日技巧-保护图像以拉伸" class="headerlink" title="今日技巧 [保护图像以拉伸]"></a>今日技巧 [保护图像以拉伸]</h2><p>主要步骤：  </p><p>1) 打开图像素材<br>2) 利用矩形选区建立人物选区，并存储选区<br>3) 使用只能图像变换，选择刚保存的选区<br>4) 拉伸图像，此时保护选区中人物不变形</p><p>首先导入图片素材，利用左边矩形选区工具建立选区。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5JOMR.md.png" alt="PS13_2"></p><p>在选择里，存储选区，名字可随便设置，比如save</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5JzdK.md.png" alt="PS13_3"></p><p>接着，在图像&gt;画布大小里，设置宽度增加100，可随意指定，接着在编辑里选择内容识别缩放。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5Y1Qs.md.png" alt="PS13_4"></p><p>在上面的保护选框中选择刚保存的选区save</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5YAsI.md.png" alt="PS13_5"></p><p>也可以调整到中间。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5YBl9.md.png" alt="PS13_6"></p><p>然后，拉伸，可以看到人物没变形。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5Yx6s.md.png" alt="PS13_7"></p><p>最后附上原图和效果图，原图：2018.6.21 10:48:20 Baidu图片。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5tltO.png" alt="PS13_8"></p><p><img src="https://s2.ax1x.com/2019/12/16/Q5Jhq0.png" alt="PS13_9"></p><p>可以看到，石头和海面都拉伸，人物保留得很好。</p>]]></content>
     
@@ -131,9 +131,9 @@
     <link href="http://www.shieber.cn/title/51ed8652/"/>
     <id>http://www.shieber.cn/title/51ed8652/</id>
     <published>2019-12-08T05:41:28.000Z</published>
-    <updated>2019-12-08T06:23:14.763Z</updated>
+    <updated>2019-12-17T08:13:06.699Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_1"> </p><a id="more"></a><p>今天学习图像颜色替换，把封面中的花色调出来。</p><h2 id="今日技巧-图像换色"><a href="#今日技巧-图像换色" class="headerlink" title="今日技巧 [图像换色]"></a>今日技巧 [图像换色]</h2><p>主要步骤：  </p><p>1) 打开图像可选颜色<br>2) 调节参数并保存</p><p>首先导入图片素材，我们首先试试色相饱和度能不能行。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiCDS.md.png" alt="PS9_2"></p><p>花是黄色，所以选择对黄色色相进行调节，下图显示，结果不好，而且人脸变色严重，值发绿。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiFEQ.md.png" alt="PS9_3"></p><p>所以，可以试试可选颜色以调整颜色的值。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaieg0.md.png" alt="PS9_4"></p><p>因为要改变黄色为粉红色，而黄色和红色挨着，所以一并调节黄色和红色的值，同时减少青色的值，具体值自己一试就知道了，按效果来调节。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaitv6.md.png" alt="PS9_5"></p><p>然后我们发现人脸也变色了，变得特别红，所以需要恢复原图人脸的颜色，同时保留花儿变化后的颜色。可以使用蒙版对人脸进行恢复。如下图，恢复的人脸和没恢复的，差别明显。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiRr8.md.png" alt="PS9_6"></p><p>把人脸调节完，基本就可以了，当然，大体可以，细节还不行，学习就到这一步，细节微调属于其他技巧。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaF9R1.md.png" alt="PS9_7"></p><p>下面附上原图和效果图，原图来源：2019.12.07 毕业班级照片校色图。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS9_8"> </p><p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_9"> </p><p>当然，还可以调成白色，薰衣草色，紫色，这些颜色都是可以的，有兴趣再慢慢摸索吧。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_1"> </p><a id="more"></a><p>今天学习图像颜色替换，把封面中的花色调出来。</p><h2 id="今日技巧-图像换色"><a href="#今日技巧-图像换色" class="headerlink" title="今日技巧 [图像换色]"></a>今日技巧 [图像换色]</h2><p>主要步骤：  </p><p>1) 打开图像可选颜色<br>2) 调节参数并保存</p><p>首先导入图片素材，我们首先试试色相饱和度能不能行。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiCDS.md.png" alt="PS9_2"></p><p>花是黄色，所以选择对黄色色相进行调节，下图显示，结果不好，而且人脸变色严重，值发绿。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiFEQ.md.png" alt="PS9_3"></p><p>所以，可以试试可选颜色以调整颜色的值。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaieg0.md.png" alt="PS9_4"></p><p>因为要改变黄色为粉红色，而黄色和红色挨着，所以一并调节黄色和红色的值，同时减少青色的值，具体值自己一试就知道了，按效果来调节。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaitv6.md.png" alt="PS9_5"></p><p>然后我们发现人脸也变色了，变得特别红，所以需要恢复原图人脸的颜色，同时保留花儿变化后的颜色。可以使用蒙版对人脸进行恢复。如下图，恢复的人脸和没恢复的，差别明显。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiRr8.md.png" alt="PS9_6"></p><p>把人脸调节完，基本就可以了，当然，大体可以，细节还不行，学习就到这一步，细节微调属于其他技巧。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaF9R1.md.png" alt="PS9_7"></p><p>下面附上原图和效果图，原图来源：2019.12.07 毕业班级照片校色图。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS9_8"> </p><p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_9"> </p><p>当然，还可以调成其他颜色，下面的背景也换了。</p><p><img src="https://s2.ax1x.com/2019/11/12/M3JoEn.md.png" alt="biye1"></p><p><img src="https://s2.ax1x.com/2019/11/12/M3Jju4.md.png" alt="biye2"></p>]]></content>
     
     <summary type="html">
     
