@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2019-12-21T13:35:25.585Z</updated>
+  <updated>2019-12-22T06:36:45.721Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日PS技巧14：去除图片水印并美化图片</title>
+    <link href="http://www.shieber.cn/title/e2d5c0dc/"/>
+    <id>http://www.shieber.cn/title/e2d5c0dc/</id>
+    <published>2019-12-22T05:49:54.000Z</published>
+    <updated>2019-12-22T06:36:45.721Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/22/QxTJC8.md.jpg" alt="PS14_1"></p><a id="more"></a><p>有的图片，被打上各种水印，尤其嵌套水印，这家加一个水印，那家再来一个，看着确实厌烦，所以很多时候我们需要去除掉这些水印。常规方法去水印有4种方法，分别对应半透明和不透明的情况。然而我们大多数时候是拿到不透明的水印，这时候只有好好利用橡皮图章和修复工具一点点修复。</p><h2 id="今日技巧-去除图像水印并美化"><a href="#今日技巧-去除图像水印并美化" class="headerlink" title="今日技巧 [去除图像水印并美化]"></a>今日技巧 [去除图像水印并美化]</h2><p>主要步骤：  </p><p>1) 打开图像素材<br>2) 图章修复部分区域<br>3) 利用修复工具修复细节<br>4) 开调整图层，加饱和度，调色阶和色彩平衡。<br>5) 图片锐化，蓝色通道高反差保留，输出图片。  </p><p>首先导入图片素材，可以看到右下角水印，还是多个，十分不好看。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7RW8.md.jpg" alt="PS14_2"></p><p>最简单的方法，直接截掉水印部分，如下图。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx72Jf.md.jpg" alt="PS14_9"></p><p>但是，这样图片就不完整了，少了一块，看着不舒服，估计也没有哪位女生喜欢自己被截掉一部分吧! 所以得保留图片，要完整去除水印。打开图章工具，利用完整皮肤部分盖印到水印部分，细节部分用修复工具慢慢修复。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7BsH.md.jpg" alt="PS14_9"></p><p>注意，人的皮肤有纹理的，比如这位女生手臂上有的地方更白一些，有的偏黄一点，要保留好颜色细节，不可都弄成白色的，那样会不协调。手指部分结合处有暗调，也要保留，不然五指成合并态，没有细节信息。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7dzD.md.jpg" alt="PS14_9"></p><p>最后恢复过来，就是这样，当然，皮肤有些问题，需要调整。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7YIx.md.jpg" alt="PS14_8"></p><p>打开滤镜，打开磨皮插件界面，调节平滑度，使得皮肤更自然。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7Pxg.md.jpg" alt="PS14_5"></p><p><img src="https://s2.ax1x.com/2019/12/22/QxT68U.md.jpg" alt="PS14_4"></p><p>最后打开色阶，色彩平衡，色相饱和度三个调整图层，分别调节。这是处理人像必备流程，听说国际顶级摄影师拍摄的高质量图片本身已经很好了，他们最后做的流程就是打开这几个调整图层，细微调整，让人物更饱满，健康，接着就可以输出图像了。</p><p>如果要做点梦幻的感觉，就选择通道&gt;蓝色通道(红绿蓝三色通道，只有蓝色有梦幻感觉，红色是血腥，绿色是怪物)，复制蓝色通道。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7Jd1.md.jpg" alt="PS14_7"></p><p>滤镜&gt;其他&gt;高反差保留&gt;半径4&gt;确定。这就是人物细节，为了锐化图片，让人物更凸显。</p><p><img src="https://s2.ax1x.com/2019/12/22/Qx7FMQ.md.jpg" alt="PS14_6"></p><p>回到图层界面，设置图层模式，柔光模式。</p><p><img src="https://s2.ax1x.com/2019/12/22/QxLocT.md.jpg" alt="PS14_7"></p><p>最后附上原图和效果图，原图：2016.4.22 某学校微博公开图片。</p><p><img src="https://s2.ax1x.com/2019/12/22/QxTr5V.md.jpg" alt="PS14_10"></p><p><img src="https://s2.ax1x.com/2019/12/22/QxTNvQ.md.jpg" alt="PS14_11"></p><p><img src="https://s2.ax1x.com/2019/12/22/QxTJC8.md.jpg" alt="PS14_12"></p><p>对人物图像，尤其女生，越年轻就越要少用特效和滤镜，因为年轻女生本身就有优势，皮肤好，越多特效就越损害人物形象，特效多了，看着怪怪的，不自然。越漂亮的女性就越要少用滤镜，本身就好看的，你一插手，就全毁了。我看很多女生自己就特别爱开什么滤镜，简直夸张，滤镜越多就越显得她们不自信，真是悲哀。美是这个时代的追求，但是有个度，千万别过头！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/22/QxTJC8.md.jpg&quot; alt=&quot;PS14_1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
+    
+  </entry>
   
   <entry>
     <title>换个搜索引擎吧！</title>
@@ -428,28 +450,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/02/Quwn0K.md.jpg&quot; alt=&quot;PS3_1&quot;&gt; &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日PS技巧2：旋转</title>
-    <link href="http://www.shieber.cn/title/ac80827b/"/>
-    <id>http://www.shieber.cn/title/ac80827b/</id>
-    <published>2019-12-01T05:00:35.000Z</published>
-    <updated>2019-12-04T02:53:41.564Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><a id="more"></a><p>昨天讲了基本概念，今天来试试旋转这个功能。旋转会生成对称美，适合建筑和部分logo设计，在平面设计种可以作为装饰部分。</p><h2 id="今日技巧-使用旋转"><a href="#今日技巧-使用旋转" class="headerlink" title="今日技巧 [使用旋转]"></a>今日技巧 [使用旋转]</h2><p>创建(Ctrl + N)一个300x300像素，填充为黑色的图层，接着再使用Ctrl + Shift +<br>N创建透明图层。选中透明图层，在视图中选定设置水平和垂直参考线。在合适位置利用椭圆工具画一个填充为红色的圆，再接着移动画圆时留下的选区使得其与红色圆相交成一个月牙。移动月牙到中部，复制月牙图层再利用橡皮擦擦除第一个月牙的上部。如下图：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeuOhQ.md.png" alt="PS2_1">  </p><p>合并两个月牙图层，再复制合并后的图层，按Ctrl + Shift + T，输入旋转角度22.5度，回车确定，接着按Ctrl + Shift + T 15次，形成下图：  </p><p><img src="https://s2.ax1x.com/2019/12/01/QeKKHK.md.png" alt="PS2_2">  </p><p>选中该图层，使用编辑中的变换，选择水平翻转。</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKIC4.md.png" alt="PS2_3"> </p><p>接着选中原来的红色图层，设置其填充为绿色，参数设置面板里勾选保留透明区域颜色。最后效果如下：</p><p><img src="https://s2.ax1x.com/2019/12/01/QeKLb6.md.png" alt="PS2_4"> </p><p>接着还可以作成万花筒，但是我感觉有点儿复杂，这个主要学习旋转的使用，到这一步就够了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/01/QeKLb6.md.png&quot; alt=&quot;PS2_4&quot;&gt; &lt;/p&gt;
     
     </summary>
     
