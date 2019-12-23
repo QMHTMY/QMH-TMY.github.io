@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Pythonic的代码写法</title>
+    <url>/title/5aa457d2/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/23/lpZk36.md.png" alt="pythonic"></p>
+<p>很多时候我们写的代码根本就不是代码，而是垃圾，尤其翻看自己以前写的东西，感觉就是一推垃圾，恨不得一删了之。每一门编程语言都有自己最为合适的写法，Python也不例外。</p>
+<p><strong>变量交换</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在C语言中是</span><br><span class="line">int tmp;</span><br><span class="line">tmp = a;</span><br><span class="line">a   = b;</span><br><span class="line">b   = tmp;</span><br><span class="line"></span><br><span class="line">python中不需要tmp，而是一步到位</span><br><span class="line">a, b = b, a </span><br><span class="line">这里最难理解的是，b赋值给a了，为何a又能复制给b？实际上，=号右边的b,a被提取出来了，应该在CPU寄存器中。</span><br></pre></td></tr></table></figure>
+
+<p><strong>循环区间元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python2中</span><br><span class="line">for i in range(1,100000,2):</span><br><span class="line">	print(i) #先由range生成列表，占用内存500000个内存位置，浪费空间</span><br><span class="line"></span><br><span class="line">for i in xrange(1,100000,2):</span><br><span class="line">	print(i) #返回一个生成器，每次调用输入一个数，实际就是利用一个函数，占用一个内存位置</span><br><span class="line"></span><br><span class="line">python3的range就是xrange实现，不用考虑，换句话说该用python3。</span><br></pre></td></tr></table></figure>
+
+<p><strong>索引</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lst = [1,4,10,100,23]</span><br><span class="line">for i in range(len(lst)):</span><br><span class="line">	print(i,&apos;--&gt;&apos;,lst[i]) 多调用函数，开销更大，速度更慢</span><br><span class="line"></span><br><span class="line">for i,val in enumerate(lst):</span><br><span class="line">	print(i,&apos;--&gt;&apos;,val)    一次把元素的序号也给输出了，省得再写变量。</span><br></pre></td></tr></table></figure>
+
+<p><strong>字符串拼接</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">strings = &apos;I&apos;+&apos;Love&apos;+&apos;You&apos; 用加法，产生内存浪费</span><br><span class="line"></span><br><span class="line">strings = &apos;&apos;.join([&apos;I&apos;,&apos;Love&apos;,&apos;You&apos;]) 用join直接生成字符串</span><br></pre></td></tr></table></figure>
+
+<p><strong>字符串翻转</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; a = &apos;I love you&apos;</span><br><span class="line">笨蛋写法</span><br><span class="line">for i in range(len(a)):</span><br><span class="line">	reverse_a += a[len(a) -i -1]</span><br><span class="line">&gt;&gt;&gt; reverse_a</span><br><span class="line">&apos;uoy evol i&apos;</span><br><span class="line"></span><br><span class="line">正确写法</span><br><span class="line">&gt;&gt;&gt; reverse_a = a[::-1]</span><br><span class="line">&gt;&gt;&gt; reverse_a</span><br><span class="line">&apos;uoy evol i&apos;</span><br></pre></td></tr></table></figure>
+
+<p><strong>上下文管理</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fobj = open(&apos;xxx.txt&apos;)</span><br><span class="line">try:</span><br><span class="line">	data = fobj.read()</span><br><span class="line">finaly:</span><br><span class="line">	fobj.close()</span><br><span class="line"></span><br><span class="line">with open(&apos;xxx.txt&apos;) as fobj:</span><br><span class="line">	data = fobj.read() 用with自动关闭文件，代码量更少</span><br></pre></td></tr></table></figure>
+
+<p><strong>列表操作</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lst = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]</span><br><span class="line">lst.pop()</span><br><span class="line">lst.pop(0)</span><br><span class="line">lst.insert(0,&apos;k&apos;)</span><br><span class="line">lst.append(&apos;g&apos;)</span><br><span class="line">大量的元素移动，效率低</span><br><span class="line"></span><br><span class="line">from collections import deque</span><br><span class="line">lst = deque([&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;])</span><br><span class="line">lst.popleft()</span><br><span class="line">lst.appendleft(&apos;k&apos;)</span><br><span class="line">lst.append(&apos;g&apos;)</span><br><span class="line">用队列处理，两头都可兼顾</span><br></pre></td></tr></table></figure>
+
+<p><strong>词频统计</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; lst = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;a&apos;,&apos;a&apos;,&apos;a&apos;,&apos;c&apos;,&apos;1&apos;,&apos;e&apos;,&apos;d&apos;,&apos;b&apos;]</span><br><span class="line"></span><br><span class="line">def counterFre(wdlst):</span><br><span class="line">	wfd = &#123;&#125;</span><br><span class="line">	for wd in wdlst:</span><br><span class="line">		if wd in wfd:</span><br><span class="line">			wfd[wd]  += 1</span><br><span class="line">		else:</span><br><span class="line">			wfd[wd] = 1</span><br><span class="line">	return wfd</span><br><span class="line">&gt;&gt;&gt; wfd = counterFre(lst)</span><br><span class="line">&#123;&apos;a&apos;:4,&apos;b&apos;:2,&apos;c&apos;:2,&apos;d&apos;:2,&apos;e&apos;:1,&apos;1&apos;:1&#125;</span><br><span class="line"></span><br><span class="line">而用Counter一步到位</span><br><span class="line">&gt;&gt;&gt; from collections import Counter</span><br><span class="line">&gt;&gt;&gt; wfd = Counter(lst)</span><br><span class="line">&gt;&gt;&gt; wfd </span><br><span class="line">&#123;&apos;a&apos;:4,&apos;b&apos;:2,&apos;c&apos;:2,&apos;d&apos;:2,&apos;e&apos;:1,&apos;1&apos;:1&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>多个赋值</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt; a = 1</span><br><span class="line">&gt;&gt; b = 2</span><br><span class="line">&gt;&gt; c = 3</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a,b,c = [1,2,3] #一步到位</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用*和**构造参数为元组和字典</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fun1(*args):</span><br><span class="line">	for arg in args:</span><br><span class="line">		print(&apos;argument: &apos;,arg)</span><br><span class="line">fun1(&apos;i&apos;,&apos;love&apos;,&apos;You&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def fun2(*args, **kwargs):</span><br><span class="line">	for k,v in kwargs.items():</span><br><span class="line">		print(k,v)</span><br><span class="line">&gt;&gt;&gt; fun2(a=2,b=3,c=5)</span><br><span class="line">a 2</span><br><span class="line">b 3</span><br><span class="line">c 5</span><br></pre></td></tr></table></figure>
+
+<p><strong>zip打包可迭代元素为元组</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; a = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; b = [4,5,6]</span><br><span class="line"></span><br><span class="line">tupled = zip(a,b)</span><br><span class="line">&gt;&gt;&gt; tupled</span><br><span class="line">[(1,4),(2,5),(3,6)]</span><br><span class="line"></span><br><span class="line">l = [1,2,3,4,5,6,7,8,9,10]</span><br><span class="line">tupled = zip(l[:-1],l[1:])</span><br><span class="line">&gt;&gt;&gt; tupled</span><br><span class="line">[(1,2),(2,3),(3,4),(4,5),(5,6),(6,7),(7,8),(8,9),(9,10)]</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; name = [&apos;shieber&apos;,&apos;kew&apos;,&apos;koi&apos;]</span><br><span class="line">&gt;&gt;&gt; for e in zip(*name):</span><br><span class="line">...	print(e)</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">(&apos;s&apos;,&apos;k&apos;,&apos;k&apos;)</span><br><span class="line">(&apos;h&apos;,&apos;e&apos;,&apos;o&apos;)</span><br><span class="line">(&apos;i&apos;,&apos;w&apos;,&apos;i&apos;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>解构赋值</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a,*mid,b = [1,2,3,4,5]</span><br><span class="line">&gt;&gt;&gt; a</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">5</span><br><span class="line">&gt;&gt;&gt; mid </span><br><span class="line">[2,3,4]</span><br><span class="line"></span><br><span class="line">man = [[&apos;Shieber&apos;,(18,18,180)],[&apos;Kew&apos;,(19,19,190)]]</span><br><span class="line">for name, (f,s,t) in man:</span><br><span class="line">	print(name, f,s,t) </span><br><span class="line">其实name, (f,s,t)就是对man内部字典的映射，模式一样的，所以解析出来了</span><br><span class="line"></span><br><span class="line">women = &#123; &apos;name&apos;: &apos;yu&apos;, &apos;age&apos;:24,&apos;height&apos;:172 &#125;</span><br><span class="line">for k,v in women.items():</span><br><span class="line">	print(k,&apos;--&gt;&apos;,v)</span><br></pre></td></tr></table></figure>
+
+<p><strong>推导</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1-100内的偶数和奇数列表推导</span><br><span class="line">even = [i for i in range(1,100) if i % 2 == 0]</span><br><span class="line">odd  = [i for i in range(1,100) if i % 2 == 1]</span><br><span class="line"></span><br><span class="line">愚蠢写法</span><br><span class="line">even, odd  = [], []</span><br><span class="line">for i in range(1,100):</span><br><span class="line">	if i % 2 == 0:</span><br><span class="line">		even.append(i)</span><br><span class="line">	else:</span><br><span class="line">		odd.append(i)</span><br><span class="line"></span><br><span class="line">集合推导 &#123;x**2 for x in range(10) if x % 2 == 0&#125;</span><br><span class="line">字典推导 &#123;x: x**2 for x in range(10) if x % 2 == 0&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>三目运算</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; a = 1</span><br><span class="line">&gt;&gt;&gt; res = &apos;Good&apos; if 1 == a else &apos;Bad&apos;</span><br><span class="line">&gt;&gt;&gt; res</span><br><span class="line">&apos;Good&apos;</span><br><span class="line"></span><br><span class="line">它等于</span><br><span class="line">if 1 == a:</span><br><span class="line">	res = &apos;Good&apos;</span><br><span class="line">else:</span><br><span class="line">	res = &apos;Bad&apos;</span><br></pre></td></tr></table></figure>
+
+<p><strong>生成器</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">even = [i for i in range(1,100) if i % 2 == 0] 推导 占用很多内存空间</span><br><span class="line">def fib(max):</span><br><span class="line">	#菲波那契数列，列表</span><br><span class="line">	n, a, b = 0, 0, 1</span><br><span class="line">	fibonacci = []</span><br><span class="line">	while n &lt; max:</span><br><span class="line">		fibonacci.append(b)</span><br><span class="line">		a, b = b, a+b</span><br><span class="line">		n += 1</span><br><span class="line"></span><br><span class="line">even = (i for i in range(1,100) if i % 2 == 0) 列表生成器 只占一个内存空间</span><br><span class="line">def fib(max):</span><br><span class="line">	#菲波那契数列，生成器</span><br><span class="line">	n, a, b = 0, 0, 1</span><br><span class="line">	while n &lt; max:</span><br><span class="line">		yield b</span><br><span class="line">		a, b = b, a+b</span><br><span class="line">		n += 1</span><br><span class="line"></span><br><span class="line">当然，还可以对该函数优化，减少一个变量n</span><br><span class="line">def fib(max):</span><br><span class="line">	a, b = 0, 1</span><br><span class="line">	while 0 &lt; max:</span><br><span class="line">		yield b</span><br><span class="line">		a, b = b, a+b</span><br><span class="line">		max -= 1</span><br><span class="line">&gt;&gt;&gt; t = fib(3)</span><br><span class="line">&gt;&gt;&gt; next(t) #使用next()函数查看下一个</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(t) </span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(t) </span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p><strong>逻辑等</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if 0 == a:</span><br><span class="line">	do1()</span><br><span class="line">else:</span><br><span class="line">	do2()</span><br><span class="line"></span><br><span class="line">不要写成</span><br><span class="line">if a == 0:</span><br><span class="line">	do1()</span><br><span class="line">else:</span><br><span class="line">	do2()</span><br><span class="line">因为你手抖写成a=0了，do2()总是运行，代码没错，而逻辑错了，写成0=a时立刻会报错</span><br><span class="line">此写法源于c中推荐的写法，当然也有人有不同意见。</span><br></pre></td></tr></table></figure>
+
+<p><strong>简单的数学运算和比较</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不是 a = a + 2 </span><br><span class="line">而是 a += 2</span><br><span class="line"></span><br><span class="line">同理还有</span><br><span class="line">a -= 2</span><br><span class="line">a *= 2</span><br><span class="line">a /= 2</span><br><span class="line">a %= 2</span><br><span class="line"></span><br><span class="line">1&lt; a and a &lt; 10 也可以(C语言中的写法)</span><br><span class="line">1 &lt; a &lt; 10 何乐而不为</span><br></pre></td></tr></table></figure>
+
+<p><strong>移位运算符</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">凡是除以和乘以2的倍数的，都用移位运算</span><br><span class="line">b = a / 2 可以写成 a &gt;&gt; 1</span><br><span class="line">b = a / 4 可以写成 a &gt;&gt; 2</span><br><span class="line">b = a / 8 可以写成 a &gt;&gt; 3</span><br><span class="line">b = a * 2 可以写成 a &lt;&lt; 1</span><br><span class="line">b = a * 4 可以写成 a &lt;&lt; 2</span><br><span class="line">b = a * 8 可以写成 a &lt;&lt; 3</span><br><span class="line"></span><br><span class="line">当然，也可保留乘除法，方便理解。</span><br><span class="line">但高效代码就必须用移位，移位利用</span><br><span class="line">cpu寄存器直接操作。/和*运算大概是</span><br><span class="line">4单位cpu时间(大概2纳秒，各cpu不同)，</span><br><span class="line">而&gt;&gt;和&lt;&lt;只要1单位时间(0.5纳秒)，</span><br><span class="line">想想你有1万亿次运算(很多数学运算都超过1万亿次，尤其科研项目跑几个月的)，</span><br><span class="line">那么用/和*会消耗2000秒(33.33分钟)，而移位消耗(8分钟)。看起来不大，</span><br><span class="line">但是如果是科研项目，要跑很多遍那种，那么最后*/写法就会多跑上月的时间，</span><br><span class="line">想想吧，几个月时间，孩子都该出生了。</span><br></pre></td></tr></table></figure>
+
+<p><strong>lambda函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def f(x):</span><br><span class="line">	return x**2 + 3</span><br><span class="line">&gt;&gt;&gt; list(map(f, [1,2,3,4,5,6,7,8]))</span><br><span class="line">[1,4,9,16,25,36,49,64]</span><br><span class="line"></span><br><span class="line">正确写法，一行搞定</span><br><span class="line">&gt;&gt;&gt; list(map(lambda x: x**2 + 3, [1,2,3,4,5,6,7,8]))</span><br><span class="line">[1,4,9,16,25,36,49,64]</span><br></pre></td></tr></table></figure>
+
+<p><strong>filter,map,reduce, apply函数的使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">filter 过滤掉不符合要求的元素 filter(function, sequence)</span><br><span class="line">&gt;&gt;&gt; L = [1,2,3,4,5,6,7,8]</span><br><span class="line">&gt;&gt;&gt; list(filter(lambda x: x%2==0, L)) #x就指代L中的每一个元素</span><br><span class="line">[2,3,4,8]</span><br><span class="line"></span><br><span class="line">map 对若干个序列进行联合操作  map(function, sequence(s))</span><br><span class="line">&gt;&gt;&gt; L1 = [1,2,3,4,5]</span><br><span class="line">&gt;&gt;&gt; L2 = [2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list(map(lambda x,y: (x+y),L1,L2)) #x来自于L1,y来自于L2 长度不一时，参照最短执行</span><br><span class="line">[3,5,7,9,11]</span><br><span class="line"></span><br><span class="line">reduce 对序列进行压缩，归并为一个值 reduce(function, sequence)</span><br><span class="line">&gt;&gt;&gt; from functools import reduce</span><br><span class="line">&gt;&gt;&gt; L = [1,2,3,4,5]</span><br><span class="line">&gt;&gt;&gt; list(reduce(lambda x,y: x+y, L)) #x和y都来自于L，但按照顺序依次取出</span><br><span class="line">[15]</span><br><span class="line"></span><br><span class="line">apply pandas中内置函数，对DataFrame和Series数据进行处理 apply(function, axis)</span><br><span class="line">&gt;&gt;&gt; import numpy as np</span><br><span class="line">&gt;&gt;&gt; a = np.random.randint(low=1,high=5,size(3,3))</span><br><span class="line">&gt;&gt;&gt; data = pd.DataFrame(a)</span><br><span class="line">&gt;&gt;&gt; data.apply(lambda x: x*100)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">	0  1  2</span><br><span class="line">0  40  40 30</span><br><span class="line">1  10  30 20</span><br><span class="line">2  10  40 30</span><br></pre></td></tr></table></figure>
+
+<p><strong>装饰器</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">装饰器就是对函数封装一次，把非核心函数和处理包装到某个核心函数上，实现业务代码干净</span><br><span class="line">def fun(x):</span><br><span class="line">	if not x.isdigit():</span><br><span class="line">		print(&quot;Error, invalid number type.&quot;)</span><br><span class="line">	c = (x-1)**2  + (x-2)**2 #离点(1,2)的距离的平方</span><br><span class="line">	print(c)</span><br><span class="line"></span><br><span class="line">下面写个装饰器，把判断是否为数字的函数分割出来</span><br><span class="line">def dec(fun):</span><br><span class="line">	def decorator(*args, **kwargs):</span><br><span class="line">		if not args.isdigit():</span><br><span class="line">			print(&quot;Error, invalid number type.&quot;)</span><br><span class="line">		return fun(*args, **kwargs)</span><br><span class="line">	return decorator</span><br><span class="line"></span><br><span class="line">@dec</span><br><span class="line">def fun(x):</span><br><span class="line">	c = (x-1)**2  + (x-2)**2 </span><br><span class="line">	print(c)</span><br><span class="line">第二种写法分离了判断函数，fun里面只作一件事，计算并输出。</span><br></pre></td></tr></table></figure>
+
+<p><strong>函数返回多个值</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fun(x):</span><br><span class="line">	a = x**2</span><br><span class="line">	b = a + x**3</span><br><span class="line">	c = b + x**4</span><br><span class="line">	return a, b, c</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a,b,c = fun(10)</span><br><span class="line">&gt;&gt;&gt; a,b,c</span><br><span class="line">(100,1100,11100)</span><br></pre></td></tr></table></figure>
+
+<p><strong>求和 最大 最小 乘积和</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">L = [1,2,3,4,5]</span><br><span class="line">&gt;&gt;&gt; sum(L)</span><br><span class="line">15</span><br><span class="line">&gt;&gt;&gt; min(L)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; max(L)</span><br><span class="line">5</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; from operator import mul</span><br><span class="line">&gt;&gt;&gt; from functools import reduce</span><br><span class="line">&gt;&gt;&gt; reduce(mul, L)</span><br><span class="line">120 #5的阶乘</span><br></pre></td></tr></table></figure>
+
+<p><strong>找出列表中最多的元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">num = [1,2,3,2,1,2,3,4,5,6,2,1,1,100,1,2,1,3,1]</span><br><span class="line">&gt;&gt;&gt; print(max(set(num), key=num.count)) 按频率找最大</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><strong>少使用None</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a = &apos;&apos;</span><br><span class="line">if a is None:</span><br><span class="line">	do1()</span><br><span class="line">else:</span><br><span class="line">	do2()</span><br><span class="line"></span><br><span class="line">python中凡是没有值或者0都是False</span><br><span class="line">if !a: </span><br><span class="line">	do1()</span><br><span class="line">else:</span><br><span class="line">	do2()</span><br></pre></td></tr></table></figure>
+
+<p><strong>字典默认值</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">d = &#123;&apos;a&apos;:2,&apos;b&apos;10,&apos;c&apos;:3&#125;</span><br><span class="line">&gt;&gt;&gt; d.get(&apos;a&apos;)  </span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; d.get(&apos;e&apos;,0) 此处默认值设置为0，确保能获取返回值</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习主流框架介绍</title>
+    <url>/title/714c49b4/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/23/lpZ48x.md.jpg" alt="dl"></p>
+<p>16年韩国李世石和AlphaGo人机大战后，人工智能(AI)一下火了起来，大量的学生和研究人员扑了上去，机器学习，深度学习成了通用词汇流入民间，人工智能这几年也确实造出些新鲜有用的玩意儿。在AI大火的背后是深度学习框架的加持，下面对几个主流学习框架作粗浅介绍。</p>
+<p><strong>TensorFlow</strong></p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSajNq.jpg" alt="tf"></p>
+<p>TF是Google官方主推的深度学习框架，可视化，部署方便，尤其在工业界得到广泛使用，是目前使用人数最多的深度学习框架，文档丰富。当然，TF自身也有缺点，太偏底层，中间转换步骤多，要先定义流图再开始计算。</p>
+<p><strong>Pytorch</strong>  </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSdS3T.md.jpg" alt="torch"></p>
+<p>这是Facebook官方开发的深度学习框架，目前在学术界使用十分火爆，代码很pythonic，方便上手。但是pytorch没有TF的tensorboard，可视化不够好，据说最近引入了tensorboard的显示。工业界目前使用率还不高，但发展势头良好，可能未来会在工业界有更多应用。</p>
+<p><strong>CNTK</strong>       </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSd9vF.jpg" alt="cntk"></p>
+<p>Microsoft官方开发，主要在语音处理上做得优秀。</p>
+<p><strong>Theano</strong>     </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSdngO.md.png" alt="Theano"></p>
+<p>人工智能三巨头约书亚.本吉奥主导开发，主要用于学术研究，2007年诞生，到2017年停止更新，刚好10年，然而真是它推动TF等框架的开发和发展。</p>
+<p><strong>Caffe</strong>      </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSdlbd.jpg" alt="caffe"></p>
+<p>伯克利大学某小组开发，由C++写成，提供Python和Matlab接口</p>
+<p><strong>MXNet</strong>      </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSdfr4.png" alt="mxnet"></p>
+<p>中国人开发，最后由Amazon收纳加持，目前是Amazon官方主推学习平台。</p>
+<p><strong>Keras</strong>      </p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSd6P0.md.png" alt="keras"></p>
+<p>一个高级API调用平台，后端可以调用TF，Theano等的API作运算，上手快，但是学习瓶颈很快就到了，学不到更深入的东西。</p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSwELQ.md.png" alt="vs"></p>
+<p>目前的大趋势是TF和Pytorch正面比拼，一个工业界，一个学术界，两者的使用人数都多。未来就看这两家谁发展得更好了，毕竟背后是Google和Facebook这两个巨擘在支持。初学的话，先用keras连连手，接着可以选用这两者的任意一个来学习。框架只是工具，重要的想法，算法，代码，Talk is cheap, show me the code!</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>DL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>每日PS技巧14：去除图片水印并美化图片</title>
     <url>/title/e2d5c0dc/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/22/QxTJC8.md.jpg" alt="PS14_1"></p>
