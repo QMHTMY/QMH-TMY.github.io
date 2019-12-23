@@ -97,27 +97,31 @@
 <p>16年韩国李世石和AlphaGo人机大战后，人工智能(AI)一下火了起来，大量的学生和研究人员扑了上去，机器学习，深度学习成了通用词汇流入民间，人工智能这几年也确实造出些新鲜有用的玩意儿。在AI大火的背后是深度学习框架的加持，下面对几个主流学习框架作粗浅介绍。</p>
 <p><strong>TensorFlow</strong></p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSajNq.jpg" alt="tf"></p>
-<p>TF是Google官方主推的深度学习框架，可视化，部署方便，尤其在工业界得到广泛使用，是目前使用人数最多的深度学习框架，文档丰富。当然，TF自身也有缺点，太偏底层，中间转换步骤多，要先定义流图再开始计算。</p>
+<p>TF是Google官方主推的深度学习框架，可视化，部署方便，尤其在工业界得到广泛使用，是目前使用人数最多的深度学习框架，文档丰富。当然，TF自身也有缺点，太偏底层，中间转换步骤多，要先定义流图再开始计算。TF更新后对以往代码不兼容，使得很多人一更新TF就得重构代码，令人头疼。</p>
 <p><strong>Pytorch</strong>  </p>
-<p><img src="https://s2.ax1x.com/2019/12/23/lSdS3T.md.jpg" alt="torch"></p>
+<p><img src="https://s2.ax1x.com/2019/12/23/lSdS3T.md.jpg" alt="pytorch"></p>
 <p>这是Facebook官方开发的深度学习框架，目前在学术界使用十分火爆，代码很pythonic，方便上手。但是pytorch没有TF的tensorboard，可视化不够好，据说最近引入了tensorboard的显示。工业界目前使用率还不高，但发展势头良好，可能未来会在工业界有更多应用。</p>
 <p><strong>CNTK</strong>       </p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSd9vF.jpg" alt="cntk"></p>
 <p>Microsoft官方开发，主要在语音处理上做得优秀。</p>
 <p><strong>Theano</strong>     </p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSdngO.md.png" alt="Theano"></p>
-<p>人工智能三巨头约书亚.本吉奥主导开发，主要用于学术研究，2007年诞生，到2017年停止更新，刚好10年，然而真是它推动TF等框架的开发和发展。</p>
-<p><strong>Caffe</strong>      </p>
+<p>人工智能三巨头约书亚.本吉奥主导开发，主要用于学术研究，2007年诞生，到2017年停止更新，刚好10年，然而正是它推动TF等框架的开发和发展，值得大家缅怀。</p>
+<p><strong>Caffe/Caffe2</strong>      </p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSdlbd.jpg" alt="caffe"></p>
-<p>伯克利大学某小组开发，由C++写成，提供Python和Matlab接口</p>
+<p>伯克利大学某小组开发，由C++写成，提供Python和Matlab接口，可以在CPU和GPU上跑，然而实现中每一层都要完成前向后向传播的代码，复杂。Caffe2是原作者新创立的框架，吸收Caffe优点，可以在PC和移动端训练部署使用。</p>
 <p><strong>MXNet</strong>      </p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSdfr4.png" alt="mxnet"></p>
-<p>中国人开发，最后由Amazon收纳加持，目前是Amazon官方主推学习平台。</p>
+<p>上海交大陈天奇和李沐牵头开发，MXNet后被AWS选择为云计算官方学习平台，再后成为Apache基金会孵化项目。</p>
 <p><strong>Keras</strong>      </p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSd6P0.md.png" alt="keras"></p>
-<p>一个高级API调用平台，后端可以调用TF，Theano等的API作运算，上手快，但是学习瓶颈很快就到了，学不到更深入的东西。</p>
+<p>一个高级API调用平台，后端可以调用TF，Theano，CNTK作为后端，上手快，但是学习瓶颈很快就到了，学不到更深入的东西。</p>
 <p><img src="https://s2.ax1x.com/2019/12/23/lSwELQ.md.png" alt="vs"></p>
-<p>目前的大趋势是TF和Pytorch正面比拼，一个工业界，一个学术界，两者的使用人数都多。未来就看这两家谁发展得更好了，毕竟背后是Google和Facebook这两个巨擘在支持。初学的话，先用keras连连手，接着可以选用这两者的任意一个来学习。框架只是工具，重要的想法，算法，代码，Talk is cheap, show me the code!</p>
+<p>目前的大趋势是TF和Pytorch正面比拼，一个工业界，一个学术界，两者的使用人数都多。未来就看这两家谁发展得更好了，毕竟背后是Google和Facebook这两个巨擘在支持。初学的话，先用keras连连手，接着可以选用这两者的任意一个来学习。</p>
+<p>同样一个功能，我们可以对比其实现的代码量，如下。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#1.TensorFlow</span><br><span class="line">import tensorflow as tf</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def func1(x, w):</span><br><span class="line">	return tf.matmul(x, w)</span><br><span class="line"></span><br><span class="line">def func2(x, w):</span><br><span class="line">	return tf.matmul(x, w)</span><br><span class="line"></span><br><span class="line">M, N, K = 4, 5, 6</span><br><span class="line">X  = tf.placeholder(tf.float32, shape=(M, N))</span><br><span class="line">Z  = tf.placeholder(tf.float32, shape=None)</span><br><span class="line">W1 = tf.placeholder(tf.float32, shape=(N,K))</span><br><span class="line">W2 = tf.placeholder(tf.float32, shape=(N,K))</span><br><span class="line">y  = tf.cond(tf.less(Z,1), func1, func2)</span><br><span class="line"></span><br><span class="line">with tf.Session() as s:</span><br><span class="line">	val = &#123;</span><br><span class="line">		X: np.random.randn(M, N),</span><br><span class="line">		Z: 10,</span><br><span class="line">		W1: np.random.randn(N,K),</span><br><span class="line">		W1: np.random.randn(N,K)</span><br><span class="line">	&#125;</span><br><span class="line">	y_val = s.run(y, feed_dict=val)</span><br><span class="line">	</span><br><span class="line">#2.Pytorch</span><br><span class="line">import torch as t</span><br><span class="line">from torch.autograd imort Variable</span><br><span class="line"></span><br><span class="line">M, N, K = 4, 5, 6</span><br><span class="line">X = Variable(t.randn(M, N))</span><br><span class="line">W1 = Variable(t.randn(N, K))</span><br><span class="line">W2 = Variable(t.randn(N, K))</span><br><span class="line"></span><br><span class="line">Z = 10</span><br><span class="line"></span><br><span class="line">if 1 &lt; Z:</span><br><span class="line">	y = X.mm(W1)</span><br><span class="line">else:</span><br><span class="line">	y = X.mm(W2)</span><br></pre></td></tr></table></figure>
+
+<p>当然，框架只是工具，重要的是我们的想法，算法，代码，Talk is cheap, show me the code!</p>
 ]]></content>
       <categories>
         <category>AI</category>
@@ -3141,8 +3145,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>IT</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
