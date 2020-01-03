@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;01&#x2F;03&#x2F;lUvgvn.jpg">
-<meta property="og:updated_time" content="2020-01-03T08:18:25.722Z">
+<meta property="og:updated_time" content="2020-01-03T08:38:00.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;01&#x2F;03&#x2F;lUvgvn.jpg">
 
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  981
+                  1.1k
                 </span>
               
 
@@ -442,22 +442,24 @@
 <a id="more"></a>
 
 <p>最近在折腾华为云系统openEuler OS(欧拉系统)，其中涉及到基于ISO制作基础镜像环节。</p>
-<p>###微服务<br>传统的应用服务包括：开发，调试，部署，运维。每个流程都很费时费力。尤其是开发和部署环境不一致带来的问题让广大开发者和运维人员头痛不已。为解决这种繁琐的流程，微服务应运而生。微服务，顾名思义，就是将原来的服务模式改小，更应该说是改方便。微服务的目标是一个次只做一件事，有点儿Unix哲学的味道。</p>
-<p>###基础镜像<br>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。这个rootfs就可以看成是一个基础镜像。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成基础镜像(rootfs)。</p>
-<p>###应用镜像<br>就是说，将某一应用和其基础镜像及其环境打包成一体，部署和开发可以做到一样的环境，这样就不用考虑不同系统环境的不同，大大的提高了开发效率，节省了成本。这种打包文件就称为镜像，它包括底层的硬件层和文件系统，最上面的才是应用层。基于一个基础镜像，在上面安装各种服务，最后作为应用镜像提供服务，可大规模部署。</p>
-<p>###基础镜像生成大体流程<br>基础镜像十分重要，而它的制作流程大体如下。<br>1.利用debootstrap(debian系列)或febootstrap(Centos系列)生成rootfs非常方便。</p>
+<h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2><p>传统的应用服务包括：开发，调试，部署，运维。每个流程都很费时费力。尤其是开发和部署环境不一致带来的问题让广大开发者和运维人员头痛不已。为解决这种繁琐的流程，微服务应运而生。微服务，顾名思义，就是将原来的服务模式改小，更应该说是改方便。微服务的目标是一个次只做一件事，有点儿Unix哲学的味道。</p>
+<h2 id="基础镜像"><a href="#基础镜像" class="headerlink" title="基础镜像"></a>基础镜像</h2><p>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。这个rootfs就可以看成是一个基础镜像。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成rootfs并进而生成基础镜像。</p>
+<h2 id="应用镜像"><a href="#应用镜像" class="headerlink" title="应用镜像"></a>应用镜像</h2><p>就是说，将某一应用和其基础镜像及其环境打包成一体，部署和开发可以做到一样的环境，这样就不用考虑不同系统环境的不同，大大的提高了开发效率，节省了成本。这种打包文件就称为镜像，它包括底层的硬件层和文件系统，最上面的才是应用层。基于一个基础镜像，在上面安装各种服务，最后作为应用镜像提供服务，可大规模部署。</p>
+<h2 id="基础镜像生成大体流程"><a href="#基础镜像生成大体流程" class="headerlink" title="基础镜像生成大体流程"></a>基础镜像生成大体流程</h2><p>基础镜像十分重要，而它的制作流程大体如下。<br>1.利用debootstrap(debian系列)或febootstrap(Centos系列)生成rootfs非常方便。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debootstrap --arch i386 ....</span><br><span class="line">febootstrap -i bash -i vim -i yum centos centosImage file:///mnt/iso/</span><br></pre></td></tr></table></figure>
 <p>2.利用shell文件，仿照LFS(Linux From Scratch)制作rootfs 再利用dockerfile生成基础镜像。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">#genImage.sh </span><br><span class="line">#基于openEuler os制作rootfs，并打包成tar.xz文件</span><br><span class="line">machine=$(uname -m)</span><br><span class="line">if [ -z $RPM_ROOT ]; then</span><br><span class="line">	rm -rf $machine</span><br><span class="line">	echo &quot;please set RPM_ROOT&quot;</span><br><span class="line">	exit</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ &quot;x$RPM_ROOT&quot; != &quot;x$(pwd)/rootfs&quot; ]; then</span><br><span class="line">	echo &quot;should set RPM_ROOT to $(pwd)/rootfs&quot;</span><br><span class="line">	exit</span><br><span class="line">fi</span><br><span class="line">if [ -z &quot;$OS_VERSION&quot; ]; then</span><br><span class="line">	echo &quot;should set OS_VERSION&quot;</span><br><span class="line">	exit</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -z $ISO_PATH ];then</span><br><span class="line">	echo &quot;please set ISO_PATH as iso mountpoint&quot;</span><br><span class="line">	exit</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ &quot;x$USER&quot; != &quot;xroot&quot; ]; then</span><br><span class="line">	echo &quot;please run as root&quot;</span><br><span class="line">	exit</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -e $RPM_ROOT ];then</span><br><span class="line">	echo &quot;rootfs exist, remove it&quot;</span><br><span class="line">	rm -rf $RPM_ROOT</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mkdir -p $&#123;RPM_ROOT&#125;</span><br><span class="line"></span><br><span class="line"># init rpmdb</span><br><span class="line">rpm --root $&#123;RPM_ROOT&#125; --initdb</span><br><span class="line"></span><br><span class="line"># init yum repo</span><br><span class="line">mkdir -p $&#123;RPM_ROOT&#125;/etc/yum.repos.d</span><br><span class="line">euleros_repo=$&#123;RPM_ROOT&#125;/etc/yum.repos.d/euleros.repo</span><br><span class="line">echo &quot;[base]&quot; &gt; $&#123;euleros_repo&#125;</span><br><span class="line">echo name=openEulerOS-1.0 base &gt;&gt; $&#123;euleros_repo&#125;</span><br><span class="line">echo baseurl=file://$&#123;ISO_PATH&#125; &gt;&gt; $&#123;euleros_repo&#125;</span><br><span class="line">echo &quot;enabled=1&quot; &gt;&gt; $&#123;euleros_repo&#125;</span><br><span class="line"></span><br><span class="line"># install rpm key</span><br><span class="line">rpm --root $&#123;RPM_ROOT&#125; --import $ISO_PATH/RPM-GPG-KEY-openEuler</span><br><span class="line"></span><br><span class="line"># install package</span><br><span class="line">echo &quot;install package..&quot;</span><br><span class="line">yum -y --installroot=$&#123;RPM_ROOT&#125; install yum</span><br><span class="line">yum -y --installroot=$&#123;RPM_ROOT&#125; clean all</span><br><span class="line"></span><br><span class="line">cp ./clean_in_chroot.sh  $&#123;RPM_ROOT&#125;</span><br><span class="line"># clean up</span><br><span class="line">chroot $RPM_ROOT /clean_in_chroot.sh</span><br><span class="line">rm  $&#123;RPM_ROOT&#125;/clean_in_chroot.sh</span><br><span class="line"></span><br><span class="line">echo &quot;generate packages&quot;</span><br><span class="line">rm -rf $machine</span><br><span class="line">mkdir $machine</span><br><span class="line">echo &quot;generate $machine/openEulerOS-$OS_VERSION-$&#123;machine&#125;.tar.xz&quot;</span><br><span class="line">tar -C $RPM_ROOT -cJf  $machine/openEulerOS-$OS_VERSION-$&#123;machine&#125;.tar.xz .</span><br><span class="line"></span><br><span class="line">echo &quot;enerate $machine/openEulerOS-$OS_VERSION-$&#123;machine&#125;-tar-xz.sha256&quot;</span><br><span class="line">sha256sum $machine/openEulerOS-$OS_VERSION-$&#123;machine&#125;.tar.xz  &gt; $machine/openEulerOS-$OS_VERSION-$&#123;machine&#125;-tar-xz.sha256</span><br></pre></td></tr></table></figure>
 
 <p>基于tar.xz生成base image</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># Dockerfile</span><br><span class="line"># Build the base image: ARM64(鲲鹏) Cloud image</span><br><span class="line"># This is a docker file, use the Huawei openEuler OS</span><br><span class="line"># Version: 0.1</span><br><span class="line"># Author: Shieber</span><br><span class="line"># Date: 2020.01.03</span><br><span class="line"></span><br><span class="line">FROM scratch</span><br><span class="line">MAINTAINER Shieber &lt;qmh_xb_fltmy@yahoo.com&gt;</span><br><span class="line">ADD openEuler-1.0-x86_64.tar.xz /</span><br><span class="line">LABEL name=&quot;openEuler Base Image&quot; \</span><br><span class="line">	vendor=&quot;Hua Wei&quot; \</span><br><span class="line">	license=&quot;GPLv2&quot; \</span><br><span class="line">	build-date=&quot;20200103&quot;</span><br><span class="line"></span><br><span class="line">ADD openEuler.repo /etc/yum.repos.d/</span><br><span class="line">RUN [&apos;yum&apos;,&apos;makecache&apos;]</span><br><span class="line">RUN [&apos;yum&apos;,&apos;update&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;vim&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;bash&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;openssh-server&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;clean&apos;] #&amp;&amp;是为了生成为一次并精简镜像</span><br><span class="line"></span><br><span class="line">CMD [&apos;/bin/bash&apos;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># Dockerfile</span><br><span class="line"># Build the base image: ARM64(鲲鹏) Cloud image</span><br><span class="line"># This is a docker file, use the Huawei openEuler OS</span><br><span class="line"># Version: 1.0</span><br><span class="line"># Author: Shieber</span><br><span class="line"># Date: 2020.01.03</span><br><span class="line"></span><br><span class="line">FROM scratch</span><br><span class="line">MAINTAINER Shieber &lt;Shieber@aliyun.com&gt;</span><br><span class="line"></span><br><span class="line">ADD openEuler-1.0-x86_64.tar.xz /</span><br><span class="line">LABEL name=&quot;openEuler Base Image&quot; \</span><br><span class="line">	vendor=&quot;Hua Wei&quot; \</span><br><span class="line">	license=&quot;GPLv2&quot; \</span><br><span class="line">	build-date=&quot;20200103&quot;</span><br><span class="line">ADD openEuler.repo /etc/yum.repos.d/</span><br><span class="line"></span><br><span class="line">RUN [&apos;yum&apos;,&apos;makecache&apos;]</span><br><span class="line">RUN [&apos;yum&apos;,&apos;update&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;vim&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;bash&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;install&apos;,&apos;-y&apos;,&apos;openssh-server&apos;] \</span><br><span class="line">&amp;&amp;  [&apos;yum&apos;,&apos;clean&apos;] #&amp;&amp;是为了生成为一次并精简镜像</span><br><span class="line"></span><br><span class="line">CMD [&apos;/bin/bash&apos;]</span><br></pre></td></tr></table></figure>
 
 <p>命令行生成image</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker image build -t openEuler-demo .</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker image build -t openEuler-1.0-demo .</span><br></pre></td></tr></table></figure>
 
 <p>运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker container run --rm -it openEuler-demo /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>上面只是大体流程，实际上华为的欧拉系统只能在其ARM64架构的鲲鹏服务器上运行，所以实际安装还要复杂。上面提供的流程应对x86_64架构下的各种Linux发行版应该都没有问题。</p>
 
       
     </div>
@@ -625,8 +627,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -765,6 +776,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#微服务"><span class="nav-number">1.</span> <span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础镜像"><span class="nav-number">2.</span> <span class="nav-text">基础镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用镜像"><span class="nav-number">3.</span> <span class="nav-text">应用镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础镜像生成大体流程"><span class="nav-number">4.</span> <span class="nav-text">基础镜像生成大体流程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
