@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;01&#x2F;03&#x2F;lUvgvn.jpg">
-<meta property="og:updated_time" content="2020-01-03T08:38:00.315Z">
+<meta property="og:updated_time" content="2020-01-07T03:56:30.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;01&#x2F;03&#x2F;lUvgvn.jpg">
 
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k
+                  1k
                 </span>
               
 
@@ -443,7 +443,7 @@
 
 <p>最近在折腾华为云系统openEuler OS(欧拉系统)，其中涉及到基于ISO制作基础镜像环节。</p>
 <h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2><p>传统的应用服务包括：开发，调试，部署，运维。每个流程都很费时费力。尤其是开发和部署环境不一致带来的问题让广大开发者和运维人员头痛不已。为解决这种繁琐的流程，微服务应运而生。微服务，顾名思义，就是将原来的服务模式改小，更应该说是改方便。微服务的目标是一个次只做一件事，有点儿Unix哲学的味道。</p>
-<h2 id="基础镜像"><a href="#基础镜像" class="headerlink" title="基础镜像"></a>基础镜像</h2><p>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。这个rootfs就可以看成是一个基础镜像。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成rootfs并进而生成基础镜像。</p>
+<h2 id="基础镜像"><a href="#基础镜像" class="headerlink" title="基础镜像"></a>基础镜像</h2><p>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成rootfs打包成tar.zx文件并导入为docker基础镜像。</p>
 <h2 id="应用镜像"><a href="#应用镜像" class="headerlink" title="应用镜像"></a>应用镜像</h2><p>就是说，将某一应用和其基础镜像及其环境打包成一体，部署和开发可以做到一样的环境，这样就不用考虑不同系统环境的不同，大大的提高了开发效率，节省了成本。这种打包文件就称为镜像，它包括底层的硬件层和文件系统，最上面的才是应用层。基于一个基础镜像，在上面安装各种服务，最后作为应用镜像提供服务，可大规模部署。</p>
 <h2 id="基础镜像生成大体流程"><a href="#基础镜像生成大体流程" class="headerlink" title="基础镜像生成大体流程"></a>基础镜像生成大体流程</h2><p>基础镜像十分重要，而它的制作流程大体如下。<br>1.利用debootstrap(debian系列)或febootstrap(Centos系列)生成rootfs非常方便。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debootstrap --arch i386 ....</span><br><span class="line">febootstrap -i bash -i vim -i yum centos centosImage file:///mnt/iso/</span><br></pre></td></tr></table></figure>
@@ -830,7 +830,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共98.2k字</span>
+  <span class="post-count">本站共98.3k字</span>
 </div>
 
 

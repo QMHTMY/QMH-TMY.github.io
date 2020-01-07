@@ -8,7 +8,7 @@
 
 <p>最近在折腾华为云系统openEuler OS(欧拉系统)，其中涉及到基于ISO制作基础镜像环节。</p>
 <h2 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h2><p>传统的应用服务包括：开发，调试，部署，运维。每个流程都很费时费力。尤其是开发和部署环境不一致带来的问题让广大开发者和运维人员头痛不已。为解决这种繁琐的流程，微服务应运而生。微服务，顾名思义，就是将原来的服务模式改小，更应该说是改方便。微服务的目标是一个次只做一件事，有点儿Unix哲学的味道。</p>
-<h2 id="基础镜像"><a href="#基础镜像" class="headerlink" title="基础镜像"></a>基础镜像</h2><p>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。这个rootfs就可以看成是一个基础镜像。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成rootfs并进而生成基础镜像。</p>
+<h2 id="基础镜像"><a href="#基础镜像" class="headerlink" title="基础镜像"></a>基础镜像</h2><p>在Linux的世界里，大家共用一套硬件管理方案：bootfs。而不同的发行版可以提供不同的文件管理系统rootfs。故而，对不同的发行版来说，需要准备不同的rootfs。拿到一个安装好的系统或是ISO文件，我们可以考虑基于此生成rootfs打包成tar.zx文件并导入为docker基础镜像。</p>
 <h2 id="应用镜像"><a href="#应用镜像" class="headerlink" title="应用镜像"></a>应用镜像</h2><p>就是说，将某一应用和其基础镜像及其环境打包成一体，部署和开发可以做到一样的环境，这样就不用考虑不同系统环境的不同，大大的提高了开发效率，节省了成本。这种打包文件就称为镜像，它包括底层的硬件层和文件系统，最上面的才是应用层。基于一个基础镜像，在上面安装各种服务，最后作为应用镜像提供服务，可大规模部署。</p>
 <h2 id="基础镜像生成大体流程"><a href="#基础镜像生成大体流程" class="headerlink" title="基础镜像生成大体流程"></a>基础镜像生成大体流程</h2><p>基础镜像十分重要，而它的制作流程大体如下。<br>1.利用debootstrap(debian系列)或febootstrap(Centos系列)生成rootfs非常方便。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">debootstrap --arch i386 ....</span><br><span class="line">febootstrap -i bash -i vim -i yum centos centosImage file:///mnt/iso/</span><br></pre></td></tr></table></figure>
@@ -898,6 +898,7 @@
 
 <p><strong>docker基本概念</strong><br>docker是一种类似虚拟机的东西，但是占用不高，启动快。<br>镜像(image)就是docker中的模版，容器依赖于它而生成。<br>仓库，是远程存放镜像的地方，可以联网获取各种image。<br>容器是docker的实质，docker是linux下容器技术的封装。<br>可以把容器看成一个进程，运行后可以删除，要再运行就用Image再生成。  </p>
 <p>docker大概工作流程:<br>1.获取image或自己创建image<br>2.利用image生成容器服务  </p>
+<p>docker核心概念<br>1.Userspace (隔离进程，网络等)<br>2.Cgroup (隔离硬件资源)<br>3.UFS (统一文件系统挂载点)</p>
 <p><strong>docker在Ubuntu下的安装</strong><br>1.卸载老版本并更新软件包信息(如果有的话)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get remove --purge docker docker-engine docker.io containerd runc</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
 
