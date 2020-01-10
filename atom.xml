@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-01-09T05:50:11.129Z</updated>
+  <updated>2020-01-10T03:38:08.862Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>神翻译</title>
+    <link href="http://www.shieber.cn/title/eb015e2b/"/>
+    <id>http://www.shieber.cn/title/eb015e2b/</id>
+    <published>2020-01-10T02:50:21.000Z</published>
+    <updated>2020-01-10T03:38:08.862Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/10/lfqrTO.md.png" alt="error1"></p><a id="more"></a><p>中国神翻译时时见诸新闻，特收集一些有趣的翻译。  </p><h2 id="字句翻译"><a href="#字句翻译" class="headerlink" title="字句翻译"></a>字句翻译</h2><p>1.God Use VPN. 佛跳墙。<br>2.Old dry mother. 老干妈。<br>3.We found love. 潍坊的爱。<br>4.Jack, slow fuck. 捷克斯洛伐克。<br>5.Seven up eight down.七上八下。<br>6.A time sex thing. 一次性用品。<br>7.You can kill me, but you can’t fuck me. 士可杀，不可辱。<br>8.You di da di da me, I hua la hua you.滴水之恩，当以涌泉相报。  </p><h2 id="人名翻译"><a href="#人名翻译" class="headerlink" title="人名翻译"></a>人名翻译</h2><table><thead><tr><th align="center">译名</th><th align="center">人物</th><th align="center">译名</th><th align="center">人物</th></tr></thead><tbody><tr><td align="center">Wayne</td><td align="center">魏延</td><td align="center">Summary</td><td align="center">司马懿</td></tr><tr><td align="center">John</td><td align="center">张颌</td><td align="center">Water</td><td align="center">华佗</td></tr><tr><td align="center">Susan</td><td align="center">孙尚香</td><td align="center">Major</td><td align="center">马忠</td></tr><tr><td align="center">Marshall</td><td align="center">马超</td><td align="center">Joey</td><td align="center">周瑜</td></tr><tr><td align="center">David</td><td align="center">典韦</td><td align="center">Rambo</td><td align="center">吕布</td></tr><tr><td align="center">Pond</td><td align="center">庞德</td><td align="center">Marcel</td><td align="center">马谡</td></tr><tr><td align="center">Josh</td><td align="center">贾诩</td><td align="center">Dunn</td><td align="center">邓艾</td></tr><tr><td align="center">Russell</td><td align="center">鲁肃</td><td align="center">Yahoo</td><td align="center">羊祜</td></tr><tr><td align="center">Charlie</td><td align="center">张辽</td><td align="center">Chauncey</td><td align="center">陈式</td></tr><tr><td align="center">Cunning</td><td align="center">甘宁</td><td align="center">Faye</td><td align="center">费祎</td></tr><tr><td align="center">Pavon</td><td align="center">潘风</td><td align="center">Hansen</td><td align="center">华雄</td></tr><tr><td align="center">Raymond</td><td align="center">吕蒙</td><td align="center">Luke</td><td align="center">陆抗</td></tr><tr><td align="center">Rachel</td><td align="center">文丑</td><td align="center">Joy</td><td align="center">大乔</td></tr><tr><td align="center">Gay</td><td align="center">关羽</td><td align="center">Joy.II</td><td align="center">小乔</td></tr><tr><td align="center">Jeff</td><td align="center">张飞</td><td align="center">Sheldon</td><td align="center">夏侯惇</td></tr><tr><td align="center">Chocolate</td><td align="center">诸葛亮</td><td align="center"></td><td align="center"></td></tr></tbody></table><p>不定期更新…..</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/01/10/lfqrTO.md.png&quot; alt=&quot;error1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Culture" scheme="http://www.shieber.cn/categories/Culture/"/>
+    
+    
+      <category term="Translation" scheme="http://www.shieber.cn/tags/Translation/"/>
+    
+  </entry>
   
   <entry>
     <title>桃花源记 【晋】陶渊明・九译</title>
@@ -423,30 +445,6 @@
     
     
       <category term="Service" scheme="http://www.shieber.cn/tags/Service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Scrapy爬取Bing壁纸</title>
-    <link href="http://www.shieber.cn/title/67e0d7bf/"/>
-    <id>http://www.shieber.cn/title/67e0d7bf/</id>
-    <published>2019-12-06T02:55:56.000Z</published>
-    <updated>2019-12-29T11:22:22.061Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/06/QJmRsK.md.png" alt="bing_1"></p><a id="more"></a><p>今天学习一下利用scrapy爬取bing的壁纸，bing的壁纸确实好看，我认为这是微软最值得赞赏的地方，反而他的windows我还不那么喜欢。</p><p>首先打开某程序员做的bing壁纸保存网站<a href="https://bing.ioliu.cn/" target="_blank" rel="noopener">Bing</a>，可以看到和封面一样多的图片，从图中可以看到有标题，日期，等。</p><p>现在设定我们需要的数据段：</p><table><thead><tr><th align="center">序号</th><th align="center">数据名</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">图片url</td></tr><tr><td align="center">1</td><td align="center">下一页url</td></tr><tr><td align="center">2</td><td align="center">图片日期</td></tr></tbody></table><p>我觉得标题太长，就用日期作标题吧。接着使用web开发者工具，调出控制台查看原代码。</p><p>1.首先定位图片位置，将鼠标放在第一副图上，可以看到其中文标题，接着在查看器中搜索这个标题，找到源码出处。如下图。可以看到图片包裹在div class=”item”的div class=”description”中。</p><p><img src="https://s2.ax1x.com/2019/12/06/QJnnY9.md.png" alt="bing_2"> </p><p>所有图片则属于不同的item。</p><p><img src="https://s2.ax1x.com/2019/12/06/QJnGwD.md.png" alt="bing_4"></p><p>同时可以看到，图片img链接在div class=”card progressive”中，且src属性中保存着图片实际地址。</p><p><img src="https://s2.ax1x.com/2019/12/06/QJnly6.md.png" alt="bing_3"></p><p>接着拉到底部，可以看到有114页图片，下一页的链接就在div class=”page”中。</p><p><img src="https://s2.ax1x.com/2019/12/06/QJnUfA.md.png" alt="bing_5"> </p><p>最后鼠标放到图片上，查看日期，比如2019-12-06，接着搜索该日期位置，发现在div class=”calendar”中，如此所有数据查找完毕。</p><p><img src="https://s2.ax1x.com/2019/12/06/QJnrm8.md.png" alt="bing_6"></p><p>好，所有数据得到了，现在利用scrapy创建项目，编写对应的spider和pipeline，最后设置好图片保存位置就可以爬取图片了。</p><p>scrapy startproject bing<br>scrapy genspider picture bing.ioliu.cn<br>mv picture.py bing/bing/spiders/<br>接着查看项目结构如下<br>$ tree bing/  </p><p><img src="https://s2.ax1x.com/2019/12/06/QJK4dU.md.png" alt="bing_7"> </p><p>现在在item.py中定义需要获取的信息字段</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class ImageItem(scrapy.Item):</span><br><span class="line">    titles = scrapy.Field()</span><br><span class="line">    images = scrapy.Field()</span><br><span class="line">    image_urls = scrapy.Field()</span><br></pre></td></tr></table></figure><p>然后到picture中实现爬取逻辑，上面的分析都给出了url地址，所以代码很简单。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import sys</span><br><span class="line">import scrapy</span><br><span class="line">from bing.items import ImageItem</span><br><span class="line"></span><br><span class="line">class WallpaperSpiderSpider(scrapy.Spider):</span><br><span class="line">    name = &apos;wallpaper&apos;</span><br><span class="line">    allowed_domains = [&apos;bing.ioliu.cn&apos;]</span><br><span class="line">    start_urls = [&apos;https://bing.ioliu.cn&apos;]</span><br><span class="line"></span><br><span class="line">    i = 0</span><br><span class="line">    item = ImageItem()</span><br><span class="line">    def parse(self, response):</span><br><span class="line">        #第一步：获取图片标题(这里是指日期)和图片url</span><br><span class="line">        sel = response.xpath(&apos;//div[@class=&quot;description&quot;]&apos;)</span><br><span class="line">        ttls= sel.xpath(&apos;.//p[@class=&quot;calendar&quot;]/em/text()&apos;).extract()</span><br><span class="line">        self.item[&apos;titles&apos;] = ttls</span><br><span class="line"></span><br><span class="line">        lks = response.xpath(&apos;//div[@class=&quot;item&quot;]/div/img/@src&apos;).extract()</span><br><span class="line">        self.item[&apos;image_urls&apos;] = lks</span><br><span class="line">        yield self.item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        self.i += 1</span><br><span class="line">        if self.i &gt; 114: #114页，到了就停止下载，不然会反复下载最后一页图片。</span><br><span class="line">            sys.exit(0)</span><br><span class="line"></span><br><span class="line">        #step 2: 提取下一页url</span><br><span class="line">        href = response.xpath(&apos;//div[@class=&quot;page&quot;]/a[2]/@href&apos;).extract_first()</span><br><span class="line">        next_url = response.urljoin(href)</span><br><span class="line">        if next_url:</span><br><span class="line">            yield scrapy.Request(next_url, callback=self.parse)</span><br></pre></td></tr></table></figure><p>接着就是到pipelines.py中修改，实现自定义图片标题。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">from os.path import basename</span><br><span class="line">from scrapy.http import Request </span><br><span class="line">from scrapy.pipelines.images import ImagesPipeline</span><br><span class="line"></span><br><span class="line">class RenameImagesPipeline(ImagesPipeline):</span><br><span class="line">    def get_media_requests(self, item, info):</span><br><span class="line">        for img_url in item[&apos;image_urls&apos;]:</span><br><span class="line">            img_type = basename(img_url).split(&apos;.&apos;)[1]  #jpeg, png</span><br><span class="line">            img_idex = item[&apos;image_urls&apos;].index(img_url)</span><br><span class="line">            img_name = item[&apos;titles&apos;][img_idex]         #2019-12-06</span><br><span class="line"></span><br><span class="line">#下面代码实现的图片名称是BingWallpaper-2019-12-06.jpe这种格式。</span><br><span class="line">            img_name = &apos;&apos;.join([&apos;BingWallpaper-&apos;,img_name,&apos;.&apos;,img_type])</span><br><span class="line">            yield Request(img_url, meta=&#123;&apos;img_name&apos;: img_name&#125;)</span><br><span class="line"></span><br><span class="line">    def file_path(self, request, response=None, info=None):</span><br><span class="line">        return request.meta[&apos;img_name&apos;]</span><br></pre></td></tr></table></figure><p>然后将RenameImagesPipeline注册到setting中，并设置好图片保存地址</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">    &apos;bing.pipelines.RenameImagesPipeline&apos;: 300,</span><br><span class="line">&#125;</span><br><span class="line">IMAGES_STORE=&apos;/home/username/bingpic/&apos; #自己设置就好</span><br><span class="line">IMAGES_MIN_WIDTH=110                   #最小图片尺寸，过小就不下载。</span><br><span class="line">IMAGES_MIN_HEIGHT=110</span><br></pre></td></tr></table></figure><p>现在回到主bing/目录下，使用scrapy crawl wallpaer就可以了。然后到你的图片保留目录下就可以看到下载的图片了。<br>我的下载了1000多张，时间越晚，图片越多。Have fun!</p><p><img src="https://s2.ax1x.com/2019/12/06/QJlHzj.md.png" alt="bing_8"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/06/QJmRsK.md.png&quot; alt=&quot;bing_1&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="爬虫" scheme="http://www.shieber.cn/categories/%E7%88%AC%E8%99%AB/"/>
-    
-    
-      <category term="IT" scheme="http://www.shieber.cn/tags/IT/"/>
-    
-      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
     
   </entry>
   
