@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>国产Linux操作系统UOS</title>
+    <url>/title/df585a29/</url>
+    <content><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/11/l5KvqA.md.png" alt="uos"></p>
+<a id="more"></a>
+
+<p>前段时间国产操作系统UOS(Unity Operating System)释出，最近用虚拟机试了试。总体来说，操作流畅，符合国人习惯。UOS内置中文输入法和各类便捷工具，大大方便用户工作。</p>
+<p>UOS是由中兴，电子集团，深之度科技等联合开发的一款国产Linux发行版，使用过Linux很快就能上手。UOS默认是没有root权限的，要登录帐号以开启，这和Ubuntu之类默认带root功能的发行版不同。UOS主体应该就是Deepin系统，软件安装方式则延续Debian系列的apt-get install方式。</p>
+<p>UOS发布的时间表(2019)：<br>10月15日：面向BIOS、CPU、整机和ODM厂商，发布龙芯、华为、飞腾、兆芯、海光五个平台的桌面和服务器UOS alpha测试版本。该版本主要功能和用户交互基本完成，存在比较明显的细节缺失和bug，但可以开展面向指定CPU型号的适配验证。<br>11月10日：发布Alpha2版本，增加对申威、海光架构版本的支持。Alpha2版本将面向安全厂商、应用厂商开发，用于进行底层安全检查；软件应用厂商可以开始基本适配测试。<br>11月30日：合并新的功能代码，并修复alpha版本发现的问题。发布beta版本，各软件厂商可以针对该版本进行正式适配。<br>12月15日：发布RC版本，代码冻结，进入正式版本发布前的bug修复阶段。<br>12月31日：如基于RC版本的修复版本通过质量测试，则发布FINAL正式版本。  </p>
+<h2 id="界面和功能欣赏"><a href="#界面和功能欣赏" class="headerlink" title="界面和功能欣赏"></a>界面和功能欣赏</h2><p>安装界面有各种语言可选择，包括台湾和港澳的繁体及正体中文。  </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5MIyQ.md.png" alt="uos_1"></p>
+<p>安装时间不长。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5MXWT.md.png" alt="uos_2"></p>
+<p>开机界面，似乎Deepin默认就是这个，极光挺美的。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5Q9m9.md.png" alt="uos_3"></p>
+<p>登录界面的图片可设置。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5QZlD.md.png" alt="uos_4"></p>
+<p>自带的壁纸很好，我这里选用了一张必应壁纸。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5QK0A.md.png" alt="uos_5"></p>
+<p>界面和Windows很像，符合国人的习惯。  </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5KvqA.md.png" alt="uos"></p>
+<p>点击上图头像右上角扩展符号可以扩展为下面的样式。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5J4Nd.md.png" alt="uos_14"></p>
+<p>UOS的浏览器似乎是封装某浏览器内核制作的，默认搜索工具是360搜索。   </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5QtXQ.md.png" alt="uos_6"></p>
+<p>自带的图片管理浏览工具。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5QBt0.md.png" alt="uos_7"></p>
+<p>自带音乐播放器。 </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5JGpq.md.png" alt="uos_9"></p>
+<p>自带视频播放器。 </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5JtXT.md.png" alt="uos_10"></p>
+<p>自带的应用下载市场，软件还不多，后续应该会越来越多。若是嫌界面图标遮住界面，碍眼，可右键设置为自动隐藏。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5Qy1U.md.png" alt="uos_8"></p>
+<p>终端使用，透明度调节没问题。  </p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5Jd74.md.png" alt="uos_11"></p>
+<p>系统监视工具，这个似乎是top命令的GUI版。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5JDhR.md.png" alt="uos_12"></p>
+<p>自带编辑器，当然也预置了Vim。</p>
+<p><img src="https://s2.ax1x.com/2020/01/11/l5JRBD.md.png" alt="uos_13"></p>
+<h2 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h2><p>Deepin为核心，各大公司合力开发，支持多种国产CPU，使用流畅，软件简洁好用。总体来说，是值得广大用户使用的一款国产Linux系统，望大家支持。</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>UOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>翻译乃大道</title>
     <url>/title/9557f6d5/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/10/lhPP6U.md.png" alt="fydd"></p>
