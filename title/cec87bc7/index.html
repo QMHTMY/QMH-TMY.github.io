@@ -96,7 +96,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;Q3ZAje.md.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;Q3ZQ9f.md.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;Q3ZK4P.md.png">
-<meta property="og:updated_time" content="2019-12-05T13:57:40.488Z">
+<meta property="og:updated_time" content="2020-01-13T08:42:32.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;ftp.bmp.ovh&#x2F;imgs&#x2F;2019&#x2F;11&#x2F;07f1ac3a09f4f773.png">
 
@@ -458,7 +458,7 @@
 
 <p>扯远了，既然Windows10升级也是一项服务，那么自然可以通过注册表取消该服务的权限以达到关闭更新，这种方法是最彻底的，其他的软件工具也是通过修改注册表项来实现禁止更新，下面看看具体操作步骤。</p>
 <p>1.按Win + R组合键输入services.msc<br>  在打开的服务中找到Windows Update，点击右键再点击进入属性，在常规一栏将启动类型修改为:禁用，如果改不了先点击下方停止按钮。接着进入恢复一栏，将第一次失败，第二次失败，后续失败统统改为无操作。失败计数设置为1000，或者9999等数字都可以，然后点击下方应用，确定，最后退出。这种方法，在win10早期就是关闭自动更新的方法，然而win10似乎知道了这点，所以他又加了一个Windows Update Medic Service在服务里面，就在Windows Update下面，你点击属性进去，还是像刚刚那样修改，然而你会发现：拒绝访问。这就是win10流氓的地方，自家的电脑，自己却无法访问，你说怪不怪？</p>
-<p>2.按Win + R组合键输入regedit.msc，然后点击注册表项进入HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc，找到start，右击点修改，将数值数据2改为4，确定。接着找到FailureActions，右击修改，将0010和0018两行的第五列[01,01]修改为[00, 00]，具体为移动到01前，按住Shift和右移动键(–&gt;)，删除再输入一个0，他自动就变为00了，下一行一样的改法。保存退出。</p>
+<p>2.按Win + R组合键输入regedit，然后点击注册表项进入HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc，找到start，右击点修改，将数值数据2改为4，确定。接着找到FailureActions，右击修改，将0010和0018两行的第五列[01,01]修改为[00, 00]，具体为移动到01前，按住Shift和右移动键(–&gt;)，删除再输入一个0，他自动就变为00了，下一行一样的改法。保存退出。</p>
 <p>3.再次按Win + R组合键输入services.msc，这次找到刚刚那个流氓Windows Update Meic Service，先点击停止，然后像修改Windows Updata那样，禁用，恢复一栏改为无操作。接着确定，退出。(还是显示拒绝访问，你不用管。)</p>
 <p>你以为完了，还有</p>
 <p>4.再次按Win + R组合键输入gpedit.msc打开组策略文件，依次打开计算机配置 -&gt; 管理模板 -&gt; Windows组件 -&gt; Windows更新，右击配置自动更新，进入编辑，设置为”已禁用”，点击应用，确定并退出。接着在配置自动更新下面找到”删除使用所有WIndows更新功能的访问权限”，右击设置为”已启用”，再点击应用，确定并退出。</p>
