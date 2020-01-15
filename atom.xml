@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-01-11T05:01:50.224Z</updated>
+  <updated>2020-01-15T11:24:55.943Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Asciidoc写作</title>
+    <link href="http://www.shieber.cn/title/b6700389/"/>
+    <id>http://www.shieber.cn/title/b6700389/</id>
+    <published>2020-01-15T08:54:40.000Z</published>
+    <updated>2020-01-15T11:24:55.943Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/15/lXKWJe.md.png" alt="asciidoc"></p><a id="more"></a><p>一直用markdown和ResTructuredText写文档，速度确实快。然而，一旦文件复杂起来后就没法儿用它们解决。今天刚好发现asciidoc，试了试，效果不错。</p><p>asciidoc是一种类似markdown的标记语言，且其功能要比markdown强大。利用asciidoc的增强版asciidoctor能直接输出html，epub电子书等格式等文件。</p><h2 id="asciidoctor支持的文档格式"><a href="#asciidoctor支持的文档格式" class="headerlink" title="asciidoctor支持的文档格式"></a>asciidoctor支持的文档格式</h2><blockquote><p>.html<br>.xml<br>.xhtml<br>.docbook<br>.manpage<br>.pdf 需安装<a href="https://rubygems.org/gems/asciidoctor-pdf" target="_blank" rel="noopener">asciidoctor-pdf</a><br>.epub3 需安装<a href="https://rubygems.org/gems/asciidoctor-ebub3" target="_blank" rel="noopener">asciidoctor-epub3</a><br>.latex 需安装<a href="https://rubygems.org/gems/asciidoctor-latex" target="_blank" rel="noopener">asciidoctor-latex</a><br>……</p></blockquote><h2 id="渲染方式"><a href="#渲染方式" class="headerlink" title="渲染方式"></a>渲染方式</h2><blockquote><p>asciidoctor -b html sample.adoc<br>asciidoctor -b xhtml sample.adoc<br>asciidoctor -b docbook sample.adoc<br>asciidoctor -b manpage sample.adoc<br>asciidoctor -b pdf sample.adoc<br>asciidoctor -b epub3 sample.adoc<br>asciidoctor -b latex sample.adoc  </p></blockquote><p>markdown的语法确实要简单些，下面是本博客的markdown原文件。</p><p><img src="https://s2.ax1x.com/2020/01/15/lXMUmt.md.png" alt="mk-origin"></p><p>如果换成asciidoctor的话该如下图所示。</p><p><img src="https://s2.ax1x.com/2020/01/15/lX14tf.md.png" alt="as-origin"></p><p>再看渲染出来的样式[第一副为markdown]，明显是asciidoctor渲染得更好，字体和颜色都比较出色。相比之下，markdown可说是一般般。所以，这篇博客怕是最后一篇用markdown写的了，以后应该会换成asciidoc格式吧。</p><p><img src="https://s2.ax1x.com/2020/01/15/lX3tC8.md.png" alt="as-render1"><br><img src="https://s2.ax1x.com/2020/01/15/lX3avQ.md.png" alt="as-render2"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/01/15/lXKWJe.md.png&quot; alt=&quot;asciidoc&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="文档" scheme="http://www.shieber.cn/categories/%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="asciidoc" scheme="http://www.shieber.cn/tags/asciidoc/"/>
+    
+  </entry>
   
   <entry>
     <title>国产Linux操作系统UOS</title>
@@ -416,28 +438,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/09/QwlJDe.md.png&quot; alt=&quot;PS10_1&quot;&gt; &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日PS技巧9：照片换色</title>
-    <link href="http://www.shieber.cn/title/51ed8652/"/>
-    <id>http://www.shieber.cn/title/51ed8652/</id>
-    <published>2019-12-08T05:41:28.000Z</published>
-    <updated>2019-12-17T08:13:06.699Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_1"> </p><a id="more"></a><p>今天学习图像颜色替换，把封面中的花色调出来。</p><h2 id="今日技巧-图像换色"><a href="#今日技巧-图像换色" class="headerlink" title="今日技巧 [图像换色]"></a>今日技巧 [图像换色]</h2><p>主要步骤：  </p><p>1) 打开图像可选颜色<br>2) 调节参数并保存</p><p>首先导入图片素材，我们首先试试色相饱和度能不能行。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiCDS.md.png" alt="PS9_2"></p><p>花是黄色，所以选择对黄色色相进行调节，下图显示，结果不好，而且人脸变色严重，值发绿。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiFEQ.md.png" alt="PS9_3"></p><p>所以，可以试试可选颜色以调整颜色的值。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaieg0.md.png" alt="PS9_4"></p><p>因为要改变黄色为粉红色，而黄色和红色挨着，所以一并调节黄色和红色的值，同时减少青色的值，具体值自己一试就知道了，按效果来调节。</p><p><img src="https://s2.ax1x.com/2019/12/08/Qaitv6.md.png" alt="PS9_5"></p><p>然后我们发现人脸也变色了，变得特别红，所以需要恢复原图人脸的颜色，同时保留花儿变化后的颜色。可以使用蒙版对人脸进行恢复。如下图，恢复的人脸和没恢复的，差别明显。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaiRr8.md.png" alt="PS9_6"></p><p>把人脸调节完，基本就可以了，当然，大体可以，细节还不行，学习就到这一步，细节微调属于其他技巧。</p><p><img src="https://s2.ax1x.com/2019/12/08/QaF9R1.md.png" alt="PS9_7"></p><p>下面附上原图和效果图，原图来源：2019.12.07 毕业班级照片校色图。</p><p><img src="https://s2.ax1x.com/2019/12/07/QtYtQU.md.png" alt="PS9_8"> </p><p><img src="https://s2.ax1x.com/2019/12/08/QaPYnS.md.png" alt="PS9_9"> </p><p>当然，还可以调成其他颜色，下面的背景也换了。</p><p><img src="https://s2.ax1x.com/2019/11/12/M3JoEn.md.png" alt="biye1"></p><p><img src="https://s2.ax1x.com/2019/11/12/M3Jju4.md.png" alt="biye2"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/08/QaPYnS.md.png&quot; alt=&quot;PS9_1&quot;&gt; &lt;/p&gt;
     
     </summary>
     

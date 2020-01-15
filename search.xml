@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>使用Asciidoc写作</title>
+      <link href="/title/b6700389/"/>
+      <url>/title/b6700389/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/15/lXKWJe.md.png" alt="asciidoc"></p><a id="more"></a><p>一直用markdown和ResTructuredText写文档，速度确实快。然而，一旦文件复杂起来后就没法儿用它们解决。今天刚好发现asciidoc，试了试，效果不错。</p><p>asciidoc是一种类似markdown的标记语言，且其功能要比markdown强大。利用asciidoc的增强版asciidoctor能直接输出html，epub电子书等格式等文件。</p><h2 id="asciidoctor支持的文档格式"><a href="#asciidoctor支持的文档格式" class="headerlink" title="asciidoctor支持的文档格式"></a>asciidoctor支持的文档格式</h2><blockquote><p>.html<br>.xml<br>.xhtml<br>.docbook<br>.manpage<br>.pdf 需安装<a href="https://rubygems.org/gems/asciidoctor-pdf" target="_blank" rel="noopener">asciidoctor-pdf</a><br>.epub3 需安装<a href="https://rubygems.org/gems/asciidoctor-ebub3" target="_blank" rel="noopener">asciidoctor-epub3</a><br>.latex 需安装<a href="https://rubygems.org/gems/asciidoctor-latex" target="_blank" rel="noopener">asciidoctor-latex</a><br>……</p></blockquote><h2 id="渲染方式"><a href="#渲染方式" class="headerlink" title="渲染方式"></a>渲染方式</h2><blockquote><p>asciidoctor -b html sample.adoc<br>asciidoctor -b xhtml sample.adoc<br>asciidoctor -b docbook sample.adoc<br>asciidoctor -b manpage sample.adoc<br>asciidoctor -b pdf sample.adoc<br>asciidoctor -b epub3 sample.adoc<br>asciidoctor -b latex sample.adoc  </p></blockquote><p>markdown的语法确实要简单些，下面是本博客的markdown原文件。</p><p><img src="https://s2.ax1x.com/2020/01/15/lXMUmt.md.png" alt="mk-origin"></p><p>如果换成asciidoctor的话该如下图所示。</p><p><img src="https://s2.ax1x.com/2020/01/15/lX14tf.md.png" alt="as-origin"></p><p>再看渲染出来的样式[第一副为markdown]，明显是asciidoctor渲染得更好，字体和颜色都比较出色。相比之下，markdown可说是一般般。所以，这篇博客怕是最后一篇用markdown写的了，以后应该会换成asciidoc格式吧。</p><p><img src="https://s2.ax1x.com/2020/01/15/lX3tC8.md.png" alt="as-render1"><br><img src="https://s2.ax1x.com/2020/01/15/lX3avQ.md.png" alt="as-render2"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文档 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> asciidoc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>国产Linux操作系统UOS</title>
       <link href="/title/df585a29/"/>
       <url>/title/df585a29/</url>
