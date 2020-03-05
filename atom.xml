@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-01-24T14:21:00.085Z</updated>
+  <updated>2020-03-05T04:36:04.436Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ubuntu20.04 LTS</title>
+    <link href="http://www.shieber.cn/title/8009ae71/"/>
+    <id>http://www.shieber.cn/title/8009ae71/</id>
+    <published>2020-03-05T04:33:44.000Z</published>
+    <updated>2020-03-05T04:36:04.436Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/03/05/3TbKmD.png" alt="Focal Fossa"></p><a id="more"></a><p>近期Ubuntu20.04 LTS(Focal Fossa)冻结部分功能，特地下载试了试。  </p><h2 id="Ubuntu20-04发布的时间表-2020-："><a href="#Ubuntu20-04发布的时间表-2020-：" class="headerlink" title="Ubuntu20.04发布的时间表(2020)：  "></a>Ubuntu20.04发布的时间表(2020)：  </h2><p>1月09日：测试周 (可选)<br>2月27日：特性冻结，Debian导入冻结<br>3月05日：测试周 (可选)<br>3月19日：用户界面冻结<br>3月26日：文档字符串冻结<br>4月02日：测试版冻结<br>4月09日：内核冻结<br>4月16日：最终冻结，语言翻译包冻结，发布候选版<br>4月23日：发布稳定版  </p><p>在某个日期，Ubuntu18.04 LTS用户会收到新LTS通知，提示升级。</p><h2 id="支持时限："><a href="#支持时限：" class="headerlink" title="支持时限：  "></a>支持时限：  </h2><p>台式机及服务器：2020-2025年<br>企业扩展维护版：2020-2030年(收费)</p><h2 id="计划功能。"><a href="#计划功能。" class="headerlink" title="计划功能。  "></a>计划功能。  </h2><ul><li>Gnome3.36</li><li>游戏相关改进</li><li>改进的ZFS支持</li><li>GDM中多显示器</li><li>Xorg会话分数缩放</li><li>Linux Kernel 5.4 or higher</li></ul><p>看来就ZFS和新内核有点看头。Ubuntu以前用的是ext4系统，不知道新ZFS如何，最近Linus大佬到是对ZFS <a href="https://www.oschina.net/news/112779/linus-zfs-statements-arent-right-heres-the-straight-dope?p=2" target="_blank" rel="noopener">颇有看法</a>。</p><p>关于<a href="https://www.kernel.org" target="_blank" rel="noopener">内核</a>，<code>uname -a</code>显示结果:<br><code>Linux ubuntu 5.4.0-14-generic #17-Ubuntu SMP Thu Feb 6 22:47:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code><br>5.4的内核比较新，微软去年贡献出的exFAT功能也已加入，所以也算得上20.04的新特性吧。</p><p>关于软件<br>预装的Amazon在本版本中被去掉了，LibreOffice提供了最新6.4版，我速度快多了。另外，官方正考虑预置新版PHP 7.4。<br>至于其他的都差不多，Firefox, vim等等这些和以前一样预置。</p><p>使用<br>虚拟机下使用也不怎么卡，Gnome优化得挺好，我这台电脑是2015年的垃圾货了，装双系统，再开虚拟机跑着还过得去。新版出来后多半会跟着升级吧，毕竟穷玩车，富玩表，屌丝玩电脑。服务器版除非买了新服务器，且够大胆，不然还是得用18.04或是16.04，我认为那是最优的，新的20.04不一定就合适。</p><p>安装节面：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3Tb4AJ.png" alt="install"></p><p>软件中心：(微软家的Visual Studio和Skype也加入了)  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TbbjK.png" alt="software"></p><p>自带软件：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TqPjf.png" alt="installed"></p><p>自带壁纸：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TqnCn.png" alt="wallpaper"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Ubuntu总体来说比较优秀。当然，近几年它很火，许多工具甚至特地发布了Ubuntu版。用了近两年Ubuntu(Windows用得很少了)，感觉我的工作它都处理得很好，它没有而我需要的功能我就自己写些脚步来处理，惟一的遗憾是缺个像Office这样好用的软件。无论如何，初学者或者喜欢玩操作系统的人不妨试试20.04。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/05/3TbKmD.png&quot; alt=&quot;Focal Fossa&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="http://www.shieber.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="OS" scheme="http://www.shieber.cn/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片库</title>
+    <link href="http://www.shieber.cn/title/8b34ad8c/"/>
+    <id>http://www.shieber.cn/title/8b34ad8c/</id>
+    <published>2020-01-31T07:21:50.000Z</published>
+    <updated>2020-01-31T07:47:33.746Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/11/17/MsC4wd.md.png" alt="AI"></p><p><a href="https://s2.ax1x.com/2019/11/17/MsC4wd.md.png" target="_blank" rel="noopener" onclick="showPic(this); return false;" alt="test">AI</a> </p><img id="placeholder" src="https://s2.ax1x.com/2019/12/04/Q1J1AO.md.png" alt="Place Holder"/>    <script>    function showPic(pic){        var src = pic.getAttribute('href');        var ph = document.getElementById("placeholder");        ph.setAttribute('src',src);}</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/11/17/MsC4wd.md.png&quot; alt=&quot;AI&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://s2.ax1x.com/2019/11/17/MsC4wd.md.png&quot; target=&quot;_
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://www.shieber.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Life" scheme="http://www.shieber.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>回首猪年，展望鼠年</title>
     <link href="http://www.shieber.cn/title/93818f3d/"/>
     <id>http://www.shieber.cn/title/93818f3d/</id>
     <published>2020-01-24T13:36:16.000Z</published>
-    <updated>2020-01-24T14:21:00.085Z</updated>
+    <updated>2020-01-24T14:21:08.441Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/24/1ZfDJI.md.png" alt="RatYear"></p><p>2019农历猪年就要过去了，在此整理这一年来的大事件。这一年，极不平静，发生好多大事。真是逢九必乱！</p><h2 id="大事件"><a href="#大事件" class="headerlink" title="大事件"></a>大事件</h2><h3 id="猪瘟"><a href="#猪瘟" class="headerlink" title="猪瘟"></a>猪瘟</h3><p> 年初时一部短片《啥是佩琪?》火遍网络，可没成想本年度物价因为猪而飙升，CPI连连上涨。非洲猪瘟给老百姓的基本生活带来了极大不便。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1ZWorD.md.png" alt="zhuwen"></p><h3 id="贸易战"><a href="#贸易战" class="headerlink" title="贸易战"></a>贸易战</h3><p> 美国总统特朗普大笔一挥，两国贸易战开打，双方国力耗损，经济受到影响，全球经济增长预期下降。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1ZWTqe.md.png" alt="tradewar"></p><h3 id="宜宾地震"><a href="#宜宾地震" class="headerlink" title="宜宾地震"></a>宜宾地震</h3><p> 宜宾，醉美之城，突然又遭遇地震袭击，给当地百姓生活带来了极大困扰，好在伤亡人数不多。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1ZWbad.md.png" alt="zhuwen"></p><h3 id="香港暴乱"><a href="#香港暴乱" class="headerlink" title="香港暴乱"></a>香港暴乱</h3><p> 从7月开始，香港不断有暴乱活动，给大陆带来很大麻烦。在国际上，香港的投资及金融地位受到影响。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1ZWOPI.md.png" alt="zhuwen"></p><h3 id="国庆"><a href="#国庆" class="headerlink" title="国庆"></a>国庆</h3><p> 今年是各种重大日子的周年纪念日。中美建交40周年，五四运动一百周年，建国70周年等等。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1ZWvxf.md.png" alt="zhuwen"></p><h3 id="2019-nCov"><a href="#2019-nCov" class="headerlink" title="2019-nCov"></a>2019-nCov</h3><p> 本以为好好过年，结果又来病毒。这次直接对人造成伤害，给社会带来恐慌。</p><p> <img src="https://s2.ax1x.com/2020/01/24/1Zfpqg.md.png" alt="zhuwen"></p><h2 id="祝福明天"><a href="#祝福明天" class="headerlink" title="祝福明天"></a>祝福明天</h2><p>  现在是除夕夜，我在成都，在某栋楼里写下这些文字。希望病毒早日消退，早点恢复社会生产和教学活动，积极发展经济。毕竟2020是中国人追求几千年的小康关键之年，不能因为一个病毒给毁了。我们这个民族，吃了太多苦了，付出了太多代价。在14亿人的大国里，任何一个麻烦都会影响国民。中国人要强大起来，富裕起来，自信起来。祝福中国，2020，鼠年！</p>]]></content>
     
@@ -399,50 +447,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/16/Q5e7PP.png&quot; alt=&quot;PS12_1&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker安装与使用</title>
-    <link href="http://www.shieber.cn/title/2e9dcbbc/"/>
-    <id>http://www.shieber.cn/title/2e9dcbbc/</id>
-    <published>2019-12-11T10:33:28.000Z</published>
-    <updated>2020-01-07T03:58:53.745Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/11/QsBuLD.png" alt="docker"></p><a id="more"></a><p><strong>docker基本概念</strong><br>docker是一种类似虚拟机的东西，但是占用不高，启动快。<br>镜像(image)就是docker中的模版，容器依赖于它而生成。<br>仓库，是远程存放镜像的地方，可以联网获取各种image。<br>容器是docker的实质，docker是linux下容器技术的封装。<br>可以把容器看成一个进程，运行后可以删除，要再运行就用Image再生成。  </p><p>docker大概工作流程:<br>1.获取image或自己创建image<br>2.利用image生成容器服务  </p><p>docker核心概念<br>1.Userspace (隔离进程，网络等)<br>2.Cgroup (隔离硬件资源)<br>3.UFS (统一文件系统挂载点)</p><p><strong>docker在Ubuntu下的安装</strong><br>1.卸载老版本并更新软件包信息(如果有的话)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove --purge docker docker-engine docker.io containerd runc</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><p>2.安装repository</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common</span><br></pre></td></tr></table></figure><p>3.添加docker官方GPG Key</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure><p>4.验证你有该key，输出是pub rsa等若干行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key fingerprint  0EBFCD88</span><br></pre></td></tr></table></figure><p>5.添加软件仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure><p>6.更新包信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure><p>7.安装docker组件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><p>8.测试安装是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker version</span><br></pre></td></tr></table></figure><p>9.更换image下载源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/default/docker </span><br><span class="line">添加如下一行</span><br><span class="line">DOCKER_OPTS=&quot;--registry-mirror=https://registry.docker-cn.com&quot;</span><br><span class="line">sudo service docker restart</span><br></pre></td></tr></table></figure><p><strong>docker的image操作</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start                      #运行</span><br><span class="line">sudo service docker stop                       #停止</span><br><span class="line">sudo docker image ls                           #列出image</span><br><span class="line">sudo docker image rm imageName                 #删除image</span><br><span class="line">sudo docker image pull library/hello-world     #从远程仓库下载hello-world镜像</span><br><span class="line">sudo docker container ls                       #查看运行的容器</span><br><span class="line">sudo docker container ls --all                 #查看所有的容器</span><br><span class="line">sudo docker container run hello-world          #运行image</span><br><span class="line">sudo docker container run -it hello-world bash #运行image并指定shell</span><br><span class="line">sudo docker container kill containerID         #终止容器</span><br><span class="line">sudo docker container rm   containerID         #删除容器</span><br><span class="line">sudo docker search python                      #搜索python相关image</span><br><span class="line"></span><br><span class="line">sudo docker run -d --rm --name xxxx_service --env MYSQL_ROOT_PASSWORD=xxxx \</span><br><span class="line">--env MYSQL_DATABASE=xxxx_service mysql:8.0.18</span><br><span class="line">#运行一个基于mysql 8.0.18的服务 -d指定后台服务，--rm指定服务运行完毕自动删除容器文件</span><br></pre></td></tr></table></figure><p><strong>docker容器制作</strong><br>1.下载服务(随意指定)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/acount/xxx.git</span><br></pre></td></tr></table></figure><p>2.编写.dockerignore</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.git</span><br><span class="line">node_modules</span><br><span class="line">npm-debug.log</span><br></pre></td></tr></table></figure><p>3.编写dockerfile</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM node:12.13.1 #使用node</span><br><span class="line">COPY . /app       #将当前目录下所有文件打包进image的/app目录</span><br><span class="line">WORKDIR /app      #指定工作路径</span><br><span class="line">RUN npm install --registry=https://registry.np.taobao.org  #安装依赖项</span><br><span class="line">EXPOSE 3000       #指定端口</span><br></pre></td></tr></table></figure><p>4.创建image</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker iamge build -t xxx-demo . #这个小点.指代dockerfile所在目录</span><br></pre></td></tr></table></figure><p>5.运行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker container run -p 8000:3000 -it xxx-demo /bin/bash</span><br></pre></td></tr></table></figure><p><strong>docker搭建hexo博客</strong><br>1.编写对应的dockerfile(也可以从仓库下载image)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FROM node:latest AS build-env</span><br><span class="line">RUN mkdir -p /home/username/env/hexo-blog #要是已经创建就可以省去</span><br><span class="line">WORKDIR /home/username/env/hexo-blog</span><br><span class="line">COPY . .  #复制当前目录文件到hexo-blog</span><br><span class="line">RUN npm --registry=https://registry.np.taobao.org install hexo-cli -g &amp;&amp; npm install</span><br><span class="line">RUN hexo clean &amp;&amp; hexo hexo g</span><br><span class="line"></span><br><span class="line">FROM nginx:lates</span><br><span class="line">ENV TZ=Asia/Shanghai</span><br><span class="line">RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone</span><br><span class="line">WORKDIR /usr/share/nginx/html</span><br><span class="line">COPY --from=build-env /home/username/env/hexo-blog/public /user/share/nginx/html</span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure><p>2.运行hexo</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo docker build -t hexo_nginx:latest .</span><br><span class="line">sudo run -p 80:80 -d hexo_nginx:latest</span><br></pre></td></tr></table></figure><p><strong>docker的image发布</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo docker login</span><br><span class="line">sudo docker tag [imageName] [username]/[repository]:[tag] #为image打标签和版本</span><br><span class="line">sudo docker image push [username]/[repository]:[tag]      #发布</span><br></pre></td></tr></table></figure><p><strong>docker拷贝并部署到其他机器</strong>  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">打包文件</span><br><span class="line">sudo docker svae -o markdown:hexo1.2 ./my-hexo1.2.tar </span><br><span class="line">新电脑解包文件，安装号docker后就可以运行</span><br><span class="line">sudo docker load &lt; my-hexo1.2.tar</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/11/QsBuLD.png&quot; alt=&quot;docker&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="微服务" scheme="http://www.shieber.cn/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-      <category term="docker" scheme="http://www.shieber.cn/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日PS技巧11：曲线</title>
-    <link href="http://www.shieber.cn/title/b00ea4f1/"/>
-    <id>http://www.shieber.cn/title/b00ea4f1/</id>
-    <published>2019-12-10T07:53:30.000Z</published>
-    <updated>2019-12-10T08:09:30.747Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/10/QB5J1J.md.png" alt="PS11_1"> </p><a id="more"></a><p>今天学习滤镜中的径向模糊。</p><h2 id="今日技巧-径向模糊"><a href="#今日技巧-径向模糊" class="headerlink" title="今日技巧 [径向模糊]"></a>今日技巧 [径向模糊]</h2><p>主要步骤：  </p><p>1) 打开图像素材<br>2) 添加色彩平衡调整图层<br>3) 添加曲线调整图层<br>4) 保存发布</p><p>首先导入图片素材，下面是原图。</p><p><img src="https://s2.ax1x.com/2019/12/10/QBIp34.md.png" alt="PS11_2">  </p><p>发现左下角有文字，复制背景图层，然后在上面用图章盖印掉。</p><p><img src="https://s2.ax1x.com/2019/12/10/QBIiuR.md.png" alt="PS11_3"> </p><p>添加色彩平衡调整图层，使得图层显示淡淡的蓝色。调整图层的意思是，不用修改原图，直接把效果叠加上原图。</p><p><img src="https://s2.ax1x.com/2019/12/10/QBIZ4O.md.png" alt="PS11_4"> </p><p>添加曲线调整图层，该工具可以调整整个图片的亮度，实际就是一个函数$$y = kx$$，通过如图的调节变为了$$y=ax^2$$的类型，使得图片整体的色彩分布更有特色，有突出，而不是线性的模式。</p><p><img src="https://s2.ax1x.com/2019/12/10/QBIlDI.md.png" alt="PS11_5"> </p><p>最后附上原图和效果图，原图：2018.6.19 Baidu图片。</p><p><img src="https://s2.ax1x.com/2019/12/10/QBIGUf.md.png" alt="PS11_7"> </p><p><img src="https://s2.ax1x.com/2019/12/10/QB5J1J.md.png" alt="PS11_8"> </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/10/QB5J1J.md.png&quot; alt=&quot;PS11_1&quot;&gt; &lt;/p&gt;
     
     </summary>
     
