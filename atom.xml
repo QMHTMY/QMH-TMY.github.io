@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-03-19T11:57:11.991Z</updated>
+  <updated>2020-03-31T03:44:29.212Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人有多重</title>
+    <link href="http://www.shieber.cn/title/68109d68/"/>
+    <id>http://www.shieber.cn/title/68109d68/</id>
+    <published>2020-03-31T02:22:08.000Z</published>
+    <updated>2020-03-31T03:44:29.212Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/03/31/GK2k9A.md.png" alt="humanweight"></p><a id="more"></a><p>曾听过一个问题：要是地球上所有人同时跳起来，会不会对地球有影响？</p><p>最近看书，突发奇想，人类到底有多重呢？我是指地球上目前活着的所有人。计算是非常简单的，所以不妨计算一下。</p><p>所有人中，有儿童，成年人。不同年龄段的体重是不一样的，有的比较胖，但大部分人都算正常，所以可以取一个平均值代表每个人的体重。</p><p>成年人的标准体重应该是  </p><p>男性：（身高 － 80）×0．7（千克）</p><p>女性：（身高 － 70）×0．6（千克）</p><p>标准体重＋10％属于正常范围，超重20％属轻度肥胖，超重50％属重度肥胖，一般成人重65KG。儿童体重可估算一个均值，设为0.7倍成人体重，其实这个估算肯定不准确，但是偏差对最后结果定性分析影响不大。</p><p>截至2020.03.31日，全球230个国家和地区人口总数为7585204179，就是75.852亿，数据来源于联合国。而目前儿童人口数大约20亿。所以总重非常好算。</p><p>$$W_{human} = 20<em>10^{8}</em>0.7<em>65 + 55.852</em>10^{8}<em>65 (Kg) = 4.54038</em>10^{8}(ton)$$<br>所以地球人，活着的，大概4.54038亿吨重。然而，这个重量仍然不够直观。为此，我需要选择些参照物，将人转换为一种大家能直观感受的东西。</p><p>这里选择石头，因为地球上到处是石头。不同种类石头的密度是不同的，根据参考文献，大部分石头密度在3左右。这里选择大理石，密度为$3ton/m^{3}$。所以将所有人压缩为大理石密度，则体积有$1.51346*10^{8}m^{3}$，开立方得到一个边长为533米长的正方体。想象一个533米的正方体，感觉不大吧？其实，泰山露出来的部分大概1500米，就比这个正方体大，所以人类实际上不如泰山这样一座山重。而地球上何止一座泰山呢？所以地球人跳起来不会对地球有啥影响。</p><p>从物理角度算算，和地球对比一下，能得到更为精确的数据。<br>$$mg = G\frac{M_{e}m}{R^{2}}$$<br>G为引力常数$G=6.67<em>10^{-11}N.m^{2}/kg^{2}$，$M_{e}$为地球质量，$R = 6371km$为地球半径，$g=9.8m/s^{2}$为引力加速度。这样可以得到地球质量$M_{e} = 6</em>10^{24}Kg$，人类质量占地球的比例为$r = \frac{4.54<em>10^{11}}{6</em>10^{24}} = 7.5*10^{-14}$，大概是百万亿分之7.5，实在算不上什么。</p><p>地球要维持自转而不分裂，大概需要维持其密度为$4ton/m^{3}$，而地球平均密度为$5.52ton/m^{3}$。将人压缩成地球平均密度的话，大概就是一个$434.9m$的正方体，比上面数据更小。</p><p>这样说吧，把地球人口看作乘火车时穿过的一座山的重量大概是合理的。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul><li><a href="https://web.phb123.com/city/renkou/rk.html" target="_blank" rel="noopener">https://web.phb123.com/city/renkou/rk.html</a></li><li><a href="https://www.worldometers.info/cn/" target="_blank" rel="noopener">https://www.worldometers.info/cn/</a></li><li>《水利水电工程施工手册》</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/03/31/GK2k9A.md.png&quot; alt=&quot;humanweight&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="议论" scheme="http://www.shieber.cn/categories/%E8%AE%AE%E8%AE%BA/"/>
+    
+    
+      <category term="小杂感" scheme="http://www.shieber.cn/tags/%E5%B0%8F%E6%9D%82%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么在股市容易亏钱</title>
@@ -421,28 +443,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/16/Q5Jhq0.png&quot; alt=&quot;PS13_1&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="设计" scheme="http://www.shieber.cn/categories/%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-      <category term="PS" scheme="http://www.shieber.cn/tags/PS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日PS技巧12：图像去模糊</title>
-    <link href="http://www.shieber.cn/title/f3df35e2/"/>
-    <id>http://www.shieber.cn/title/f3df35e2/</id>
-    <published>2019-12-16T12:18:35.000Z</published>
-    <updated>2019-12-16T12:33:19.719Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/16/Q5e7PP.png" alt="PS12_1"></p><a id="more"></a><p>有的时候，图片没对好焦，拍的照片有些模糊，实际上利用PS可以恢复到一定程度。</p><h2 id="今日技巧-图像去模糊"><a href="#今日技巧-图像去模糊" class="headerlink" title="今日技巧 [图像去模糊]"></a>今日技巧 [图像去模糊]</h2><p>主要步骤：  </p><p>1) 打开图像素材<br>2) 利用Ctrl+Shif+U去色<br>3) 在去色图层上施加滤镜&gt;其他&gt;高反差保留(半径在2~5，要自行调节)<br>4) 保存发布</p><p>首先导入图片素材，下面是未调整的原图。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5eOKg.md.png" alt="PS12_2"></p><p>首先去色 Ctrl+Shif+U，去色的目的是为了得到灰调图(没有色彩信息，只有结构信息，我们利用结构信息以去模糊)</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5mAr4.md.png" alt="PS12_3"></p><p>接着，施加高反差保留的滤镜(高反差，意味着图像结构信息很鲜明，反差大，得以保留)</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5mKG6.md.png" alt="PS12_4"></p><p>接下来，将该灰调图层的模式设置为叠加（将高反差结构信息和原彩色图叠加，去除模糊）</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5mTeJ.md.png" alt="PS12_5"></p><p>最后附上原图和效果图，原图：2018.6.21 10:48:20 Baidu图片。两图对比看，还是能看出差别。</p><p><img src="https://s2.ax1x.com/2019/12/16/Q5na79.png" alt="PS12_7"></p><p><img src="https://s2.ax1x.com/2019/12/16/Q5e7PP.png" alt="PS12_8"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/12/16/Q5e7PP.png&quot; alt=&quot;PS12_1&quot;&gt;&lt;/p&gt;
     
     </summary>
     
