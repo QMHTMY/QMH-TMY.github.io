@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
-<meta property="og:updated_time" content="2020-05-28T08:05:10.383Z">
+<meta property="og:updated_time" content="2020-05-28T08:14:12.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
 
@@ -442,7 +442,220 @@
 <a id="more"></a>
 
 <p>Python实现的数据有(字符，数字，元组)[不可变]，(列表，字典，集合)[可变]。每一种数据的操作都不同，现做一番总结。</p>
-<p>#不可变数据<br>字符串操作          | 解释                  | 举例(‘Ab ab’)<br>:—————— | :——————– | :——<br>del sr              | 删除sr                |<br>sr[0]               | 通过下标取元素        | ‘A’<br>st[1:3]             | 字符串切片            | ‘b a’<br>sr[::-1]            | 字符串反转            | ‘ba bA’<br>sr.lower()          | 转换为小写            | ‘ab ab’<br>sr.upper()          | 转换为大写            | ‘AB AB’<br>sr.title()          | 单词首字母大写        | ‘Ab Ab’<br>sr.casefold()       | 转换为小写，对所有字符，包括法国字母              | ‘ab ab’<br>sr.swapcase()       | 转换大写为小写，小写为大写                        | ‘aB AB’<br>sr.capitalize()     | 首字母大写                                        | ‘Ab ab’<br>sr.center(10,’-‘)   | 将sr居中对齐并扩展到长为10的字符串，不够用’-‘补齐 | ‘–Ab ab—‘<br>sr.ljust(10,’-‘)    | 将sr左对齐并扩展到长为n的字符串，不够用’sp’补齐   | ‘Ab ab—–’<br>sr.rjust(10,’-‘)    | 将sr右对齐并扩展到长为n的字符串，不够用’sp’补齐   | ‘—–Ab ab’<br>sr.zfill(10)        | 将sr右对齐并扩展到长为n的字符串，不够用’0’补齐    | ‘00000Ab ab’<br>sr.split(‘ ‘)       | 按’ ‘分隔字符串sr为列表，’ ‘默认为空格            | [‘Ab’, ‘ab’]<br>sr.rsplit(‘a’,1)    | 按’sp’从右到左分隔字符串sr为列表，’sp’默认为空格，n为分割的次数 |[‘Ab ‘, ‘b’]<br>sr.startwith(‘a’)   | 判断sr是否以’sp’开头 | False<br>sr.endswith(‘ab’)   | 判断sr是否以’sp’结尾 | True<br>sr.expandtabs(4)    | 将sr中的tab键转换为空格，4为空格数 | ‘A\tB’ -&gt; ‘A    B’<br>sr.isupper()        | 判断sr是否是大写 | False<br>sr.islower()        | 判断sr是否是小写 | False<br>sr.isalpha()        | 判断sr是否是字母 | False<br>sr.isdigit()        | 判断sr是否是数字 | False<br>sr.isalnum()        | 判断sr是否是字母数字| False<br>sr.isspace()        | 判断sr是否是空格| False<br>sr.istitle()        | 判断sr中单词首字母是否是大写| False<br>sr.isdecimal()      | 判断sr是否是十进制数| False<br>sr.isnumeric()      | 判断sr是否是数| False<br>sr.strip()          | 去掉sr两侧的空字符| ‘ Ab ab ‘-&gt;’Ab ab’<br>sr.lstrip()         | 去掉sr左侧的空字符| ‘ Ab ab ‘-&gt;’Ab ab ‘<br>sr.rstrip(‘,’)      | 去掉sr右侧的空字符| ‘ Ab ab ‘-&gt;’ Ab ab’<br>sr.encode(encoding) | 按encoding规则编码sr|<br>sr.decode(encoding) | 按encoding规则解码sr|<br>sr.count(‘a’)       | 统计sr中’a’的频度| 2<br>sr.find(‘a’,s,e)    | 返回sr中从左侧开始第一个’a’位置，无则返回-1，可指定查找范围s和e| 3<br>sr.rfind(‘a’)       | 返回sr中从右侧开始第一个’a’位置，无则返回-1，可指定查找范围s和e| 3<br>sr.index(‘a’)       | 返回sr中从左侧开始第一个’a’位置，无则报错，可指定查找范围s和e| 3<br>sr.rindex(‘a’)      | 返回sr中从右侧开始第一个’a’位置，无则报错，可指定查找范围s和e| 3<br>sr.join(‘ABC’)      | 将sr作为’ABC’的连接符号，组成’AsrBsrC’这种字符串| ‘AAb abBAb abC’<br>sr.format()         | 格式化输出，替代%方法|’{}-{}’.format(1,2) -&gt; ‘1-2’<br>sr.replace(‘a’,’b)  | 将sr中的’a’替换成’b’| ‘Ab bb’</p>
+<h2 id="不可变数据"><a href="#不可变数据" class="headerlink" title="不可变数据"></a>不可变数据</h2><table>
+<thead>
+<tr>
+<th align="left">字符串操作</th>
+<th align="left">解释</th>
+<th align="left">举例(‘Ab ab’)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">del sr</td>
+<td align="left">删除sr</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">sr[0]</td>
+<td align="left">通过下标取元素</td>
+<td align="left">‘A’</td>
+</tr>
+<tr>
+<td align="left">st[1:3]</td>
+<td align="left">字符串切片</td>
+<td align="left">‘b a’</td>
+</tr>
+<tr>
+<td align="left">sr[::-1]</td>
+<td align="left">字符串反转</td>
+<td align="left">‘ba bA’</td>
+</tr>
+<tr>
+<td align="left">sr.lower()</td>
+<td align="left">转换为小写</td>
+<td align="left">‘ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.upper()</td>
+<td align="left">转换为大写</td>
+<td align="left">‘AB AB’</td>
+</tr>
+<tr>
+<td align="left">sr.title()</td>
+<td align="left">单词首字母大写</td>
+<td align="left">‘Ab Ab’</td>
+</tr>
+<tr>
+<td align="left">sr.casefold()</td>
+<td align="left">转换为小写，对所有字符，包括法国字母</td>
+<td align="left">‘ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.swapcase()</td>
+<td align="left">转换大写为小写，小写为大写</td>
+<td align="left">‘aB AB’</td>
+</tr>
+<tr>
+<td align="left">sr.capitalize()</td>
+<td align="left">首字母大写</td>
+<td align="left">‘Ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.center(10,’-‘)</td>
+<td align="left">将sr居中对齐并扩展到长为10的字符串，不够用’-‘补齐</td>
+<td align="left">‘–Ab ab—‘</td>
+</tr>
+<tr>
+<td align="left">sr.ljust(10,’-‘)</td>
+<td align="left">将sr左对齐并扩展到长为n的字符串，不够用’sp’补齐</td>
+<td align="left">‘Ab ab—–’</td>
+</tr>
+<tr>
+<td align="left">sr.rjust(10,’-‘)</td>
+<td align="left">将sr右对齐并扩展到长为n的字符串，不够用’sp’补齐</td>
+<td align="left">‘—–Ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.zfill(10)</td>
+<td align="left">将sr右对齐并扩展到长为n的字符串，不够用’0’补齐</td>
+<td align="left">‘00000Ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.split(‘ ‘)</td>
+<td align="left">按’ ‘分隔字符串sr为列表，’ ‘默认为空格</td>
+<td align="left">[‘Ab’, ‘ab’]</td>
+</tr>
+<tr>
+<td align="left">sr.rsplit(‘a’,1)</td>
+<td align="left">按’sp’从右到左分隔字符串sr为列表，’sp’默认为空格，n为分割的次数</td>
+<td align="left">[‘Ab ‘, ‘b’]</td>
+</tr>
+<tr>
+<td align="left">sr.startwith(‘a’)</td>
+<td align="left">判断sr是否以’sp’开头</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.endswith(‘ab’)</td>
+<td align="left">判断sr是否以’sp’结尾</td>
+<td align="left">True</td>
+</tr>
+<tr>
+<td align="left">sr.expandtabs(4)</td>
+<td align="left">将sr中的tab键转换为空格，4为空格数</td>
+<td align="left">‘A\tB’ -&gt; ‘A    B’</td>
+</tr>
+<tr>
+<td align="left">sr.isupper()</td>
+<td align="left">判断sr是否是大写</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.islower()</td>
+<td align="left">判断sr是否是小写</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isalpha()</td>
+<td align="left">判断sr是否是字母</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isdigit()</td>
+<td align="left">判断sr是否是数字</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isalnum()</td>
+<td align="left">判断sr是否是字母数字</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isspace()</td>
+<td align="left">判断sr是否是空格</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.istitle()</td>
+<td align="left">判断sr中单词首字母是否是大写</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isdecimal()</td>
+<td align="left">判断sr是否是十进制数</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.isnumeric()</td>
+<td align="left">判断sr是否是数</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">sr.strip()</td>
+<td align="left">去掉sr两侧的空字符</td>
+<td align="left">‘ Ab ab ‘-&gt;’Ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.lstrip()</td>
+<td align="left">去掉sr左侧的空字符</td>
+<td align="left">‘ Ab ab ‘-&gt;’Ab ab ‘</td>
+</tr>
+<tr>
+<td align="left">sr.rstrip(‘,’)</td>
+<td align="left">去掉sr右侧的空字符</td>
+<td align="left">‘ Ab ab ‘-&gt;’ Ab ab’</td>
+</tr>
+<tr>
+<td align="left">sr.encode(encoding)</td>
+<td align="left">按encoding规则编码sr</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">sr.decode(encoding)</td>
+<td align="left">按encoding规则解码sr</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">sr.count(‘a’)</td>
+<td align="left">统计sr中’a’的频度</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">sr.find(‘a’,s,e)</td>
+<td align="left">返回sr中从左侧开始第一个’a’位置，无则返回-1，可指定查找范围s和e</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">sr.rfind(‘a’)</td>
+<td align="left">返回sr中从右侧开始第一个’a’位置，无则返回-1，可指定查找范围s和e</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">sr.index(‘a’)</td>
+<td align="left">返回sr中从左侧开始第一个’a’位置，无则报错，可指定查找范围s和e</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">sr.rindex(‘a’)</td>
+<td align="left">返回sr中从右侧开始第一个’a’位置，无则报错，可指定查找范围s和e</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">sr.join(‘ABC’)</td>
+<td align="left">将sr作为’ABC’的连接符号，组成’AsrBsrC’这种字符串</td>
+<td align="left">‘AAb abBAb abC’</td>
+</tr>
+<tr>
+<td align="left">sr.format()</td>
+<td align="left">格式化输出，替代%方法</td>
+<td align="left">‘{}-{}’.format(1,2) -&gt; ‘1-2’</td>
+</tr>
+<tr>
+<td align="left">sr.replace(‘a’,’b)</td>
+<td align="left">将sr中的’a’替换成’b’</td>
+<td align="left">‘Ab bb’</td>
+</tr>
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -487,7 +700,90 @@
 <td align="left">0</td>
 </tr>
 </tbody></table>
-<p>#可变数据<br>列表操作                          | 解释                    | 举例[1,2,3,4,1,2,3,4]<br>:——————————– | :———————- | :——————-<br>del lst[1]                        | 删除列表lst中某元素     | [1,3,4,1,2,3,4]<br>del lst                           | 删除列表lst             |<br>‘-‘.join(lst)                     | 用’-‘拼接lst为字符串    | ‘1-3-4-1-2-3-4’<br>lst.append(‘x’)                   | 向lst末尾添加元素’x’    | [1,3,4,1,2,3,4,’x’]<br>lst.extend(iter)                  | 将可迭代对象添加到lst   | lst.extend([10,9])-&gt;[1,2,3,4,1,2,3,4,10,9]<br>lst.insert(0,’x’)                 | 在lst的i位置插入’x’     | [‘x’,1,2,3,4,1,2,3,4]<br>lst.remove(‘1’)                   | 移除lst中的第一个’1’元素| [2,3,4,1,2,3,4]<br>lst.pop(2)                        | 弹出lst中2位置的元素    | [1,2,4,1,2,3,4]<br>lst.index(‘1’,start,end)          | 在start-end范围内查找元素，并返回位置 | 0<br>lst.count(‘1’)                    | 统计lst中’1’的频度      | 2<br>lst.sort(key=None, reverse=False) | 对lst进行排序           | [1,1,2,2,3,3,4,4]<br>lst.reverse()                     | 对lst进行逆序           | [4,3,2,1,4,3,2,1]<br>lst.clear()                       | 清除lst中所有元素       | []<br>lst.copy()                        | 浅拷贝lst               |<br>copy.deepcopy(lst)                | 深拷贝lst               |</p>
+<h2 id="可变数据"><a href="#可变数据" class="headerlink" title="可变数据"></a>可变数据</h2><table>
+<thead>
+<tr>
+<th align="left">列表操作</th>
+<th align="left">解释</th>
+<th align="left">举例[1,2,3,4,1,2,3,4]</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">del lst[1]</td>
+<td align="left">删除列表lst中某元素</td>
+<td align="left">[1,3,4,1,2,3,4]</td>
+</tr>
+<tr>
+<td align="left">del lst</td>
+<td align="left">删除列表lst</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">‘-‘.join(lst)</td>
+<td align="left">用’-‘拼接lst为字符串</td>
+<td align="left">‘1-3-4-1-2-3-4’</td>
+</tr>
+<tr>
+<td align="left">lst.append(‘x’)</td>
+<td align="left">向lst末尾添加元素’x’</td>
+<td align="left">[1,3,4,1,2,3,4,’x’]</td>
+</tr>
+<tr>
+<td align="left">lst.extend(iter)</td>
+<td align="left">将可迭代对象添加到lst</td>
+<td align="left">lst.extend([10,9])-&gt;[1,2,3,4,1,2,3,4,10,9]</td>
+</tr>
+<tr>
+<td align="left">lst.insert(0,’x’)</td>
+<td align="left">在lst的i位置插入’x’</td>
+<td align="left">[‘x’,1,2,3,4,1,2,3,4]</td>
+</tr>
+<tr>
+<td align="left">lst.remove(‘1’)</td>
+<td align="left">移除lst中的第一个’1’元素</td>
+<td align="left">[2,3,4,1,2,3,4]</td>
+</tr>
+<tr>
+<td align="left">lst.pop(2)</td>
+<td align="left">弹出lst中2位置的元素</td>
+<td align="left">[1,2,4,1,2,3,4]</td>
+</tr>
+<tr>
+<td align="left">lst.index(‘1’,start,end)</td>
+<td align="left">在start-end范围内查找元素，并返回位置</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">lst.count(‘1’)</td>
+<td align="left">统计lst中’1’的频度</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">lst.sort(key=None, reverse=False)</td>
+<td align="left">对lst进行排序</td>
+<td align="left">[1,1,2,2,3,3,4,4]</td>
+</tr>
+<tr>
+<td align="left">lst.reverse()</td>
+<td align="left">对lst进行逆序</td>
+<td align="left">[4,3,2,1,4,3,2,1]</td>
+</tr>
+<tr>
+<td align="left">lst.clear()</td>
+<td align="left">清除lst中所有元素</td>
+<td align="left">[]</td>
+</tr>
+<tr>
+<td align="left">lst.copy()</td>
+<td align="left">浅拷贝lst</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">copy.deepcopy(lst)</td>
+<td align="left">深拷贝lst</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -823,8 +1119,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -963,6 +1268,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#不可变数据"><span class="nav-number">1.</span> <span class="nav-text">不可变数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可变数据"><span class="nav-number">2.</span> <span class="nav-text">可变数据</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
