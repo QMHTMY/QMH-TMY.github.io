@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
-<meta property="og:updated_time" content="2020-05-28T08:14:12.835Z">
+<meta property="og:updated_time" content="2020-05-29T03:11:59.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
 
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.5k
+                  1.7k
                 </span>
               
 
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -443,6 +443,55 @@
 
 <p>Python实现的数据有(字符，数字，元组)[不可变]，(列表，字典，集合)[可变]。每一种数据的操作都不同，现做一番总结。</p>
 <h2 id="不可变数据"><a href="#不可变数据" class="headerlink" title="不可变数据"></a>不可变数据</h2><table>
+<thead>
+<tr>
+<th align="left">数字操作</th>
+<th align="left">解释</th>
+<th align="left">举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">num.real</td>
+<td align="left">返回数的实部</td>
+<td align="left">(2+3j).real -&gt; 2</td>
+</tr>
+<tr>
+<td align="left">num.imag</td>
+<td align="left">返回数的虚部</td>
+<td align="left">(2+3j).real -&gt; 3</td>
+</tr>
+<tr>
+<td align="left">num.bit_length</td>
+<td align="left">返回数的字节长度</td>
+<td align="left">a=6; a.bit_length() -&gt; 3</td>
+</tr>
+<tr>
+<td align="left">num.to_bytes(L,byteorder)</td>
+<td align="left">返回数的字节数组</td>
+<td align="left">a=6; a.to_bytes(2,’big’) -&gt; b’\x06\x00’</td>
+</tr>
+<tr>
+<td align="left">int.form_bytes(bts,byteorder)</td>
+<td align="left">返回由给定字节数组所表示的整数。</td>
+<td align="left">int.form_bytes(b’\x00\x10’,’big’) -&gt; 16</td>
+</tr>
+<tr>
+<td align="left">num.as_integer_ratio()</td>
+<td align="left">返回一对整数，其比率为num</td>
+<td align="left">a=6.0; a.as_integer_ratio() -&gt; (6,1)</td>
+</tr>
+<tr>
+<td align="left">num.is_integer()</td>
+<td align="left">若num能用有限位整数表示返回True</td>
+<td align="left">a=6.0; a.is_integer() -&gt; True</td>
+</tr>
+<tr>
+<td align="left">num.hex()</td>
+<td align="left">以16进制返回浮点数</td>
+<td align="left">a=6.0; a.hex() -&gt; ‘0x1.8000000000000p+2’</td>
+</tr>
+</tbody></table>
+<table>
 <thead>
 <tr>
 <th align="left">字符串操作</th>
@@ -1322,7 +1371,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共124.5k字</span>
+  <span class="post-count">本站共124.6k字</span>
 </div>
 
 
