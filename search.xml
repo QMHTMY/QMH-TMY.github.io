@@ -197,12 +197,12 @@
 <tr>
 <td align="left">bytearray(x,coding,errs)</td>
 <td align="left">由x的数值返回一个新的bytes数组，可变。</td>
-<td align="left">a = [1,0], bytearray(a)-&gt; bytearray(b”\x01\x00’)</td>
+<td align="left">a = [1,0], bytearray(a)-&gt; bytearray(b’\x01\x00’)</td>
 </tr>
 <tr>
 <td align="left">bytes(x,coding,errs)</td>
 <td align="left">由x的数值返回一个新的bytes对象，不可变。</td>
-<td align="left">a = [1,0], bytes(a)-&gt; b”\x01\x00’</td>
+<td align="left">a = [1,0], bytes(a)-&gt; b’\x01\x00’</td>
 </tr>
 <tr>
 <td align="left">callable(obj)</td>
@@ -212,7 +212,7 @@
 <tr>
 <td align="left">chr(x)</td>
 <td align="left">返回Unicode码位为整数x的字符的字符串格式。</td>
-<td align="left">chr(97)-&gt;”a’，chr(38)-&gt;”&amp;’</td>
+<td align="left">chr(97)-&gt;’a’，chr(38)-&gt;’&amp;’</td>
 </tr>
 <tr>
 <td align="left">staticmethod</td>
@@ -227,7 +227,7 @@
 <tr>
 <td align="left">compile(x,flnm,mode)</td>
 <td align="left">将x编译成代码或AST对象，代码对象可以被exec()或eval()执行。</td>
-<td align="left">r = compile(‘3+4’,”xx’,”eval’), eval(r) -&gt; 7</td>
+<td align="left">r = compile(‘3+4’,’xx’,’eval’), eval(r) -&gt; 7</td>
 </tr>
 <tr>
 <td align="left">complex(real,imag)</td>
@@ -242,7 +242,7 @@
 <tr>
 <td align="left">dict()</td>
 <td align="left">新建字典。</td>
-<td align="left">a = [(‘a’,1),(‘b’,2)], dict(a) -&gt; {‘a’:1,”b’:2}</td>
+<td align="left">a = [(‘a’,1),(‘b’,2)], dict(a) -&gt; {‘a’:1,’b’:2}</td>
 </tr>
 <tr>
 <td align="left">dir(obj)</td>
@@ -282,7 +282,7 @@
 <tr>
 <td align="left">format(val, format)</td>
 <td align="left">将val转换为format控制的“格式化”表示。</td>
-<td align="left">fomat(10,”0b’) -&gt; ‘1010’</td>
+<td align="left">fomat(10,’0b’) -&gt; ‘1010’</td>
 </tr>
 <tr>
 <td align="left">frozenset(iterable)</td>
@@ -317,7 +317,7 @@
 <tr>
 <td align="left">hex(x)</td>
 <td align="left">将整数转换为以“0x”为前缀的小写十六进制字符串。</td>
-<td align="left">hex(10) -&gt;”0xa’</td>
+<td align="left">hex(10) -&gt;’0xa’</td>
 </tr>
 <tr>
 <td align="left">id(obj)</td>
@@ -432,7 +432,7 @@
 <tr>
 <td align="left">repr(obj)</td>
 <td align="left">返回包含一个对象的可打印表示形式的字符串。</td>
-<td align="left">repr([1,2,3])-&gt;”[1,2,3]’</td>
+<td align="left">repr([1,2,3])-&gt;’[1,2,3]’</td>
 </tr>
 <tr>
 <td align="left">reversed(seq)</td>
