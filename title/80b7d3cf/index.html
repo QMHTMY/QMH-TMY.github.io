@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tMtMUf.png">
-<meta property="og:updated_time" content="2020-05-30T06:26:03.791Z">
+<meta property="og:updated_time" content="2020-05-31T01:02:12.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tMtMUf.png">
 
@@ -586,7 +586,7 @@
 <td align="left">XxxError</td>
 </tr>
 </tbody></table>
-<h2 id="内置函数69个-全由C写成"><a href="#内置函数69个-全由C写成" class="headerlink" title="内置函数69个(全由C写成)"></a>内置函数69个(全由C写成)</h2><table>
+<h2 id="内置函数69个-全由C写成"><a href="#内置函数69个-全由C写成" class="headerlink" title="内置函数69个(全由C写成)"></a>内置函数69个(<a href="https://github.com/python/cpython/blob/master/Python/bltinmodule.c" target="_blank" rel="noopener">全由C写成</a>)</h2><table>
 <thead>
 <tr>
 <th align="left">函数</th>
@@ -616,7 +616,7 @@
 </tr>
 <tr>
 <td align="left">bin(x)</td>
-<td align="left">将一个整数转变为一个前缀为“0b”的二进制字符串。</td>
+<td align="left">将一个整数转变为一个前缀为‘0b’的二进制字符串。</td>
 <td align="left">a = 10, bin(a) -&gt; ‘0b1010’</td>
 </tr>
 <tr>
@@ -632,12 +632,12 @@
 <tr>
 <td align="left">bytearray(x,coding,errs)</td>
 <td align="left">由x的数值返回一个新的bytes数组，可变。</td>
-<td align="left">a = [1,0], bytearray(a)-&gt; bytearray(b’\x01\x00’)</td>
+<td align="left">a = [1,0], bytearray(a)-&gt; bytearray(b‘\x01\x00’)</td>
 </tr>
 <tr>
 <td align="left">bytes(x,coding,errs)</td>
 <td align="left">由x的数值返回一个新的bytes对象，不可变。</td>
-<td align="left">a = [1,0], bytes(a)-&gt; b’\x01\x00’</td>
+<td align="left">a = [1,0], bytes(a)-&gt; b‘\x01\x00’</td>
 </tr>
 <tr>
 <td align="left">callable(obj)</td>
@@ -647,7 +647,7 @@
 <tr>
 <td align="left">chr(x)</td>
 <td align="left">返回Unicode码位为整数x的字符的字符串格式。</td>
-<td align="left">chr(97)-&gt;’a’，chr(38)-&gt;’&amp;’</td>
+<td align="left">chr(97)-&gt; a，chr(38)-&gt;&amp;</td>
 </tr>
 <tr>
 <td align="left">staticmethod</td>
@@ -662,7 +662,7 @@
 <tr>
 <td align="left">compile(x,flnm,mode)</td>
 <td align="left">将x编译成代码或AST对象，代码对象可以被exec()或eval()执行。</td>
-<td align="left">r = compile(‘3+4’,’xx’,’eval’), eval(r) -&gt; 7</td>
+<td align="left">r = compile(‘3+4’,‘xx’,‘eval’), eval(r) -&gt; 7</td>
 </tr>
 <tr>
 <td align="left">complex(real,imag)</td>
@@ -677,7 +677,7 @@
 <tr>
 <td align="left">dict()</td>
 <td align="left">新建字典。</td>
-<td align="left">a = [(‘a’,1),(‘b’,2)], dict(a) -&gt; {‘a’:1,’b’:2}</td>
+<td align="left">a = [(‘a’,1),(‘b’,2)], dict(a) -&gt; {‘a’:1,‘b’:2}</td>
 </tr>
 <tr>
 <td align="left">dir(obj)</td>
@@ -712,12 +712,12 @@
 <tr>
 <td align="left">float(x)</td>
 <td align="left">从数字或字符串x生成浮点数。</td>
-<td align="left">float(‘ -2.3 ‘) -&gt; -2.3</td>
+<td align="left">float(‘ -2.3 ’) -&gt; -2.3</td>
 </tr>
 <tr>
 <td align="left">format(val, format)</td>
-<td align="left">将val转换为format控制的“格式化”表示。</td>
-<td align="left">fomat(10,’0b’) -&gt; ‘1010’</td>
+<td align="left">将val转换为format控制的格式化表示。</td>
+<td align="left">fomat(10,‘0b’) -&gt; ‘1010’</td>
 </tr>
 <tr>
 <td align="left">frozenset(iterable)</td>
@@ -751,12 +751,12 @@
 </tr>
 <tr>
 <td align="left">hex(x)</td>
-<td align="left">将整数转换为以“0x”为前缀的小写十六进制字符串。</td>
-<td align="left">hex(10) -&gt;’0xa’</td>
+<td align="left">将整数转换为以‘0x’为前缀的小写十六进制字符串。</td>
+<td align="left">hex(10) -&gt;‘0xa’</td>
 </tr>
 <tr>
 <td align="left">id(obj)</td>
-<td align="left">返回对象的“标识值”,该值是整数，在对象生命周期中保证唯一恒定。</td>
+<td align="left">返回对象的标识值,该值是整数，在对象生命周期中保证唯一恒定。</td>
 <td align="left">a = 1, id(a) -&gt; 10914496, b = a, id(b) -&gt; 10914496</td>
 </tr>
 <tr>
@@ -816,7 +816,7 @@
 </tr>
 <tr>
 <td align="left">memoryview</td>
-<td align="left">返回由给定实参创建的“内存视图”对象。</td>
+<td align="left">返回由给定实参创建的内存视图对象。</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -831,7 +831,7 @@
 </tr>
 <tr>
 <td align="left">oct(x)</td>
-<td align="left">将一个整数转变为一个前缀为“0o”的八进制字符串。</td>
+<td align="left">将一个整数转变为一个前缀为‘0o’的八进制字符串。</td>
 <td align="left">oct(10) -&gt; ‘0o12’</td>
 </tr>
 <tr>
@@ -851,7 +851,7 @@
 </tr>
 <tr>
 <td align="left">print(obj)</td>
-<td align="left">参数有sep=’ ‘，end=’\n’，file=sys.stdout，flush=False</td>
+<td align="left">参数有sep=‘ ’，end=‘\n’，file=sys.stdout，flush=False</td>
 <td align="left">输出信息到指定位置。</td>
 </tr>
 <tr>
@@ -867,7 +867,7 @@
 <tr>
 <td align="left">repr(obj)</td>
 <td align="left">返回包含一个对象的可打印表示形式的字符串。</td>
-<td align="left">repr([1,2,3])-&gt;’[1,2,3]’</td>
+<td align="left">repr([1,2,3])-&gt;‘[1,2,3]’</td>
 </tr>
 <tr>
 <td align="left">reversed(seq)</td>
