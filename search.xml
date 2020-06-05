@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>用RSS快速干净地获取各领域信息</title>
+      <link href="/title/9ade8626/"/>
+      <url>/title/9ade8626/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/06/04/tBLh11.jpg" alt="rsslogo"></p><a id="more"></a><p>信息时代，信息更新快，碎片化。大部分人都通过各类新闻软件获取信息，比如头条，腾讯新闻，微信公众号等等。然而这些信息是别人特意挑选，甚至是算法推送的。有没有可能自己选择些新闻信息聚合在一个软件里来看呢？当然有，那就是<a href="https://baike.baidu.com/item/rss/24470" target="_blank" rel="noopener">RSS简易信息聚合</a>，可以将其理解成各信息发布渠道提供的另一种信息访问方式。</p><p>比如一个网站，除了可以在浏览器中输入<a href="http://xxx" target="_blank" rel="noopener">http://xxx</a> 登录查看点击网页查看，还可用RSS获取同样的内容，而且可将各网站的信息聚合在一个软件。RSS的优点，多个消息渠道聚合在一个APP里节约空间，可自动推送，不会被算法分析，没有广告，隐私程度高，不想看了可随时取消订阅。</p><p>有很多优秀的RSS软件，在此推荐几个，可能需要翻墙到Google play才能获得。  </p><table><thead><tr><th align="left">软件名</th><th align="left">支持平台</th><th align="left">地址</th></tr></thead><tbody><tr><td align="left">RSS reader</td><td align="left">Android</td><td align="left"><a href="https://play.google.com" target="_blank" rel="noopener">https://play.google.com</a></td></tr><tr><td align="left">Winds</td><td align="left">Win,Mac,Linux</td><td align="left"><a href="https://getstream.io/winds" target="_blank" rel="noopener">https://getstream.io/winds</a></td></tr><tr><td align="left">订阅帝</td><td align="left">Android</td><td align="left"><a href="https://www.dingyuedi.com" target="_blank" rel="noopener">https://www.dingyuedi.com</a></td></tr></tbody></table><p>如下是Google play上的RSS软件，太多了，都很不错，各个特色不一样，有的收费。</p><p><img src="https://s1.ax1x.com/2020/06/05/tDNHl8.png" alt="rss2"></p><p><img src="https://s1.ax1x.com/2020/06/05/tDNxkn.png" alt="rss3"></p><p>接下来的一个问题是，我怎么知道某新闻是否提供RSS信息发布渠道呢？</p><p>这个有多种解决方法。</p><p>第一：网站提供RSS发布渠道，那么通常在顶部菜单、右侧菜单、底部菜单等地方会有RSS图标，鼠标放RSS图标上面或者点击进去可以看到对应的RSS地址，比如本网站订阅地址<a href="https://www.shieber.cn/atom.xml，">https://www.shieber.cn/atom.xml，</a> 其他网站可能是<a href="https://xxx.xxx.xx/feed，https://xxx.xxx.xx/rss。" target="_blank" rel="noopener">https://xxx.xxx.xx/feed，https://xxx.xxx.xx/rss。</a> 总之结尾是 atom.xml、feed、rss等，可多次尝试。</p><p>下图左侧橙色RSS图标很显眼，鼠标放上面，最下面就是订阅地址，添加到RSS软件里，这些博客就可以看了。</p><p><img src="https://s1.ax1x.com/2020/06/05/tDNgyD.png" alt="rss1"></p><p>第二：网站不提供RSS发布渠道，此时可以利用工具自己制作该网站的RSS源并订阅。制作工具及使用方法可以搜索一下，比如<a href="http://createfeed.fivefilters.org" target="_blank" rel="noopener">Feed Creatro</a>和<a href="http://www.feed43.com" target="_blank" rel="noopener">feed43</a>，具体操作可以看<a href="https://zhuanlan.zhihu.com/p/64457116" target="_blank" rel="noopener">如何用RSS订阅？</a>。</p><p>第三：利用别人总结好的源，直接订阅，比如<a href="https://www.zhihu.com/question/19580096" target="_blank" rel="noopener">你必读的RSS订阅源有哪些？</a>或者一些RSS订阅源汇聚网站如<a href="https://ohmyrss.com" target="_blank" rel="noopener">己思</a>。</p><p>微博，公众号，简书，B站，贴吧，知乎，豆瓣，抖音，网易云音乐，Github都是可以订阅的源。要是都开App，太麻烦，都聚合到一个App，岂不美哉？</p><p>自己挑选的源，内容要宽泛，质量要有保证，这样接受到的讯息才能和其他新闻软件有所差别，听见不同的声音。但凡用RSS的人都会发现类似其他新闻软件里的一片光明没了，民间疾苦冒了出来；对伟光正感性地歌功颂德没了，却更多看到理性的批评和民间疾苦。</p><p>下面是操作指南。</p><iframe src="https://player.bilibili.com/player.html?aid=38629650&cid=70525810" width="900" height="550" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 通信 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> information </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>数据结构及各语言中的实现</title>
       <link href="/title/fe068447/"/>
       <url>/title/fe068447/</url>
