@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Shieber">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
-<meta property="og:updated_time" content="2020-05-31T00:52:45.084Z">
+<meta property="og:updated_time" content="2020-06-21T08:47:46.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tZWFAA.jpg">
 
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.7k
+                  1.8k
                 </span>
               
 
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  8
                 </span>
               
             </div>
@@ -780,42 +780,42 @@
 <tr>
 <td align="left">lst.extend(iter)</td>
 <td align="left">将可迭代对象添加到lst</td>
-<td align="left">lst.extend([10,9])-&gt;[1,2,3,4,1,2,3,4,10,9]</td>
+<td align="left">lst.extend([10,9])-&gt;[1,3,4,1,2,3,4,10,9]</td>
 </tr>
 <tr>
 <td align="left">lst.insert(0,‘x’)</td>
 <td align="left">在lst的i位置插入x</td>
-<td align="left">[‘x’,1,2,3,4,1,2,3,4]</td>
+<td align="left">[‘x’,1,3,4,1,2,3,4]</td>
 </tr>
 <tr>
-<td align="left">lst.remove(‘1’)</td>
-<td align="left">移除lst中的第一个1元素</td>
-<td align="left">[2,3,4,1,2,3,4]</td>
+<td align="left">lst.remove(1)</td>
+<td align="left">移除lst中的第一个1</td>
+<td align="left">[‘x’,3,4,1,2,3,4]</td>
 </tr>
 <tr>
-<td align="left">lst.pop(2)</td>
+<td align="left">lst.pop(0)</td>
 <td align="left">弹出lst中2位置的元素</td>
-<td align="left">[1,2,4,1,2,3,4]</td>
+<td align="left">[3,4,1,2,3,4]</td>
 </tr>
 <tr>
-<td align="left">lst.index(‘1’,start,end)</td>
+<td align="left">lst.index(1,start,end)</td>
 <td align="left">在start-end范围内查找元素，并返回位置</td>
-<td align="left">0</td>
+<td align="left">2</td>
 </tr>
 <tr>
-<td align="left">lst.count(‘1’)</td>
+<td align="left">lst.count(3)</td>
 <td align="left">统计lst中1的频度</td>
 <td align="left">2</td>
 </tr>
 <tr>
 <td align="left">lst.sort(key=None, reverse=False)</td>
 <td align="left">对lst进行排序</td>
-<td align="left">[1,1,2,2,3,3,4,4]</td>
+<td align="left">[1,2,3,3,4,4]</td>
 </tr>
 <tr>
 <td align="left">lst.reverse()</td>
 <td align="left">对lst进行逆序</td>
-<td align="left">[4,3,2,1,4,3,2,1]</td>
+<td align="left">[4,4,3,3,2,1]</td>
 </tr>
 <tr>
 <td align="left">lst.clear()</td>
@@ -831,6 +831,65 @@
 <td align="left">copy.deepcopy(lst)</td>
 <td align="left">深拷贝lst</td>
 <td align="left"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">collections中的双队列</th>
+<th align="left">解释</th>
+<th align="left">举例deque([1,2,3,4])</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">copy(dq)</td>
+<td align="left">浅拷贝</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">append(5)</td>
+<td align="left">队列末尾添加元素5</td>
+<td align="left">deque([1,2,3,4,5])</td>
+</tr>
+<tr>
+<td align="left">appendleft(5)</td>
+<td align="left">队列首部添加元素5</td>
+<td align="left">deque([5,1,2,3,4,5])</td>
+</tr>
+<tr>
+<td align="left">pop()</td>
+<td align="left">弹出队列尾部数据</td>
+<td align="left">deque([5,1,2,3,4])</td>
+</tr>
+<tr>
+<td align="left">popleft()</td>
+<td align="left">弹出队列首部数据</td>
+<td align="left">deque([1,2,3,4])</td>
+</tr>
+<tr>
+<td align="left">extend([7,8,9])</td>
+<td align="left">添加多个元素到队列尾部</td>
+<td align="left">deque([1,2,3,4,7,8,9])</td>
+</tr>
+<tr>
+<td align="left">extendleft([0,0,7])</td>
+<td align="left">添加多个元素到队列首部</td>
+<td align="left">deque([0,0,7,1,2,3,4,7,8,9])</td>
+</tr>
+<tr>
+<td align="left">rotate(-2)</td>
+<td align="left">向左移动两个位置，负左，正右</td>
+<td align="left">deque([7,1,2,3,4,7,8,9,0,0])</td>
+</tr>
+<tr>
+<td align="left">remove(7)</td>
+<td align="left">删除第一个7</td>
+<td align="left">deque([1,2,3,4,7,8,9,0,0])</td>
+</tr>
+<tr>
+<td align="left">reverse()</td>
+<td align="left">队列倒序</td>
+<td align="left">deque([0,0,9,8,7,4,3,2,1])</td>
 </tr>
 </tbody></table>
 <table>
@@ -1375,7 +1434,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本站共129.5k字</span>
+  <span class="post-count">本站共129.7k字</span>
 </div>
 
 
