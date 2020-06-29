@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td align="left">树</td>
-<td align="left">树是链表的扩展，用在数据库，文件系统，搜索引擎，编译器，二/三/四/八叉树，字典树，红黑树，B+树，Trie树</td>
+<td align="left">树是链表的扩展，用在数据库，文件系统，搜索引擎，编译器。二/三/四/八叉树，线段树，字典树，红黑树，B+树，Trie树</td>
 </tr>
 <tr>
 <td align="left">堆</td>
@@ -113,10 +113,12 @@
 <p><strong>构造类型</strong>:<br> 1.数组类型 array<br> 2.结构体型 struct<br> 3.共用体型 union<br> 4.枚举体型 enum  </p>
 <p><strong>指针类型</strong>:<br> 1.pointer </p>
 <p><strong>空类型</strong>:<br> 1.void</p>
+<h2 id="Rust语言"><a href="#Rust语言" class="headerlink" title="Rust语言"></a>Rust语言</h2><p><strong>标量类型</strong>:<br> 1.数值类型 u|i(8/16/32/64/128/size)  f32(64)<br> 2.布尔类型 true false<br> 3.字符类型 char  </p>
+<p><strong>复合类型</strong>:<br> 1.数组类型 tup<br> 2.元组类型 array </p>
 <h2 id="Java语言"><a href="#Java语言" class="headerlink" title="Java语言"></a>Java语言</h2><p><strong>基本类型</strong>:<br> 1.字符类型 char<br> 2.布尔类型 boolean<br> 3.数值类型 byte short int long float double  </p>
 <p><strong>引用类型</strong>:<br> 1.类类型   class<br> 2.接口类型 interface<br> 3.数组类型 array  </p>
 <h2 id="Go语言"><a href="#Go语言" class="headerlink" title="Go语言"></a>Go语言</h2><p><strong>基本类型</strong>:<br> 1.字符及串 rune byte string<br> 2.布尔类型 true false<br> 3.数值类型 (u)int(8,16,32,64) float(32,64) complex  </p>
-<p><strong>派生类型</strong>：<br>    1.指针类型 p := &amp;v (nil)<br>    2.数组类型 var nums [4]int{0,1,2,3}<br>    3.切片类型 基于数组位置实现<br>    4.映射类型 var m = make(map[string]string)<br>    4.结构类型<br>    5.管道类型<br>    6.接口类型 func (p *Ptr) getName() string{}<br>    8.函数类型 func sayHello(name strin){}  </p>
+<p><strong>派生类型</strong>：<br>    1.指针类型 pt := &amp;v (nil)<br>    2.数组类型 nu := [4]int{0,1,2,3}<br>    3.切片类型 sl := []int{0,1,2,3,}<br>    4.映射类型 var m = make(map[string]string)<br>    4.结构类型 type Employee struct {}<br>    5.管道类型 ch := make(chan int, 2)<br>    6.接口类型 func (p *Ptr) getName() string{}<br>    8.函数类型 func sayHello(name strin){}  </p>
 <h2 id="Python语言"><a href="#Python语言" class="headerlink" title="Python语言"></a>Python语言</h2><p><strong>不可变类型</strong>：<br> 1.数值类型 number<br> 2.字符串型 string<br> 3.元组类型 tuple   </p>
 <p><strong>可变类型</strong>：<br> 1.列表类型 list<br> 2.字典类型 dict<br> 3.集合类型 set   </p>
 <h2 id="JavaScript语言"><a href="#JavaScript语言" class="headerlink" title="JavaScript语言"></a>JavaScript语言</h2><p><strong>基本类型</strong>:<br>    1.对空类型 Null<br>    2.字符串型 String<br>    3.数值类型 Number<br>    4.大整数型 BigInt<br>    5.符号类型 Symbol<br>    6.布尔类型 boolean<br>    7.未定义型 Undefined  </p>
@@ -131,7 +133,7 @@
       </tags>
   </entry>
   <entry>
-    <title>PyPython自带元素</title>
+    <title>Python自带元素</title>
     <url>/title/80b7d3cf/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/05/30/tMtMUf.png" alt="pythoninternal"></p>
 <a id="more"></a>
@@ -4807,7 +4809,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux下自定义位置安装TeXLive2019</title>
+    <title>Linux下自定义位置安装TeXLive2020</title>
     <url>/title/46ed9a72/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/10/30/K5J53q.md.jpg" alt="texlive"></p>
 <a id="more"></a>
@@ -4816,22 +4818,22 @@
 
 <h2 id="2-安装图像化界面必备的perl-tk组件"><a href="#2-安装图像化界面必备的perl-tk组件" class="headerlink" title="2.安装图像化界面必备的perl-tk组件"></a>2.安装图像化界面必备的perl-tk组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install perl-tk</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mount -t iso9660 -o loop texlive2019-20190410.iso /mnt</span><br></pre></td></tr></table></figure>
+<h2 id="3-把下载好的-iso文件挂载到-mnt下"><a href="#3-把下载好的-iso文件挂载到-mnt下" class="headerlink" title="3.把下载好的.iso文件挂载到/mnt下"></a>3.把下载好的.iso文件挂载到/mnt下</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mount -t iso9660 -o loop texlive2020-20200406.iso /mnt</span><br></pre></td></tr></table></figure>
 
 <h2 id="4-准备从图形界面安装"><a href="#4-准备从图形界面安装" class="headerlink" title="4.准备从图形界面安装"></a>4.准备从图形界面安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /mnt</span><br><span class="line">sudo ./install-tl -gui</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2019)</code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;安装字体/宏包文档目录树&quot;　切换为否</span><br><span class="line">&quot;安装字体/宏包源代码目录树&quot;　切换为否</span><br><span class="line">上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间</span><br></pre></td></tr></table></figure>
+<h2 id="5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步"><a href="#5-如果要修改安装位置请执行-目录下面空间够用也可不用管这一步" class="headerlink" title="5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)"></a>5.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)</h2><pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2020)</code></pre><h2 id="6-可以瘦身安装-空间够此步也可忽略"><a href="#6-可以瘦身安装-空间够此步也可忽略" class="headerlink" title="6.可以瘦身安装(空间够此步也可忽略)"></a>6.可以瘦身安装(空间够此步也可忽略)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;安装字体/宏包文档目录树&quot;　切换为否</span><br><span class="line">&quot;安装字体/宏包源代码目录树&quot;　切换为否</span><br><span class="line">上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间</span><br></pre></td></tr></table></figure>
 <h2 id="7-点击安装TeX-Live"><a href="#7-点击安装TeX-Live" class="headerlink" title="7.点击安装TeX Live"></a>7.点击安装TeX Live</h2><h2 id="8-卸载镜像文件"><a href="#8-卸载镜像文件" class="headerlink" title="8.卸载镜像文件"></a>8.卸载镜像文件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo unmount /mnt</span><br></pre></td></tr></table></figure>
 
-<h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo cp /home/tex2019/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf</span><br><span class="line">sudo fc-cache -fsv (此步执行时间稍长)</span><br></pre></td></tr></table></figure>
+<h2 id="9-配置字体-不配置的话，无法使用TeXLive自带字体"><a href="#9-配置字体-不配置的话，无法使用TeXLive自带字体" class="headerlink" title="9.配置字体(不配置的话，无法使用TeXLive自带字体)"></a>9.配置字体(不配置的话，无法使用TeXLive自带字体)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo cp /home/texlive2020/2020/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf</span><br><span class="line">sudo fc-cache -fsv (此步执行时间稍长)</span><br></pre></td></tr></table></figure>
 
-<h2 id="10-环境变量设置"><a href="#10-环境变量设置" class="headerlink" title="10.环境变量设置"></a>10.环境变量设置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">打开~/.bashrc 在最后加入如下内容(具体路径安按照自己的系统修改)</span><br><span class="line"></span><br><span class="line">	export TexMan=&quot;/home/tex2019/2019/texmf-dist/doc/man&quot;</span><br><span class="line">	export TexInfo=&quot;/home/tex2019/2019/texmf-dist/doc/info&quot;</span><br><span class="line">	export TexLive=&quot;/home/tex2019/2019/bin/x86_64-linux&quot;</span><br><span class="line">	export MANPATH=&quot;$MANPATH:$TexMan&quot;</span><br><span class="line">	export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;</span><br><span class="line">	export PATH=&quot;$PATH:$TexLive&quot;</span><br><span class="line"></span><br><span class="line">执行 source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h2 id="10-环境变量设置"><a href="#10-环境变量设置" class="headerlink" title="10.环境变量设置"></a>10.环境变量设置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">打开~/.bashrc 在最后加入如下内容(具体路径安按照自己的系统修改)</span><br><span class="line"></span><br><span class="line">	export TexMan=&quot;/home/texlive2020/2020/texmf-dist/doc/man&quot;</span><br><span class="line">	export TexInfo=&quot;/home/texlive2020/2020/texmf-dist/doc/info&quot;</span><br><span class="line">	export TexLive=&quot;/home/texlive2020/2020/bin/x86_64-linux&quot;</span><br><span class="line">	export MANPATH=&quot;$MANPATH:$TexMan&quot;</span><br><span class="line">	export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;</span><br><span class="line">	export PATH=&quot;$PATH:$TexLive&quot;</span><br><span class="line"></span><br><span class="line">执行 source ~/.bashrc</span><br></pre></td></tr></table></figure>
 
 <h2 id="11-更新源配置"><a href="#11-更新源配置" class="headerlink" title="11.更新源配置"></a>11.更新源配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet</span><br><span class="line">此步如果出现sudo;找不到命令 tlmgr，意味着执行时环境变量不对，请执行</span><br><span class="line">(1) sudo vi /etc/sudoers</span><br><span class="line">(2) 给如下内容加一个感叹号</span><br><span class="line">	Defaults	env_reset </span><br><span class="line">	Defaults	!env_reset</span><br><span class="line">(3) 再vi ~/.bashrc 加入下面这行到最后</span><br><span class="line">(4) alias sudo=&apos;sudo env PATH=$PATH&apos;</span><br><span class="line">(5) 保存退出执行 source ~/.bashrc</span><br><span class="line">此时再执行第一条命令 sudo tlmgr option ....</span><br></pre></td></tr></table></figure>
 
 <h2 id="12-更新宏包"><a href="#12-更新宏包" class="headerlink" title="12.更新宏包"></a>12.更新宏包</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tlmgr update --self --all </span><br><span class="line">要更新几百个，时间较长</span><br></pre></td></tr></table></figure>
 
-<h2 id="13-解决软件安装依赖问题"><a href="#13-解决软件安装依赖问题" class="headerlink" title="13.解决软件安装依赖问题"></a>13.解决软件安装依赖问题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1) sudo apt-get install aptitude</span><br><span class="line">(2) sudo aptitude install equivs</span><br><span class="line">(3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs</span><br><span class="line">(4) equivs-control texlive-local</span><br><span class="line">(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2019-ex.txt并复制所有内容</span><br><span class="line">(6) sudo vi texlive-local 将从浏览器拷贝的内容粘贴进去并保存退出</span><br><span class="line">(7) sudo equivs-build texlive-local</span><br><span class="line">(8) sudo apt-get freeglut3</span><br><span class="line">(9) sudo dpkg -i texlive-local_2019-1_all.deb</span><br></pre></td></tr></table></figure>
+<h2 id="13-解决软件安装依赖问题"><a href="#13-解决软件安装依赖问题" class="headerlink" title="13.解决软件安装依赖问题"></a>13.解决软件安装依赖问题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(1) sudo apt-get install aptitude</span><br><span class="line">(2) sudo aptitude install equivs</span><br><span class="line">(3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs</span><br><span class="line">(4) equivs-control texlive-local</span><br><span class="line">(5) 浏览器打开https://www.tug.org/texlive/files/debian-equivs-2020-ex.txt并复制所有内容</span><br><span class="line">(6) sudo vi texlive-local 将从浏览器拷贝的内容粘贴进去并保存退出</span><br><span class="line">(7) sudo equivs-build texlive-local</span><br><span class="line">(8) sudo apt-get freeglut3</span><br><span class="line">(9) sudo dpkg -i texlive-local_2020-1_all.deb</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>排版设计</category>
