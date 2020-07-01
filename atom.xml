@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-07-01T14:27:47.699Z</updated>
+  <updated>2020-07-01T14:27:56.611Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.shieber.cn/title/23e3bd3/"/>
     <id>http://www.shieber.cn/title/23e3bd3/</id>
     <published>2020-07-01T13:29:05.000Z</published>
-    <updated>2020-07-01T14:27:47.699Z</updated>
+    <updated>2020-07-01T14:27:56.611Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/01/NHF7on.png" alt="gopher"></p><a id="more"></a><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>最近学习Go这门语言，感觉有很多特性和Python一样，但又有很多特性和C一样。Go语言借鉴了许多其他语言的优秀用法。</p><p>Go由Google推出，主要开发者是贝尔实验室的大佬们(Rob Pike, Robert Griesemer, Ken Thompson)。</p><p>开发的目的主要是解决C++编译时间长的问题。Go于2009年11月正式推出第一个版本，到如今快11年了。而这十余年来，Go也逐渐火了起来。</p><h2 id="Go的几大优点"><a href="#Go的几大优点" class="headerlink" title="Go的几大优点"></a>Go的几大优点</h2><blockquote><p>1.简洁<br>2.速度接近C<br>3.原生并发非常好<br>4.对网络支持很好<br>5.文档支持也不错   </p></blockquote><h2 id="Go的几大特性"><a href="#Go的几大特性" class="headerlink" title="Go的几大特性"></a>Go的几大特性</h2><blockquote><p>1.反射<br>2.defer<br>3.工程化<br>4.错误处理<br>5.通道概念<br>6.goroutine<br>7.垃圾收集器GC<br>8.包机制(类似python)</p></blockquote><h2 id="Go的重要数据类型"><a href="#Go的重要数据类型" class="headerlink" title="Go的重要数据类型"></a>Go的重要数据类型</h2><blockquote><p>1.complex<br>2.string<br>3.slice<br>4.map<br>5.chan<br>6.interface  </p></blockquote><h2 id="Go的应用领域"><a href="#Go的应用领域" class="headerlink" title="Go的应用领域"></a>Go的应用领域</h2><blockquote><p>1.Web<br>2.分布式<br>3.中间件<br>4.服务器<br>5.数据库<br>6.网络编程<br>7.图像处理<br>8.游戏引擎  </p></blockquote><p>Go的重要产品Docker和Kubernetes，基本上大的互联网公司都在使用Go和Docker，微服务的实践因Docker和Kubernetes而火了起来。</p><p>目前云是热点，而Go天生的网络能力，使得Go成了云上的C语言。感觉未来的物联网时代，Go还会大放异彩。Go再许多方面超过了Java，又能接下许多C/C++的工作，能力是毋庸置疑的。</p><p>现在学习Go正是时候，Let’s Go!</p><p><img src="https://s1.ax1x.com/2020/07/01/NHuPxI.png" alt="golearn"></p>]]></content>
     
