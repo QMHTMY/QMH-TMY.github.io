@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-07-11T03:11:31.861Z</updated>
+  <updated>2020-07-11T03:11:36.749Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.shieber.cn/title/d63ca381/"/>
     <id>http://www.shieber.cn/title/d63ca381/</id>
     <published>2020-07-11T02:33:13.000Z</published>
-    <updated>2020-07-11T03:11:31.861Z</updated>
+    <updated>2020-07-11T03:11:36.749Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/11/UQtLvT.png" alt="linux-software"></p><a id="more"></a><p>Windows下安装软件似乎只有一种方式，那就是下载.exe，然后执行安装。然而Linux系统中软件安装方式可谓五花八门，下面总结一番。</p><p>因为Linux系统发行版多，各家有各家的软件安装方式，这种种不同方式可称为专用安装方式。另外，有人开发的软件若是想要支持各大发行版，那么就需要一种通用的软件安装方式。</p><h2 id="A-Linux通用的跨发行版软件包安装方式"><a href="#A-Linux通用的跨发行版软件包安装方式" class="headerlink" title="A.Linux通用的跨发行版软件包安装方式"></a>A.Linux通用的跨发行版软件包安装方式</h2><p>1.snap<br>2.flatpak<br>3.AppImage<br>4.source-code  </p><p>1.snap是ubuntu搞的，但目前已经支持多种发行版的安装，可归类为通用安装方式。snap目前甚至可以安装微信到linux。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install xxx #用snap安装软件</span><br></pre></td></tr></table></figure><p>2.flatpak(前身为xdg-app) 是一种用于构建，分发，安装和运行应用程序的技术。通过在沙箱中隔离应用程序来提高Linux桌面的安全性，允许应用程序安装在任何Linux发行版上。 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo flatpak install xxx #用flatpak安装软件</span><br></pre></td></tr></table></figure><p>3.AppImage是打包好的可执行镜像，赋予执行权限后直接运行就可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x AppImage</span><br><span class="line">./AppImage</span><br></pre></td></tr></table></figure><p>4.source-code，源代码安装，这是最基本的，最通用的安装方式。而源代码发布时，作者可能提供了不同安装选项给用户，有以下三种。  </p><blockquote><p>a. 只有configure文件，则按如下方式安装<br>    ./configure #为了生成makefile<br>    make<br>    make install<br>b. 已有makefile<br>    make<br>    make install<br>c. 只有Imake<br>    xmkmf<br>    make<br>    make install  </p></blockquote><p>说完通用的方式，接着看看专用的方式。</p><h2 id="B-Linux专用的软件包管理器"><a href="#B-Linux专用的软件包管理器" class="headerlink" title="B.Linux专用的软件包管理器"></a>B.Linux专用的软件包管理器</h2><ol><li>.deb</li><li>.rpm</li><li>etc…</li></ol><p>主要是两大类 </p><blockquote><p><strong>a</strong>.以Debian系列的dpkg安装deb包，和apt-get方式<br>sudo dpkg -i xxx.deb<br>sudo apt-get install xxx<br><strong>b</strong>.以Redhat系列的rpm安装rpm包，和yum方式<br>sudo rpm xxx.rpm<br>sudo yum install xxx<br><strong>c</strong>.其他的，比如Arch用pacman -S xxx 安装</p></blockquote><h2 id="rpm包转deb包"><a href="#rpm包转deb包" class="headerlink" title="rpm包转deb包"></a>rpm包转deb包</h2><p>rpm包还可以转换为deb包，以便安装到debian系linux系统。具体方式如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install alien</span><br><span class="line">sudo aline xxx.rpm     #当前目录生成xxx.deb</span><br><span class="line">sudo dpkg -i xxx.deb</span><br></pre></td></tr></table></figure><p>这样，就能将rpm包转换为deb包，然后装到debian系系统，不过有的软件转换后未必能安装。</p>]]></content>
     
