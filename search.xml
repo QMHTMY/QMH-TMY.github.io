@@ -1,6 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>学习Scrapy源代码</title>
+    <url>/title/ae08e597/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/21/UI6CX4.png" alt="scrapy-structure"></p>
+<a id="more"></a>
+
+<p>近期学习Scrapy源代码，稍作整理。</p>
+<h2 id="Scrapy架构"><a href="#Scrapy架构" class="headerlink" title="Scrapy架构"></a>Scrapy架构</h2><p><img src="https://s1.ax1x.com/2020/07/21/UI6CX4.png" alt="scrapy-structure"></p>
+<p>主体架构包含五大主体，两大中间件。</p>
+<table>
+<thead>
+<tr>
+<th align="left">主体/中间件</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">engine</td>
+<td align="left">调动爬虫，使其运转起来</td>
+</tr>
+<tr>
+<td align="left">scheduler</td>
+<td align="left">接受新的url，并安排下载器下载Request</td>
+</tr>
+<tr>
+<td align="left">downloader</td>
+<td align="left">专注于下载，返回Response给spider</td>
+</tr>
+<tr>
+<td align="left">spider</td>
+<td align="left">爬虫，处理Response并返回url给scheduler，item给item pipeline</td>
+</tr>
+<tr>
+<td align="left">item pipeline</td>
+<td align="left">管道，保存下载的数据项item</td>
+</tr>
+<tr>
+<td align="left">downloadermiddlewares</td>
+<td align="left">下载器中间件，处理request中各种问题</td>
+</tr>
+<tr>
+<td align="left">spidermiddlewares</td>
+<td align="left">爬虫中间件，处理response中各种问题</td>
+</tr>
+</tbody></table>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>Scrapy爬虫的运行流程如上图红色圆圈标示。</p>
+<table>
+<thead>
+<tr>
+<th align="left">流程</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">引擎从初始化spider中获取start_urls</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">引擎将start_urls给调度器并请求下载任务</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">调度器取出url给引擎以驱动下载器</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">引擎分发url给下载器</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">下载器按url下载</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">下载器返回下载内容给spider</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">spider处理返回内容，提取新url和item</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">spider将新url给调度器，item给pipeline以保存</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">返回第三步，开启多线程调度，循环工作</td>
+</tr>
+</tbody></table>
+<p>第一二步使用的是起始url，这是我们在项目spider/xxxspider.py中写好的，如下面的代码所示，这是起始时爬虫需要的，从第三步开始，爬虫自己有新爬取到的url，可以自行调度实现循环下载，直到任务结束。所以编写scrapy爬虫只需要很少的代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class MzituSpider(scrapy.Spider):</span><br><span class="line">    name = &apos;web&apos;</span><br><span class="line">    allowed_domains = [&apos;www.web.com&apos;]</span><br><span class="line">    start_urls = [&apos;https://www.web.com/&apos;]</span><br><span class="line"></span><br><span class="line">    item = ImageItem()</span><br><span class="line">    def parse(self, response):</span><br><span class="line">        #step 1: get image title and url</span><br><span class="line">        sel = response.xpath(&apos;//div[@class=&quot;postlist&quot;]/ul&apos;)</span><br><span class="line">        ttls= sel.xpath(&apos;.//img/@alt&apos;).extract()</span><br><span class="line">        self.item[&apos;titles&apos;] = ttls</span><br><span class="line"></span><br><span class="line">        lks = sel.xpath(&apos;.//img/@data-original&apos;).extract()</span><br><span class="line">        self.item[&apos;image_urls&apos;] = lks</span><br><span class="line">        yield self.item</span><br><span class="line"> </span><br><span class="line">        #step 2: get next page url</span><br><span class="line">        href=response.xpath(&apos;//div[@class=&quot;nav-links&quot;]/a[@class=&quot;next page-numbers&quot;]/@href&apos;).extract_first()</span><br><span class="line">        next_url=response.urljoin(href)</span><br><span class="line">        if next_url:</span><br><span class="line">            yield scrapy.Request(next_url, callback=self.parse)</span><br></pre></td></tr></table></figure>
+
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>如下是scrapy所有目录及外层代码。目录比较重，里面包含许多处理代码，而外层代码是scrapy实现的逻辑，这些外层代码调用目录中的代码完成整个爬取流程。所有目录及代码在/usr/local/lib/python3.6/dist-packages/scrapy/下。</p>
+<table>
+<thead>
+<tr>
+<th align="left">目录</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">commands</td>
+<td align="left">命令行命令具体实现</td>
+</tr>
+<tr>
+<td align="left">contracts</td>
+<td align="left">爬虫可用性检测代码</td>
+</tr>
+<tr>
+<td align="left">core</td>
+<td align="left">核心类，包括downloader, engine, scheduler, scraper, spidermw</td>
+</tr>
+<tr>
+<td align="left">downloadermiddlewares</td>
+<td align="left">下载器中间件，包括ajax,cookie,http,agent,robots等</td>
+</tr>
+<tr>
+<td align="left">extensions</td>
+<td align="left">扩展类，包括logstats, spiderstates等</td>
+</tr>
+<tr>
+<td align="left">http</td>
+<td align="left">网络处理，包括Request和Response等</td>
+</tr>
+<tr>
+<td align="left">linkextractors</td>
+<td align="left">链接抽取类，包括html, lxml, regex, sgml</td>
+</tr>
+<tr>
+<td align="left">loader</td>
+<td align="left">Item加载器</td>
+</tr>
+<tr>
+<td align="left">pipelines</td>
+<td align="left">Item管道，包含file, image和media</td>
+</tr>
+<tr>
+<td align="left">selector</td>
+<td align="left">基于lxml的xpath选择器</td>
+</tr>
+<tr>
+<td align="left">settings</td>
+<td align="left">爬虫基本配置，十分多，可自定义</td>
+</tr>
+<tr>
+<td align="left">spidermiddlewares</td>
+<td align="left">爬虫中间件，包括深度优先深度设置，http错误处理等</td>
+</tr>
+<tr>
+<td align="left">spiders</td>
+<td align="left">爬虫类，实现xmlFeed, sitemap，crawl</td>
+</tr>
+<tr>
+<td align="left">templates</td>
+<td align="left">项目和爬虫模板，包括一个项目架构，基本爬虫，双向爬虫等</td>
+</tr>
+<tr>
+<td align="left">utils</td>
+<td align="left">各种工具类，用于实现各种处理功能</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>外层代码</strong></td>
+<td align="left"><strong>作用</strong></td>
+</tr>
+<tr>
+<td align="left">cmdline.py</td>
+<td align="left">命令行参数处理</td>
+</tr>
+<tr>
+<td align="left">crawler.py</td>
+<td align="left">爬虫</td>
+</tr>
+<tr>
+<td align="left">dupefilters.py</td>
+<td align="left">去重</td>
+</tr>
+<tr>
+<td align="left">exceptions.py</td>
+<td align="left">错误处理</td>
+</tr>
+<tr>
+<td align="left">exporters.py</td>
+<td align="left">序列化保存文件</td>
+</tr>
+<tr>
+<td align="left">extension.py</td>
+<td align="left">扩展管理</td>
+</tr>
+<tr>
+<td align="left">interfaces.py</td>
+<td align="left">爬虫接口</td>
+</tr>
+<tr>
+<td align="left">item.py</td>
+<td align="left">数据流Item</td>
+</tr>
+<tr>
+<td align="left">link.py</td>
+<td align="left">链接对象结构</td>
+</tr>
+<tr>
+<td align="left">logformatter.py</td>
+<td align="left">日志生成</td>
+</tr>
+<tr>
+<td align="left">mail.py</td>
+<td align="left">邮件助手</td>
+</tr>
+<tr>
+<td align="left">middleware.py</td>
+<td align="left">中间件管理</td>
+</tr>
+<tr>
+<td align="left">pqueues.py</td>
+<td align="left">下载器先级队列</td>
+</tr>
+<tr>
+<td align="left">resolver.py</td>
+<td align="left">Twisted异步处理</td>
+</tr>
+<tr>
+<td align="left">responsetypes.py</td>
+<td align="left">请求响应数据</td>
+</tr>
+<tr>
+<td align="left">robotstxt.py</td>
+<td align="left">禁止爬取规则</td>
+</tr>
+<tr>
+<td align="left">shell.py</td>
+<td align="left">命令行工具</td>
+</tr>
+<tr>
+<td align="left">signalmanager.py</td>
+<td align="left">信号管理</td>
+</tr>
+<tr>
+<td align="left">signals.py</td>
+<td align="left">信号</td>
+</tr>
+<tr>
+<td align="left">spiderloader.py</td>
+<td align="left">爬虫加载</td>
+</tr>
+<tr>
+<td align="left">squeues.py</td>
+<td align="left">调度器队列</td>
+</tr>
+<tr>
+<td align="left">statscollectors.py</td>
+<td align="left">爬虫信息统计</td>
+</tr>
+<tr>
+<td align="left">mime.types</td>
+<td align="left">支持的文件类型</td>
+</tr>
+<tr>
+<td align="left">VERSION</td>
+<td align="left">版本信息</td>
+</tr>
+<tr>
+<td align="left">_monkeypatches.py</td>
+<td align="left">猴子补丁，处理Twisted</td>
+</tr>
+<tr>
+<td align="left">__init__.py</td>
+<td align="left">项目初始化</td>
+</tr>
+<tr>
+<td align="left">__main__.py</td>
+<td align="left">执行入口</td>
+</tr>
+</tbody></table>
+<h2 id="大概流程"><a href="#大概流程" class="headerlink" title="大概流程"></a>大概流程</h2><p>__main__(或命令行的scrapy crawl xxx等) 调用cmdline.py，cmdline.py调用utils中文件处理配置，再调用crawler.py。crcrawler.py调用spider和core中引擎。引擎初始化scheduler，downloader，scraper等，开启下载流程。</p>
+<p>重要文件：cmdline.py, crawler.py<br>重要目录：core, http, pipelines, utils, spider<br>其他的目录和文件都为重要文件和目录服务，主逻辑实现也在重要目录和文件中。  </p>
+<h2 id="调用关系图"><a href="#调用关系图" class="headerlink" title="调用关系图"></a>调用关系图</h2><p>图一是从命令行开始的全过程，图二是核心架构运行流程，也即图一crawl下面那部分。当然，很多都省略了，比如日志，错误处理，这些不是主要的内容，加上反而让人看不懂。</p>
+<p><img src="https://s1.ax1x.com/2020/07/21/UIIPGd.png" alt="whole"></p>
+<p>我们自己写的代码只在start_request处执行一次，此后就是核心线程开启循环下载直到结束，可以看到scrapy为我们完成了大多数内容。由于scrapy整体架构高度解耦合，所以需要什么功能，我们可以自己去添加配置。每一个箭头就是一步，对这一步需要添加功能就编写好代码然后串在中间。比如觉得downloader和scraper中还需要处理，自己写好代码，将其放在downloader和scraper间，这样整个爬虫处理流程是不变的，但增加了自定义内容。</p>
+<p><img src="https://s1.ax1x.com/2020/07/21/UIImdS.png" alt="core"></p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Code</tag>
+        <tag>scrapy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux下的软件安装</title>
     <url>/title/d63ca381/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/11/UQtLvT.png" alt="linux-software"></p>
