@@ -91,8 +91,7 @@
 </tr>
 </tbody></table>
 <p>第一二步使用的是起始url，这是我们在项目spider/xxxspider.py中写好的，如下面的代码所示，这是起始时爬虫需要的，从第三步开始，爬虫自己有新爬取到的url，可以自行调度实现循环下载，直到任务结束。所以编写scrapy爬虫只需要很少的代码。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class MzituSpider(scrapy.Spider):</span><br><span class="line">    name = &apos;web&apos;</span><br><span class="line">    allowed_domains = [&apos;www.web.com&apos;]</span><br><span class="line">    start_urls = [&apos;https://www.web.com/&apos;]</span><br><span class="line"></span><br><span class="line">    item = ImageItem()</span><br><span class="line">    def parse(self, response):</span><br><span class="line">        #step 1: get image title and url</span><br><span class="line">        sel = response.xpath(&apos;//div[@class=&quot;postlist&quot;]/ul&apos;)</span><br><span class="line">        ttls= sel.xpath(&apos;.//img/@alt&apos;).extract()</span><br><span class="line">        self.item[&apos;titles&apos;] = ttls</span><br><span class="line"></span><br><span class="line">        lks = sel.xpath(&apos;.//img/@data-original&apos;).extract()</span><br><span class="line">        self.item[&apos;image_urls&apos;] = lks</span><br><span class="line">        yield self.item</span><br><span class="line"> </span><br><span class="line">        #step 2: get next page url</span><br><span class="line">        href=response.xpath(&apos;//div[@class=&quot;nav-links&quot;]/a[@class=&quot;next page-numbers&quot;]/@href&apos;).extract_first()</span><br><span class="line">        next_url=response.urljoin(href)</span><br><span class="line">        if next_url:</span><br><span class="line">            yield scrapy.Request(next_url, callback=self.parse)</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://s1.ax1x.com/2020/07/21/UoSGad.png" alt="scrapy-code"></p>
 <h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>如下是scrapy所有目录及外层代码。目录比较重，里面包含许多处理代码，而外层代码是scrapy实现的逻辑，这些外层代码调用目录中的代码完成整个爬取流程。所有目录及代码在/usr/local/lib/python3.6/dist-packages/scrapy/下。</p>
 <table>
 <thead>
@@ -359,18 +358,16 @@
 <p>所以看到一来就是一个超大的数，规模，尺度的问题，多半可以考虑递归手段。就是化大为小，化繁为简。这是该用递归的时候。</p>
 <p>现在再去翻书，看递归定义：1.出口，2.转移条件。你发现就好懂了。因为解决大问题，需要必要的规则和起始条件(或终止条件)。其实，理科有什么科学规律不是这样呢？</p>
 <p>比如描述宇宙规律，牛顿爵士提出理解和解决世界小问题的方案，加点约束，就可以解决宇宙的大问题了。</p>
-<p>$$牛顿第一定律: 不受合外力作用的质点保持静止或做匀速直线运动。[规则]$$<br>$$牛顿第二定律: 物体动量的变化率同该质点所受合外力成正比，F = Ma.(a是加速度) [规则]$$<br>$$牛顿第三定律: 相互作用的两质点间作用力和反作用力大小相等，方向相反，作用在同一直线上。 [规则]$$</p>
+<p><img src="https://s1.ax1x.com/2020/07/21/UoFFr6.png" alt="newtown-laws"></p>
 <p>受力与否为起始条件(边界)，三大定律就是转移条件。有了力，宇宙就动起来了。</p>
 <p>当然，你说既然力是起始条件(边界)，那力呢？牛顿发现不把起始原因找到，肯定不行，因为那套运动规则就没法动起来。所以牛逼的爵士，再来一律，万有引力定律。就是说，到处都是起始原因，万有嘛，大家都有，这下宇宙不就动了吗。</p>
 <p>$$万有引力定律:  F = G\frac{M_{1}M_{2}}{R^{2}}$$</p>
 <p>所以，牛，很牛！我看了觉得简单，自己要是不看，到死也想不出来。所以，牛顿牛逼。就这几句话，你我独自是整不出来的，所以要尊重数学家和物理学家嘛！</p>
 <p>扯远了，但是这么个理解法。下面写出Fibnacci的算法。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fibnacci(n): #n为正数</span><br><span class="line">    if n &lt; 2: return n                   #此处就是边界，出口，这就是小问题。</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    return fibnacci(n-1) + fibnacci(n-2) #此处分解大问题为小问题</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://s1.ax1x.com/2020/07/21/UoFfQ1.png" alt="fibnacci1"></p>
 <p>上面的代码，就可以用来计算了。但是，我们上面分析指出，它占内存，不断的压栈。所以是否能够优化一下，减少内存占用呢？当然可以，尾递归就是干这事的。</p>
 <p>尾递归，字面意思，就是它是尾巴上的，最后一个调用的。所以，尾递归只能调用自身，不能乘除加减。下面就是斐波那契的尾递归版本。最后一行，不加减，无乘除，单是调用自身，这就是尾递归。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fibnacci(n, x=0, y=1):</span><br><span class="line">    if n &lt; 2: return y</span><br><span class="line"></span><br><span class="line">    return fibnacci0(n-1, y, x+y) #加法状态传递到了参数里，只用一个栈。</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://s1.ax1x.com/2020/07/21/UoFbJH.png" alt="fibnacci2"></p>
 <p>那它如何减少内存消耗呢？我们知道纯递归版中，栈主要用来记录中间状态了，而这些中间状态中我们需要的无非就是些加法罢了，因为依据规则Fib(n) = Fib(n-1) + Fib(n-2)，这里就只有加法。那么我们把加法保留到下次函数调用，不就可以只用一个栈了吗？所以我们就这么干了。下面的参数中y和x+y就是保留的值和加法状态。</p>
 <p>现在回过头看第二条：尾递归解决了递归<strong>大量占用栈</strong>的缺点，是对递归的一种优化，节约了内存。可第五条又说，都各自<strong>带来了新问题</strong>。什么问题？</p>
 <p>函数递归调用，参数入栈，栈上还有很多操作系统用得到的信息，尤其出Bug了，调试时，就需要栈上的信息。现在尾递归给优化了，全部信息都在一份参数里，而且还是多次相加后的值，找不出问题了。所以尾递归在操作系统层面，还有许多需要栈信息的应用上并没有得到太多应用。别看优化了，节约资源了，但是也引入了新问题。</p>
@@ -380,12 +377,11 @@
 </blockquote>
 <h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>第三条：动态规划是一种利用<strong>小问题解决大问题</strong>的技术。刚才我们看了递归是把大问题分解成小问题，现在我们从小问题能不能推导些大问题出来呢？当然能，这就是动态规划。动态二字是说，新问题是热乎的，才得到的。比如还是用斐波那契数列说，我们用两个小问题Fib(0) + Fib(1)就得到Fib(2)了，看到没，没叫你算Fib(2)，但是由小问题构造出了大问题。而且Fib(3) = Fib(2) + Fib(1)，这里Fib(3)又是由刚生成的Fib(2)构成，和最开始的Fib(0)无关了，始终用这种规律动态生成下一个。是不是利用小问题解决大问题？</p>
 <p>再看动态规划版的斐波那契数列计算代码。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fibnacci(n):</span><br><span class="line">    if n &lt; 2: return n            #边界</span><br><span class="line">                              </span><br><span class="line">    dp = [0] * n              </span><br><span class="line">    dp[0], dp[1] = 0, 1           #基本条件      </span><br><span class="line">    for i in range(2, n+1):</span><br><span class="line">        dp[i] = dp[i-1] + dp[i-2] #转移因子，或转移规则，构造规则</span><br><span class="line"></span><br><span class="line">    return dp[n-1]</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/07/21/UoFqWd.png" alt="fibnacci3"></p>
 <p>此处是从2开始计算到n，由0和1两个基本条件构造大问题，这就是动态规划。递归的终止条件恰好就是动态规划的起始条件，所以不同的叫法，出口，边界，约束，其实都一样。</p>
 <p>再看第五条，各自<strong>带来了新问题</strong>。 动态规划带来什么问题？动态规划不好找准转移规则和起始条件。而这两点又是必须的，所以动态规划好用，不好理解。比如爬楼梯问题，可以爬1阶，2阶，3阶。计算到n阶楼梯的爬法。<br>还有很多问题，乍一看是看不出能用动态规划的，甚至条件复杂得很。还有上面的dp数组也很费内存。</p>
 <p>当然，费内存可以优化，用两个变量来存储信息。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def fibnacci(n):</span><br><span class="line">    if n &lt; 2: return n</span><br><span class="line"></span><br><span class="line">    p, q, = 0, 1</span><br><span class="line">    for i in range(2, n+1):</span><br><span class="line">        p , q = q, p + q</span><br><span class="line"></span><br><span class="line">    return q</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://s1.ax1x.com/2020/07/21/UoFjyt.png" alt="fibnacci4"></p>
 <p>这也是数学教材上的斐波那契算法定义。</p>
 <h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p>第四条：递归从大到小，自顶(大)向下(小)；动态规划从小到大，自底(小)向上(大)。现在应该好理解了。自顶向下和自底向上是另一种说法罢了。递归时，从一个大问题不断产生新的小问题，画成树，不就是顶上一个点，下面一堆点吗？所以从顶向下，最下面刚好是基本条件。而动态规划恰好就从基本条件开始，不断向上计算较大的问题。自然自底向上了。递归和动态规划两者联系就在于此，看从哪头开始。</p>
 <p><img src="https://s1.ax1x.com/2020/07/08/UElmkR.png" alt="recursion_fibnacci"></p>
@@ -2240,7 +2236,8 @@
 <td align="left">list(zip([1,2],[8,3])) -&gt; [(1,8),(2,3)]</td>
 </tr>
 </tbody></table>
-<h2 id="一些用法和实现"><a href="#一些用法和实现" class="headerlink" title="一些用法和实现"></a>一些用法和实现</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#all的逻辑</span><br><span class="line">def all(iterable):</span><br><span class="line">    for element in iterable:</span><br><span class="line">        if not element:</span><br><span class="line">            return False</span><br><span class="line">    return True</span><br><span class="line"></span><br><span class="line">#any的逻辑</span><br><span class="line">def any(iterable):</span><br><span class="line">    for element in iterable:</span><br><span class="line">        if element:</span><br><span class="line">            return False</span><br><span class="line">     return False</span><br><span class="line"></span><br><span class="line">#zip的逻辑</span><br><span class="line">#zip(&apos;ABCD&apos;, &apos;xy&apos;) --&gt; Ax By</span><br><span class="line">def zip(*iterables):</span><br><span class="line">    sentinel = object()</span><br><span class="line">    iterators = [iter(it) for it in iterables]</span><br><span class="line">    while iterators:</span><br><span class="line">        result = []</span><br><span class="line">        for it in iterators:</span><br><span class="line">            elem = next(it, sentinel)</span><br><span class="line">            if elem is sentinel:</span><br><span class="line">                return</span><br><span class="line">            result.append(elem)</span><br><span class="line">        yield tuple(result)</span><br><span class="line"></span><br><span class="line">#输出a中最长的1子串个数。</span><br><span class="line">a = [1,0,1,1,0,1,1,1]</span><br><span class="line">print(max([len(i) for i in bytearray(a).split(b&apos;\x00&apos;)]))</span><br><span class="line"></span><br><span class="line">#staticmethod和classmethod的用法</span><br><span class="line">class A():</span><br><span class="line">    def func1(self):</span><br><span class="line">        self.bar = 1</span><br><span class="line">        print(&apos;self:&apos;,self)</span><br><span class="line">        self.func2(2)</span><br><span class="line">        self.func3(2)</span><br><span class="line"></span><br><span class="line">    @classmethod #不实例化而和类交互，先于构造函数执行</span><br><span class="line">    def func2(cls, n):</span><br><span class="line">        cls.func3(n)</span><br><span class="line">        print(cls.bar)</span><br><span class="line">        print(&apos;cls:&apos;,cls)</span><br><span class="line"></span><br><span class="line">    @staticmethod #适合不获取实例方法和属性的情况，独自处理</span><br><span class="line">    def func3(n):</span><br><span class="line">        print(n)</span><br><span class="line">        print(A.bar)</span><br><span class="line"></span><br><span class="line">A.func3() #不需要实例化直接调用，可用来初始化</span><br><span class="line">A.func2()</span><br></pre></td></tr></table></figure>
+<h2 id="一些用法和实现"><a href="#一些用法和实现" class="headerlink" title="一些用法和实现"></a>一些用法和实现</h2><p><img src="https://s1.ax1x.com/2020/07/21/UoVkSH.png" alt="usage1"></p>
+<p><img src="https://s1.ax1x.com/2020/07/21/UoV86s.png" alt="usage2"></p>
 ]]></content>
       <categories>
         <category>编程语言</category>
