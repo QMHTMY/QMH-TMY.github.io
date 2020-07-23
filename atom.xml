@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-07-21T08:01:32.555Z</updated>
+  <updated>2020-07-23T08:07:15.547Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python各种虚拟环境使用</title>
+    <link href="http://www.shieber.cn/title/3f375b95/"/>
+    <id>http://www.shieber.cn/title/3f375b95/</id>
+    <published>2020-07-23T06:52:32.000Z</published>
+    <updated>2020-07-23T08:07:15.547Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/23/UL2XtO.png" alt="virtualenv"></p><a id="more"></a><p>Python下存在多种虚拟环境构建方式，现做整理。</p><h2 id="为什么需要虚拟环境"><a href="#为什么需要虚拟环境" class="headerlink" title="为什么需要虚拟环境"></a>为什么需要虚拟环境</h2><p>传统的库安装方式，如pip install package，会将包安装到系统，不管你后面用不用都在。然而大部分人安装后就忘了卸载，导致占用内存。还有的时候，项目可能需要python2.7，有时又需要python3.5，甚至对同一个包的版本需求也不一样，既要1.1版又要1.4版，然而传统安装方式只可能保留一个版本，这该怎么办？</p><p>为了解决占用和多版本问题，python给出了虚拟环境。虚拟环境其实就是一个目录，项目需要的包不再安装到系统而是该目录。不同的目录可以放同一个包不同的版本。项目不要了，可直接删除该目录，节约内存。如下图，一个主目录下是各种虚拟环境。</p><p><img src="https://s1.ax1x.com/2020/07/23/ULRCnI.png" alt="virtualenv1"></p><p>python的虚拟环境方式主要有三种，分别是virtualenv，virtualenvwrapper，pipenv。三者的区别是管理依赖的方式和指令的复杂度，主体功能肯定都是一样的。</p><h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><p>最早出现的就是virtualenv了，下面是其用法。</p><p><img src="https://s1.ax1x.com/2020/07/23/ULoaWV.png" alt="virtualenv-op"></p><h2 id="virtualenvwrapper"><a href="#virtualenvwrapper" class="headerlink" title="virtualenvwrapper"></a>virtualenvwrapper</h2><p>virtualenvwrapper是virtualenv的升级版，管理各个环境，切换方便</p><p><img src="https://s1.ax1x.com/2020/07/23/ULofSK.png" alt="virtualenvwrapper-op"></p><h2 id="pipenv"><a href="#pipenv" class="headerlink" title="pipenv"></a>pipenv</h2><p>pipenv 是pip和virtualenv的结合，使用Pipfile和Pipfile.lock来管理依赖关系，更加方便，未来会是Python开虚拟环境的首选方法。下面是其用法。</p><p><img src="https://s1.ax1x.com/2020/07/23/ULT9Ts.png" alt="pipenv-op"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/23/UL2XtO.png&quot; alt=&quot;virtualenv&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="虚拟环境" scheme="http://www.shieber.cn/categories/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    
+      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="virtualenv" scheme="http://www.shieber.cn/tags/virtualenv/"/>
+    
+  </entry>
   
   <entry>
     <title>学习Scrapy源代码</title>
@@ -426,28 +450,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/01/10/lhPP6U.md.png&quot; alt=&quot;fydd&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Culture" scheme="http://www.shieber.cn/categories/Culture/"/>
-    
-    
-      <category term="Translation" scheme="http://www.shieber.cn/tags/Translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>神翻译</title>
-    <link href="http://www.shieber.cn/title/eb015e2b/"/>
-    <id>http://www.shieber.cn/title/eb015e2b/</id>
-    <published>2020-01-10T02:50:21.000Z</published>
-    <updated>2020-01-10T03:38:08.862Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/01/10/lfqrTO.md.png" alt="error1"></p><a id="more"></a><p>中国神翻译时时见诸新闻，特收集一些有趣的翻译。  </p><h2 id="字句翻译"><a href="#字句翻译" class="headerlink" title="字句翻译"></a>字句翻译</h2><p>1.God Use VPN. 佛跳墙。<br>2.Old dry mother. 老干妈。<br>3.We found love. 潍坊的爱。<br>4.Jack, slow fuck. 捷克斯洛伐克。<br>5.Seven up eight down.七上八下。<br>6.A time sex thing. 一次性用品。<br>7.You can kill me, but you can’t fuck me. 士可杀，不可辱。<br>8.You di da di da me, I hua la hua you.滴水之恩，当以涌泉相报。  </p><h2 id="人名翻译"><a href="#人名翻译" class="headerlink" title="人名翻译"></a>人名翻译</h2><table><thead><tr><th align="center">译名</th><th align="center">人物</th><th align="center">译名</th><th align="center">人物</th></tr></thead><tbody><tr><td align="center">Wayne</td><td align="center">魏延</td><td align="center">Summary</td><td align="center">司马懿</td></tr><tr><td align="center">John</td><td align="center">张颌</td><td align="center">Water</td><td align="center">华佗</td></tr><tr><td align="center">Susan</td><td align="center">孙尚香</td><td align="center">Major</td><td align="center">马忠</td></tr><tr><td align="center">Marshall</td><td align="center">马超</td><td align="center">Joey</td><td align="center">周瑜</td></tr><tr><td align="center">David</td><td align="center">典韦</td><td align="center">Rambo</td><td align="center">吕布</td></tr><tr><td align="center">Pond</td><td align="center">庞德</td><td align="center">Marcel</td><td align="center">马谡</td></tr><tr><td align="center">Josh</td><td align="center">贾诩</td><td align="center">Dunn</td><td align="center">邓艾</td></tr><tr><td align="center">Russell</td><td align="center">鲁肃</td><td align="center">Yahoo</td><td align="center">羊祜</td></tr><tr><td align="center">Charlie</td><td align="center">张辽</td><td align="center">Chauncey</td><td align="center">陈式</td></tr><tr><td align="center">Cunning</td><td align="center">甘宁</td><td align="center">Faye</td><td align="center">费祎</td></tr><tr><td align="center">Pavon</td><td align="center">潘风</td><td align="center">Hansen</td><td align="center">华雄</td></tr><tr><td align="center">Raymond</td><td align="center">吕蒙</td><td align="center">Luke</td><td align="center">陆抗</td></tr><tr><td align="center">Rachel</td><td align="center">文丑</td><td align="center">Joy</td><td align="center">大乔</td></tr><tr><td align="center">Gay</td><td align="center">关羽</td><td align="center">Joy.II</td><td align="center">小乔</td></tr><tr><td align="center">Jeff</td><td align="center">张飞</td><td align="center">Sheldon</td><td align="center">夏侯惇</td></tr><tr><td align="center">Chocolate</td><td align="center">诸葛亮</td><td align="center"></td><td align="center"></td></tr></tbody></table><p>不定期更新…..</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/01/10/lfqrTO.md.png&quot; alt=&quot;error1&quot;&gt;&lt;/p&gt;
     
     </summary>
     
