@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>华为面试</title>
+    <url>/title/f822c036/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/08/04/a0F4bR.png" alt="interview"></p>
+<a id="more"></a>
+
+<p>最近参加华为面试，感觉问的问题很有价值，总结了下面试的题目。</p>
+<h2 id="一面-2020-08-03-10-05"><a href="#一面-2020-08-03-10-05" class="headerlink" title="一面 [2020.08.03 10:05]"></a>一面 [2020.08.03 10:05]</h2><ul>
+<li>谈谈分布式。  </li>
+<li>谈谈数据结构。  </li>
+<li>哈希碰撞如何解决。  </li>
+<li>手撕代码：集合合并。  </li>
+<li>谈Python，Rust语言。  </li>
+<li>四层B+树，查找需要次数？  </li>
+<li>B+树的查找过程是怎么样？  </li>
+<li>B+树适合的情况，B+树节点分裂的条件。  </li>
+<li>存储10万左右的中国地名数据，自己设计数据模型来存储，要求实现快速访问。  </li>
+</ul>
+<h2 id="二面-2020-08-04-10-01"><a href="#二面-2020-08-04-10-01" class="headerlink" title="二面 [2020.08.04 10:01]"></a>二面 [2020.08.04 10:01]</h2><ul>
+<li>谈汇编语言。</li>
+<li>谈编程语言发展。</li>
+<li>谈微服务和集群。</li>
+<li>谈软件开发原则。</li>
+<li>软件开发设计模式。</li>
+<li>谈对Linux系统认识。</li>
+<li>谈谈Linux内核架构。</li>
+<li>谈Linux系统调用流程。</li>
+<li>操作系统调度的单位是？</li>
+<li>谈面向对象和面向过程。</li>
+<li>谈软件开发，如何优化呢？</li>
+<li>谈如何使用各种数据结构。</li>
+<li>栈的调用流程，栈的毁坏。</li>
+<li>为什么会出现NoSql，NewSql？</li>
+<li>关系型数据库和NoSQL有什么区别？</li>
+<li>设计操作系统调度系统，你如何考虑？</li>
+<li>设计一个图书馆系统，你如何设计？</li>
+<li>100亿数据存储，你如何存储处理呢？</li>
+<li>1+2这样的计算，计算机的处理流程是？</li>
+</ul>
+<h2 id="面试官建议"><a href="#面试官建议" class="headerlink" title="面试官建议 "></a>面试官建议 </h2><ul>
+<li>互联网，计算机技术是飞速发展的，但底层技术不过时，需要学好。  </li>
+<li>了解技术发展的历史沿革，要做到即有广度，更有深度。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>IT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>21世纪计算机技术发展展望</title>
     <url>/title/a1d4a508/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/08/02/aY6dW8.png" alt="21-new-tech"></p>
@@ -7213,8 +7264,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
