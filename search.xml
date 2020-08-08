@@ -4,6 +4,8 @@
     <title>Linux内核代码结构</title>
     <url>/title/71001b59/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/08/07/afOPyT.png" alt="linus-tux"></p>
+<a id="more"></a>
+
 <h1 id="Linux系统结构"><a href="#Linux系统结构" class="headerlink" title="Linux系统结构"></a>Linux系统结构</h1><p>阅读过linus再1991年写的kernel-0.01版，发现和今天的内核比起来结构超级简单。下图是Linux系统架构图，中线间就是内核。</p>
 <p><img src="https://s1.ax1x.com/2020/08/07/afL3in.png" alt="kernel-arch"></p>
 <p>#1991年 0.01版本linux内核目录</p>
