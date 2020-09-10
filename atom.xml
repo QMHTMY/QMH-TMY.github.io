@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-08-30T02:39:36.047Z</updated>
+  <updated>2020-09-10T10:50:43.015Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何制作deb包</title>
+    <link href="http://www.shieber.cn/title/583751c1/"/>
+    <id>http://www.shieber.cn/title/583751c1/</id>
+    <published>2020-09-07T10:17:18.000Z</published>
+    <updated>2020-09-10T10:50:43.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/09/10/wJoQ4U.png" alt="deb"></p><a id="more"></a><p>平时安装软件有可能用到deb包，那么它是如何制作的呢？</p><h2 id="学会包命名"><a href="#学会包命名" class="headerlink" title="学会包命名"></a>学会包命名</h2><p>包名格式：软件名_上游版本号.主版本号.次版本号-修订号_平台</p><p>如: gim_bash_0.0.4-1_amd64</p><h2 id="安排deb包内部结构"><a href="#安排deb包内部结构" class="headerlink" title="安排deb包内部结构"></a>安排deb包内部结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">└── gim_bash_0.0.4-1_amd64</span><br><span class="line">    ├── DEBIAN</span><br><span class="line">    │   └── control</span><br><span class="line">    └── usr</span><br><span class="line">        └── local</span><br><span class="line">            └── bin</span><br><span class="line">                └── gim</span><br></pre></td></tr></table></figure><p>上面是一个deb包打包前的结构，DEBIAN/control为控制文件，里面写了各种软件包信息。gim为代码，<br>usr/local/bin/是gim最终安装位置，也可以安装到/usr/bin，则结构如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">└── gim_bash_0.0.4-1_amd64</span><br><span class="line">    ├── DEBIAN</span><br><span class="line">    │   └── control</span><br><span class="line">    └── usr</span><br><span class="line">        └── bin</span><br><span class="line">            └── gim</span><br></pre></td></tr></table></figure><h2 id="构建流程"><a href="#构建流程" class="headerlink" title="构建流程"></a>构建流程</h2><ul><li>写好代码，(编译)，修改最终文件属性<blockquote><p>sudo chown root gim<br>sudo chgrp root gim</p></blockquote></li><li>准备好deb包结构</li><li>修改control文件</li><li>打包为deb</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">drwxrwxr-x 4 shieber shieber 4.0K 9月   8 13:55 gim_bash_0.0.4-1_amd64</span><br><span class="line"><span class="meta">$</span><span class="bash"> dpkg-deb --build gim_bash_0.0.4-1_amd64/</span></span><br><span class="line">dpkg-deb: 正在 'gim_bash_0.0.4-1_amd64.deb' 中构建软件包 'gim'。</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls </span></span><br><span class="line">drwxrwxr-x 4 shieber shieber 4.0K 9月   8 13:55 gim_bash_0.0.4-1_amd64</span><br><span class="line">-rw-r--r-- 1 shieber shieber 1.9K 9月  10 18:42 gim_bash_0.0.4-1_amd64.deb</span><br></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dpkg -i gim_bash_0.0.4-1_amd64.deb</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/09/10/wJoQ4U.png&quot; alt=&quot;deb&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="软件包" scheme="http://www.shieber.cn/categories/%E8%BD%AF%E4%BB%B6%E5%8C%85/"/>
+    
+    
+      <category term="deb" scheme="http://www.shieber.cn/tags/deb/"/>
+    
+  </entry>
   
   <entry>
     <title>编程语言的七夕</title>
@@ -435,28 +457,6 @@
     
     
       <category term="股市" scheme="http://www.shieber.cn/tags/%E8%82%A1%E5%B8%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu20.04 LTS</title>
-    <link href="http://www.shieber.cn/title/8009ae71/"/>
-    <id>http://www.shieber.cn/title/8009ae71/</id>
-    <published>2020-03-05T04:33:44.000Z</published>
-    <updated>2020-03-05T04:36:08.272Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s2.ax1x.com/2020/03/05/3TbKmD.png" alt="Focal Fossa"></p><a id="more"></a><p>近期Ubuntu20.04 LTS(Focal Fossa)冻结部分功能，特地下载试了试。  </p><h2 id="Ubuntu20-04发布的时间表-2020-："><a href="#Ubuntu20-04发布的时间表-2020-：" class="headerlink" title="Ubuntu20.04发布的时间表(2020)：  "></a>Ubuntu20.04发布的时间表(2020)：  </h2><p>1月09日：测试周 (可选)<br>2月27日：特性冻结，Debian导入冻结<br>3月05日：测试周 (可选)<br>3月19日：用户界面冻结<br>3月26日：文档字符串冻结<br>4月02日：测试版冻结<br>4月09日：内核冻结<br>4月16日：最终冻结，语言翻译包冻结，发布候选版<br>4月23日：发布稳定版  </p><p>在某个日期，Ubuntu18.04 LTS用户会收到新LTS通知，提示升级。</p><h2 id="支持时限："><a href="#支持时限：" class="headerlink" title="支持时限：  "></a>支持时限：  </h2><p>台式机及服务器：2020-2025年<br>企业扩展维护版：2020-2030年(收费)</p><h2 id="计划功能。"><a href="#计划功能。" class="headerlink" title="计划功能。  "></a>计划功能。  </h2><ul><li>Gnome3.36</li><li>游戏相关改进</li><li>改进的ZFS支持</li><li>GDM中多显示器</li><li>Xorg会话分数缩放</li><li>Linux Kernel 5.4 or higher</li></ul><p>看来就ZFS和新内核有点看头。Ubuntu以前用的是ext4系统，不知道新ZFS如何，最近Linus大佬到是对ZFS <a href="https://www.oschina.net/news/112779/linus-zfs-statements-arent-right-heres-the-straight-dope?p=2" target="_blank" rel="noopener">颇有看法</a>。</p><p>关于<a href="https://www.kernel.org" target="_blank" rel="noopener">内核</a>，<code>uname -a</code>显示结果:<br><code>Linux ubuntu 5.4.0-14-generic #17-Ubuntu SMP Thu Feb 6 22:47:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</code><br>5.4的内核比较新，微软去年贡献出的exFAT功能也已加入，所以也算得上20.04的新特性吧。</p><p>关于软件<br>预装的Amazon在本版本中被去掉了，LibreOffice提供了最新6.4版，我速度快多了。另外，官方正考虑预置新版PHP 7.4。<br>至于其他的都差不多，Firefox, vim等等这些和以前一样预置。</p><p>使用<br>虚拟机下使用也不怎么卡，Gnome优化得挺好，我这台电脑是2015年的垃圾货了，装双系统，再开虚拟机跑着还过得去。新版出来后多半会跟着升级吧，毕竟穷玩车，富玩表，屌丝玩电脑。服务器版除非买了新服务器，且够大胆，不然还是得用18.04或是16.04，我认为那是最优的，新的20.04不一定就合适。</p><p>安装节面：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3Tb4AJ.png" alt="install"></p><p>软件中心：(微软家的Visual Studio和Skype也加入了)  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TbbjK.png" alt="software"></p><p>自带软件：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TqPjf.png" alt="installed"></p><p>自带壁纸：  </p><p><img src="https://s2.ax1x.com/2020/03/05/3TqnCn.png" alt="wallpaper"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Ubuntu总体来说比较优秀。当然，近几年它很火，许多工具甚至特地发布了Ubuntu版。用了近两年Ubuntu(Windows用得很少了)，感觉我的工作它都处理得很好，它没有而我需要的功能我就自己写些脚步来处理，惟一的遗憾是缺个像Office这样好用的软件。无论如何，初学者或者喜欢玩操作系统的人不妨试试20.04。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/05/3TbKmD.png&quot; alt=&quot;Focal Fossa&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="操作系统" scheme="http://www.shieber.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="OS" scheme="http://www.shieber.cn/tags/OS/"/>
     
   </entry>
   
