@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>云原生技术栈</title>
+    <url>/title/83723c7e/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p>
+<a id="more"></a>
+
+<p>最近折腾云原生技术，然而学了半天，感觉知识越来越复杂，涉及的技术太多了，本文特此稍做总结。</p>
+<h3 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h3><p>云原生是一种新的构建软件并提供服务的架构或模式，云是和本地相对的。从技术的角度，云原生架构是基于云原生技术的一组架构原则和设计模式的集合，旨在将云应用中的非业务代码部分进行最大化的剥离，从而让云设施接管应用中原有的大量非功能特性(如弹性、韧性、安全、可观测性、灰度等)，使业务不再有非功能性业务中断困扰的同时，具备轻量、敏捷、高度自动化的特点。</p>
+<h3 id="为什么需要云原生"><a href="#为什么需要云原生" class="headerlink" title="为什么需要云原生"></a>为什么需要云原生</h3><p>对于企业的 CIO 或者 IT 主管而言，原来企业内部 IT 建设以“烟筒”模式比较多，每个部门甚至每<br>个应用都相对独立，如何管理与分配资源成了难题。大家都基于最底层 IDC 设施独自向上构建，都需要<br>单独分配硬件资源，这就造成资源被大量占用且难以被共享。但是上云之后，由于云厂商提供了统一的<br>IaaS 能力和云服务，大幅提升了企业 IaaS 层的复用程度，CIO 或者 IT 主管自然而然想到 IaaS 以上层的系统也需要被统一，使资源、产品可被不断复用，从而能够进一步降低企业运营成本。</p>
+<p>所有这些问题都指向一个共同点，那就是云的时代需要新的技术架构，来帮助企业应用能够更好地利<br>用云计算优势，充分释放云计算的技术红利，让业务更敏捷、成本更低的同时又可伸缩性更灵活，而这<br>些正好就是云原生架构专注解决的技术点。</p>
+<h3 id="云原生架构原则"><a href="#云原生架构原则" class="headerlink" title="云原生架构原则"></a>云原生架构原则</h3><p>云原生架构本身作为一种架构，也有若干架构原则作为应用架构的核心架构控制面，通过遵从这些架<br>构原则可以让技术主管和架构师在做技术选择时不会出现大的偏差。</p>
+<ul>
+<li>服务化原则</li>
+<li>弹性原则</li>
+<li>可观测原则</li>
+<li>韧性原则</li>
+<li>自动化原则</li>
+<li>零信任原则</li>
+<li>持续演进原则</li>
+</ul>
+<h3 id="云原生主要技术"><a href="#云原生主要技术" class="headerlink" title="云原生主要技术"></a>云原生主要技术</h3><ul>
+<li>容器</li>
+<li>微服务</li>
+<li>DevOps</li>
+<li>Serverless</li>
+<li>Service Mesh</li>
+<li>开放应用模型</li>
+<li>云原生中间件</li>
+</ul>
+<h3 id="云原生技术栈"><a href="#云原生技术栈" class="headerlink" title="云原生技术栈"></a>云原生技术栈</h3><p>云原生涉及众多技术，这些技术按照作用可分为四层，每层涉及的工具如下(只列出部分代表性工具)。蓝色框中代表CNCF孵化项目，是重点工具。</p>
+<p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p>
+<p>1.基础层（Provisioning）</p>
+<ul>
+<li>自动化和配置 KubeEdge Ansible</li>
+<li>容器注册 HARBOR Dragonfly</li>
+<li>安全管理 TUF falco</li>
+<li>密钥管理 spiffe SPIRE</li>
+</ul>
+<p>2.运行时层（Runtime）  </p>
+<ul>
+<li>云原生存储 ROOK Portworx ceph 盘古</li>
+<li>容器运行时 Containerd rkt cri-o</li>
+<li>云网络 CNI</li>
+</ul>
+<p>3.编排和管理层（Orchestration &amp; Management）  </p>
+<ul>
+<li>编排和调度 K8S K3S Mesos Swarm</li>
+<li>服务发现 CoreDNS etcd Consul</li>
+<li>远程调用 gRPC Thrift</li>
+<li>服务代理 Envoy CONTOUR MSON</li>
+<li>API网关 Kong</li>
+<li>服务网格 Linkerd Istio </li>
+</ul>
+<p>4.应用程序定义和开发层（Application Definition &amp; Development）  </p>
+<ul>
+<li>数据库 TiKV/TiDB Vitess Redis MySQL MongoDB Neo4j</li>
+<li>流和消息传递 NATS Cloudevents Flink Spark Kafka</li>
+<li>应用定义和镜像构建 Helm </li>
+<li>持续集成和持续交付 Orgo Jenkins Gitlab Github</li>
+</ul>
+<p>除了四层技术栈，还有些跨四层运行的工具</p>
+<p>1.平台类  </p>
+<ul>
+<li>Kubernetes发行版 谷歌K8S Azure K8S  AWS K8S Rancher </li>
+<li>Kubernetes托管平台 谷歌云 AWS Azure 阿里云 阿里云 腾讯云 </li>
+<li>Kubernetes安装程序 Minikube Rancher</li>
+<li>PaaS/容器服务 heroku </li>
+</ul>
+<p>2.可观察性与分析  </p>
+<ul>
+<li>监控 Prometheus cortex</li>
+<li>日志 Elasticsearch Logstash Kibana</li>
+<li>跟踪 JAEGER </li>
+<li>混沌 Gremlin Chaos mesh</li>
+</ul>
+<h3 id="云原生技术栈中的中国产品"><a href="#云原生技术栈中的中国产品" class="headerlink" title="云原生技术栈中的中国产品"></a>云原生技术栈中的中国产品</h3><ul>
+<li>PingCAP 贡献给CNCF的有TiKV/TiDB， Chaos mesh</li>
+<li>阿里自研了盘古，MSON，Dubbo-go</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>技术栈涉及很多工具，像Kubernetes，Elasticsearch等都是重型工具，学习难，但光是使用它们就能干不少事。这些工具，要想都精通不太可能，基本学习使用就只用挑核心产品如Kubernetes，Docker，Etcd，Prometheus，Elasticsearch等学习，把流程搞熟悉。</p>
+<p>工作流程能跑通后接着就是再深入某个技术点，比如  </p>
+<ul>
+<li>对容器编排有需求就研究Kubernetes，Mesos，Swarm </li>
+<li>对分布式事务有需求就研究MySQL，TiDB/TiKV数据库</li>
+<li>对实时搜索有需求就研究Elasticsearch涉及的ELK技术</li>
+<li>对微服务有需求就研究Istio，Dubbo-go等</li>
+<li>对容器有需求就研究Containerd，RunC，Docker等</li>
+<li>对实时大数据处理有需求就研究Spark，Flink，MapReduce等</li>
+</ul>
+<p>这些技术都很复杂，而且这些技术还在随着时代发展而不断变化，不知未来以Kubernetes为代表的云原生技术又会变成什么样？精通某一个领域我认为都非常不容易，但技术人，再复杂也得学呀。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Unix时间戳</title>
     <url>/title/f7591bd4/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/09/13/w0Hp2n.png" alt="unixtimestamp"></p>
