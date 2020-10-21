@@ -1,6 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Go的各种数据结构底层表示</title>
+    <url>/title/e985015c/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/10/21/BCAWVS.png" alt="go-datastructure"></p>
+<a id="more"></a>
+
+<p>go语言内置数据类型包含数值，字符串和引用类型，这些不同类型的数据底层结构是不一样的。面试时问到部分的底层结构，下面对所有内容作一个总结。</p>
+<h3 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h3><p>整数型</p>
+<pre><code>按照数值范围，是否有负数和特殊用途，存在八种类型。
+类型     数值范围
+int8    [-128-127]
+int16   [-32768-32767]
+int32   [-2147483648-2147483647]
+int64   [-9223372036854775808-9223372036854775807]
+uint8   [0-255]
+uint16  [0-65535]
+uint32  [0-4294967295]
+uint64  [0-18446744073709551615]
+int     依机器为int32/int64位
+uint    依机器为uint32/uint64位
+byte    字节，值范围uint8
+rune    码点，值范围int32
+uintptr 保存指针的数值，值范围uint
+
+整数直接存储在存储器中，有符号数包含符号位s和尾数部分m。
+如32位十进制有符号数d = -11
+s = 1
+m = 0000000000000000000000000001011
+1 0000000000000000000000000001011
+s   m 两部分组合得到d
+d = 10000000000000000000000000001011 (32位计算机存储的-11)
+
+若是64位十进制有符号数d = -11
+d = 1000000000000000000000000000000000000000000000000000000000001011 (64位计算机存储的-11)</code></pre><p>浮点数</p>
+<pre><code>按照数值范围分为如下两种类型。
+float32
+float64
+
+浮点数涉及小数，必须将小数表示为二进制。浮点数底层结构包含符号位s，阶码e，尾数m。
+浮点数f表示规则如下
+1.首位s为符号位，s=0时，f为正数，s=1时，f为负数。
+2.接着8/11位为阶码，阶码为f二进制表示科学计数法的指数加127/1023的二进制数。
+3.最后23/52位为尾数，就是二进制表示的小数部分。
+其中/两侧的数分别对应32位和64位。
+
+如32位的十进制数f = 5.0 = 0b101.0 = 0b1.01x2^2
+s = 0
+e = 2+127=10000001 
+m = 01 
+0 10000001 01000000000000000000000 
+s   e            m 三部分组合得到f
+f = 01000000101000000000000000000000 (32位计算机存储的5.0)
+
+同理64位的十进制数f = 5.0 = 0b101.0 = 0b1.01x2^2
+s = 0
+e = 2+1023=10000000001
+m = 01 
+0 10000000001 0100000000000000000000000000000000000000000000000000 
+s   e            m
+f = 0100000000010100000000000000000000000000000000000000000000000000 (64位计算机存储的5.0)</code></pre><p>复数</p>
+<pre><code>按照数值范围分为如下两种类型。
+complex64
+complex128
+复数存在实部和虚部，而且都为浮点数，所以底层为两个浮点数的组合，输出时虚部会添加上i</code></pre><h3 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h3><p>字符串底层结构</p>
+<pre><code>type string struct { 
+    str unsafe.Pointer //指针
+    len int            //长度
+}</code></pre><h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>数组底层结构   </p>
+<pre><code>type array struct { 
+    array unsafe.Pointer //指针 
+    len int              //长度
+}</code></pre><p>切片底层结构   </p>
+<pre><code>type slice struct { 
+    array unsafe.Pointer //指针
+    len int              //长度
+    cap int              //容量(切片基于数组)
+ }</code></pre><p>映射底层结构   </p>
+<pre><code>type hmap struct {
+    count     int   
+    flags     uint8 
+    B         uint8          //平衡因子
+    noverflow uint16 
+    hash0     uint32 
+    buckets   unsafe.Pointer //桶
+    bucket    unsafe.Pointer //旧桶
+    nevacuate uintptr
+    extra     *mapextra 
+}</code></pre><p>安全映射底层结构 </p>
+<pre><code>type Map struct {
+    mu Mutex   //锁(并发安全)
+    dirty map[interface{}]*entry
+    misses int
+}</code></pre><p>通道底层结构 </p>
+<pre><code>type hchan struct {
+    qcount   uint           // 队列中元素个数
+    dataqsiz uint           // 队列中元素大小
+    buf      unsafe.Pointer // 指向缓冲区的指针
+    elemsize uint16
+    closed   uint32
+    elemtype *_type         // 元素类型
+    sendx    uint           // 发送下标
+    recvx    uint           // 接收下标
+    sendq    waitq          // 发送队列
+    recvq    waitq          // 接收队列
+    lock     mutex          // 锁(并发安全)
+}</code></pre><p>无方法的接口底层结构</p>
+<pre><code>type eface struct {
+    _type *_type          //类型指针
+    data unsafe.Pointer   //数据指针
+}</code></pre><p>有方法的接口底层结构</p>
+<pre><code>type ifcae struct {
+    tab *itab      
+    data unsafe.Pointer
+}
+
+type itab struct {
+    inter *interfacetype
+    _type *_type
+    hash  uint32       // 类型转换时快速判断类型是否相等
+    _     [4]byte
+    fun   [1]uintptr   // 动态数组，存储函数指针
+}
+
+type _type struct { // go类型运行时表示，所有类新基础
+    size       uintptr // 内存占用
+    ptrdata    uintptr
+    hash       uint32  // 判断类型是否相等
+    tflag      tflag
+    align      uint8
+    fieldAlign uint8
+    kind       uint8
+    equal      func(unsafe.Pointer, unsafe.Pointer) bool
+    gcdata     *byte
+    str        nameOff
+    ptrToThis  typeOff
+}</code></pre>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Go</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>云原生技术栈</title>
     <url>/title/83723c7e/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p>
