@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-11-06T12:27:37.816Z</updated>
+  <updated>2020-11-06T13:52:36.177Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C/Python/Go/Rust/Dart历史</title>
+    <link href="http://www.shieber.cn/title/9b69707/"/>
+    <id>http://www.shieber.cn/title/9b69707/</id>
+    <published>2020-11-06T13:49:52.000Z</published>
+    <updated>2020-11-06T13:52:36.177Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/06/BhgyM8.png" alt="go-v-rust"></p><a id="more"></a><p>本文为五种语言对比学习的第二篇，主要讲历史。</p><h1 id="C语言历史"><a href="#C语言历史" class="headerlink" title="C语言历史"></a>C语言历史</h1><p><img src="https://s1.ax1x.com/2020/11/06/BhcSt1.png" alt="c"></p><p>C语言是一种通用的高级语言，最初是由丹尼斯·里奇在贝尔实验室为开发UNIX操作系统而设计的。C语言最开始是于1972年在DEC PDP-11计算机上被首次实现。C语言是以B语言为基础的，B语言大概是在1970年被引进的。在1978年，布莱恩·柯尼汉（Brian Kernighan）和丹尼斯·里奇（Dennis Ritchie）制作了C的第一个公开可用的描述，现在被称为K&amp;R标准。</p><p>UNIX操作系统，C编译器，和几乎所有的UNIX应用程序都是用C语言编写的。由于各种原因，C 语言现在已经成为一种广泛使用的专业语言。C语言标准是于1988年由美国国家标准协会（ANSI，全称 American National Standard Institute）制定的。</p><p>C优点：</p><ul><li>易于学习</li><li>结构化语言</li><li>产生高效率程序</li><li>处理底层的活动</li><li>在多种计算机平台上编译</li></ul><p>C使用领域：</p><ul><li>汇编器</li><li>编译器</li><li>解释器</li><li>数据库</li><li>操作系统</li><li>文本编辑器</li><li>网络驱动器</li></ul><h1 id="Python语言历史"><a href="#Python语言历史" class="headerlink" title="Python语言历史"></a>Python语言历史</h1><p><img src="https://s1.ax1x.com/2020/11/06/Bh6UyD.png" alt="python"></p><p>Python 是一个高层次的结合了解释性、互动性和面向对象的脚本语言。Python的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色的语法结构。</p><p>Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计出来的。</p><p>Python 本身也是由诸多其他语言发展而来的,这包括 ABC、Modula-3、C、C++、Algol-68、SmallTalk、Unix shell 和其他的脚本语言等等。</p><p>Python 2.0 于 2000 年 10 月 16 日发布，增加了实现完整的垃圾回收，并且支持 Unicode。Python 3.0 于 2008 年 12 月 3 日发布，此版不完全兼容之前的 Python 源代码。不过，很多新特性后来也被移植到旧的Python 2.6/2.7版本。</p><p>Python优点：</p><ul><li>易阅读：Python代码定义的更清晰</li><li>易学习：Python有较少的关键字，结构简单</li><li>易维护：Python的成功在于它的源代码是相当容易维护的</li><li>易可扩展：如果你需要一段运行很快的关键代码，或者是想要编写一些不愿开放的算法，你可以使用C或C++完成那部分程序，然后从你的Python程序中调用。</li><li>广泛的标准库：Python的最大的优势之一是丰富的库，跨平台，在UNIX，Windows和Mac兼容很好</li></ul><p>Python使用领域：</p><ul><li>Web开发</li><li>游戏开发</li><li>网络爬虫</li><li>科学计算</li><li>人工智能</li><li>自动化运维</li></ul><h1 id="Go语言历史"><a href="#Go语言历史" class="headerlink" title="Go语言历史"></a>Go语言历史</h1><p><img src="https://s1.ax1x.com/2020/11/06/Bh6cSf.png" alt="go"></p><p>2007年9月，Rob Pike在Google分布式编译平台上进行C++编译，在漫长的等待过程中，他和Robert Griesemer探讨了程序设计语言的一些关键性问题，他们认为，简化编程语言相比于在臃肿的语言上不断增加新特性，会是更大的进步。随后他们在编译结束之前说服了身边的Ken Thompson，觉得有必要为此做一些事情。几天后，他们发起了一个叫Golang的项目，将它作为自由时间的实验项目。</p><p>2008年5月 Google发现了GO语言的巨大潜力，得到了Google的全力支持，这些人开始全职投入GO语言的设计和开发。</p><p>2009年11月 Go语言第一个版本发布。2012年3月 第一个正式版本Go1.0发布。</p><p>2015年8月 Go1.5发布，这个版本被认为是历史性的。完全移除C语言部分，使用Go编译Go，少量代码使用汇编实现。</p><p>当前(2020)，Go语言成了云计算核心语言，网络时代的C语言。</p><p>Go优点：</p><ul><li>学习简单</li><li>编译效率高</li><li>内存占用少</li><li>包管理和工程管理(mod)使用方便</li><li>天生自带并发，容易实现大并发程序</li></ul><p>Go使用领域：</p><ul><li>数据库</li><li>云平台</li><li>网络编程</li><li>消息中间件</li><li>分布式系统</li></ul><h1 id="Rust语言历史"><a href="#Rust语言历史" class="headerlink" title="Rust语言历史"></a>Rust语言历史</h1><p><img src="https://s1.ax1x.com/2020/11/06/BhcV7d.png" alt="rust"></p><p>Rust 语言是一种高效、可靠的通用高级语言。其高效不仅限于开发效率，它的执行效率也是令人称赞的，是一种少有的兼顾开发效率和执行效率的语言。</p><p>Rust最早是Mozilla雇员Graydon Hoare的一个个人项目，从2009年开始，得到了Mozilla研究院的支助，2010年项目对外公布。2010 ～2011年间实现的自举。从此以后，Rust经历了巨大的设计变化和反复（历程极其艰辛），终于在2015 年5月15日发布了1.0版。在这个研发过程中，Rust建立了一个强大活跃的社区，形成了一整套完善稳定的项目贡献机制。</p><p>Rust能得到Mozilla研究院的支持，是因为Mozilla在开发和维护Firefox的Gecko引擎的时候，对于这样一个由C++写的维护了20多年的，累计上千万行的代码库，已经不胜厌烦。由于历史包袱及各种漏洞、性能瓶颈，Firefox已经远远落后竞争对手Google Chrome了。Mozilla亟需一种能够安全编程的语言来重新让 Firefox能跟上并超越时代。于是Rust项目就被资助并坚持孵化，直到发布1.0。</p><p>影响了Rust的流行的编程语言包括C, C++, C#, Erlang, Haskell, OCaml, Ruby, Scheme 和 Swift 等。Rust也影响了C#7, Elm, Idris, Swift。</p><p>Rust优点：</p><ul><li>安全</li><li>并发</li><li>宏强大</li><li>高性能</li><li>工具链完整</li></ul><p>Rust使用领域：</p><ul><li>命令行</li><li>数据库</li><li>Web应用</li><li>操作系统</li><li>网络服务器</li><li>嵌入式设备</li></ul><h1 id="Dart语言历史"><a href="#Dart语言历史" class="headerlink" title="Dart语言历史"></a>Dart语言历史</h1><p><img src="https://s1.ax1x.com/2020/11/06/BhcDuF.png" alt="dart"></p><p>Dart诞生于2011 年，刚开始的定位是取代JavaScript，但却以Flutter的编程语言出道而被人熟知，它是强类型语言却又同时支持类型推导，它支持AOT也支持JIT，由于是第一个使用声明式UI的编程语言，也引发过很过争议。除了用于Flutter，很少有人知道，Dart也可以用于后台开发，Dart甚至也可以和C直接交互。Dart语言设计者Lars Bak就是jvm发明者，从此点可以看出Dart有Java的基因。</p><p>Dart优点：</p><ul><li>异步</li><li>跨平台</li><li>包管理解决依赖</li></ul><p>Dart使用领域：</p><ul><li>命令行</li><li>前后端</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/11/06/BhgyM8.png&quot; alt=&quot;go-v-rust&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
+    
+      <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
+    
+      <category term="Rust" scheme="http://www.shieber.cn/tags/Rust/"/>
+    
+      <category term="Dart" scheme="http://www.shieber.cn/tags/Dart/"/>
+    
+  </entry>
   
   <entry>
     <title>c/python/go/rust/dart语言关键字总结</title>
@@ -439,28 +469,6 @@
     
     
       <category term="information" scheme="http://www.shieber.cn/tags/information/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构及各语言中的实现</title>
-    <link href="http://www.shieber.cn/title/fe068447/"/>
-    <id>http://www.shieber.cn/title/fe068447/</id>
-    <published>2020-05-31T12:53:39.000Z</published>
-    <updated>2020-06-29T01:03:03.902Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/05/31/t3QBYF.png" alt="data structure"></p><a id="more"></a><p><strong>数据结构各种各样，其应用领域也不尽相同，现做部分整理。</strong></p><h1 id="一-数据结构"><a href="#一-数据结构" class="headerlink" title="一. 数据结构"></a>一. 数据结构</h1><table><thead><tr><th align="left">类型</th><th align="left">应用领域</th></tr></thead><tbody><tr><td align="left">数组</td><td align="left">同种数据存放，寻址方便</td></tr><tr><td align="left">链表</td><td align="left">用在文件系统，内存管理，数据库冲突解决，set集合，git记录</td></tr><tr><td align="left">跳表</td><td align="left">由链表通过索引构建，有序，用在替代平衡树(AVL Tree)，如redis就有使用，复杂度O(logn)</td></tr><tr><td align="left">栈</td><td align="left">用在递归，逆序输出，网页网址保存，计算表达式，运算符优先级，括号检查，数制转换，函数调用</td></tr><tr><td align="left">队列</td><td align="left">用在操作系统任务安排，模拟派对，一切按序安排的任务</td></tr><tr><td align="left">散列</td><td align="left">用在MD5，SHA1等加密算法，数据校验，数据分片(分布式)，负载均衡，散列表类似数组结合链表</td></tr><tr><td align="left">树</td><td align="left">树是链表的扩展，用在数据库，文件系统，搜索引擎，编译器。二/三/四/八叉树，线段树，字典树，红黑树，B+树，Trie树</td></tr><tr><td align="left">堆</td><td align="left">等效于完全二叉树，用在操作系统分配内存，优先队列，海量数据查找，排序</td></tr><tr><td align="left">图</td><td align="left">用在知识图谱，图数据库，任务安排，最短路径，最小生成树，网络处理，计算生物学</td></tr></tbody></table><h1 id="二-各语言的数据类型"><a href="#二-各语言的数据类型" class="headerlink" title="二. 各语言的数据类型"></a>二. 各语言的数据类型</h1><h2 id="C-C-语言"><a href="#C-C-语言" class="headerlink" title="C/C++语言"></a>C/C++语言</h2><p><strong>基本类型</strong>:<br> 1.字符类型 char<br> 2.数值类型 short int long float double<br> 3.布尔类型 bool (C++独有)  </p><p><strong>构造类型</strong>:<br> 1.数组类型 array<br> 2.结构体型 struct<br> 3.共用体型 union<br> 4.枚举体型 enum  </p><p><strong>指针类型</strong>:<br> 1.pointer </p><p><strong>空类型</strong>:<br> 1.void</p><h2 id="Rust语言"><a href="#Rust语言" class="headerlink" title="Rust语言"></a>Rust语言</h2><p><strong>标量类型</strong>:<br> 1.数值类型 u|i(8/16/32/64/128/size)  f32(64)<br> 2.布尔类型 true false<br> 3.字符类型 char  </p><p><strong>复合类型</strong>:<br> 1.数组类型 tup<br> 2.元组类型 array </p><h2 id="Java语言"><a href="#Java语言" class="headerlink" title="Java语言"></a>Java语言</h2><p><strong>基本类型</strong>:<br> 1.字符类型 char<br> 2.布尔类型 boolean<br> 3.数值类型 byte short int long float double  </p><p><strong>引用类型</strong>:<br> 1.类类型   class<br> 2.接口类型 interface<br> 3.数组类型 array  </p><h2 id="Go语言"><a href="#Go语言" class="headerlink" title="Go语言"></a>Go语言</h2><p><strong>基本类型</strong>:<br> 1.字符及串 rune byte string<br> 2.布尔类型 true false<br> 3.数值类型 (u)int(8,16,32,64) float(32,64) complex  </p><p><strong>派生类型</strong>：<br>    1.指针类型 pt := &amp;v (nil)<br>    2.数组类型 nu := [4]int{0,1,2,3}<br>    3.切片类型 sl := []int{0,1,2,3,}<br>    4.映射类型 var m = make(map[string]string)<br>    4.结构类型 type Employee struct {}<br>    5.管道类型 ch := make(chan int, 2)<br>    6.接口类型 func (p *Ptr) getName() string{}<br>    8.函数类型 func sayHello(name strin){}  </p><h2 id="Python语言"><a href="#Python语言" class="headerlink" title="Python语言"></a>Python语言</h2><p><strong>不可变类型</strong>：<br> 1.数值类型 number<br> 2.字符串型 string<br> 3.元组类型 tuple   </p><p><strong>可变类型</strong>：<br> 1.列表类型 list<br> 2.字典类型 dict<br> 3.集合类型 set   </p><h2 id="JavaScript语言"><a href="#JavaScript语言" class="headerlink" title="JavaScript语言"></a>JavaScript语言</h2><p><strong>基本类型</strong>:<br>    1.对空类型 Null<br>    2.字符串型 String<br>    3.数值类型 Number<br>    4.大整数型 BigInt<br>    5.符号类型 Symbol<br>    6.布尔类型 boolean<br>    7.未定义型 Undefined  </p><p><strong>对象类型</strong>:<br>    1.对象类型 Object<br>    2.数组类型 Array<br>    3.函数类型 Function  </p><p><strong>网络数据传输</strong>:<br> 1.JSON</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/05/31/t3QBYF.png&quot; alt=&quot;data structure&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="数据结构" scheme="http://www.shieber.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="DataStructure" scheme="http://www.shieber.cn/tags/DataStructure/"/>
     
   </entry>
   
