@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-11-06T13:52:52.877Z</updated>
+  <updated>2020-11-06T16:12:00.620Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C/Python/Go/Rust/Dart程序结构</title>
+    <link href="http://www.shieber.cn/title/e0879928/"/>
+    <id>http://www.shieber.cn/title/e0879928/</id>
+    <published>2020-11-06T16:11:02.000Z</published>
+    <updated>2020-11-06T16:12:00.620Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/BhXAu4.png" alt="cpygorsdart"></p><a id="more"></a><p>本文为五种语言对比学习的第三篇：程序结构。</p><h1 id="C程序结构"><a href="#C程序结构" class="headerlink" title="C程序结构"></a>C程序结构</h1><p>C 程序主要包括以下部分：</p><ul><li>预处理(#)</li><li>变量</li><li>语句/表达式</li><li>函数</li><li>标签</li><li>注释</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言程序hlwd.c</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, World!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shieber@Kew:c 🐁  gcc hlwd.c -o hlwd</span><br><span class="line">shieber@Kew:c 🐁  ./hlwd                 #C程序执行方法</span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><h1 id="Python程序结构"><a href="#Python程序结构" class="headerlink" title="Python程序结构"></a>Python程序结构</h1><p>Python 程序主要包括以下部分：</p><ul><li>包(import)</li><li>编码(utf-8)</li><li>变量</li><li>语句/表达式</li><li>函数</li><li>类</li><li>注释</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python语言程序hlwd.py</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hw</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello, World!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    hw()</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shieber@Kew:python 🐁  python3 hlwd.py     <span class="comment">#Python程序执行方法</span></span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><h1 id="Go程序结构"><a href="#Go程序结构" class="headerlink" title="Go程序结构"></a>Go程序结构</h1><p>Go 程序主要包括以下部分：</p><ul><li>包(import)</li><li>变量</li><li>语句/表达式</li><li>函数</li><li>接口</li><li>标签</li><li>注释</li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Go语言程序hlwd.go</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">"Hello, World!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shieber@Kew:<span class="keyword">go</span> 🐁  <span class="keyword">go</span> run hlwd.<span class="keyword">go</span>         #Go程序执行方法<span class="number">1</span></span><br><span class="line">Hello, World!</span><br><span class="line">shieber@Kew:<span class="keyword">go</span> 🐁  <span class="keyword">go</span> build hlwd.py -o hlwd</span><br><span class="line">shieber@Kew:<span class="keyword">go</span> 🐁  ./hlwd                 #Go程序执行方法<span class="number">2</span></span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><h1 id="Rust程序结构"><a href="#Rust程序结构" class="headerlink" title="Rust程序结构"></a>Rust程序结构</h1><p>Rust 程序主要包括以下部分：</p><ul><li>箱(crate)/包(package)</li><li>变量</li><li>语句/表达式</li><li>函数</li><li>特性</li><li>模块(mod)</li><li>标签</li><li>注释</li></ul><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rust语言程序hlwd.rs</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, World!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">shieber@Kew:rust 🐁  rustc hlwd.rs    </span><br><span class="line">shieber@Kew:rust 🐁  ./hlwd            #Rust程序执行方法<span class="number">1</span></span><br><span class="line">Hello, World!</span><br><span class="line">shieber@Kew:rust 🐁  cargo run         #Rust程序执行方法<span class="number">2</span></span><br><span class="line">Hello, World!</span><br><span class="line">shieber@Kew:rust 🐁  cargo build       </span><br><span class="line">shieber@Kew:rust 🐁  cargo run         #Rust程序执行方法<span class="number">3</span></span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><h1 id="Dart程序结构"><a href="#Dart程序结构" class="headerlink" title="Dart程序结构"></a>Dart程序结构</h1><p>Dart 程序主要包括以下部分：</p><ul><li>库(import)和包(package)</li><li>变量</li><li>语句/表达式</li><li>函数</li><li>类</li><li>接口</li><li>集合/泛型</li><li>注释</li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Dart语言程序hlwd.dart</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Hello, World!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shieber@Kew:dart 🐁  dart hlwd.dart         <span class="comment">#Dart程序执行方法1</span></span><br><span class="line">Hello, World!</span><br><span class="line">shieber@Kew:dart 🐁  dart2native hlwd.dart -o hlwd</span><br><span class="line">shieber@Kew:dart 🐁  ./hlwd                 <span class="comment">#Dart程序执行方法2</span></span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure><p>通过对比，发现五种语言程序结构大体是差不多的。这五种语言同时也有许多不同：</p><ul><li>Go和Python语言结尾不用分号</li><li>Dart语言和Python一样，可以看成脚本型语言</li><li>Dart语言和C/Go/Rust一样，又能看成编译型语言</li><li>C必须编译执行，Python直接执行，Go可即时和编译执行</li><li>Rust可编译也可用Cargo执行，Dart即能当脚本执行又能编译后执行</li><li>Python用#作为注释符号，其余四种使用的注释都是//或/**/</li><li>Python中并不需要一个叫main的主函数，而其他四种语言均需要main函数。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/11/07/BhXAu4.png&quot; alt=&quot;cpygorsdart&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
+    
+      <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
+    
+      <category term="Rust" scheme="http://www.shieber.cn/tags/Rust/"/>
+    
+      <category term="Dart" scheme="http://www.shieber.cn/tags/Dart/"/>
+    
+  </entry>
   
   <entry>
     <title>C/Python/Go/Rust/Dart历史</title>
@@ -34,9 +64,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -64,9 +94,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -447,28 +477,6 @@
     
     
       <category term="OS" scheme="http://www.shieber.cn/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用RSS快速干净地获取各领域信息</title>
-    <link href="http://www.shieber.cn/title/9ade8626/"/>
-    <id>http://www.shieber.cn/title/9ade8626/</id>
-    <published>2020-06-04T14:22:55.000Z</published>
-    <updated>2020-06-05T07:04:57.896Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/06/04/tBLh11.jpg" alt="rsslogo"></p><a id="more"></a><p>信息时代，信息更新快，碎片化。大部分人都通过各类新闻软件获取信息，比如头条，腾讯新闻，微信公众号等等。然而这些信息是别人特意挑选，甚至是算法推送的。有没有可能自己选择些新闻信息聚合在一个软件里来看呢？当然有，那就是<a href="https://baike.baidu.com/item/rss/24470" target="_blank" rel="noopener">RSS简易信息聚合</a>，可以将其理解成各信息发布渠道提供的另一种信息访问方式。</p><p>比如一个网站，除了可以在浏览器中输入<a href="http://xxx" target="_blank" rel="noopener">http://xxx</a> 登录查看点击网页查看，还可用RSS获取同样的内容，而且可将各网站的信息聚合在一个软件。RSS的优点，多个消息渠道聚合在一个APP里节约空间，可自动推送，不会被算法分析，没有广告，隐私程度高，不想看了可随时取消订阅。</p><p>有很多优秀的RSS软件，在此推荐几个，可能需要翻墙到Google play才能获得。  </p><table><thead><tr><th align="left">软件名</th><th align="left">支持平台</th><th align="left">地址</th></tr></thead><tbody><tr><td align="left">RSS reader</td><td align="left">Android</td><td align="left"><a href="https://play.google.com" target="_blank" rel="noopener">https://play.google.com</a></td></tr><tr><td align="left">Winds</td><td align="left">Win,Mac,Linux</td><td align="left"><a href="https://getstream.io/winds" target="_blank" rel="noopener">https://getstream.io/winds</a></td></tr><tr><td align="left">订阅帝</td><td align="left">Android</td><td align="left"><a href="https://www.dingyuedi.com" target="_blank" rel="noopener">https://www.dingyuedi.com</a></td></tr></tbody></table><p>如下是Google play上的RSS软件，太多了，都很不错，各个特色不一样，有的收费。</p><p><img src="https://s1.ax1x.com/2020/06/05/tDNHl8.png" alt="rss2"></p><p><img src="https://s1.ax1x.com/2020/06/05/tDNxkn.png" alt="rss3"></p><p>接下来的一个问题是，我怎么知道某新闻是否提供RSS信息发布渠道呢？</p><p>这个有多种解决方法。</p><p>第一：网站提供RSS发布渠道，那么通常在顶部菜单、右侧菜单、底部菜单等地方会有RSS图标，鼠标放RSS图标上面或者点击进去可以看到对应的RSS地址，比如本网站订阅地址<a href="https://www.shieber.cn/atom.xml，">https://www.shieber.cn/atom.xml，</a> 其他网站可能是<a href="https://xxx.xxx.xx/feed，https://xxx.xxx.xx/rss。" target="_blank" rel="noopener">https://xxx.xxx.xx/feed，https://xxx.xxx.xx/rss。</a> 总之结尾是 atom.xml、feed、rss等，可多次尝试。</p><p>下图左侧橙色RSS图标很显眼，鼠标放上面，最下面就是订阅地址，添加到RSS软件里，这些博客就可以看了。</p><p><img src="https://s1.ax1x.com/2020/06/05/tDNgyD.png" alt="rss1"></p><p>第二：网站不提供RSS发布渠道，此时可以利用工具自己制作该网站的RSS源并订阅。制作工具及使用方法可以搜索一下，比如<a href="http://createfeed.fivefilters.org" target="_blank" rel="noopener">Feed Creatro</a>和<a href="http://www.feed43.com" target="_blank" rel="noopener">feed43</a>，具体操作可以看<a href="https://zhuanlan.zhihu.com/p/64457116" target="_blank" rel="noopener">如何用RSS订阅？</a>。</p><p>第三：利用别人总结好的源，直接订阅，比如<a href="https://www.zhihu.com/question/19580096" target="_blank" rel="noopener">你必读的RSS订阅源有哪些？</a>或者一些RSS订阅源汇聚网站如<a href="https://ohmyrss.com" target="_blank" rel="noopener">己思</a>。</p><p>第四：利用插件获取网站的RSS地址，一个值得推荐的插件是<a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSShub</a>，浏览网站时，该插件会显示RSS地址。</p><p>微博，公众号，简书，B站，贴吧，知乎，豆瓣，抖音，网易云音乐，Github都是可以订阅的源。要是都开App，太麻烦，都聚合到一个App，岂不美哉？</p><p>自己挑选的源，内容要宽泛，质量要有保证，这样接受到的讯息才能和其他新闻软件有所差别，听见不同的声音。但凡用RSS的人都会发现类似其他新闻软件里的一片光明没了，民间疾苦冒了出来；对伟光正感性地歌功颂德没了，却更多看到理性的批评和民间疾苦。</p><p>如下为各类订阅内容，当然者是PC端的RSS软件，手机端太小，截屏不好看。</p><p><img src="https://s1.ax1x.com/2020/06/05/tr8GIP.png" alt="dingye"></p><p>下面是操作指南。</p><iframe src="https://player.bilibili.com/player.html?aid=38629650&cid=70525810" width="800" height="530" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/06/04/tBLh11.jpg&quot; alt=&quot;rsslogo&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="通信" scheme="http://www.shieber.cn/categories/%E9%80%9A%E4%BF%A1/"/>
-    
-    
-      <category term="information" scheme="http://www.shieber.cn/tags/information/"/>
     
   </entry>
   
