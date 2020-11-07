@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C/Python/Go/Rust/Dart数据类型</title>
+    <url>/title/6a4fc2a2/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/BhXAu4.png" alt="cpygorsdart"></p>
+<a id="more"></a>
+
+<p>本文为五种语言对比学习的第五篇：数据类型。</p>
+<h1 id="C数据类型"><a href="#C数据类型" class="headerlink" title="C数据类型"></a>C数据类型</h1><p>因为C是底层语言，所以它的数据类型偏底层，和内存联系在一起。</p>
+<p><strong>基本类型</strong></p>
+<ul>
+<li>字符类型 char  </li>
+<li>数值类型 [signed/unsigned] short int long float double </li>
+</ul>
+<p><strong>派生类型</strong>  </p>
+<ul>
+<li>枚举体型 enum  </li>
+<li>结构体型 struct  </li>
+<li>联合体型 union  </li>
+<li>数组类型 array  </li>
+<li>函数类型 function </li>
+</ul>
+<p><strong>指针类型</strong></p>
+<ul>
+<li>指针类型 pointer </li>
+</ul>
+<p><strong>空类型</strong></p>
+<ul>
+<li>空类型 void</li>
+</ul>
+<h1 id="Python数据类型"><a href="#Python数据类型" class="headerlink" title="Python数据类型"></a>Python数据类型</h1><p>Python作为动态语言，数据分可变与否，偏实用。</p>
+<p><strong>不可变类型</strong>    </p>
+<ul>
+<li>布尔类型 bool</li>
+<li>字符串型 string    </li>
+<li>元组类型 tuple   </li>
+<li>数值类型 number [int float complex]  </li>
+</ul>
+<p><strong>可变类型</strong>  </p>
+<ul>
+<li>列表类型 list  </li>
+<li>字典类型 dict  </li>
+<li>集合类型 set   </li>
+</ul>
+<h1 id="Go数据类型"><a href="#Go数据类型" class="headerlink" title="Go数据类型"></a>Go数据类型</h1><p>Go作为网络时代的C，其数据类型中既有偏底层的，又有偏实用的，其中有一些是Go特有的。</p>
+<p><strong>基本类型</strong>  </p>
+<ul>
+<li>布尔类型 bool</li>
+<li>码点类型 rune</li>
+<li>字符及串 byte string  </li>
+<li>数值类型 (u)int(8,16,32,64) float(32,64) complex  </li>
+</ul>
+<p><strong>派生类型</strong>  </p>
+<ul>
+<li>指针类型 pt := &amp;v (nil)  </li>
+<li>数组类型 nu := [4]int{0,1,2,3}   </li>
+<li>切片类型 sl := []int{0,1,2,3,}  </li>
+<li>映射类型 mp := make(map[string]string)  </li>
+<li>结构类型 type Employee struct {}  </li>
+<li>管道类型 ch := make(chan int, 2)  </li>
+<li>接口类型 func (p *Ptr) getName() string{}  </li>
+<li>函数类型 func sayHello(name strin){}  </li>
+</ul>
+<h1 id="Rust数据类型"><a href="#Rust数据类型" class="headerlink" title="Rust数据类型"></a>Rust数据类型</h1><p>Rust面向底层，数据类型和C很像，但又有些数据类型和Go相似。</p>
+<p><strong>标量类型</strong></p>
+<ul>
+<li>布尔类型 bool</li>
+<li>字符类型 char  </li>
+<li>数值类型 u|i(8/16/32/64/128/size)  f32(64)  </li>
+</ul>
+<p><strong>复合类型</strong></p>
+<ul>
+<li>元组类型 tuple</li>
+<li>数组类型 array</li>
+<li>切片类型 slice</li>
+<li>结构体型 struct</li>
+<li>枚举类型 enum</li>
+<li>泛型类型 generics [trait]</li>
+</ul>
+<h1 id="Dart数据类型"><a href="#Dart数据类型" class="headerlink" title="Dart数据类型"></a>Dart数据类型</h1><p>Dart即可看成动态，又可看成静态语言，数据类型丰富。</p>
+<p><strong>基本类型</strong></p>
+<ul>
+<li>布尔类型 bool</li>
+<li>字符串型 String</li>
+<li>码点类型 rune </li>
+<li>符号类型 Symbol</li>
+<li>数值类型 num int double</li>
+</ul>
+<p><strong>集合类型</strong></p>
+<ul>
+<li>列表类型 List</li>
+<li>映射类型 Map</li>
+<li>集合类型 Set</li>
+<li>队列类型 Queue</li>
+<li>枚举类型 enum</li>
+</ul>
+<p><strong>动态类型</strong></p>
+<ul>
+<li>动态类型 dynamic</li>
+</ul>
+<h1 id="类型对比"><a href="#类型对比" class="headerlink" title="类型对比"></a>类型对比</h1><ul>
+<li>Go和Dart共有码点(rune)类型</li>
+<li>C和Rust与Dart共有枚举(enum)类型</li>
+<li>Python和Rust共有元组(tuple)类型</li>
+<li>Python和Dart共有列表(list)，集合(set)和映射(map)类型</li>
+<li>Go独有通道(channel)和接口(interface)类型</li>
+<li>Dart独有符号(Symbol)，队列(queue)，动态(dynamic)类型</li>
+<li>各种语言都或多或少存在指针(*&amp;)，引用的使用</li>
+</ul>
+<p>布尔型，字符型，数值型，数组型几乎是各语言共有的类型，这说明此四类型是基础，重中之重。基于这些类型，各语言构造了不同用途的复杂数据结构。</p>
+<p>学习时，要先从基础类型学，然后学习各语言衍生的复杂结构，最后总结。</p>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>C</tag>
+        <tag>Go</tag>
+        <tag>Rust</tag>
+        <tag>Dart</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/Python/Go/Rust/Dart基础</title>
     <url>/title/2e9fe2ee/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/BhXAu4.png" alt="cpygorsdart"></p>
@@ -101,8 +223,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>Python</tag>
+        <tag>C</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -201,8 +323,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>Python</tag>
+        <tag>C</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -241,8 +363,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>Python</tag>
+        <tag>C</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -361,8 +483,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>C</tag>
         <tag>Python</tag>
+        <tag>C</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
