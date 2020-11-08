@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C/Python/Go/Rust/Dart常量和变量</title>
+    <url>/title/bf474c89/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/08/Bo6QFH.png" alt="cpygorsdart"></p>
+<a id="more"></a>
+
+<p>本文为五种语言对比学习的第七篇：常量和变量。</p>
+<p>编程语言中的量是一种表述和存储模型，它表征了某个对象或事物在内存中的保存和使用方式。这些量即有值又有类型。常量就是值和类型均不能变的量，相反，变量的值可以变，但类型不可变，除非重定义。</p>
+<h1 id="C常量和变量"><a href="#C常量和变量" class="headerlink" title="C常量和变量"></a>C常量和变量</h1><p>C中常量</p>
+<ul>
+<li>define 定义</li>
+<li>const 定义</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 常量定义方式</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> G 9.8   <span class="comment">// 没有;号</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">54</span>;</span><br></pre></td></tr></table></figure>
+
+<p>C中变量</p>
+<ul>
+<li>type variable 定义方式1</li>
+<li>type variable = value 定义方式2</li>
+<li>type variable1, variable2 定义方式3</li>
+<li>type variable1 = value1, variable2 = value2 定义方式4</li>
+<li>extern type variable 定义方式5</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// C中变量类型</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">int</span> <span class="keyword">float</span> <span class="keyword">double</span></span><br><span class="line"><span class="keyword">enum</span> <span class="class"><span class="keyword">struct</span> <span class="title">union</span></span></span><br><span class="line"><span class="class"><span class="title">array</span></span></span><br><span class="line"><span class="class"><span class="title">pointer</span></span></span><br><span class="line"><span class="class"><span class="title">void</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">// <span class="title">C</span>变量定义及初始化</span></span><br><span class="line"><span class="class"><span class="title">int</span> <span class="title">i</span>;</span></span><br><span class="line"><span class="keyword">int</span> i, j, k;</span><br><span class="line"><span class="keyword">int</span> c = <span class="number">3</span>, d = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">char</span> l = <span class="string">"s"</span>;</span><br><span class="line"><span class="keyword">float</span> m = <span class="number">2.0</span>;</span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> T;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> WEEK&#123; MON = <span class="number">1</span>,Tue,Wed,Thu,Fri,Sat,Sun&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">char</span> b;</span><br><span class="line">    <span class="keyword">double</span> c;</span><br><span class="line">&#125;s1;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Books</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">50</span>];</span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">50</span>];</span><br><span class="line">    <span class="keyword">char</span> subject[<span class="number">50</span>];</span><br><span class="line">    <span class="keyword">int</span> book_id;</span><br><span class="line">&#125;k1;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Books</span> <span class="title">t1</span>, <span class="title">t2</span>[20], *<span class="title">t3</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">char</span> b;</span><br><span class="line">    <span class="keyword">double</span> c;</span><br><span class="line">&#125;Simple;</span><br><span class="line">Simple u1, u2[<span class="number">20</span>], *u3;</span><br><span class="line"></span><br><span class="line">unio Data &#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">float</span> f;</span><br><span class="line">    <span class="keyword">char</span> str[<span class="number">20</span>];</span><br><span class="line">&#125;data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">union</span> Data newData; <span class="comment">// 一次最好只使用一个变量</span></span><br><span class="line">newData.i = <span class="number">10</span>;</span><br><span class="line">newData.f = <span class="number">12.5</span>;</span><br><span class="line"><span class="built_in">strcpy</span>(newData.str <span class="string">"C programming"</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python常量和变量"><a href="#Python常量和变量" class="headerlink" title="Python常量和变量"></a>Python常量和变量</h1><p>Python中并没有C中那种命名常量，一切都看使用形式。数字、字符串、布尔值、空值等都是常量。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// 常量定义方式</span><br><span class="line">PI = <span class="number">3.141592653</span></span><br><span class="line">NAME = <span class="string">"Shieber"</span></span><br><span class="line">YES = <span class="literal">True</span></span><br><span class="line">RESULT = <span class="literal">None</span></span><br><span class="line">PERSON = (<span class="string">"Shieber"</span>, <span class="number">24</span>, <span class="number">172</span>)</span><br><span class="line"></span><br><span class="line">// 变量定义方式</span><br><span class="line">age = <span class="number">24</span></span><br><span class="line">name = [<span class="string">"Shieber"</span>,<span class="string">"Kew"</span>,<span class="string">"Kim"</span>]</span><br><span class="line">dics = &#123;<span class="string">"a"</span>:<span class="number">1</span>,<span class="string">"b"</span>:<span class="number">2</span>,<span class="string">"c"</span>:<span class="number">3</span>&#125;</span><br><span class="line">sets = &#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Go常量和变量"><a href="#Go常量和变量" class="headerlink" title="Go常量和变量"></a>Go常量和变量</h1><p>Go中基本变量包括布尔型，数字型，字符串，它的定义和C一样使用const。</p>
+<p>Go中常量</p>
+<ul>
+<li>const 定义</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 常量定义方式</span></span><br><span class="line"><span class="keyword">const</span> i <span class="keyword">int</span> = <span class="number">100</span></span><br><span class="line"><span class="keyword">const</span> y <span class="keyword">bool</span> = <span class="literal">true</span></span><br><span class="line"><span class="keyword">const</span> b <span class="keyword">string</span> = <span class="string">"abc"</span></span><br><span class="line"><span class="keyword">const</span> b = <span class="string">"abc"</span></span><br><span class="line"><span class="keyword">const</span> a, b = <span class="string">"a"</span>, <span class="string">"b"</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    a = <span class="literal">iota</span>      <span class="comment">// 0</span></span><br><span class="line">    b             <span class="comment">// 1</span></span><br><span class="line">    _             <span class="comment">// 2</span></span><br><span class="line">    d             <span class="comment">// 3</span></span><br><span class="line">    e = <span class="number">1</span> &lt;&lt; <span class="literal">iota</span> <span class="comment">// 16</span></span><br><span class="line">    f             <span class="comment">// 32 </span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Go中变量</p>
+<ul>
+<li>var定义</li>
+<li>:= 定义</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 变量定义方式</span></span><br><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line"><span class="keyword">var</span> bar [<span class="number">10</span>]<span class="keyword">float32</span></span><br><span class="line">baz := [...]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>      <span class="comment">//映射</span></span><br><span class="line">m = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>)</span><br><span class="line">n := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">10</span>, <span class="number">30</span>)  <span class="comment">//切片</span></span><br><span class="line">q := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">10</span>)   <span class="comment">//通道</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="keyword">struct</span> person &#123;</span><br><span class="line">    Name: <span class="keyword">string</span></span><br><span class="line">    Gender: <span class="keyword">string</span></span><br><span class="line">    Age: <span class="keyword">int</span></span><br><span class="line">    Address: <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p := person&#123;</span><br><span class="line">    Name: <span class="string">"Shieber"</span>,</span><br><span class="line">    Gender: <span class="string">"Male"</span>,</span><br><span class="line">    Age: <span class="number">24</span>,</span><br><span class="line">    Address: <span class="string">"CD"</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c, d, e <span class="keyword">int</span></span><br><span class="line">c, d, e = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c, d, e  = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span></span><br><span class="line">c, d, e := <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"Shieber"</span></span><br><span class="line"><span class="keyword">var</span> s <span class="keyword">string</span> = <span class="string">"Shieber"</span></span><br><span class="line"></span><br><span class="line">s := <span class="string">"Shieber"</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Rust常量和变量"><a href="#Rust常量和变量" class="headerlink" title="Rust常量和变量"></a>Rust常量和变量</h1><p>Rust中常量定义和C中相似，只是Rust加入了生命周期概念。</p>
+<p>Rust中常量</p>
+<ul>
+<li>const 定义常量，类似C中#define </li>
+<li>static 定义全局变量，可当常量使用</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> AGE:<span class="built_in">i32</span> = <span class="number">24</span>;</span><br><span class="line"><span class="keyword">const</span> NUM:<span class="built_in">f64</span> = <span class="number">3.0</span>;</span><br><span class="line"><span class="keyword">const</span> NUMS:[<span class="built_in">i32</span>:<span class="number">4</span>] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> NAME:<span class="built_in">String</span> = <span class="string">"Shieber"</span></span><br></pre></td></tr></table></figure>
+
+<p>Rust中变量</p>
+<ul>
+<li>let 定义，值不能变，但变量能重定义</li>
+<li>let mut 定义，值能变，变量也能重定义</li>
+<li>static mut 定义，静态变量，但值可变</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 变量定义方式</span></span><br><span class="line"><span class="keyword">let</span> x:<span class="built_in">f64</span> = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">6.28</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut</span> z = <span class="number">70000</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut</span> k: int64 = <span class="number">70000</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">mut</span> NUM:<span class="built_in">i32</span> = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">unsafe</span> &#123;</span><br><span class="line">    NUM += <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Num:&#123;&#125;"</span>,NUM);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Dart常量和变量"><a href="#Dart常量和变量" class="headerlink" title="Dart常量和变量"></a>Dart常量和变量</h1><p>Dart中常量</p>
+<ul>
+<li>const  定义并赋值</li>
+<li>final  定义时可不赋值，但只能赋值一次</li>
+</ul>
+<p>final和const区别：final修饰的是变量，定义时可不赋值，但初始化赋值只能一次，之后就不再变，类似常量。而const一开始修饰的就必须是常量，且必须初始化。final用时才申请内存，const一开始就处理好了，所以速度要快些。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.141592653</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> F = <span class="number">2.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="built_in">int</span> A; <span class="comment">//未初始化</span></span><br><span class="line">A = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> C = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="built_in">String</span> NAME = <span class="string">'Shieber'</span>; <span class="comment">// 可以加上类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> bar = <span class="keyword">const</span>[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> baz = <span class="keyword">const</span>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="built_in">int</span> x; <span class="comment">// 内部变量必须是final，因为类型不定</span></span><br><span class="line">    <span class="keyword">final</span> <span class="built_in">int</span> y;</span><br><span class="line">    <span class="keyword">const</span> Point(<span class="keyword">this</span>.x, <span class="keyword">this</span>.y); <span class="comment">// 返回必须是const</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Dart中变量</p>
+<ul>
+<li>var 定义</li>
+<li>dynamic 定义，类型可变</li>
+<li>type variable  定义</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'Shieber'</span>; <span class="comment">// 自动推导类型</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">dynamic</span> str = <span class="string">'Shieber'</span>;</span><br><span class="line">str = <span class="number">20</span>;            <span class="comment">// dynamic变量的类型可改变</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">String</span> str = <span class="string">'Shieber'</span>;</span><br><span class="line"><span class="built_in">String</span> s = <span class="string">'''</span></span><br><span class="line"><span class="string">Hello</span></span><br><span class="line"><span class="string">Dart</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">bool</span> y = <span class="keyword">true</span>;</span><br><span class="line"><span class="built_in">int</span> str = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">double</span> c = <span class="number">2.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">List</span> l1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> l2 = <span class="keyword">const</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">// const 可构造变量, l2可修改</span></span><br><span class="line"><span class="built_in">List</span> l3 =  <span class="keyword">new</span> <span class="built_in">List</span>();</span><br><span class="line">l3.add(<span class="string">'z'</span>);</span><br><span class="line">l3.add(<span class="string">'k'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Map</span> m1 = &#123;</span><br><span class="line">    <span class="string">'Name'</span>: <span class="string">'Shieber'</span>,</span><br><span class="line">    <span class="string">'Age'</span>: <span class="number">24</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Map</span> m2 = <span class="keyword">const</span>&#123;</span><br><span class="line">    <span class="string">'Name'</span>: <span class="string">'Shieber'</span>,</span><br><span class="line">    <span class="string">'Age'</span>: <span class="number">24</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Map</span> m3 = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">m3[<span class="string">'Name'</span>] = <span class="string">'Shieber'</span>;</span><br><span class="line">m3[<span class="string">'Age'</span>] = <span class="number">24</span>;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Python</tag>
+        <tag>Go</tag>
+        <tag>Rust</tag>
+        <tag>Dart</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/Python/Go/Rust/Dart运算符</title>
     <url>/title/ed051314/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/BIFNv9.png" alt="cpygorsdart"></p>
@@ -62,8 +147,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -184,8 +269,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -292,8 +377,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -392,8 +477,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -432,8 +517,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -552,8 +637,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -9046,8 +9131,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
