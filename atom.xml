@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-11-09T09:14:08.567Z</updated>
+  <updated>2020-11-09T09:39:20.049Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C/Python/Go/Rust/Dart作用域</title>
+    <link href="http://www.shieber.cn/title/6587fc8f/"/>
+    <id>http://www.shieber.cn/title/6587fc8f/</id>
+    <published>2020-11-09T09:38:28.000Z</published>
+    <updated>2020-11-09T09:39:20.049Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/09/BHYJtP.png" alt="cpygorsdart"></p><a id="more"></a><p>本文为五种语言对比学习的第十篇：作用域。</p><p>作用域是程序中定义的变量所存在的区域，超过该区域变量就不能被访问。如果再访问，就可能访问到其他内存区域引起程序崩溃。不同的语言对其变量都设置了作用域。</p><h1 id="C作用域规则"><a href="#C作用域规则" class="headerlink" title="C作用域规则"></a>C作用域规则</h1><p>C语言中存在三种变量  </p><ul><li>在函数或块内部的局部变量，它们只能被该函数或该代码块内部的语句使用。 </li><li>在所有函数外部的全局变量，在整个程序生命周期内有效，任意函数内部能访问。</li><li>在函数中定义的的形式参数，被当作该函数内的局部变量，如与全局变量同名会优先使用参数。</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;      // 数据类型        初始化值</span></span></span><br><span class="line">                        <span class="comment">// int             0</span></span><br><span class="line"><span class="keyword">int</span> g; <span class="comment">//全局           // char            '\0'</span></span><br><span class="line">                        <span class="comment">// float           0</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;            <span class="comment">// double          0</span></span><br><span class="line">                        <span class="comment">// pointer         NULL</span></span><br><span class="line">    <span class="keyword">int</span> a, b, c; <span class="comment">//局部</span></span><br><span class="line">    a = <span class="number">10</span>;</span><br><span class="line">    b = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    g = a + b;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a = %d, b = %d, d = %d\n"</span>, a, b, g);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    c = sum(a, b); <span class="comment">// 参数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"c = %d\n"</span>, c);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> sum(<span class="keyword">int</span> a, <span class="keyword">int</span> b) &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="Python作用域规则"><a href="#Python作用域规则" class="headerlink" title="Python作用域规则"></a>Python作用域规则</h1><p>Python的作用域又叫命名空间(Namespace)。命名空间是从名称到对象的映射，大部分的命名空间都是通过字典来实现的。命名空间提供了在项目中避免名字冲突的一种方法。各个命名空间是独立的，没有任何关系的，所以一个命名空间中不能有重名，但不同的命名空间是可以重名而没有任何影响。</p><p>Python中存在四种作用域</p><ul><li>内置空间，Python内置的函数名，异常等。</li><li>全局空间，模块中定义，包括模块，类，函数，常量/变量。</li><li>嵌套空间，在内层函数中引用外层函数定义的名称，变量，参数。</li><li>局部空间，函数中定义的名称，变量，参数。</li></ul><p>搜索规则是局部-&gt;嵌套-&gt;全局-&gt;内置，使用不同空间的变量要使用global和nonlocal关键字。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">v1 = <span class="number">5</span> <span class="comment">#全局</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_1</span><span class="params">()</span>:</span></span><br><span class="line">    v2 = <span class="number">7</span>   <span class="comment">#局部</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_2</span><span class="params">()</span>:</span></span><br><span class="line">        v3 = <span class="number">9</span>   <span class="comment">#内嵌局部</span></span><br><span class="line"></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_3</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> num</span><br><span class="line"></span><br><span class="line">    num1 = num + <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func_4</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">nonlocal</span> num1</span><br><span class="line">        num1 +=  <span class="number">1</span></span><br><span class="line">        print(num1)</span><br><span class="line"></span><br><span class="line">    func_4()</span><br><span class="line">    print(num, num1)</span><br><span class="line"></span><br><span class="line">    num = <span class="number">123</span></span><br><span class="line">    print(num)</span><br></pre></td></tr></table></figure><h1 id="Go作用域规则"><a href="#Go作用域规则" class="headerlink" title="Go作用域规则"></a>Go作用域规则</h1><p>Go作为类C语言，作用域规则和C一样。</p><p>Go的作用域规则</p><ul><li>函数内定义的变量称为局部变量</li><li>函数外定义的变量称为全局变量</li><li>函数定义中的变量称为形式参数</li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main             <span class="comment">// 数据类型        初始化值    </span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span>             <span class="comment">// int            0</span></span><br><span class="line">                         <span class="comment">// float32        0</span></span><br><span class="line"><span class="keyword">var</span> g <span class="keyword">int</span>                <span class="comment">// pointer        nil</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a, b, c <span class="keyword">int</span> <span class="comment">// 局部</span></span><br><span class="line">    a,b = <span class="number">10</span>, <span class="number">20</span></span><br><span class="line">    c = sum(a, b)   <span class="comment">// 参数</span></span><br><span class="line">    g = c * a;      <span class="comment">// 全局</span></span><br><span class="line"></span><br><span class="line">    fmt.Printf(<span class="string">"a=%d, b=%d, c=%d, g=%d\n"</span>, a,b,c,g)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="Rust作用域规则"><a href="#Rust作用域规则" class="headerlink" title="Rust作用域规则"></a>Rust作用域规则</h1><p>Rust引入了所有权/借用，生命周期等概念，所以它的作用域规则是所有语言中最严格的，Rust的变量只能按照生命周期和所有权机制，在某个代码块中存在，Rust的困难有一部分就在于其作用域规则。引入这些概念主要还是为了应对复杂类型系统中资源管理的问题，解决悬荡引用等安全问题。</p><p>Rust语言中的作用域概念</p><ul><li>所有权/借用</li><li>生命周期，用’加小写字母，如’a</li><li>静态生命周期，表示从程序运行开始到结束都存在，用’static</li></ul><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">longer</span></span>&lt;<span class="symbol">'a</span>&gt;(s1:&amp;<span class="symbol">'a</span> <span class="built_in">str</span>, s2:&amp;<span class="symbol">'a</span> <span class="built_in">str</span>) -&gt; &amp;<span class="symbol">'a</span> <span class="built_in">str</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> s2.len() &gt; s1.len() &#123;</span><br><span class="line">        s2</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        s1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> long_lived = <span class="number">1</span>;             &lt;----------- long_lived  出现</span><br><span class="line">                                    </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> short_lived = <span class="number">2</span>;        &lt;----------- short_lived 出现</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"inner short: &#123;&#125;"</span>, short_lived);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> long_lived = <span class="number">5_f32</span>;     &lt;----------- long_lived  出现(内部)</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"inner long: &#123;&#125;"</span>, long_lived);</span><br><span class="line">    &#125;                               &lt;----------- long_lived 和 short_lived 清除</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> long_lived = <span class="string">'a'</span>;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"outer long: &#123;&#125;"</span>, long_lived);</span><br><span class="line">&#125;                                   &lt;----------- long_lived  清除(外部)</span><br></pre></td></tr></table></figure><h1 id="Dart作用域规则"><a href="#Dart作用域规则" class="headerlink" title="Dart作用域规则"></a>Dart作用域规则</h1><p>Dart是一门真正面向对象的语言，甚至其中的函数也是对象，并且有它的类型Function。这意味着函数可以被赋值给变量或者作为参数传递给其他函数。在函数main之外定义的函数，或是直接在main函数中定义的函数都是全局函数，除此之外，其他函数中定义函数为局部函数。</p><p>Dart作用域概念</p><ul><li>局部变量，函数内可见。</li><li>形式参数，函数内可见。</li><li>全局变量，程序中可见。</li><li>词法闭包，只要调用就可见。</li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span> makeAdder(<span class="built_in">num</span> addBy) &#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">num</span> i) =&gt; addBy + i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">bool</span> topLevel = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">    <span class="keyword">var</span> innerMain = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> myFunction() &#123;</span><br><span class="line">        <span class="keyword">var</span> insideFunc = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">void</span> nestedFunction() &#123;</span><br><span class="line">            <span class="keyword">var</span> insideNestedFunction = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">assert</span>(topLevel);              <span class="comment">// 顶层变量</span></span><br><span class="line">            <span class="keyword">assert</span>(innerMain);             <span class="comment">// 主函数变量</span></span><br><span class="line">            <span class="keyword">assert</span>(insideFunc);            <span class="comment">// 外层变量</span></span><br><span class="line">            <span class="keyword">assert</span>(insideNestedFunction);  <span class="comment">// 局部变量</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> add1 = makeAdder(<span class="number">1</span>); <span class="comment">// 使用闭包</span></span><br><span class="line">    <span class="keyword">var</span> add2 = makeAdder(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">assert</span>(add1(<span class="number">3</span>) == <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">assert</span>(add2(<span class="number">3</span>) == <span class="number">5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/11/09/BHYJtP.png&quot; alt=&quot;cpygorsdart&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
+    
+      <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
+    
+      <category term="Rust" scheme="http://www.shieber.cn/tags/Rust/"/>
+    
+      <category term="Dart" scheme="http://www.shieber.cn/tags/Dart/"/>
+    
+  </entry>
   
   <entry>
     <title>C/Python/Go/Rust/Dart函数</title>
@@ -34,9 +64,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -64,9 +94,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -94,9 +124,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -124,9 +154,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -154,9 +184,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -184,9 +214,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -214,9 +244,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -244,9 +274,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -274,9 +304,9 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
-    
       <category term="Python" scheme="http://www.shieber.cn/tags/Python/"/>
+    
+      <category term="C" scheme="http://www.shieber.cn/tags/C/"/>
     
       <category term="Go" scheme="http://www.shieber.cn/tags/Go/"/>
     
@@ -503,28 +533,6 @@
       <category term="Code" scheme="http://www.shieber.cn/tags/Code/"/>
     
       <category term="scrapy" scheme="http://www.shieber.cn/tags/scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux下软件安装方式</title>
-    <link href="http://www.shieber.cn/title/d63ca381/"/>
-    <id>http://www.shieber.cn/title/d63ca381/</id>
-    <published>2020-07-11T02:33:13.000Z</published>
-    <updated>2020-07-23T08:18:59.841Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s1.ax1x.com/2020/07/11/UQtLvT.png" alt="linux-software"></p><a id="more"></a><p>Windows下安装软件似乎只有一种方式，那就是下载.exe，然后执行安装。然而Linux系统中软件安装方式可谓五花八门，下面总结一番。</p><p>因为Linux系统发行版多，各家有各家的软件安装方式，这种种不同方式可称为专用安装方式。另外，有人开发的软件若是想要支持各大发行版，那么就需要一种通用的软件安装方式。</p><h2 id="A-Linux通用的跨发行版软件包安装方式"><a href="#A-Linux通用的跨发行版软件包安装方式" class="headerlink" title="A.Linux通用的跨发行版软件包安装方式"></a>A.Linux通用的跨发行版软件包安装方式</h2><p>1.snap<br>2.flatpak<br>3.AppImage<br>4.source-code  </p><p>1.snap是ubuntu搞的，但目前已经支持多种发行版的安装，可归类为通用安装方式。snap目前甚至可以安装微信到linux。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install xxx #用snap安装软件</span><br></pre></td></tr></table></figure><p>2.flatpak(前身为xdg-app) 是一种用于构建，分发，安装和运行应用程序的技术。通过在沙箱中隔离应用程序来提高Linux桌面的安全性，允许应用程序安装在任何Linux发行版上。 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo flatpak install xxx #用flatpak安装软件</span><br></pre></td></tr></table></figure><p>3.AppImage是打包好的可执行镜像，赋予执行权限后直接运行就可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x AppImage</span><br><span class="line">./AppImage</span><br></pre></td></tr></table></figure><p>4.source-code，源代码安装，这是最基本的，最通用的安装方式。而源代码发布时，作者可能提供了不同安装选项给用户，有以下三种。  </p><blockquote><p>a. 只有configure文件，则按如下方式安装<br>    ./configure #为了生成makefile<br>    make<br>    make install<br>b. 已有makefile<br>    make<br>    make install<br>c. 只有Imake<br>    xmkmf<br>    make<br>    make install  </p></blockquote><p>说完通用的方式，接着看看专用的方式。</p><h2 id="B-Linux专用的软件包管理器"><a href="#B-Linux专用的软件包管理器" class="headerlink" title="B.Linux专用的软件包管理器"></a>B.Linux专用的软件包管理器</h2><ol><li>.deb</li><li>.rpm</li><li>etc…</li></ol><p>主要是两大类 </p><blockquote><p><strong>a</strong>.以Debian系列的dpkg安装deb包，和apt-get方式<br>sudo dpkg -i xxx.deb<br>sudo apt-get install xxx<br><strong>b</strong>.以Redhat系列的rpm安装rpm包，和yum方式<br>sudo rpm xxx.rpm<br>sudo yum install xxx<br><strong>c</strong>.其他的，比如Arch用pacman -S xxx 安装</p></blockquote><h2 id="rpm包转deb包"><a href="#rpm包转deb包" class="headerlink" title="rpm包转deb包"></a>rpm包转deb包</h2><p>rpm包还可以转换为deb包，以便安装到debian系linux系统。具体方式如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install alien</span><br><span class="line">sudo aline xxx.rpm     #当前目录生成xxx.deb</span><br><span class="line">sudo dpkg -i xxx.deb</span><br></pre></td></tr></table></figure><p>这样，就能将rpm包转换为deb包，然后装到debian系系统，不过有的软件转换后未必能安装。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/11/UQtLvT.png&quot; alt=&quot;linux-software&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="软件" scheme="http://www.shieber.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="software" scheme="http://www.shieber.cn/tags/software/"/>
     
   </entry>
   
