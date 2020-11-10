@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C/Python/Go/Rust/Dart内置函数</title>
+    <url>/title/20d2819d/</url>
+    <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/10/BqzEUx.png" alt="cpygorsdart"></p>
+<a id="more"></a>
+
+<p>本文为五种语言对比学习的第十四篇：内置函数。</p>
+<p>内置函数多是实现的某些通用功能，可以提高程序开发的效率，提升代码的重用性。</p>
+<h1 id="C内置函数"><a href="#C内置函数" class="headerlink" title="C内置函数"></a>C内置函数</h1><p>C的内置函数在stdio.h，time.h，ctype.h，string.h等头文件中定义，使用时需导入对应头文件。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// C各头文件内置函数		</span></span><br><span class="line">&lt;stdio.h&gt;   <span class="built_in">isalpha</span>()</span><br><span class="line"><span class="built_in">printf</span>()    <span class="built_in">isdigit</span>()</span><br><span class="line"><span class="built_in">scanf</span>()     <span class="built_in">toupper</span>()</span><br><span class="line">getchar()   <span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">putchar</span>()   </span><br><span class="line">            &lt;math.h&gt;</span><br><span class="line">&lt;time.h&gt;    <span class="built_in">ceil</span>()</span><br><span class="line">time()      <span class="built_in">floor</span>()</span><br><span class="line">            <span class="built_in">sqrt</span>();</span><br><span class="line">&lt;<span class="built_in">string</span>.h&gt;  <span class="built_in">pow</span>();</span><br><span class="line"><span class="built_in">strcpy</span>()    <span class="built_in">abs</span>();</span><br><span class="line"><span class="built_in">strcmp</span>()    </span><br><span class="line">            &lt;stdlib.h&gt;</span><br><span class="line">&lt;ctype.h&gt;   srand()</span><br><span class="line"><span class="built_in">isupper</span>()   rand()</span><br><span class="line"><span class="built_in">islower</span>()   <span class="built_in">exit</span>()</span><br><span class="line">            system()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python内置函数"><a href="#Python内置函数" class="headerlink" title="Python内置函数"></a>Python内置函数</h1><p>Python内置的函数非常好用，不需要导入包，写代码时直接使用。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Python内置函数		</span></span><br><span class="line">abs()          dict()       help()        min()       setattr()</span><br><span class="line">all()          dir()        hex()         next()      slice()</span><br><span class="line">any()          divmod()     id()          object()    sorted()</span><br><span class="line">ascii()        enumerate()  input()       oct()       staticmethod()</span><br><span class="line">bin()          eval()       int()         open()      str()</span><br><span class="line">bool()         exec()       isinstance()  ord()       sum()</span><br><span class="line">bytearray()    filter()     issubclass()  pow()       super()</span><br><span class="line">bytes()        float()      iter()        print()     tuple()</span><br><span class="line">callable()     format()     len()         property()  type()</span><br><span class="line">chr()          frozenset()  list()        range()     vars()</span><br><span class="line">classmethod()  getattr()    locals()      repr()      zip()</span><br><span class="line">compile()      globals()    map()         reversed()  __import__()</span><br><span class="line">complex()      hasattr()    max()         round()</span><br><span class="line">delattr()      hash()       memoryview()  set()</span><br></pre></td></tr></table></figure>
+
+<h1 id="Go内置函数"><a href="#Go内置函数" class="headerlink" title="Go内置函数"></a>Go内置函数</h1><p>Go虽然继承了C的很多特性，但它的内置函数不是如C那般放在库中，反而如Python般，直接实现在编译器中。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Go内置函数</span></span><br><span class="line">init()     初始化<span class="keyword">package</span></span><br><span class="line"><span class="built_in">append</span>()   追加元素到数组、slice</span><br><span class="line"><span class="built_in">copy</span>()     复制和连接slice</span><br><span class="line"><span class="built_in">close</span>()    关闭channel</span><br><span class="line"><span class="built_in">delete</span>()   从<span class="keyword">map</span>中删除key对应的value</span><br><span class="line"><span class="built_in">new</span>()      用来分配内存，用来分配值类型</span><br><span class="line"><span class="built_in">make</span>()     来分配内存，返回Type本身，只用于slice, <span class="keyword">map</span>, channel</span><br><span class="line"><span class="built_in">len</span>()      求长度</span><br><span class="line"><span class="built_in">cap</span>()      求容量</span><br><span class="line"><span class="built_in">real</span>()     返回<span class="built_in">complex</span>的实部</span><br><span class="line"><span class="built_in">imag</span>()     返回<span class="built_in">complex</span>的虚部</span><br><span class="line"><span class="built_in">panic</span>()    立即崩溃</span><br><span class="line"><span class="built_in">recover</span>()  从崩溃中恢复</span><br></pre></td></tr></table></figure>
+
+<h1 id="Rust内置函数"><a href="#Rust内置函数" class="headerlink" title="Rust内置函数"></a>Rust内置函数</h1><p>Rust中并不存在内置函数，一切都需要自己定义。但是Rust实现了一套高效的宏（函数宏，过程宏），函数宏也可看成内置函数来用。当然也可用macro_rules!自定义宏。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Rust内建函数宏</span></span><br><span class="line"><span class="built_in">println!</span>()</span><br><span class="line"><span class="built_in">panic!</span>()</span><br><span class="line"><span class="built_in">vec!</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// Rust建宏规则</span></span><br><span class="line"><span class="built_in">macro_rules!</span> xxx_macro &#123;</span><br><span class="line">    code_body</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Dart内置函数"><a href="#Dart内置函数" class="headerlink" title="Dart内置函数"></a>Dart内置函数</h1><p>Dart内置的函数多放置在dart:core, dart:io, dart:math, dart:convert库中。其他一些函数是内建的，可以直接使用。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="keyword">assert</span>()</span><br><span class="line"><span class="built_in">List</span>()</span><br><span class="line"><span class="built_in">Map</span>()</span><br><span class="line"><span class="built_in">Set</span>()</span><br><span class="line">Runes()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Python</tag>
+        <tag>Go</tag>
+        <tag>Rust</tag>
+        <tag>dart</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/Python/Go/Rust/Dart异常处理</title>
     <url>/title/d29eef7e/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/10/BqY9Og.png" alt="cpygorsdart"></p>
@@ -512,14 +546,14 @@
       </tags>
   </entry>
   <entry>
-    <title>C/Python/Go/Rust/Dart数据类型</title>
+    <title>C/Python/Go/Rust/Dart数据类型及类型转换</title>
     <url>/title/6a4fc2a2/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/B5B37R.png" alt="cpygorsdart"></p>
 <a id="more"></a>
 
-<p>本文为五种语言对比学习的第五篇：数据类型。</p>
-<h1 id="C数据类型"><a href="#C数据类型" class="headerlink" title="C数据类型"></a>C数据类型</h1><p>因为C是底层语言，所以它的数据类型偏底层，和内存联系在一起。</p>
-<p><strong>基本类型</strong></p>
+<p>本文为五种语言对比学习的第五篇：数据类型及其转换规则。</p>
+<h1 id="C语言数据类型"><a href="#C语言数据类型" class="headerlink" title="C语言数据类型"></a>C语言数据类型</h1><p>因为C是底层语言，所以它的数据类型偏底层，和内存联系在一起。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>基本类型</strong></p>
 <ul>
 <li>字符类型 char  </li>
 <li>数值类型 [signed/unsigned] short int long float double </li>
@@ -540,8 +574,19 @@
 <ul>
 <li>空类型 void</li>
 </ul>
+<h3 id="类型转变"><a href="#类型转变" class="headerlink" title="类型转变"></a>类型转变</h3><p>C语言中的数值数据会因为所处的代码上下文环境而发生类型转变，如降级，提升。</p>
+<p>以下是C语言中数据类型转换的基本规则：</p>
+<ul>
+<li>强制转换格式为 (类型名) (表达式)</li>
+<li>在表达式中，参与运算的量的类型不同时会转换为同一类型</li>
+<li>在表达式中，有符号和无符号的char和short类型将自动转换为int</li>
+<li>在包含两种数据类型的任何运算中，较低级别类型会转为较高级别的数据类型</li>
+<li>赋值语句中结果将转换为被赋值量类型，可能级别提升或者降级，提升无损，降级可能丢失数据</li>
+<li>函数参数传递时，char和short转为int，float转为double，可通过函数原型指定以阻止提升的发生</li>
+<li>数据类型级别高低顺序是long double、double、float、usigned long、long、unsigned int、int，当long和int具有相同大小时，unsigned int级别高于long</li>
+</ul>
 <h1 id="Python数据类型"><a href="#Python数据类型" class="headerlink" title="Python数据类型"></a>Python数据类型</h1><p>Python作为动态语言，数据分可变与否，偏实用。</p>
-<p><strong>不可变类型</strong>    </p>
+<h3 id="数据类型-1"><a href="#数据类型-1" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>不可变类型</strong>    </p>
 <ul>
 <li>布尔类型 bool</li>
 <li>字符串型 string    </li>
@@ -554,8 +599,12 @@
 <li>字典类型 dict  </li>
 <li>集合类型 set   </li>
 </ul>
+<h3 id="数据类型转变"><a href="#数据类型转变" class="headerlink" title="数据类型转变"></a>数据类型转变</h3><p>Python支持的数值类型有整型int、浮点型float、复数型complex。但Python中，数据类型不会自动转换，有需要时，要自己调用相应函数实现转换。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>lst = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">""</span>.join(lst)</span><br><span class="line"><span class="string">'123'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'3'</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>float(<span class="string">'3'</span>)</span><br><span class="line"><span class="number">3.0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>complex(<span class="number">3</span>,<span class="number">1</span>)</span><br><span class="line">(<span class="number">3</span>+<span class="number">1j</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="number">3</span>)</span><br><span class="line"><span class="string">'3'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tuple(lst)</span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(<span class="string">'123'</span>)</span><br><span class="line">[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">97</span>)</span><br><span class="line"><span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'a'</span>)</span><br><span class="line"><span class="number">97</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hex(<span class="number">21</span>)</span><br><span class="line"><span class="string">'0x15'</span></span><br><span class="line">&gt;&gt; oct(<span class="number">21</span>)</span><br><span class="line"><span class="string">'0o25'</span></span><br></pre></td></tr></table></figure>
+<p>具体转换规则如下图:</p>
+<p><img src="https://s1.ax1x.com/2020/11/10/BqWWKe.png" alt="data2p"></p>
 <h1 id="Go数据类型"><a href="#Go数据类型" class="headerlink" title="Go数据类型"></a>Go数据类型</h1><p>Go作为网络时代的C，其数据类型中既有偏底层的，又有偏实用的，其中有一些是Go特有的。</p>
-<p><strong>基本类型</strong>  </p>
+<h3 id="数据类型-2"><a href="#数据类型-2" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>基本类型</strong>  </p>
 <ul>
 <li>布尔类型 bool</li>
 <li>码点类型 rune</li>
@@ -573,8 +622,18 @@
 <li>接口类型 func (p *Ptr) getName() string{}  </li>
 <li>函数类型 func sayHello(name strin){}  </li>
 </ul>
+<h3 id="数据类型转变-1"><a href="#数据类型转变-1" class="headerlink" title="数据类型转变"></a>数据类型转变</h3><p>GO中数据类型一般需要显式转换，但一些底层有着相同类型的数据也会隐式转换。</p>
+<ul>
+<li><code>byte</code> 和 <code>uint8</code></li>
+<li><code>rune</code> 和 <code>int32</code></li>
+<li><code>[]byte</code> 和 <code>[]uint8</code></li>
+<li>转换规则是 <code>(T) (x)</code>。</li>
+</ul>
+<p>对于接口类型，可通过断言转换为对应类型。而所有unsafe pointer都是unsafe.Pointer类型。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a <span class="keyword">int</span> = <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> b <span class="keyword">interface</span>&#123;&#125; = a</span><br><span class="line"></span><br><span class="line">c := b.(<span class="keyword">int</span>) <span class="comment">// c是int型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum <span class="keyword">int</span> = <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> count <span class="keyword">int</span> = <span class="number">5</span></span><br><span class="line">mean := <span class="keyword">float32</span>(sum) / <span class="keyword">float32</span>(count)</span><br></pre></td></tr></table></figure>
+
 <h1 id="Rust数据类型"><a href="#Rust数据类型" class="headerlink" title="Rust数据类型"></a>Rust数据类型</h1><p>Rust面向底层，数据类型和C很像，但又有些数据类型和Go相似。</p>
-<p><strong>标量类型</strong></p>
+<h3 id="数据类型-3"><a href="#数据类型-3" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>标量类型</strong></p>
 <ul>
 <li>布尔类型 bool</li>
 <li>字符类型 char  </li>
@@ -589,8 +648,14 @@
 <li>枚举类型 enum</li>
 <li>泛型类型 generics [trait]</li>
 </ul>
+<h3 id="数据类型转变-2"><a href="#数据类型转变-2" class="headerlink" title="数据类型转变"></a>数据类型转变</h3><p>Rust不提供原生类型之间的隐式类型转换，但可使用as关键字显式类型转换。整型之间的转换大体使用且遵循C语言惯例，在Rust中所有整型转换都是定义良好的。as只能用于i64 i32 f64 f32 u32 u8 char类型。</p>
+<p>Rust内部对于Struce和Enum的类型转换提供了From和Into两个trait，实现From会默认实现Into。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="class"><span class="keyword">trait</span> <span class="title">From</span></span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">from</span></span>&lt;T&gt; -&gt; <span class="keyword">Self</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">pub</span> <span class="class"><span class="keyword">trait</span> <span class="title">Info</span></span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">into</span></span>&lt;T&gt; -&gt; T;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="meta">#![allow(overflowing_literals)]</span>  <span class="comment">// 忽略类型转换的溢出警告</span></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> decimal = <span class="number">61.3214_f32</span>;</span><br><span class="line">    <span class="keyword">let</span> integer: <span class="built_in">u8</span> = decimal;   <span class="comment">// 此行错误，默认不能将f32转为u8</span></span><br><span class="line">    <span class="keyword">let</span> integer = decimal <span class="keyword">as</span> <span class="built_in">u8</span>; <span class="comment">// 正确，as转换</span></span><br><span class="line">    <span class="keyword">let</span> character = integer <span class="keyword">as</span> <span class="built_in">char</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"1000 as a u16 is: &#123;&#125;"</span>, <span class="number">1000</span> <span class="keyword">as</span> <span class="built_in">u16</span>);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"1000 as a u8 is: &#123;&#125;"</span>, <span class="number">1000</span> <span class="keyword">as</span> <span class="built_in">u8</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">#[derive(Debug)]</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Complex</span></span> &#123;</span><br><span class="line">        re: <span class="built_in">i32</span>,</span><br><span class="line">        im: <span class="built_in">i32</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">impl</span> <span class="built_in">From</span>&lt;<span class="built_in">i32</span>&gt; <span class="keyword">for</span> Complex &#123;</span><br><span class="line">        <span class="function"><span class="keyword">fn</span> <span class="title">from</span></span>(re: <span class="built_in">i32</span>) -&gt; <span class="keyword">Self</span> &#123;</span><br><span class="line">            Complex &#123;</span><br><span class="line">                re,</span><br><span class="line">                im:<span class="number">0</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="Dart数据类型"><a href="#Dart数据类型" class="headerlink" title="Dart数据类型"></a>Dart数据类型</h1><p>Dart即可看成动态，又可看成静态语言，数据类型丰富。</p>
-<p><strong>基本类型</strong></p>
+<h3 id="数据类型-4"><a href="#数据类型-4" class="headerlink" title="数据类型"></a>数据类型</h3><p><strong>基本类型</strong></p>
 <ul>
 <li>布尔类型 bool</li>
 <li>字符串型 String</li>
@@ -610,6 +675,14 @@
 <ul>
 <li>动态类型 dynamic</li>
 </ul>
+<h3 id="数据类型转变-3"><a href="#数据类型转变-3" class="headerlink" title="数据类型转变"></a>数据类型转变</h3><p>Dart不提供隐式转换，所有类型转换需要显式执行。</p>
+<ul>
+<li>toXtype</li>
+<li>parse(Xtype)</li>
+<li>as</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> main() &#123;</span><br><span class="line">    age.toString();</span><br><span class="line">    <span class="built_in">int</span>.parse(<span class="string">"100"</span>);</span><br><span class="line">    <span class="keyword">var</span> oneP = <span class="built_in">double</span>.parse(<span class="string">"1.1"</span>);</span><br><span class="line">    <span class="built_in">String</span> pi = <span class="number">3.1415926</span>.toStringAsFixed(<span class="number">3</span>)</span><br><span class="line">    </span><br><span class="line">    (emp <span class="keyword">as</span> Person).firstName = <span class="string">"Tim"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="类型对比"><a href="#类型对比" class="headerlink" title="类型对比"></a>类型对比</h1><ul>
 <li>Go和Dart共有码点(rune)类型</li>
 <li>C和Rust与Dart共有枚举(enum)类型</li>
@@ -882,7 +955,7 @@
       </tags>
   </entry>
   <entry>
-    <title>C/Python/Go/Rust/Dart历史</title>
+    <title>C/Python/Go/Rust/Dart语言历史</title>
     <url>/title/9b69707/</url>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/07/B5wgat.png" alt="cpygorsdart"></p>
 <a id="more"></a>
