@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C、Python、Go、Rust、Dart数据序列化</title>
+    <url>/title/97872ba/</url>
+    <content><![CDATA[<p><img src="https://s3.ax1x.com/2020/11/12/BxMvIs.png" alt="cpygorsdart"></p>
+<a id="more"></a>
+
+<p>本文为五种语言对比学习的第二十二篇：数据序列化。</p>
+<p>数据序列化就是将对象或数据结构转化成特定的格式，使其可在网络中传输，或可存储在内存或者文件中。反序列化则是相反的操作，将对象从序列化数据中还原出来。数据序列化后的数据格式可以是二进制，XML，JSON等格式。数据序列化是为了于数据的保存、交换、传输，如果不是这些目的，根本就不需要序列化。</p>
+<p>序列化的要点</p>
+<ul>
+<li>序列化后数据大小</li>
+<li>序列化所消耗的时间</li>
+<li>平台、语言支持如何</li>
+</ul>
+<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>C目前没有什么好的序列化工具使用，只能纯手写。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OUT</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IN</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">MyStruct</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> nA;</span><br><span class="line">    <span class="keyword">char</span> cB;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">MyStruct</span>* <span class="title">pNext</span>;</span></span><br><span class="line">&#125;MYSTRUCT, *PMYSTRUCT;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 序列化写入文件，-1表失败 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">serialInToFile</span><span class="params">(IN PMYSTRUCT pList, IN <span class="keyword">const</span> <span class="keyword">char</span>* pFileName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nReturn = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> uszBuf[<span class="number">8</span>] = &#123;<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>,<span class="number">0xff</span>&#125;;</span><br><span class="line"> </span><br><span class="line">    FILE* pFile = fopen(pFileName, <span class="string">"wb+"</span>);</span><br><span class="line">    <span class="keyword">if</span> (!pFile)</span><br><span class="line">        <span class="keyword">return</span> nReturn;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">while</span> (pList!= <span class="literal">NULL</span>)&#123;</span><br><span class="line">        fwrite(pList, <span class="number">1</span>, <span class="number">5</span>, pFile);  <span class="comment">// 5个字节</span></span><br><span class="line">        pList = pList-&gt;pNext;</span><br><span class="line">        <span class="keyword">if</span> (pList)</span><br><span class="line">            fwrite(uszBuf, <span class="number">1</span>, <span class="number">8</span>, pFile);</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(pFile);</span><br><span class="line">    nReturn = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> nReturn;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 序列化导出文件，-1代表失败 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">serialOutFromeFile</span><span class="params">(OUT PMYSTRUCT* ppList, IN <span class="keyword">const</span> <span class="keyword">char</span>* pFileName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nReturn = <span class="number">-1</span>;</span><br><span class="line"> </span><br><span class="line">    FILE* pFile = fopen(pFileName, <span class="string">"rb"</span>);</span><br><span class="line">    PMYSTRUCT pCurNode = (PMYSTRUCT)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(MYSTRUCT));</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> uszBuf[<span class="number">8</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>* pA = <span class="literal">NULL</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span> (!pFile)</span><br><span class="line">        <span class="keyword">return</span> nReturn;</span><br><span class="line"> </span><br><span class="line">    *ppList = pCurNode;</span><br><span class="line">    <span class="keyword">while</span>(!feof(pFile))&#123;</span><br><span class="line">        pCurNode -&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">        fread(uszBuf, <span class="number">1</span>, <span class="number">4</span>, pFile);</span><br><span class="line">        pA = (<span class="keyword">int</span>*)uszBuf;</span><br><span class="line">        pCurNode-&gt;nA = *pA;</span><br><span class="line">        <span class="built_in">fscanf</span>(pFile, <span class="string">"%c"</span>, &amp;(pCurNode-&gt;cB));</span><br><span class="line">        fread(uszBuf, <span class="number">1</span>, <span class="number">8</span>, pFile);</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i ++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (uszBuf[i] != <span class="number">0xff</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">8</span>)&#123;</span><br><span class="line">            pCurNode-&gt;pNext = (PMYSTRUCT)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(MYSTRUCT));</span><br><span class="line">            pCurNode = pCurNode-&gt;pNext;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(pFile);</span><br><span class="line">    nReturn = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> nReturn;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitStruct</span><span class="params">(PMYSTRUCT pSTest)</span></span>&#123;</span><br><span class="line">    pSTest-&gt;nA = <span class="number">1</span>;</span><br><span class="line">    pSTest-&gt;cB = <span class="string">'C'</span>;</span><br><span class="line">    pSTest-&gt;pNext = (PMYSTRUCT)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(MYSTRUCT));</span><br><span class="line">    pSTest-&gt;pNext-&gt;nA = <span class="number">2</span>;</span><br><span class="line">    pSTest-&gt;pNext-&gt;cB = <span class="string">'A'</span>;</span><br><span class="line">    pSTest-&gt;pNext-&gt;pNext = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteStruct</span><span class="params">(PMYSTRUCT pSTest)</span></span>&#123;</span><br><span class="line">    PMYSTRUCT pTmp = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span> (pSTest!= <span class="literal">NULL</span>)&#123;</span><br><span class="line">        pTmp = pSTest;</span><br><span class="line">        pSTest = pSTest-&gt;pNext;</span><br><span class="line">        <span class="built_in">free</span>(pTmp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printStruct</span><span class="params">(PMYSTRUCT pSTest)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (pSTest!= <span class="literal">NULL</span>)&#123;</span><br><span class="line">        ++i;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"第%d, nA = %d, cB = %c \n"</span>, i, pSTest-&gt;nA, pSTest-&gt;cB);</span><br><span class="line">        pSTest = pSTest-&gt;pNext;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, _TCHAR* argv[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> nReturn = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* pFileName = <span class="string">"fileSerial.tmp"</span>;</span><br><span class="line">    PMYSTRUCT pSTest = (PMYSTRUCT)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(MYSTRUCT));</span><br><span class="line">    InitStruct(pSTest);</span><br><span class="line"></span><br><span class="line">    nReturn = serialInToFile(pSTest, pFileName); <span class="comment">//序列化</span></span><br><span class="line">    DeleteStruct(pSTest);  <span class="comment">//删除</span></span><br><span class="line">    <span class="keyword">if</span> (nReturn == <span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">return</span> nReturn;</span><br><span class="line"> </span><br><span class="line">    pSTest = <span class="literal">NULL</span>;</span><br><span class="line">    serialOutFromeFile(&amp;pSTest, pFileName); <span class="comment">// 导出</span></span><br><span class="line">    printStruct(pSTest); </span><br><span class="line">    DeleteStruct(pSTest);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>Python有多种序列化方法，其中Pickle是Python的专属序列化方案。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line">adict = &#123;<span class="string">"Name"</span>:<span class="string">"Shieber"</span>, <span class="string">"Age"</span>:<span class="number">24</span>,<span class="string">"Addr"</span>:<span class="string">"Chenddu"</span>&#125;</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"abc.pk"</span>, <span class="string">"wb"</span>) <span class="keyword">as</span> fobj: <span class="comment">#写二进制数据</span></span><br><span class="line">    pickle.dump(adict, fobj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"abc.pk"</span>, <span class="string">"rb"</span>) <span class="keyword">as</span> fobj: <span class="comment">#读二进制数据</span></span><br><span class="line">    a_dict = pickle.load(fobj)</span><br><span class="line">    print(type(a_dict))</span><br></pre></td></tr></table></figure>
+
+<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p>Go里面也有多种序列化方法，甚至能自定义。</p>
+<ul>
+<li>ASN.1</li>
+<li>JSON</li>
+<li>gob</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ASN.1</span></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"encoding/asn1"</span></span><br><span class="line">    <span class="string">"encoding/json"</span></span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"os"</span></span><br><span class="line">)</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    data, err := asn1.Marshal(<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Fprintf(os.Stderr, <span class="string">"Fatal error: %s"</span>, err.Error())</span><br><span class="line">        os.Exit(<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> n <span class="keyword">int</span></span><br><span class="line">    _, err := asn1.Unmarshal(data, &amp;n)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Fprintf(os.Stderr, <span class="string">"Fatal error: %s"</span>, err.Error())</span><br><span class="line">        os.Exit(<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(<span class="string">"Marshaled: "</span>, n)</span><br><span class="line"></span><br><span class="line">    person := Person &#123;</span><br><span class="line">        Name: <span class="string">"Shieber"</span>,</span><br><span class="line">        Age: <span class="number">24</span>,</span><br><span class="line">        Gender: <span class="string">"Male"</span>,</span><br><span class="line">        Addr: <span class="string">"Chengdu"</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    dj, err := json.Marshal(&amp;person)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(err)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Printf(<span class="string">"Serialized data:%v\n"</span>, <span class="keyword">string</span>(dj))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h1><p>serde, 是rust语言用来序列化和反序列化数据的一个工具，支持的数据格式多。</p>
+<ul>
+<li>JSON</li>
+<li>YAML</li>
+<li>BSON</li>
+<li>URL</li>
+<li>TOML</li>
+<li>Pickle</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="meta">#[macro_use]</span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> serde_derive;</span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> serde;</span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">crate</span> serde_json;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Serialize, Deserialize, Debug)</span></span><br><span class="line"><span class="meta">struct Point &#123;</span></span><br><span class="line"><span class="meta">    x: i32,</span></span><br><span class="line"><span class="meta">    y: i32,</span></span><br><span class="line"><span class="meta">    z: i32,</span></span><br><span class="line"><span class="meta">&#125;</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">fn main() &#123;</span></span><br><span class="line"><span class="meta">    let point = Point &#123; x:1, y:2, Z:3 &#125;;</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">    let serialized = serde_json::to_string(&amp;point)</span></span><br><span class="line"><span class="meta">        .unwrap(<span class="meta-string">"Error while serializing."</span>);    // 转换为json</span></span><br><span class="line"><span class="meta">    println!(<span class="meta-string">"serialized = &#123;&#125;"</span>, serialized);</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">    let deserialized:Point = serde_json::from_str(&amp;serialized)</span></span><br><span class="line"><span class="meta">        .unwrap(<span class="meta-string">"Error while deserializing.E"</span>); //从json转回Point</span></span><br><span class="line"><span class="meta">    println!(<span class="meta-string">"deserialized = &#123;:?&#125;"</span>, deserialized);</span></span><br><span class="line"><span class="meta">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Dart"><a href="#Dart" class="headerlink" title="Dart"></a>Dart</h1><p>Dart可用convert库实现JSON的序列和反序列化。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:async'</span> <span class="keyword">show</span> Future;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:flutter/services.dart'</span> <span class="keyword">show</span> rootBundle;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'dart:convert'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:demo/student.dart'</span>; <span class="comment">// 模型文件</span></span><br><span class="line"></span><br><span class="line">Future&lt;<span class="built_in">String</span>&gt; _loadAStudentAsset() <span class="keyword">async</span> &#123; <span class="comment">// 加载Json</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">await</span> rootBundle.loadString(<span class="string">'assets/student.json'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Future loadStudent() <span class="keyword">async</span> &#123; <span class="comment">// 加载响应数据</span></span><br><span class="line">  <span class="built_in">String</span> jsonString = <span class="keyword">await</span> _loadAStudentAsset();</span><br><span class="line">  <span class="keyword">final</span> jsonResponse = json.decode(jsonString); </span><br><span class="line">  Student student = <span class="keyword">new</span> Student.fromJson(jsonResponse); <span class="comment">// 反序列化</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"student.studentScores= <span class="subst">$&#123;student.studentScores&#125;</span>"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Python</tag>
+        <tag>Go</tag>
+        <tag>Rust</tag>
+        <tag>Dart</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C、Python、Go、Rust、Dart同步及异步编程</title>
+    <url>/title/d1c85720/</url>
+    <content><![CDATA[<p><img src="https://s3.ax1x.com/2020/11/12/BvjeXD.png" alt="cpygorsdart"></p>
+<a id="more"></a>
+
+<p>本文为五种语言对比学习的第二十一篇：同步及异步编程。</p>
+<p>程序的运行不单单只是顺序执行，往往会和各类资源以及外界系统进行交互。所以，传统直观的程序编写方法可能并不能应对实际情况。比如，系统需要等待网络传输，磁盘读取。这时程序该等待还是去处理其他事务呢？遇到购物节这种高并发事务场景，程序又该如何处理？</p>
+<p>实际上，应对上述种种问题的编程模型就是同步和异步编程，它们往往涉及如下概念：</p>
+<ul>
+<li>阻塞：任务未结束时，主调用进程需等待结果返回</li>
+<li>非阻塞：任务未结束时，主调用进程可去处理其他任务</li>
+<li>同步：任务未结束时，被调用进程只能处理该任务</li>
+<li>异步：任务未结束时，被调用进程可去执行其他任务</li>
+</ul>
+<p>同步异步和阻塞非阻塞组合就有四种情况：</p>
+<ul>
+<li>阻塞同步： 主调用进程等待被调用返回结果，被调用进程只处理该任务，不干别的 (多用)</li>
+<li>非阻塞同步：主调用进程不用等待被调用返回结果，被调用进程只处理该任务，不干别的 (少用)</li>
+<li>阻塞异步： 主调用进程等待被调用返回结果，被调用进程可处理其他事 (不用)</li>
+<li>非阻塞异步：主调用进程不用等待被调用返回结果，被调用进程可处理其他事 (多用)</li>
+</ul>
+<p>所以同步编程多说的是阻塞同步，异步编程一定是非阻塞异步。这样，四种情况就简化为两种，便于理解。</p>
+<p>阻塞非阻塞是讲的主调用进程，同步异步描述的是被调用进程。同步保证有序，效率低；异步效率高，资源占用多。有序的事务，比如生成订单，扣款，次序不能颠倒。这类需要保证顺序的工作称为事务，需要满足(ACID)条件。</p>
+<p>同步没什么好说的，代码怎么写，执行就怎么来。异步却需要考虑执行任务完成后如何回到当前任务。不同的语言异步编程模型不同，但大体概念是类似的。本文都只写异步的示例，同步没什么好写的。</p>
+<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>C虽是面向过程的语言，但它也可进行异步编程。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// A.c</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"B"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*pcb)</span><span class="params">(<span class="keyword">int</span> a)</span></span>; <span class="comment">//函数指针，方便直接使用pcb</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">parameter</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a ;</span><br><span class="line">    pcb callback;</span><br><span class="line">&#125;parameter;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">callback_thread</span><span class="params">(<span class="keyword">void</span> *p1)</span> </span>&#123; <span class="comment">//回调线程</span></span><br><span class="line">    do_works();</span><br><span class="line">    parameter* p = (parameter*)p1 ;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"GetCallBack print! \n"</span>);</span><br><span class="line">        sleep(<span class="number">3</span>);</span><br><span class="line">        p-&gt;callback(p-&gt;a); <span class="comment">//函数指针执行函数，来自于B</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//留给B的接口</span></span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="title">SetCallBackFun</span><span class="params">(<span class="keyword">int</span> a, pcb callback)</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"SetCallBackFun print! \n"</span>);</span><br><span class="line">    parameter *p = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(parameter)) ;</span><br><span class="line">    p-&gt;a  = <span class="number">10</span>;</span><br><span class="line">    p-&gt;callback = callback;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pthread_t</span> thing1;</span><br><span class="line">    pthread_create(&amp;thing1,<span class="literal">NULL</span>,callback_thread,(<span class="keyword">void</span> *) p);</span><br><span class="line">    pthread_join(thing1,<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    SetCallBackFun(<span class="number">4</span>, fCallBack);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// B.c</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fCallBack</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a = %d\n"</span>,a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>Python实现异步编程。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os, time</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Pool</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test1</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"进程pid=%d,ppid=%d"</span>%(os.getpid(),os.getppid()))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">        print(<span class="string">"%d"</span>%i)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"test1"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span><span class="params">(args)</span>:</span></span><br><span class="line">    print(<span class="string">"callback func-pid=%d"</span>%os.getpid())</span><br><span class="line">    print(<span class="string">"callback func-args=%s"</span>%args)</span><br><span class="line"></span><br><span class="line">pool = Pool(<span class="number">3</span>)</span><br><span class="line">pool.apply_async(func=test1, callback=test2)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line">print(<span class="string">"主进程-pid=%d"</span>%os.getpid())</span><br></pre></td></tr></table></figure>
+
+<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p>使用signal和sync库实现异步。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> async</span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"os"</span></span><br><span class="line">    <span class="string">"os/signal"</span></span><br><span class="line">    <span class="string">"time"</span></span><br><span class="line">    <span class="string">"sync"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Runner <span class="keyword">struct</span> &#123; <span class="comment">// 异步执行任务</span></span><br><span class="line">    interrupt <span class="keyword">chan</span> os.Signal</span><br><span class="line">    complete <span class="keyword">chan</span> error</span><br><span class="line">    timeout &lt;- <span class="keyword">chan</span> time.Time</span><br><span class="line">    tasks []<span class="function"><span class="keyword">func</span><span class="params">(id <span class="keyword">int</span>)</span> <span class="title">error</span></span></span><br><span class="line">    waitGroup sync.WaitGroup</span><br><span class="line">    lock sync.Mutex</span><br><span class="line">    errs []error</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewRunner</span><span class="params">(d time.Duration)</span> *<span class="title">Runner</span></span> &#123; <span class="comment">// 开启新Runner</span></span><br><span class="line">    <span class="keyword">return</span> &amp;Runner&#123;</span><br><span class="line">        interrupt: <span class="built_in">make</span>(<span class="keyword">chan</span> os.Signal, <span class="number">1</span>),</span><br><span class="line">        complete: <span class="built_in">make</span>(<span class="keyword">chan</span> error),</span><br><span class="line">        timeout: time.After(d),</span><br><span class="line">        waitGroup: sync.WaitGroup&#123;&#125;,</span><br><span class="line">        lock: sync.Mutex&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Runner)</span> <span class="title">Add</span><span class="params">(tasks... <span class="keyword">func</span>(id <span class="keyword">int</span>)</span> <span class="title">error</span>)</span> &#123; <span class="comment">// 添加任务</span></span><br><span class="line">    r.tasks = <span class="built_in">append</span>(r.tasks, tasks...)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Runner)</span> <span class="title">Start</span><span class="params">()</span></span> &#123; <span class="comment">// 启动Runner并监听</span></span><br><span class="line">    signal.Notify(r.interrupt, os.Interrupt)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">        r.complete &lt;- r.Run()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">select</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> err := &lt;- r.complete:</span><br><span class="line">            <span class="keyword">return</span> err</span><br><span class="line">        <span class="keyword">case</span> &lt;- r.timeout:</span><br><span class="line">            <span class="keyword">return</span> ErrTimeOut</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Runner)</span> <span class="title">Run</span><span class="params">()</span> <span class="title">error</span></span> &#123; <span class="comment">// 异步执行任务</span></span><br><span class="line">    <span class="keyword">for</span> id, task := <span class="keyword">range</span> r.tasks &#123;</span><br><span class="line">        <span class="keyword">if</span> r.gotInterrupt() &#123;</span><br><span class="line">            <span class="keyword">return</span> ErrInterrupt</span><br><span class="line">        &#125;</span><br><span class="line">        r.waitGroup.Add(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">(id <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">            r.lock.Lock()</span><br><span class="line">            err := task(id)</span><br><span class="line">            r.errs = <span class="built_in">append</span>(r.errs, err)</span><br><span class="line">            r.lock.Unlock()</span><br><span class="line">            r.waitGroup.Done()</span><br><span class="line">        &#125;(id)</span><br><span class="line">    &#125;</span><br><span class="line">    r.waitGroup.Wait()</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Runner)</span> <span class="title">gotInterrupt</span><span class="params">()</span> <span class="title">bool</span></span> &#123; <span class="comment">// 中断处理</span></span><br><span class="line">    <span class="keyword">select</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> &lt;-r.interrupt:</span><br><span class="line">            signal.Stop(r.interrupt)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Runner)</span> <span class="title">GetErrs</span><span class="params">()</span> []<span class="title">error</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> r.errs</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h1><p>Rust使用Future和Executor、Reactor实现异步。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">fn</span> <span class="title">read_and_write</span></span>(s: TcpStream) &#123;</span><br><span class="line">    <span class="keyword">let</span> (<span class="keyword">mut</span> r, <span class="keyword">mut</span> w) = s.split();</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> buffer = r.read().<span class="keyword">await</span>.unwrap();</span><br><span class="line">    buffer.append(<span class="string">"Hello World!"</span>);</span><br><span class="line">    w.write_all(buffer.as_bytes()).<span class="keyword">await</span>.unwrap();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行流程</p>
+<p><img src="https://s3.ax1x.com/2020/11/12/BxVh9S.png" alt="async"></p>
+<h1 id="Dart"><a href="#Dart" class="headerlink" title="Dart"></a>Dart</h1><p>Dart中也是Future实现异步，它包含完成与未完成两种状态。async和await是专门的语法糖，简化了异步编程难度。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> Login() <span class="keyword">async</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> token = <span class="keyword">await</span> login(<span class="string">"name"</span>, <span class="string">"Password"</span>);</span><br><span class="line">        <span class="keyword">var</span> user = <span class="keyword">await</span> fetchUserInfo(token);</span><br><span class="line">        <span class="keyword">await</span> saveUserInfo(user);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Caught error:<span class="subst">$err</span>"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Python</tag>
+        <tag>Go</tag>
+        <tag>Rust</tag>
+        <tag>Dart</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C、Python、Go、Rust、Dart数据库连接</title>
     <url>/title/f431010f/</url>
     <content><![CDATA[<p><img src="https://s3.ax1x.com/2020/11/12/Bvhxyt.png" alt="cpygorsdart"></p>
@@ -27,15 +133,15 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
       </tags>
   </entry>
   <entry>
-    <title>c-python-go-rust-dart-learn-19-2020-11-11</title>
+    <title>C、Python、Go、Rust、Dart网络编程</title>
     <url>/title/5f93f118/</url>
     <content><![CDATA[<p><img src="https://s3.ax1x.com/2020/11/11/BvR3rT.png" alt="cpygorsdart"></p>
 <a id="more"></a>
@@ -70,8 +176,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -104,8 +210,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -148,8 +254,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -207,8 +313,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -265,8 +371,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -299,8 +405,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -339,8 +445,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -402,8 +508,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -436,8 +542,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>dart</tag>
@@ -502,8 +608,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -544,8 +650,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -613,8 +719,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -682,8 +788,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -767,8 +873,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -928,8 +1034,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1036,8 +1142,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1136,8 +1242,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1176,8 +1282,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1300,8 +1406,8 @@
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -9794,8 +9900,8 @@
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
