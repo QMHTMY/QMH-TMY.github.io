@@ -1799,7 +1799,7 @@ sudo apt install  libpython2.7  </code></pre>
         <tag>C</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
-        <tag>dart</tag>
+        <tag>Dart</tag>
       </tags>
   </entry>
   <entry>
@@ -8300,7 +8300,7 @@ sudo apt install  libpython2.7  </code></pre>
       </tags>
   </entry>
   <entry>
-    <title>docker安装与使用</title>
+    <title>Docker安装与使用</title>
     <url>/title/2e9dcbbc/</url>
     <content><![CDATA[<p><img src="https://s2.ax1x.com/2019/12/11/QsBuLD.png" alt="docker"></p>
 <a id="more"></a>
@@ -8365,7 +8365,7 @@ sudo apt install  libpython2.7  </code></pre>
         <category>微服务</category>
       </categories>
       <tags>
-        <tag>docker</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
