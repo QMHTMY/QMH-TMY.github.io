@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.shieber.cn/"/>
-  <updated>2020-12-04T11:41:03.168Z</updated>
+  <updated>2020-12-04T11:47:07.859Z</updated>
   <id>http://www.shieber.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.shieber.cn/title/82ebf5cc/"/>
     <id>http://www.shieber.cn/title/82ebf5cc/</id>
     <published>2020-12-04T11:39:18.000Z</published>
-    <updated>2020-12-04T11:41:03.168Z</updated>
+    <updated>2020-12-04T11:47:07.859Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dq9HSJ.png" alt="zig"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装  <pre><code class="bash">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61  <span class="built_in">echo</span> <span class="string">'deb https://dl.bintray.com/dryzig/zig-ubuntu focal main'</span>  \    | sudo tee -a /etc/apt/sources.list  sudo apt update  sudo apt install zig  </code></pre></li><li>编写如下hellowd.zig  <pre><code class="zig">const std = @import(&quot;std&quot;);  pub fn main() !void {      const stdout = std.io.getStdOut().writer();      try stdou.print(&quot;Hello, {}!\n&quot;, .{&quot;world&quot;});  }  </code></pre></li><li>编译执行<br>  zig build-exe hellowd.zig<br>  ./hellowd  </li></ul>]]></content>
     
@@ -43,7 +43,7 @@
     <link href="http://www.shieber.cn/title/a18bb24b/"/>
     <id>http://www.shieber.cn/title/a18bb24b/</id>
     <published>2020-12-04T11:36:44.000Z</published>
-    <updated>2020-12-04T11:38:55.783Z</updated>
+    <updated>2020-12-04T11:47:07.855Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dq9NQA.png" alt="vlang"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>下载<br>  到vlang.io下载包  </li><li>解压编译  <pre><code class="bash">unzip v_linux.zip  <span class="built_in">cd</span> v_linux/  make  </code></pre></li><li>编写如下hellowd.v  <pre><code class="v">fn main() {    println(<span class="number">'He</span>llo world!')  }  </code></pre></li><li>编译执行<br>  v hellowd.v<br>  ./hellowd  </li></ul>]]></content>
     
@@ -65,7 +65,7 @@
     <link href="http://www.shieber.cn/title/b7656e70/"/>
     <id>http://www.shieber.cn/title/b7656e70/</id>
     <published>2020-12-04T11:30:50.000Z</published>
-    <updated>2020-12-04T11:36:33.433Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dqpx2j.png" alt="Tex"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><p>TeX是排版语言，Linux推荐安装TexLive，安装过程较为复杂。    </p><ul><li>安装流程如下<br>  a.从清华大学的镜像处下载  <pre><code>https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/  </code></pre>  b.安装图像化界面必备的perl-tk组件  <pre><code>sudo apt-get install perl-tk  </code></pre>  c.把下载好的.iso文件挂载到/mnt下  <pre><code>sudo mount -t iso9660 -o loop texlive2020-20200406.iso /mnt  </code></pre>  d.准备从图形界面安装  <pre><code>cd /mnt  sudo ./install-tl -gui  </code></pre>  e.如果要修改安装位置请执行(/目录下面空间够用也可不用管这一步)  <pre><code>在&quot;TEXDIR(主TeX目录)&quot; 一行后点修改，填入新的位置(如/home/texlive2020)  </code></pre>  f.可以瘦身安装(空间够此步也可忽略)  <pre><code>&quot;安装字体/宏包文档目录树&quot;　切换为否  &quot;安装字体/宏包源代码目录树&quot;　切换为否  上面两个操作会舍弃安装文档和源代码，实际上大部分人也不会看，安装了浪费2G左右空间  </code></pre>  g.点击安装TeX Live<br>  h.卸载镜像文件  <pre><code>sudo unmount /mnt  sudo cp /home/texlive2020/2020/texmf-var/fonts/conf/texlive-fontconfig.conf \     /etc/fonts/conf.d/09-texlive.conf  sudo fc-cache -fsv #此步执行时间稍长</code></pre>  i.环境变量设置<br>  打开~/.bashrc 在最后加入如下内容(具体路径按照自己的系统修改)  <pre><code>export TexMan=&quot;/home/texlive2020/2020/texmf-dist/doc/man&quot;  export TexInfo=&quot;/home/texlive2020/2020/texmf-dist/doc/info&quot;  export TexLive=&quot;/home/texlive2020/2020/bin/x86_64-linux&quot;  export MANPATH=&quot;$MANPATH:$TexMan&quot;  export INFOPATH=&quot;$INFOPATH:$TexInfo&quot;  export PATH=&quot;$PATH:$TexLive&quot;  </code></pre>  执行 source ~/.bashrc<br>  j.更新源配置  <pre><code>sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet  此步如果出现sudo;找不到命令 tlmgr，意味着执行时环境变量不对，请执行  (1) sudo vi /etc/sudoers  (2) 给如下内容加一个感叹号      Defaults    env_reset       Defaults    !env_reset  (3) 再vi ~/.bashrc 加入下面这行到最后  (4) alias sudo=&apos;sudo env PATH=$PATH&apos;  (5) 保存退出执行 source ~/.bashrc  (6) 再执行 sudo tlmgr option ....  </code></pre>  k.更新宏包  <pre><code>sudo tlmgr update --self --all #要更新几百个，时间较长   </code></pre>  l.解决软件安装依赖问题  <pre><code>(1) sudo apt-get install aptitude  (2) sudo aptitude install equivs  (3) sudo mkdir /tmp/tl-equivs &amp;&amp; cd /tmp/tl-equivs  (4) equivs-control texlive-local  (5) 打开https://www.tug.org/texlive/files/debian-equivs-2020-ex.txt并复制所有内容  (6) sudo vi texlive-local 将复制的内容粘贴进去并保存   (7) sudo equivs-build texlive-local  (8) sudo apt-get freeglut3  (9) sudo dpkg -i texlive-local_2020-1_all.deb  </code></pre></li><li>编写如下hellowd.tex    <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">&#123;article&#125;</span></span>  </span><br><span class="line"><span class="tag">\<span class="name">begin</span><span class="string">&#123;document&#125;</span></span>  </span><br><span class="line">Hello world!  </span><br><span class="line"><span class="tag">\<span class="name">end</span><span class="string">&#123;document&#125;</span></span></span><br></pre></td></tr></table></figure></li><li>编译得到pdf文件<br>  xelatex hellowd.tex  </li><li>查看pdf<br>  evince hellowd.pdf  </li></ul>]]></content>
     
@@ -87,7 +87,7 @@
     <link href="http://www.shieber.cn/title/4d7c098b/"/>
     <id>http://www.shieber.cn/title/4d7c098b/</id>
     <published>2020-12-04T11:28:28.000Z</published>
-    <updated>2020-12-04T11:30:37.472Z</updated>
+    <updated>2020-12-04T11:47:07.855Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dqp13j.png" alt="swift"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装依赖及下载安装包  <pre><code class="bash">sudo apt install libz3-4   sudo apt install  libpython2.7  </code></pre>  然后到<a href="https://swift.org/download/" target="_blank" rel="noopener">https://swift.org/download/</a> 下载安装包  </li><li>解压到/usr/local<br>  tar -zxf swift-5.3.1-RELEASE-ubuntu20.04.tar.gz -C /usr/local  </li><li>设置环境变量<br>  在~/.bashrc中添加如下内容<br>  export SWIFT_HOME=”/usr/local/swift-5.3.1-RELEASE-ubuntu20.04”<br>  export SWIFT_LIBRARY=”SWIFT_HOME/usr/lib”<br>  export PATH=”$PATH:SWIFT_HOME/usr/bin:SWIFT_LIBRARY”<br>  执行 source ~/.bashrc  </li><li>编写如下hellowd.swift  <pre><code class="swift"><span class="built_in">print</span>(<span class="string">"Hello world!"</span>)  </code></pre></li><li>编译执行<br>  swiftc hellowd.swift -o hellowd<br>  ./hellowd  </li></ul>]]></content>
     
@@ -109,7 +109,7 @@
     <link href="http://www.shieber.cn/title/f1582adf/"/>
     <id>http://www.shieber.cn/title/f1582adf/</id>
     <published>2020-12-04T11:16:56.000Z</published>
-    <updated>2020-12-04T11:22:38.706Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DqS0Xt.png" alt="solidity"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ethereum/ethereum</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install solc</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.sol  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.7.5;</span><br><span class="line">contract hellowd &#123;</span><br><span class="line">    string public hlwd = &quot;Hello world!&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>编译<br>  solc –bin hellowd.sol<br>  Solidity用于智能合约，没有输出函数。  </li></ul>]]></content>
     
@@ -131,7 +131,7 @@
     <link href="http://www.shieber.cn/title/6f9e5fce/"/>
     <id>http://www.shieber.cn/title/6f9e5fce/</id>
     <published>2020-12-04T11:09:15.000Z</published>
-    <updated>2020-12-04T11:16:44.918Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbzQZ8.png" alt="smalltalk"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>下载<br>  到<a href="https://ftp.gnu.org/gnu/smalltalk/" target="_blank" rel="noopener">https://ftp.gnu.org/gnu/smalltalk/</a> 下载合适的包</li><li>解压安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf smalltalk.3.2.5.tar.gz</span><br><span class="line"><span class="built_in">cd</span> smalltalk.3.2.5/</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li><li>编写如下hellwd.st    <figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Transcript</span> show: <span class="string">'Hello world!'</span>; cr.</span><br></pre></td></tr></table></figure></li><li>执行<br>  gst hellowd.st</li></ul>]]></content>
     
@@ -153,7 +153,7 @@
     <link href="http://www.shieber.cn/title/78d9da1d/"/>
     <id>http://www.shieber.cn/title/78d9da1d/</id>
     <published>2020-12-04T11:04:53.000Z</published>
-    <updated>2020-12-04T11:08:51.431Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dbx0Cd.png" alt="scheme"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装依赖    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install uuid-dev</span><br><span class="line">sudo apt-get install libghc-x11-dev</span><br></pre></td></tr></table></figure></li><li>下载源码    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">下面任意方式均可 </span><br><span class="line">git <span class="built_in">clone</span> git@github.com:cisco/ChezScheme.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/cisco/ChezScheme</span><br><span class="line">gh repo <span class="built_in">clone</span> cisco/ChezScheme</span><br></pre></td></tr></table></figure></li><li>编译安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ChezScheme/</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.scm    <figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">begin</span></span></span><br><span class="line">  (<span class="name"><span class="builtin-name">display</span></span> <span class="string">"Hello world!"</span>)</span><br><span class="line">  (<span class="name"><span class="builtin-name">newline</span></span>))</span><br></pre></td></tr></table></figure></li><li>执行<br>  scheme –script hellowd.scm</li></ul>]]></content>
     
@@ -175,7 +175,7 @@
     <link href="http://www.shieber.cn/title/1551f511/"/>
     <id>http://www.shieber.cn/title/1551f511/</id>
     <published>2020-12-04T11:01:44.000Z</published>
-    <updated>2020-12-04T11:04:43.871Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbvL9A.png" alt="rust"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><p>Rust可用rustup来安装 </p><ul><li>安装rustup、rustc、rustfmt等<br>  curl –proto ‘=https’ –tlsv1.2 -sSf <a href="https://sh.rustup.rs" target="_blank" rel="noopener">https://sh.rustup.rs</a> | sh  </li><li>配置环境变量    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在~/.bashrc中加入如下内容</span><br><span class="line"><span class="built_in">export</span> CARGO=<span class="string">"<span class="variable">$HOME</span>/.cargo/bin"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:CARGO"</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.rs  <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>编译执行<br>  rustc hellowd.rs<br>  ./hellowd</li></ul>]]></content>
     
@@ -197,7 +197,7 @@
     <link href="http://www.shieber.cn/title/8fd765aa/"/>
     <id>http://www.shieber.cn/title/8fd765aa/</id>
     <published>2020-12-04T10:58:21.000Z</published>
-    <updated>2020-12-04T11:01:36.827Z</updated>
+    <updated>2020-12-04T11:47:07.851Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dbv3m8.png" alt="ruby"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  到<a href="http://www.ruby-lang.org/en/downloads/下载ruby" target="_blank" rel="noopener">http://www.ruby-lang.org/en/downloads/下载ruby</a>  </li><li>解压安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf ruby-2.7.2.tar.gz</span><br><span class="line"><span class="built_in">cd</span> ruby-2.7.2/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.rb  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">"Hello world!"</span></span><br></pre></td></tr></table></figure></li><li>执行<br>  ruby hellowd.rb</li></ul>]]></content>
     
@@ -219,7 +219,7 @@
     <link href="http://www.shieber.cn/title/a8601231/"/>
     <id>http://www.shieber.cn/title/a8601231/</id>
     <published>2020-12-04T10:55:08.000Z</published>
-    <updated>2020-12-04T10:58:10.732Z</updated>
+    <updated>2020-12-04T11:47:07.847Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbjTWn.png" alt="r"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装R    <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com \</span><br><span class="line">    --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install r-base</span><br></pre></td></tr></table></figure></li><li>编写hellowd.r    <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello world!"</span>);</span><br></pre></td></tr></table></figure></li><li>执行<br>  Rscript hellowd.r</li></ul>]]></content>
     
@@ -241,7 +241,7 @@
     <link href="http://www.shieber.cn/title/cdbf0a6a/"/>
     <id>http://www.shieber.cn/title/cdbf0a6a/</id>
     <published>2020-12-04T10:52:48.000Z</published>
-    <updated>2020-12-04T10:54:56.335Z</updated>
+    <updated>2020-12-04T11:47:07.847Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dbjla4.png" alt="python"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><p>Linux自带Python，不用安装。</p><ul><li>编写如下hellowd.py   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line">print(<span class="string">"Hello, world!"</span>)</span><br></pre></td></tr></table></figure></li><li>执行<br>  python3 hellowd.py</li></ul>]]></content>
     
@@ -263,7 +263,7 @@
     <link href="http://www.shieber.cn/title/2e5a384b/"/>
     <id>http://www.shieber.cn/title/2e5a384b/</id>
     <published>2020-12-04T10:48:00.000Z</published>
-    <updated>2020-12-04T10:52:30.270Z</updated>
+    <updated>2020-12-04T11:47:07.847Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbX6DU.png" alt="Prolog"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  sudo apt install swi-prolog</li><li>编写如下hellowd.pro或hellowd.pl(注意.pl和Perl后缀冲突)    <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello:-write(<span class="string">"Hello, world"</span>).</span><br></pre></td></tr></table></figure></li><li>执行    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ swipl -s hellowd.pro</span><br><span class="line">?- hello.</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -285,7 +285,7 @@
     <link href="http://www.shieber.cn/title/a5e1d4fb/"/>
     <id>http://www.shieber.cn/title/a5e1d4fb/</id>
     <published>2020-12-04T10:45:21.000Z</published>
-    <updated>2020-12-04T10:47:49.238Z</updated>
+    <updated>2020-12-04T11:47:07.847Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbXmHe.png" alt="PHP"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  到<a href="https://www.php.net/downloads" target="_blank" rel="noopener">https://www.php.net/downloads</a> 下载适合版本  </li><li>解压安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf php-8.0.0.tar.gz</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.php    <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="keyword">echo</span>(<span class="string">"Hello world!"</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></li><li>执行<br>  用浏览器查看就可以了</li></ul>]]></content>
     
@@ -307,7 +307,7 @@
     <link href="http://www.shieber.cn/title/c236715d/"/>
     <id>http://www.shieber.cn/title/c236715d/</id>
     <published>2020-12-04T10:41:59.000Z</published>
-    <updated>2020-12-04T10:44:48.782Z</updated>
+    <updated>2020-12-04T11:47:07.843Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbO7kj.png" alt="pascal"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  sudo apt install fp-compile  </li><li>编写hellowd.pas    <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">    writeln(<span class="string">"Hello world!)</span></span><br><span class="line"><span class="string">end.</span></span><br></pre></td></tr></table></figure></li><li>编译执行<br>  fpc hellowd.pas<br>  ./hellowd  </li></ul>]]></content>
     
@@ -329,7 +329,7 @@
     <link href="http://www.shieber.cn/title/8ce2b37a/"/>
     <id>http://www.shieber.cn/title/8ce2b37a/</id>
     <published>2020-12-04T10:38:32.000Z</published>
-    <updated>2020-12-04T10:41:32.549Z</updated>
+    <updated>2020-12-04T11:47:07.843Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbLaqg.png" alt="perl"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><p>Linux自带Perl，不用安装</p><ul><li>编写如下hellowd.pl    <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Hello world!\n"</span>;</span><br></pre></td></tr></table></figure></li><li>执行<br>  perl hellowd.pl  </li></ul>]]></content>
     
@@ -351,7 +351,7 @@
     <link href="http://www.shieber.cn/title/64d15820/"/>
     <id>http://www.shieber.cn/title/64d15820/</id>
     <published>2020-12-04T10:35:37.000Z</published>
-    <updated>2020-12-04T10:38:13.649Z</updated>
+    <updated>2020-12-04T11:47:07.843Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbLKqe.png" alt="ocaml"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  sudo apt install ocaml<br>  sudo apt install ocaml-nox #无X11支持，二者选择合适的安装  </li><li>编写如下hellowd.ml    <figure class="highlight ocaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print_string <span class="string">"Hello world!\n"</span></span><br></pre></td></tr></table></figure></li><li>编译执行<br>  ocamlc hellowd.ml -o hellowd<br>  ./hellowd  </li></ul>]]></content>
     
@@ -369,11 +369,11 @@
   </entry>
   
   <entry>
-    <title>如何在Linux上安装及使用Objective-c语言？</title>
+    <title>如何在Linux上安装及使用Objective-C语言？</title>
     <link href="http://www.shieber.cn/title/4600d3d9/"/>
     <id>http://www.shieber.cn/title/4600d3d9/</id>
     <published>2020-12-04T10:32:26.000Z</published>
-    <updated>2020-12-04T10:35:23.937Z</updated>
+    <updated>2020-12-04T12:03:23.875Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/Dbq7Dg.png" alt="objective-c"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gobjc</span><br><span class="line">sudo apt install gnustep</span><br><span class="line">sudo apt install gnustep-devel</span><br><span class="line">sudo bash /usr/share/GNUstep/Makefiles/GNUstep.sh</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.m  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">int main ( int argc, const char * argv[])</span><br><span class="line">&#123;</span><br><span class="line">     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</span><br><span class="line"> </span><br><span class="line">     NSLog( @&quot;hello world&quot; );</span><br><span class="line">     [pool drain];</span><br><span class="line">     return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>编译执行<br>  gcc ‘gnustep-config –objc-flags’ -lgnustep-base hellowd.m -o hellowd<br>  ./hellowd  </li></ul>]]></content>
     
@@ -386,7 +386,7 @@
       <category term="编程语言" scheme="http://www.shieber.cn/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="Objective-c" scheme="http://www.shieber.cn/tags/Objective-c/"/>
+      <category term="Objective-C" scheme="http://www.shieber.cn/tags/Objective-C/"/>
     
   </entry>
   
@@ -395,7 +395,7 @@
     <link href="http://www.shieber.cn/title/9ad7b386/"/>
     <id>http://www.shieber.cn/title/9ad7b386/</id>
     <published>2020-12-04T10:30:05.000Z</published>
-    <updated>2020-12-04T10:32:05.038Z</updated>
+    <updated>2020-12-04T11:47:07.843Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbqJuF.png" alt="nim"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装<br>  sudo apt-get install nim  </li><li>编写如下hellowd.nim    <figure class="highlight nim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"Hello world!"</span></span><br></pre></td></tr></table></figure></li><li>编译执行  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">方式一：</span><br><span class="line">    nim c -r --verbosity:0 hellowd.nim</span><br><span class="line">方式二：</span><br><span class="line">    nim c --verbosity:0 hellowd.nim</span><br><span class="line">    ./hellowd</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -417,7 +417,7 @@
     <link href="http://www.shieber.cn/title/6b743584/"/>
     <id>http://www.shieber.cn/title/6b743584/</id>
     <published>2020-12-04T10:25:56.000Z</published>
-    <updated>2020-12-04T10:29:54.990Z</updated>
+    <updated>2020-12-04T11:47:07.839Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbbLp6.png" alt="matlab"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>下载Matlab安装包，有些大<br>  地址 <a href="https://pan.baidu.com/s/1jD5bUfPOfGxPC5njPswGPw" target="_blank" rel="noopener">https://pan.baidu.com/s/1jD5bUfPOfGxPC5njPswGPw</a> 提取码：60gp<br>  其实不一定非得这个，任何合适的版本都可以  </li><li>安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a.进入两个镜像文件目录</span><br><span class="line">b.右键dvd1，用磁盘映像挂载器打开</span><br><span class="line">c.对挂载盘赋权限</span><br><span class="line">    sudo /media/wangbo/MATHWORKS_R2018B/install</span><br><span class="line">d.一路安装，直到输入序列号如下</span><br><span class="line">    09806-07443-53955-64350-21751-41297</span><br><span class="line">e.提示弹出DVD1，插入DVD2时，不要点确定；先卸载DVD1，然后挂载DVD2，再点确定，继续安装</span><br><span class="line">f.安装完成后，先进行破解，进入安装包的MATLAB R2018b Linux64 Crack文件夹，执行如下操作</span><br><span class="line">    sudo cp -f ./R2018b/bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so \</span><br><span class="line">        /usr/<span class="built_in">local</span>/MATLAB/R2018b/bin/glnxa64/matlab_startup_plugins/lmgrimpl</span><br><span class="line">    sudo cp -f ./license_standalone.lic /usr/<span class="built_in">local</span>/MATLAB/R2018b/licenses</span><br><span class="line">g.配置环境变量，在~/.bashrc中添加并保存</span><br><span class="line">    <span class="built_in">export</span> MATLAB_HOME=<span class="string">"/usr/local/MATLAB/R2018b:<span class="variable">$PATH</span>"</span></span><br><span class="line">    <span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:MATLAB_HOME/bin"</span></span><br><span class="line">h.执行 <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></li><li>可以编写如下hellowd.m(注意和Objective-C文件后缀一样)  <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[ output_args ]</span> = <span class="title">Untitled</span><span class="params">( input_args )</span></span></span><br><span class="line">    <span class="built_in">disp</span>(<span class="string">'Hello world!'</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li><li>执行    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">    打开 matlab </span><br><span class="line">    输入 hellowd.m 直接运行</span><br><span class="line">方法二：</span><br><span class="line">    matlab -nodesktop -nosplash -r hellowd</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -439,7 +439,7 @@
     <link href="http://www.shieber.cn/title/c83c9b9b/"/>
     <id>http://www.shieber.cn/title/c83c9b9b/</id>
     <published>2020-12-04T10:23:20.000Z</published>
-    <updated>2020-12-04T10:25:39.777Z</updated>
+    <updated>2020-12-04T11:47:07.839Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://s3.ax1x.com/2020/12/04/DbHziq.png" alt="lua"></p><a id="more"></a><h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><ul><li>安装    <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -R -O http://www.lua.org/ftp/lua-5.4.2.tar.gz</span><br><span class="line">tar zxf lua-5.4.2.tar.gz</span><br><span class="line"><span class="built_in">cd</span> lua-5.4.2</span><br><span class="line">make linux <span class="built_in">test</span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure></li><li>编写如下hellowd.lua    <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">"Hello world!"</span>)</span><br></pre></td></tr></table></figure></li><li>执行<br>  lua hellowd.lua</li></ul>]]></content>
     
