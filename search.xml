@@ -1036,9 +1036,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1183,9 +1183,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1216,9 +1216,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1257,9 +1257,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1315,9 +1315,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1371,9 +1371,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1409,9 +1409,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1456,9 +1456,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1494,9 +1494,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1542,9 +1542,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1609,9 +1609,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1672,9 +1672,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1689,17 +1689,21 @@ sudo apt install  libpython2.7  </code></pre>
 <p>本文为六种语言对比学习的第十四篇：标准库依赖关系。</p>
 <p>编程语言的标准库往往存在依赖关系，但一定有些库是自满足而不引入其他库的，本文试图探究各库的依赖关系，看看到底一门语言的核心库是如何构建起来的。</p>
 <h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>C的头文件依赖关系图。（箭头表示引用该库文件）</p>
-<p><img src="https://s1.ax1x.com/2020/11/11/BXLM01.png" alt="c"></p>
+<p><img src="https://s3.ax1x.com/2020/12/10/ri9CK1.png" alt="c"></p>
 <p>可见，最底层为features, bits, stddef, sys库文件。</p>
 <h1 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h1><p>C++的头文件依赖关系图。</p>
 <p><img src="https://s3.ax1x.com/2020/12/09/rCoql4.png" alt="c++"></p>
 <p>可见，最底层为bits，features 等库文件。</p>
 <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>Python的模块依赖关系图</p>
-<p><img src="https://s1.ax1x.com/2020/11/11/BjSRRP.png" alt="py"></p>
-<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p>Go的包依赖关系图，三幅图是一幅从左到右的完整图片。</p>
-<p><img src="https://s1.ax1x.com/2020/11/11/Bj9pX8.png" alt="Go1"></p>
-<p><img src="https://s1.ax1x.com/2020/11/11/Bj9J91.png" alt="Go2"></p>
-<p><img src="https://s1.ax1x.com/2020/11/11/Bj9tc6.png" alt="Go3"></p>
+<p><img src="https://s3.ax1x.com/2020/12/10/rFCeUK.png" alt="py"></p>
+<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p>Go的包依赖关系图。</p>
+<p><img src="https://s3.ax1x.com/2020/12/10/rFrlqS.png" alt="Go1"></p>
+<!-- ![Go1](https://s1.ax1x.com/2020/11/11/Bj9pX8.png) -->
+
+<!-- ![Go2](https://s1.ax1x.com/2020/11/11/Bj9J91.png) -->
+
+<!-- ![Go3](https://s1.ax1x.com/2020/11/11/Bj9tc6.png) -->
+
 <h1 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h1><p>Rust的包依赖关系图关系复杂，但经过分析，可以分层：alloc -&gt; core -&gt; std。</p>
 <figure class="highlight rust"><table><tr><td class="code"><pre><span class="line">         +---------------------------------------------------------------------------+</span><br><span class="line">std   -&gt; | any array ascii future env error ffi fs io net option os path thread time | 标准库</span><br><span class="line">         +---------------------------------------------------------------------------+</span><br><span class="line">         +----------------------------------------------------------------------+</span><br><span class="line">core  -&gt; | arch borrow cell <span class="built_in">char</span> clone cmp convert <span class="built_in">f64</span> hash <span class="built_in">i64</span> panic slice <span class="built_in">u64</span> | 核心库</span><br><span class="line">         +----------------------------------------------------------------------+</span><br><span class="line">         +--------------------------------------------------------+</span><br><span class="line">alloc -&gt; | alloc boxed rc collections <span class="built_in">str</span> string sync vec prelude |  内存分配库</span><br><span class="line">         +--------------------------------------------------------+</span><br></pre></td></tr></table></figure>
 
@@ -1710,9 +1714,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1754,9 +1758,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1822,9 +1826,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1860,9 +1864,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1935,9 +1939,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1984,9 +1988,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2066,9 +2070,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2144,9 +2148,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2248,9 +2252,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2446,9 +2450,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2566,9 +2570,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2682,9 +2686,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2725,9 +2729,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2876,9 +2880,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
+        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
-        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -7221,8 +7225,8 @@ sudo apt install  libpython2.7  </code></pre>
         <category>操作系统</category>
       </categories>
       <tags>
-        <tag>OS</tag>
         <tag>Linux</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
@@ -11531,8 +11535,8 @@ sudo apt install  libpython2.7  </code></pre>
       </categories>
       <tags>
         <tag>IT</tag>
-        <tag>OS</tag>
         <tag>Linux</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
 </search>
