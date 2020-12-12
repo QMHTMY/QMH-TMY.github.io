@@ -1745,7 +1745,7 @@ sudo apt install  libpython2.7  </code></pre>
     <content><![CDATA[<p><img src="https://s1.ax1x.com/2020/11/11/BjM3U1.png" alt="cpygorsdart"></p>
 <a id="more"></a>
 
-<p>本文为六种语言对比学习的第十四篇：标准库依赖关系。</p>
+<p>本文为七种语言对比学习的第十四篇：标准库依赖关系。</p>
 <p>编程语言的标准库往往存在依赖关系，但一定有些库是自满足而不引入其他库的，本文试图探究各库的依赖关系，看看到底一门语言的核心库是如何构建起来的。</p>
 <h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>C的头文件依赖关系图。（箭头表示引用该库文件）</p>
 <p><img src="https://s3.ax1x.com/2020/12/10/ri9CK1.png" alt="c"></p>
@@ -1753,6 +1753,9 @@ sudo apt install  libpython2.7  </code></pre>
 <h1 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h1><p>C++的头文件依赖关系图。</p>
 <p><img src="https://s3.ax1x.com/2020/12/09/rCoql4.png" alt="c++"></p>
 <p>可见，最底层为bits，features 等库文件。</p>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><p>Java类库文件依赖关系图。</p>
+<p><img src="https://s3.ax1x.com/2020/12/12/rZGESf.png" alt="java"></p>
+<p>可见，最底层为base，这也是它较base的原因。</p>
 <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>Python的模块依赖关系图</p>
 <p><img src="https://s3.ax1x.com/2020/12/10/rFCeUK.png" alt="py"></p>
 <h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p>Go的包依赖关系图。</p>
@@ -11611,8 +11614,8 @@ sudo apt install  libpython2.7  </code></pre>
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>IT</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -11768,8 +11771,8 @@ sudo apt install  libpython2.7  </code></pre>
         <category>操作系统</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>IT</tag>
+        <tag>Linux</tag>
         <tag>OS</tag>
       </tags>
   </entry>
