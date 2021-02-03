@@ -59,9 +59,17 @@
 <td align="left">张蔷</td>
 </tr>
 </tbody></table>
-<h2 id="年度视频"><a href="#年度视频" class="headerlink" title="年度视频"></a>年度视频</h2><p>展现中国舞蹈的魅力，舞剧《孔子》当之无愧，其中的《采薇》我认为最为精彩。</p>
+<h2 id="年度视频"><a href="#年度视频" class="headerlink" title="年度视频"></a>年度视频</h2><p>这三个是2020年看的视频里面我觉得最优秀的。第一个舞剧《孔子》展现中国舞蹈的魅力，其中《采薇》最为精彩。第二个是《让子弹飞》的重制作，非常优秀。第三个是建国70周年献礼，拍出了祖国大好河山。</p>
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=25674897&bvid=BV13s411j7GK&cid=43905521&page=11&as_wide=1&high_quality=1&danmaku=0" scrolling="no" frameborder="no" allowfullscreen="true"> </iframe>
+</div>
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=626357031&bvid=BV1yt4y1Q7SS&cid=210738676&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" frameborder="no" allowfullscreen="true"> </iframe>
+</div>
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=69241910&bvid=BV19E41197Kc&cid=121296106&page=2&as_wide=1&high_quality=1&danmaku=0" scrolling="no" frameborder="no" allowfullscreen="true"> </iframe>
 </div>
 
 <h2 id="年度观影"><a href="#年度观影" class="headerlink" title="年度观影   "></a>年度观影   </h2><table>
@@ -555,12 +563,12 @@
 <td align="left">7.34:4.24:1.0</td>
 </tr>
 <tr>
-<td align="left">天气统计</td>
-<td align="left">地点：清水河</td>
+<td align="left">统计地点</td>
+<td align="left">清水河</td>
 </tr>
 <tr>
-<td align="left">天气统计</td>
-<td align="left">时段：1.1~12.31</td>
+<td align="left">统计时段</td>
+<td align="left">2020.01.01~2020.12.31</td>
 </tr>
 </tbody></table>
 ]]></content>
@@ -1623,10 +1631,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1773,10 +1781,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1808,10 +1816,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1857,10 +1865,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1920,10 +1928,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -1980,10 +1988,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2022,10 +2030,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2075,10 +2083,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2117,10 +2125,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2169,10 +2177,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2244,10 +2252,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2315,10 +2323,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2361,9 +2369,9 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2410,10 +2418,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2483,10 +2491,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2525,10 +2533,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2610,10 +2618,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2665,10 +2673,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2756,10 +2764,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2843,10 +2851,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -2967,10 +2975,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -3196,10 +3204,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -3337,10 +3345,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -3472,10 +3480,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -3518,10 +3526,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -3701,10 +3709,10 @@ sudo apt install  libpython2.7  </code></pre>
         <category>编程语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>C</tag>
         <tag>C++</tag>
         <tag>Java</tag>
+        <tag>Python</tag>
         <tag>Go</tag>
         <tag>Rust</tag>
         <tag>Dart</tag>
@@ -12201,8 +12209,8 @@ sudo apt install  libpython2.7  </code></pre>
         <category>互联网</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
       </tags>
   </entry>
   <entry>
@@ -12358,8 +12366,8 @@ sudo apt install  libpython2.7  </code></pre>
         <category>操作系统</category>
       </categories>
       <tags>
-        <tag>IT</tag>
         <tag>Linux</tag>
+        <tag>IT</tag>
         <tag>OS</tag>
       </tags>
   </entry>
