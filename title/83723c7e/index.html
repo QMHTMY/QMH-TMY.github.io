@@ -1,4 +1,1006 @@
-<!DOCTYPE html><html class="theme-next gemini" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4"><link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222"><meta name="keywords" content="Shieber's Blog"><link rel="alternate" href="/atom.xml" title="Shieber" type="application/atom+xml"><meta property="og:type" content="article"><meta property="og:title" content="云原生技术栈"><meta property="og:url" content="http:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;83723c7e&#x2F;index.html"><meta property="og:site_name" content="Shieber"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png"><meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png"><meta property="og:updated_time" content="2020-10-07T11:20:07.334Z"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"5.1.4",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!0,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="http://www.shieber.cn/title/83723c7e/"><title>云原生技术栈 | Shieber</title></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">Shieber</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description">友朋自远方来，不亦乐乎?</h1></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-tags"><a href="/tags" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-categories"><a href="/categories" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-archives"><a href="/archives" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-about"><a href="/about" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li><li class="menu-item menu-item-search"><a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://www.shieber.cn/title/83723c7e/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="Shieber"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Shieber"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">云原生技术栈</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-07T18:20:41+08:00">2020-10-07</time></span><div class="post-wordcount"> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1.3k</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">4</span></div></div></header><div class="post-body" itemprop="articleBody"><p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p><a id="more"></a><p>最近折腾云原生技术，然而学了半天，感觉知识越来越复杂，涉及的技术太多了，本文特此稍做总结。</p><h3 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h3><p>云原生是一种新的构建软件并提供服务的架构或模式，云是和本地相对的。从技术的角度，云原生架构是基于云原生技术的一组架构原则和设计模式的集合，旨在将云应用中的非业务代码部分进行最大化的剥离，从而让云设施接管应用中原有的大量非功能特性(如弹性、韧性、安全、可观测性、灰度等)，使业务不再有非功能性业务中断困扰的同时，具备轻量、敏捷、高度自动化的特点。</p><h3 id="为什么需要云原生"><a href="#为什么需要云原生" class="headerlink" title="为什么需要云原生"></a>为什么需要云原生</h3><p>对于企业的 CIO 或者 IT 主管而言，原来企业内部 IT 建设以“烟筒”模式比较多，每个部门甚至每<br>个应用都相对独立，如何管理与分配资源成了难题。大家都基于最底层 IDC 设施独自向上构建，都需要<br>单独分配硬件资源，这就造成资源被大量占用且难以被共享。但是上云之后，由于云厂商提供了统一的<br>IaaS 能力和云服务，大幅提升了企业 IaaS 层的复用程度，CIO 或者 IT 主管自然而然想到 IaaS 以上层的系统也需要被统一，使资源、产品可被不断复用，从而能够进一步降低企业运营成本。</p><p>所有这些问题都指向一个共同点，那就是云的时代需要新的技术架构，来帮助企业应用能够更好地利<br>用云计算优势，充分释放云计算的技术红利，让业务更敏捷、成本更低的同时又可伸缩性更灵活，而这<br>些正好就是云原生架构专注解决的技术点。</p><h3 id="云原生架构原则"><a href="#云原生架构原则" class="headerlink" title="云原生架构原则"></a>云原生架构原则</h3><p>云原生架构本身作为一种架构，也有若干架构原则作为应用架构的核心架构控制面，通过遵从这些架<br>构原则可以让技术主管和架构师在做技术选择时不会出现大的偏差。</p><ul><li>服务化原则</li><li>弹性原则</li><li>可观测原则</li><li>韧性原则</li><li>自动化原则</li><li>零信任原则</li><li>持续演进原则</li></ul><h3 id="云原生主要技术"><a href="#云原生主要技术" class="headerlink" title="云原生主要技术"></a>云原生主要技术</h3><ul><li>容器</li><li>微服务</li><li>DevOps</li><li>Serverless</li><li>Service Mesh</li><li>开放应用模型</li><li>云原生中间件</li></ul><h3 id="云原生技术栈"><a href="#云原生技术栈" class="headerlink" title="云原生技术栈"></a>云原生技术栈</h3><p>云原生涉及众多技术，这些技术按照作用可分为四层，每层涉及的工具如下(只列出部分代表性工具)。蓝色框中代表CNCF孵化项目，是重点工具。</p><p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p><p>1.基础层（Provisioning）</p><ul><li>自动化和配置 KubeEdge Ansible</li><li>容器注册 HARBOR Dragonfly</li><li>安全管理 TUF falco</li><li>密钥管理 spiffe SPIRE</li></ul><p>2.运行时层（Runtime）</p><ul><li>云原生存储 ROOK Portworx ceph 盘古</li><li>容器运行时 Containerd rkt cri-o</li><li>云网络 CNI</li></ul><p>3.编排和管理层（Orchestration &amp; Management）</p><ul><li>编排和调度 K8S K3S Mesos Swarm</li><li>服务发现 CoreDNS etcd Consul</li><li>远程调用 gRPC Thrift</li><li>服务代理 Envoy CONTOUR MSON</li><li>API网关 Kong</li><li>服务网格 Linkerd Istio</li></ul><p>4.应用程序定义和开发层（Application Definition &amp; Development）</p><ul><li>数据库 TiKV/TiDB Vitess Redis MySQL MongoDB Neo4j</li><li>流和消息传递 NATS Cloudevents Flink Spark Kafka</li><li>应用定义和镜像构建 Helm</li><li>持续集成和持续交付 Orgo Jenkins Gitlab Github</li></ul><p>除了四层技术栈，还有些跨四层运行的工具</p><p>1.平台类</p><ul><li>Kubernetes发行版 谷歌K8S Azure K8S AWS K8S Rancher</li><li>Kubernetes托管平台 谷歌云 AWS Azure 阿里云 阿里云 腾讯云</li><li>Kubernetes安装程序 Minikube Rancher</li><li>PaaS/容器服务 heroku</li></ul><p>2.可观察性与分析</p><ul><li>监控 Prometheus cortex</li><li>日志 Elasticsearch Logstash Kibana</li><li>跟踪 JAEGER</li><li>混沌 Gremlin Chaos mesh</li></ul><h3 id="云原生技术栈中的中国产品"><a href="#云原生技术栈中的中国产品" class="headerlink" title="云原生技术栈中的中国产品"></a>云原生技术栈中的中国产品</h3><ul><li>PingCAP 贡献给CNCF的有TiKV/TiDB， Chaos mesh</li><li>阿里自研了盘古，MSON，Dubbo-go</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>技术栈涉及很多工具，像Kubernetes，Elasticsearch等都是重型工具，学习难，但光是使用它们就能干不少事。这些工具，要想都精通不太可能，基本学习使用就只用挑核心产品如Kubernetes，Docker，Etcd，Prometheus，Elasticsearch等学习，把流程搞熟悉。</p><p>工作流程能跑通后接着就是再深入某个技术点，比如</p><ul><li>对容器编排有需求就研究Kubernetes，Mesos，Swarm</li><li>对分布式事务有需求就研究MySQL，TiDB/TiKV数据库</li><li>对实时搜索有需求就研究Elasticsearch涉及的ELK技术</li><li>对微服务有需求就研究Istio，Dubbo-go等</li><li>对容器有需求就研究Containerd，RunC，Docker等</li><li>对实时大数据处理有需求就研究Spark，Flink，MapReduce等</li></ul><p>这些技术都很复杂，而且这些技术还在随着时代发展而不断变化，不知未来以Kubernetes为代表的云原生技术又会变成什么样？精通某一个领域我认为都非常不容易，但技术人，再复杂也得学呀。</p></div><div><div><div style="text-align:center;color:#300;font-size:14px">-------本文结束<i class="fa fa-heart"></i>感谢您的阅读-------</div></div></div><div></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>坚持原创，您的支持将鼓励我继续创作!</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>打赏</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/wechatpay.png" alt="Shieber 微信支付"><p>微信支付</p></div><div id="alipay" style="display:inline-block"> <img id="alipay_qr" src="/images/alipay.png" alt="Shieber 支付宝"><p>支付宝</p></div></div></div></div><footer class="post-footer"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/title/e985015c/" rel="prev" title="Go的各种数据结构底层表示"><i class="fa fa-chevron-left"></i> Go的各种数据结构底层表示</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/title/f7591bd4/" rel="next" title="Unix时间戳">Unix时间戳<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"><script>window._bd_share_config={common:{bdText:"",bdMini:"1",bdMiniList:!1,bdPic:""},image:{viewList:["tsina","douban","sqq","qzone","weixin","twi","fbook"],viewText:"分享到：",viewSize:"16"},slide:{bdImg:"5",bdPos:"left",bdTop:"100"}}</script><script>with(document)(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date/36e5)</script></div></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Shieber"><p class="site-author-name" itemprop="name">Shieber</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives%7C%7C%20archive"><span class="site-state-item-count">163</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">36</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">79</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/QMHTMY" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="mailto:Shieber@aliyun.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span></div><div class="cc-license motion-element" itemprop="license"> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a></div><div class="links-of-blogroll motion-element links-of-blogroll-inline"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 站点推荐</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="http://www.yinwang.org/" title="王垠" target="_blank">王垠</a></li><li class="links-of-blogroll-item"> <a href="https://www.coolshell.cn/" title="酷壳" target="_blank">酷壳</a></li><li class="links-of-blogroll-item"> <a href="http://www.ruanyifeng.com/" title="阮一峰" target="_blank">阮一峰</a></li></ul></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是云原生"><span class="nav-number">1.</span> <span class="nav-text">什么是云原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要云原生"><span class="nav-number">2.</span> <span class="nav-text">为什么需要云原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生架构原则"><span class="nav-number">3.</span> <span class="nav-text">云原生架构原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生主要技术"><span class="nav-number">4.</span> <span class="nav-text">云原生主要技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生技术栈"><span class="nav-number">5.</span> <span class="nav-text">云原生技术栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生技术栈中的中国产品"><span class="nav-number">6.</span> <span class="nav-text">云原生技术栈中的中国产品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span><span class="with-love"><i class="fa fa-snowflake-o"></i></span> <span class="author" itemprop="copyrightHolder">Shieber</span></div><div class="theme-info"><div class="powered-by"></div> <span class="post-count">本站共206.5k字</span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div><script type="text/javascript" src="/js/src/love.js"></script><canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:1;pointer-events:none"></canvas><script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/src/fireworks.js"></script><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><script type="text/javascript">
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Shieber's Blog" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Shieber" type="application/atom+xml" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="云原生技术栈">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.shieber.cn&#x2F;title&#x2F;83723c7e&#x2F;index.html">
+<meta property="og:site_name" content="Shieber">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png">
+<meta property="og:updated_time" content="2020-10-07T11:20:07.334Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;10&#x2F;07&#x2F;0dYPZ6.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.shieber.cn/title/83723c7e/"/>
+
+
+
+
+
+  <title>云原生技术栈 | Shieber</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shieber</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">友朋自远方来，不亦乐乎?</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.shieber.cn/title/83723c7e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shieber">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shieber">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">云原生技术栈</h2>
+        
+
+        <div class="post-meta">
+		  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-07T18:20:41+08:00">
+                2020-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+	<!-- 插封面图 -->
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p>
+<a id="more"></a>
+
+<p>最近折腾云原生技术，然而学了半天，感觉知识越来越复杂，涉及的技术太多了，本文特此稍做总结。</p>
+<h3 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h3><p>云原生是一种新的构建软件并提供服务的架构或模式，云是和本地相对的。从技术的角度，云原生架构是基于云原生技术的一组架构原则和设计模式的集合，旨在将云应用中的非业务代码部分进行最大化的剥离，从而让云设施接管应用中原有的大量非功能特性(如弹性、韧性、安全、可观测性、灰度等)，使业务不再有非功能性业务中断困扰的同时，具备轻量、敏捷、高度自动化的特点。</p>
+<h3 id="为什么需要云原生"><a href="#为什么需要云原生" class="headerlink" title="为什么需要云原生"></a>为什么需要云原生</h3><p>对于企业的 CIO 或者 IT 主管而言，原来企业内部 IT 建设以“烟筒”模式比较多，每个部门甚至每<br>个应用都相对独立，如何管理与分配资源成了难题。大家都基于最底层 IDC 设施独自向上构建，都需要<br>单独分配硬件资源，这就造成资源被大量占用且难以被共享。但是上云之后，由于云厂商提供了统一的<br>IaaS 能力和云服务，大幅提升了企业 IaaS 层的复用程度，CIO 或者 IT 主管自然而然想到 IaaS 以上层的系统也需要被统一，使资源、产品可被不断复用，从而能够进一步降低企业运营成本。</p>
+<p>所有这些问题都指向一个共同点，那就是云的时代需要新的技术架构，来帮助企业应用能够更好地利<br>用云计算优势，充分释放云计算的技术红利，让业务更敏捷、成本更低的同时又可伸缩性更灵活，而这<br>些正好就是云原生架构专注解决的技术点。</p>
+<h3 id="云原生架构原则"><a href="#云原生架构原则" class="headerlink" title="云原生架构原则"></a>云原生架构原则</h3><p>云原生架构本身作为一种架构，也有若干架构原则作为应用架构的核心架构控制面，通过遵从这些架<br>构原则可以让技术主管和架构师在做技术选择时不会出现大的偏差。</p>
+<ul>
+<li>服务化原则</li>
+<li>弹性原则</li>
+<li>可观测原则</li>
+<li>韧性原则</li>
+<li>自动化原则</li>
+<li>零信任原则</li>
+<li>持续演进原则</li>
+</ul>
+<h3 id="云原生主要技术"><a href="#云原生主要技术" class="headerlink" title="云原生主要技术"></a>云原生主要技术</h3><ul>
+<li>容器</li>
+<li>微服务</li>
+<li>DevOps</li>
+<li>Serverless</li>
+<li>Service Mesh</li>
+<li>开放应用模型</li>
+<li>云原生中间件</li>
+</ul>
+<h3 id="云原生技术栈"><a href="#云原生技术栈" class="headerlink" title="云原生技术栈"></a>云原生技术栈</h3><p>云原生涉及众多技术，这些技术按照作用可分为四层，每层涉及的工具如下(只列出部分代表性工具)。蓝色框中代表CNCF孵化项目，是重点工具。</p>
+<p><img src="https://s1.ax1x.com/2020/10/07/0dYPZ6.png" alt="cloud-native"></p>
+<p>1.基础层（Provisioning）</p>
+<ul>
+<li>自动化和配置 KubeEdge Ansible</li>
+<li>容器注册 HARBOR Dragonfly</li>
+<li>安全管理 TUF falco</li>
+<li>密钥管理 spiffe SPIRE</li>
+</ul>
+<p>2.运行时层（Runtime）  </p>
+<ul>
+<li>云原生存储 ROOK Portworx ceph 盘古</li>
+<li>容器运行时 Containerd rkt cri-o</li>
+<li>云网络 CNI</li>
+</ul>
+<p>3.编排和管理层（Orchestration &amp; Management）  </p>
+<ul>
+<li>编排和调度 K8S K3S Mesos Swarm</li>
+<li>服务发现 CoreDNS etcd Consul</li>
+<li>远程调用 gRPC Thrift</li>
+<li>服务代理 Envoy CONTOUR MSON</li>
+<li>API网关 Kong</li>
+<li>服务网格 Linkerd Istio </li>
+</ul>
+<p>4.应用程序定义和开发层（Application Definition &amp; Development）  </p>
+<ul>
+<li>数据库 TiKV/TiDB Vitess Redis MySQL MongoDB Neo4j</li>
+<li>流和消息传递 NATS Cloudevents Flink Spark Kafka</li>
+<li>应用定义和镜像构建 Helm </li>
+<li>持续集成和持续交付 Orgo Jenkins Gitlab Github</li>
+</ul>
+<p>除了四层技术栈，还有些跨四层运行的工具</p>
+<p>1.平台类  </p>
+<ul>
+<li>Kubernetes发行版 谷歌K8S Azure K8S  AWS K8S Rancher </li>
+<li>Kubernetes托管平台 谷歌云 AWS Azure 阿里云 阿里云 腾讯云 </li>
+<li>Kubernetes安装程序 Minikube Rancher</li>
+<li>PaaS/容器服务 heroku </li>
+</ul>
+<p>2.可观察性与分析  </p>
+<ul>
+<li>监控 Prometheus cortex</li>
+<li>日志 Elasticsearch Logstash Kibana</li>
+<li>跟踪 JAEGER </li>
+<li>混沌 Gremlin Chaos mesh</li>
+</ul>
+<h3 id="云原生技术栈中的中国产品"><a href="#云原生技术栈中的中国产品" class="headerlink" title="云原生技术栈中的中国产品"></a>云原生技术栈中的中国产品</h3><ul>
+<li>PingCAP 贡献给CNCF的有TiKV/TiDB， Chaos mesh</li>
+<li>阿里自研了盘古，MSON，Dubbo-go</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>技术栈涉及很多工具，像Kubernetes，Elasticsearch等都是重型工具，学习难，但光是使用它们就能干不少事。这些工具，要想都精通不太可能，基本学习使用就只用挑核心产品如Kubernetes，Docker，Etcd，Prometheus，Elasticsearch等学习，把流程搞熟悉。</p>
+<p>工作流程能跑通后接着就是再深入某个技术点，比如  </p>
+<ul>
+<li>对容器编排有需求就研究Kubernetes，Mesos，Swarm </li>
+<li>对分布式事务有需求就研究MySQL，TiDB/TiKV数据库</li>
+<li>对实时搜索有需求就研究Elasticsearch涉及的ELK技术</li>
+<li>对微服务有需求就研究Istio，Dubbo-go等</li>
+<li>对容器有需求就研究Containerd，RunC，Docker等</li>
+<li>对实时大数据处理有需求就研究Spark，Flink，MapReduce等</li>
+</ul>
+<p>这些技术都很复杂，而且这些技术还在随着时代发展而不断变化，不知未来以Kubernetes为代表的云原生技术又会变成什么样？精通某一个领域我认为都非常不容易，但技术人，再复杂也得学呀。</p>
+
+      
+    </div>
+    
+    
+    
+
+	 <div>
+  	  
+      <div> 
+ 
+<div style="text-align:center;color:#330000;font-size:14px;">-------本文结束<i class="fa fa-heart"></i>感谢您的阅读-------</div> 
+
+</div>
+
+
+  	  
+	 </div>
+
+	 <div>
+  	  
+      
+
+
+
+  	  
+	 </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创，您的支持将鼓励我继续创作!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Shieber 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Shieber 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/title/e985015c/" rel="prev" title="Go的各种数据结构底层表示">
+                <i class="fa fa-chevron-left"></i> Go的各种数据结构底层表示
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/title/f7591bd4/" rel="next" title="Unix时间戳">
+                Unix时间戳 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Shieber" />
+            
+              <p class="site-author-name" itemprop="name">Shieber</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">164</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/QMHTMY" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Shieber@aliyun.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                站点推荐
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.yinwang.org/" title="王垠" target="_blank">王垠</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是云原生"><span class="nav-number">1.</span> <span class="nav-text">什么是云原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要云原生"><span class="nav-number">2.</span> <span class="nav-text">为什么需要云原生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生架构原则"><span class="nav-number">3.</span> <span class="nav-text">云原生架构原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生主要技术"><span class="nav-number">4.</span> <span class="nav-text">云原生主要技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生技术栈"><span class="nav-number">5.</span> <span class="nav-text">云原生技术栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生技术栈中的中国产品"><span class="nav-number">6.</span> <span class="nav-text">云原生技术栈中的中国产品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shieber</span>
+
+  
+</div>
+
+<!-- 
+-->
+
+
+
+<!--
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">本站共208.1k字</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+  
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/src/fireworks.js"></script> 
+ 
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -313,7 +1315,24 @@
         onPopupClose();
       }
     });
-  </script><script type="text/x-mathjax-config">
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -321,11 +1340,23 @@
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
       });
-    </script><script type="text/x-mathjax-config">
+    </script>
+
+    <script type="text/x-mathjax-config">
       MathJax.Hub.Queue(function() {
         var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
       });
-    </script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
